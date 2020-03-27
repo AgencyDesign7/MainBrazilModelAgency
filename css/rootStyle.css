@@ -4,7 +4,7 @@
    ========================================================================== */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
-   font-family: 'Poiret One', cursive;
+   font-family: 'Arial, Helvetica, sans-serif';
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   
@@ -246,7 +246,7 @@ body {
   margin: 0;
   min-height: 100%;
   background-color: #fff;
- font-family: 'Poiret One', cursive;
+ font-family: 'Arial, Helvetica, sans-serif';
   font-size: 14px;
   line-height: 20px;
   color: #333;
@@ -539,7 +539,7 @@ button,html input[type="button"],input[type="reset"] {
 label {
   display: block;
   margin-bottom: 5px;
-  font-weight: bold;
+  font-size: 30px;
 }
 
 .w-input,.w-select {
@@ -1920,7 +1920,7 @@ textarea.w-input,textarea.w-select {
   margin-left: auto;
   margin-right: auto;
   border: none;
-  font-family: 'Poiret One', cursive !important;
+  font-family: 'Arial, Helvetica, sans-serif' !important;
 }
 .navbar-2 .nav-link-2{
 	border-top: solid 1px white;
@@ -2949,6 +2949,12 @@ h1{
   .show1, .show2{
     height: auto;
     width: auto;
+  }
+  label{
+    font-size: 20px;
+  }
+  input::placeholder{
+    font-size: 20px;
   }
 }
 
