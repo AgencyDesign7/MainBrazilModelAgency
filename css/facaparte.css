@@ -1,0 +1,77 @@
+.div-block-15{
+    display: flex;
+
+}
+.header-block{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 40px;
+    font-weight: bolder;
+    color: white;
+}
+
+.image-fp1{
+    height: auto;
+    width: 800px;
+}
+label{
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+form{
+    margin-top: 20px;
+    display: block;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 30px;
+    color: black;
+}
+
+input[type=text], input[type=number], input[type=password], input[type=email],input[type=date], input[type=file], select {
+   width: 50vw;
+    border: none;
+    border-bottom: solid 2px black;
+}
+
+.center-marker-category{
+    text-align: center;
+    margin-top: 30px;
+    border-top: dashed 2px rgb(136, 136, 136);
+}
+
+@media screen and (max-width:767px){
+    .div-block-15{
+        flex-direction: column;
+    }
+    input[type=text], input[type=number], input[type=password], input[type=email],input[type=date], input[type=file], select{
+        width: 100%;
+    }
+    form{
+        font-size: 30px;
+        line-height: normal;
+        
+    }
+    .header-block{
+        font-size: 25px;
+    }
+   
+}
+
+@media screen and (max-width:415px){
+    form{
+        font-size: 25px;
+        line-height: normal;
+        
+    }
+    .header-block{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width:300px){
+    form{
+        font-size: 15px;
+        line-height: normal;
+        
+    }
+}

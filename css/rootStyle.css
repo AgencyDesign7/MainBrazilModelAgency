@@ -4,9 +4,10 @@
    ========================================================================== */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
-  font-family: 'Raleway', Arial,sans-serif;
+   font-family: 'Poiret One', cursive;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  
 }
 
 body {
@@ -145,6 +146,7 @@ input[type="checkbox"],input[type="radio"] {
 
 input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button {
   height: auto;
+  
 }
 
 input[type="search"] {
@@ -244,7 +246,7 @@ body {
   margin: 0;
   min-height: 100%;
   background-color: #fff;
-  font-family: 'Raleway', Arial,sans-serif;
+ font-family: 'Poiret One', cursive;
   font-size: 14px;
   line-height: 20px;
   color: #333;
@@ -1912,10 +1914,10 @@ textarea.w-input,textarea.w-select {
   margin-left: auto;
   margin-right: auto;
   border: none;
-  font-family: 'Raleway', Arial,sans-serif !important;
+  font-family: 'Poiret One', cursive !important;
 }
 .navbar-2 .nav-link-2{
-	border-top: solid 2px white;
+	border-top: solid 1px white;
 } 
 
 .w-nav-link.w--current {
@@ -2164,6 +2166,7 @@ textarea.w-input,textarea.w-select {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  background-color: white;
 }
 .titleName{
   display: flex;
@@ -2512,7 +2515,7 @@ h1{
   -ms-flex-align: center;
   align-items: center;
   background-color: black;
-	border-top: solid 2px white;
+	border-top: solid 1px white;
 }
 
 .section-2 {
@@ -2521,12 +2524,12 @@ h1{
 
 .footer {
   position: relative;
-  top: 20px;
+  top: 0px;
   display: block;
   overflow: auto;
   width: auto;
   height: auto;
-  margin-top: 271px;
+  margin-top: 0px;
   padding-top: 13px;
   padding-bottom: 0px;
   float: none;
@@ -2871,8 +2874,8 @@ h1{
     flex-wrap: nowrap;
   }
   .footer {
-    top: 220px;
-    margin-top: 286px;
+    top: 0px;
+    margin-top: 0px;
     padding: 10px 20px;
   }
   .footer-image {
@@ -2964,7 +2967,7 @@ h1{
     background-color: transparent;
   }
   .footer {
-    margin-top: 310px;
+    margin-top: 0px;
     padding: 10px 20px 0px;
     background-color: #e2e2e2;
     text-align: left;
@@ -2997,7 +3000,7 @@ h1{
 .mob-nav a{
 	
 	color: white !important;
-	border-bottom: solid 2px white;
+	border-bottom: solid 1px white;
 	
 }
 
