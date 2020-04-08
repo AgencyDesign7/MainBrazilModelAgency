@@ -2159,6 +2159,7 @@ textarea.w-input,textarea.w-select {
    Start of custom Webflow CSS
    ========================================================================== */
 .hero {
+  min-height: 100vh;
   display: block;
   overflow: visible;
   margin-top: 20px;
@@ -2956,6 +2957,13 @@ h1{
   input::placeholder{
     font-size: 20px;
   }
+  .sub-category-models{
+    display: none;
+    
+  }
+  .showContentBlock{
+    display: block;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -3093,5 +3101,31 @@ h1{
 	overflow: hidden;
 }
 
+.style-sub-category a{
+  background-color: white;
+  color: black !important;
+  border: solid 1px black
+}
 
+.loader{
+  display: none;
+  border: 16px solid rgb(209, 209, 209);
+  border-radius: 50%;
+  border-top: 16px solid rgb(98, 150, 255);
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  z-index: 10;
+  -moz-animation: spin 1s linear infinite;
+  -o-animation: spin 1s linear infinite;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+}
+
+/*Override all*/
+.w-slider-mask{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 

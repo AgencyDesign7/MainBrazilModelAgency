@@ -35,8 +35,31 @@ function navBar() {
         } else {
             navMenu.innerHTML = '';
             spanInset.innerHTML = `
-        <nav role="navigation" class="nav-menu w-nav-menu mob-nav" style="transform: translateY(0px) translateX(0px); transition: transform 400ms ease 0s;" data-nav-menu-open=""><a href="./index.html" class="nav-link-2 w-nav-link w--nav-link-open" style="">HOME</a><a href="./composite.html" class="nav-link-3 w-nav-link w--nav-link-open" style="">SOBRE NÓS</a><a href="./book.html" class="nav-link-4 w-nav-link w--nav-link-open" style="">MODELOS</a>
-            <a href="./parceiros.html" class="nav-link-5 w-nav-link w--nav-link-open" style="">CURSOS</a><a href="./facaparte.html" class="nav-link-6 w-nav-link w--nav-link-open" style="">REVISTA</a><a href="./contato.html" class="nav-link-6 w-nav-link w--nav-link-open" style="">EVENTOS</a><a href="./shows.html" class="nav-link-6 w-nav-link w--nav-link-open" style="">ARTISTAS</a><a href="./index.html" class="nav-link-2 w-nav-link w--nav-link-open" style="">PARCEIROS</a><a href="./index.html" class="nav-link-2 w-nav-link w--nav-link-open" style="">FAÇA PARTE</a><a href="./index.html" class="nav-link-2 w-nav-link w--nav-link-open" style="">CONTATOS</a></nav>
+        <nav role="navigation" class="nav-menu w-nav-menu mob-nav" style="transform: translateY(0px) translateX(0px); transition: transform 400ms ease 0s;" data-nav-menu-open="">
+        <a href="./index.html" class="nav-link-2 w-nav-link w--nav-link-open" style="">HOME</a>
+        <a href="./sobrenos.html" class="nav-link-3 w-nav-link w--nav-link-open" style="">SOBRE NÓS</a>
+        <a href="#" class="nav-link-4 w-nav-link w--nav-link-open" style="" onClick = showCategoryModels() >MODELOS</a>
+        <div class="sub-category-models style-sub-category">
+        <a href="./curos.html" class="nav-link-5 w-nav-link w--nav-link-open" style="">BABY</a>
+        <a href="./curos.html" class="nav-link-5 w-nav-link w--nav-link-open" style="">KID'S</a>
+        <a href="./curos.html" class="nav-link-5 w-nav-link w--nav-link-open" style="">PRÉ-TEEN</a>
+        <a href="./curos.html" class="nav-link-5 w-nav-link w--nav-link-open" style="">MORE AGE</a>
+        <a href="./curos.html" class="nav-link-5 w-nav-link w--nav-link-open" style="">PLUS SIZE</a>
+        <a href="./curos.html" class="nav-link-5 w-nav-link w--nav-link-open" style="">COMERCIAL</a>
+        <a href="./curos.html" class="nav-link-5 w-nav-link w--nav-link-open" style="">FASHION</a>
+        <a href="./curos.html" class="nav-link-5 w-nav-link w--nav-link-open" style="">FITNESS</a>
+        <a href="./curos.html" class="nav-link-5 w-nav-link w--nav-link-open" style="">ANDROGYNOUS</a>
+        <a href="./curos.html" class="nav-link-5 w-nav-link w--nav-link-open" style="">URBAN</a>
+        </div>
+        </a>
+        <a href="./curos.html" class="nav-link-5 w-nav-link w--nav-link-open" style="">CURSOS</a>
+        <a href="./revista.html" class="nav-link-6 w-nav-link w--nav-link-open" style="">REVISTA</a>
+        <a href="./eventos.html" class="nav-link-6 w-nav-link w--nav-link-open" style="">EVENTOS</a>
+        <a href="./artista.html" class="nav-link-6 w-nav-link w--nav-link-open" style="">ARTISTAS</a>
+        <a href="./parceiros.html" class="nav-link-2 w-nav-link w--nav-link-open" style="">PARCEIROS</a>
+        <a href="./facaparte.html" class="nav-link-2 w-nav-link w--nav-link-open" style="">FAÇA PARTE</a>
+        <a href="./contatos.html" class="nav-link-2 w-nav-link w--nav-link-open" style="">CONTATOS</a>
+        </nav>
     </div>`;
             navButton.classList.add('w--open')
             navbarDiv.classList.add('an-nav-bf')
@@ -123,11 +146,12 @@ function slideTitle() {
     nextSlide()
     function nextSlide() {
         var divImgs = document.querySelectorAll('.w-slide');
+
         divImgs.forEach(element => element.style.display = "none")
         index++;
         if (index > divImgs.length) { index = 1 }
         divImgs[index - 1].style.display = "block";
-        setTimeout(nextSlide, 9000)
+        setTimeout(nextSlide, 7000)
     }
 
 
@@ -135,4 +159,27 @@ function slideTitle() {
 
 }
 
+function showCategoryModels() {
+    var subCategoryModels = document.querySelector('.sub-category-models').classList.toggle('showContentBlock');
+}
+
+/*
+function searchAndShowSlide() {
+    slideTitle();
+    var divimg2 = document.querySelectorAll('.w-slide img');
+    var spanSlide = document.querySelector('.slideshow');
+    divimg2.forEach(elements => {
+        setInterval(() => {
+            if (elements.naturalHeight == 0) {
+                var loader = document.querySelector('.loader').style.display = "block";
+                elements.innerHTML = "";
+            }
+            else {
+                console.log('hello')
+            }
+        }, 500)
+
+    })
+}
+*/
 
