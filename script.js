@@ -40,8 +40,8 @@ function navBar() {
         <a href="./sobrenos.html" class="nav-link-3 w-nav-link w--nav-link-open" style="">SOBRE NÓS</a>
         <a href="#" class="nav-link-4 w-nav-link w--nav-link-open" style="" onClick = showCategoryModels() >MODELOS</a>
         <div class="sub-category-models style-sub-category">
-        <a href="./curos.html" class="nav-link-5 w-nav-link w--nav-link-open" style="">BABY</a>
-        <div class="style-sub-category">
+        <a href="./curos.html" class="nav-link-5 w-nav-link w--nav-link-open" >BABY</a>
+        <div class="style-sub-category sub-baby subs-category-ref">
               <div class="sub-baby">
                 <div class="sub-imgs">
                   <img href="" >
@@ -53,8 +53,8 @@ function navBar() {
                 </div>
               </div>
          </div>
-        <a href="./curos.html" class="nav-link-5 w-nav-link w--nav-link-open" style="">KID'S</a>
-        <div class="style-sub-category">
+        <a class="nav-link-5 w-nav-link w--nav-link-open" onClick="ShowSubCategorys('sub-kids')" style="">KID'S</a>
+        <div class="style-sub-category sub-kids subs-category-ref">
                       <div class="sub-baby">
                         <div class="sub-imgs">
                           <img href="" >
@@ -67,7 +67,7 @@ function navBar() {
                       </div>
                  </div>
         <a href="./curos.html" class="nav-link-5 w-nav-link w--nav-link-open" style="">PRÉ-TEEN</a>
-        <div class="style-sub-category">
+        <div class="style-sub-category sub-teens subs-category-ref">
                       <div class="sub-baby">
                         <div class="sub-imgs">
                           <img href="" >
@@ -80,7 +80,7 @@ function navBar() {
                       </div>
                  </div>
         <a href="./curos.html" class="nav-link-5 w-nav-link w--nav-link-open" style="">MORE AGE</a>
-        <div class="style-sub-category">
+        <div class="style-sub-category sub-moreage subs-category-ref">
                       <div class="sub-baby">
                         <div class="sub-imgs">
                           <img href="" >
@@ -93,7 +93,7 @@ function navBar() {
                       </div>
                  </div>
         <a href="./curos.html" class="nav-link-5 w-nav-link w--nav-link-open" style="">PLUS SIZE</a>
-        <div class="style-sub-category">
+        <div class="style-sub-category sub-plussize subs-category-ref">
                       <div class="sub-baby">
                         <div class="sub-imgs">
                           <img href="" >
@@ -106,7 +106,7 @@ function navBar() {
                       </div>
                  </div>
         <a href="./curos.html" class="nav-link-5 w-nav-link w--nav-link-open" style="">COMERCIAL</a>
-        <div class="style-sub-category">
+        <div class="style-sub-category sub-comercial subs-category-ref">
                       <div class="sub-baby">
                         <div class="sub-imgs">
                           <img href="" >
@@ -119,7 +119,7 @@ function navBar() {
                       </div>
                  </div>
         <a href="./curos.html" class="nav-link-5 w-nav-link w--nav-link-open" style="">FASHION</a>
-        <div class="style-sub-category">
+        <div class="style-sub-category sun-fashion subs-category-ref">
                       <div class="sub-baby">
                         <div class="sub-imgs">
                           <img href="" >
@@ -132,7 +132,7 @@ function navBar() {
                       </div>
                  </div>
         <a href="./curos.html" class="nav-link-5 w-nav-link w--nav-link-open" style="">FITNESS</a>
-        <div class="style-sub-category">
+        <div class="style-sub-category sun-fitness subs-category-ref">
                       <div class="sub-baby">
                         <div class="sub-imgs">
                           <img href="" >
@@ -145,7 +145,7 @@ function navBar() {
                       </div>
                  </div>
         <a href="./curos.html" class="nav-link-5 w-nav-link w--nav-link-open" style="">ANDROGYNOUS</a>
-        <div class="style-sub-category">
+        <div class="style-sub-category sub-androgynous subs-category-ref">
                       <div class="sub-baby">
                         <div class="sub-imgs">
                           <img href="" >
@@ -158,7 +158,7 @@ function navBar() {
                       </div>
                  </div>
         <a href="./curos.html" class="nav-link-5 w-nav-link w--nav-link-open" style="">URBAN</a>
-        <div class="style-sub-category">
+        <div class="style-sub-category sub-urban subs-category-ref">
                       <div class="sub-baby">
                         <div class="sub-imgs">
                           <img href="" >
@@ -173,16 +173,16 @@ function navBar() {
         </div>
         </a>
         <a href="./curos.html" class="nav-link-5 w-nav-link w--nav-link-open" style="">CURSOS</a>
-        <div class="style-sub-category">
+        <div class="style-sub-category subs-category-ref">
           <a href="./curos.html" class="nav-link-5 w-nav-link w--nav-link-open" style="">EM BREVE</a>
          </div>
         <a href="./revista.html" class="nav-link-6 w-nav-link w--nav-link-open" style="">REVISTA</a>
-         <div class="style-sub-category">
+         <div class="style-sub-category subs-category-ref">
            <a href="./curos.html" class="nav-link-5 w-nav-link w--nav-link-open" style="">EM BREVE</a>
         </div>
         <a href="./eventos.html" class="nav-link-6 w-nav-link w--nav-link-open" style="">EVENTOS</a>
         <a href="./artista.html" class="nav-link-6 w-nav-link w--nav-link-open" style="">ARTISTAS</a>
-        <div class="style-sub-category">
+        <div class="style-sub-category subs-category-ref">
                 <a href="./curos.html" class="nav-link-5 w-nav-link w--nav-link-open" style="">BABY</a>
                 <a href="./curos.html" class="nav-link-5 w-nav-link w--nav-link-open" style="">KID'S</a>
                 <a href="./curos.html" class="nav-link-5 w-nav-link w--nav-link-open" style="">PRÉ-TEEN</a>
@@ -303,6 +303,13 @@ function slideTitle() {
 
 function showCategoryModels() {
   var subCategoryModels = document.querySelector('.sub-category-models').classList.toggle('showContentBlock');
+}
+
+function ShowSubCategorys(category){
+  var subCategorys = document.querySelectorAll('.subs-category-ref')
+  subCategorys.forEach(element =>{
+    element.classList[1] === category? element.classList.toggle('showContentBlock') : element.style.display = 'none';
+  })
 }
 
 /*

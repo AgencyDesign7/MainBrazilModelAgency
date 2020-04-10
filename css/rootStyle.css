@@ -2659,6 +2659,10 @@ h1{
   background-color: white;
 }
 
+.subs-category-ref{
+  display: none;
+}
+
 @media screen and (max-width: 991px) {
   .container-3 {
     margin-top: -7px;
@@ -2964,7 +2968,6 @@ h1{
   .showContentBlock{
     display: block;
   }
-  
   .sub-imgs{
     display: flex;
     justify-content: space-around;
