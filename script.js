@@ -38,7 +38,7 @@ function navBar() {
         <nav role="navigation" class="nav-menu w-nav-menu mob-nav" style="transform: translateY(0px) translateX(0px); transition: transform 400ms ease 0s;" data-nav-menu-open="">
         <a href="./index.html" class="nav-link-2 w-nav-link w--nav-link-open" style="">HOME</a>
         <a href="./sobrenos.html" class="nav-link-3 w-nav-link w--nav-link-open" style="">SOBRE NÓS</a>
-        <a href="#" class="nav-link-4 w-nav-link w--nav-link-open" style="" onClick = showCategoryModels() >MODELOS</a>
+        <a href="#" class="nav-link-4 w-nav-link w--nav-link-open" style="" onClick = showCategoryModels("sub-category-models") >MODELOS</a>
         <div class="sub-category-models style-sub-category">
         <a class="nav-link-5 w-nav-link w--nav-link-open" onClick="ShowSubCategorys('sub-baby')">BABY</a>
         <div class="style-sub-category sub-baby subs-category-ref">
@@ -301,15 +301,15 @@ function slideTitle() {
 
 }
 
-function showCategoryModels() {
-  var subCategoryModels = document.querySelector('.sub-category-models').classList.toggle('showContentBlock');
+function showCategoryModels(selectedCategory) {
+  var subCategoryModels = document.querySelector(`.${selectedCategory}`).classList.toggle('showContentBlock');
 }
 
 function ShowSubCategorys(category){
   var subCategorys = document.querySelectorAll('.subs-category-ref')
   subCategorys.forEach(element =>{
     
-    element.classList[1] === category? element.classList.toggle('showContentBlock') : element.style.display = 'none';
+    element.classList[1] === category? element.classList.toggle('showContentBlock') : null;
   })
 }
 
