@@ -849,6 +849,17 @@ textarea.w-input,textarea.w-select {
 .w-hidden-main {
   display: none !important;
 }
+.about-us{
+  background-color: white;
+  padding: 15px;
+}
+.about-us p{
+ display: flex; 
+ text-align: justify;
+ word-break: break-all;
+ word-spacing: 7px;
+ font: 23px black;
+}
 
 @media screen and (max-width:991px) {
   .w-container {
@@ -917,6 +928,7 @@ textarea.w-input,textarea.w-select {
     right: auto;
   }
 }
+
 
 @media screen and (max-width:767px) {
   .w-hidden-main {
@@ -3155,5 +3167,17 @@ h1{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.sub-team-link {
+  display: flex ;
+}
+.sub-team-link a {
+  display: block !important;
+  text-decoration: none !important;
+  border: none !important;
+  border-radius: 30px;
+  text-decoration: none !important;
+  background-color: black !important;
+   color: white !important;
 }
 

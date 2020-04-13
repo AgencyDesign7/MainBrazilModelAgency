@@ -36,8 +36,20 @@ function navBar() {
       navMenu.innerHTML = '';
       spanInset.innerHTML = `
         <nav role="navigation" class="nav-menu w-nav-menu mob-nav" style="transform: translateY(0px) translateX(0px); transition: transform 400ms ease 0s;" data-nav-menu-open="">
-        <a href="./index.html" class="nav-link-2 w-nav-link w--nav-link-open" style="">HOME</a>
-        <a href="./sobrenos.html" class="nav-link-3 w-nav-link w--nav-link-open" style="">SOBRE NÓS</a>
+        <a class="nav-link-2 w-nav-link w--nav-link-open" style="">HOME</a>
+        <a class="nav-link-3 w-nav-link w--nav-link-open" style="" onClick = showCategoryModels("about-us")>SOBRE NÓS</a>
+        <div class="style-sub-category about-us subs-category-ref">
+        
+          <p>
+            Atuante no mercado da moda, a Brazil Modelo Agency é uma empresa na assessoria e descoberta descoberta de novos talentos, levando até você cursos de modelo, manequim e workshop de passarela com professores altamente capacitados.Preparando os aspirantes e modelos para convenções e seletivas a nível nacional e internacional.
+             <br>Preparando os modelos para o mercado de trabalho e para o mercado da moda. <br>Realizamos eventos corporativos, institucionais, particulares, espetáculos desportivos, produção de teatro, recepções, lançamentos de livros, workshop, desfiles, treinamentos, lançamentos de CD 's, inaugurações, feiras, shows, lançamentos de produtos, eventos gospel, danças, entre outros, de acordo com a necessidade de cada cliente.
+            Para tanto, contamos com uma equipe especializada na área e um casting de fornecedores sempre prontos para atender com qualidade, agilidade e bom gosto, buscando acima de tudo superar as expectativas do nosso cliente.
+          </p>
+          <div class="sub-team">
+            <div class="sub-team-link">
+              <a href="">EQUIPE BRAZIL MODEL</a></div>
+          </div>
+        </div>
         <a href="#" class="nav-link-4 w-nav-link w--nav-link-open" style="" onClick = showCategoryModels("sub-category-models") >MODELOS</a>
         <div class="sub-category-models style-sub-category">
         <a class="nav-link-5 w-nav-link w--nav-link-open" onClick="ShowSubCategorys('sub-baby')">BABY</a>
