@@ -1,4 +1,4 @@
-window.onload = function() {
+window.onload = function () {
   navBar()
   var pageName = location.pathname.split('/').pop()
   switch (pageName) {
@@ -25,15 +25,15 @@ function navBar() {
 
     if (navButton.classList[2] == 'w--open') {
       navButton.classList.remove('w--open')
-      navMenu.innerHTML = `<a href="./index.html" class="nav-link-2 w-nav-link">HOME</a><a
+      /*navMenu.innerHTML = `<a href="./index.html" class="nav-link-2 w-nav-link">HOME</a><a
         href="./composite.html" class="nav-link-3 w-nav-link">COMPOSITE</a><a href="./book.html"
         class="nav-link-4 w-nav-link">BOOK</a><a href="./parceiros.html" class="nav-link-5 w-nav-link">PARCEIROS</a><a
-        href="./contato.html" class="nav-link-6 w-nav-link">CONTATO</a>`
+        href="./contato.html" class="nav-link-6 w-nav-link">CONTATO</a>`*/
       spanInset.innerHTML = '';
       navbarDiv.classList.remove('an-nav-bf')
       iconMenuClick.classList.remove('w-menu-open-nav')
     } else {
-      navMenu.innerHTML = '';
+      /*navMenu.innerHTML = '';*/
       spanInset.innerHTML = `
         <nav role="navigation" class="nav-menu w-nav-menu mob-nav" style="transform: translateY(0px) translateX(0px); transition: transform 400ms ease 0s;" data-nav-menu-open="">
         <a class="nav-link-2 w-nav-link w--nav-link-open" style="">HOME</a>
@@ -42,7 +42,7 @@ function navBar() {
         
           <p>
             Atuante no mercado da moda, a Brazil Modelo Agency é uma empresa na assessoria e descoberta descoberta de novos talentos, levando até você cursos de modelo, manequim e workshop de passarela com professores altamente capacitados.Preparando os aspirantes e modelos para convenções e seletivas a nível nacional e internacional.
-             <br>Preparando os modelos para o mercado de trabalho e para o mercado da moda. <br>Realizamos eventos corporativos, institucionais, particulares, espetáculos desportivos, produção de teatro, recepções, lançamentos de livros, workshop, desfiles, treinamentos, lançamentos de CD 's, inaugurações, feiras, shows, lançamentos de produtos, eventos gospel, danças, entre outros, de acordo com a necessidade de cada cliente.
+             Preparando os modelos para o mercado de trabalho e para o mercado da moda. <br>Realizamos eventos corporativos, institucionais, particulares, espetáculos desportivos, produção de teatro, recepções, lançamentos de livros, workshop, desfiles, treinamentos, lançamentos de CD 's, inaugurações, feiras, shows, lançamentos de produtos, eventos gospel, danças, entre outros, de acordo com a necessidade de cada cliente.
             Para tanto, contamos com uma equipe especializada na área e um casting de fornecedores sempre prontos para atender com qualidade, agilidade e bom gosto, buscando acima de tudo superar as expectativas do nosso cliente.
           </p>
           <div class="sub-team">
@@ -300,11 +300,18 @@ function slideTitle() {
 
   function nextSlide() {
     var divImgs = document.querySelectorAll('.w-slide');
-
+    var images = document.querySelectorAll('.w-slide img')
+    var loader = document.querySelector('.loader');
     divImgs.forEach(element => element.style.display = "none")
     index++;
     if (index > divImgs.length) { index = 1 }
-    divImgs[index - 1].style.display = "block";
+    if (images[index - 1].naturalHeight < 1000) {
+      divImgs[index - 1].style.visibility = "none";
+      loader.style.display = "block";
+    } else {
+      divImgs[index - 1].style.display = "block";
+      loader.style.display = "none";
+    }
     setTimeout(nextSlide, 7000)
   }
 
@@ -317,30 +324,29 @@ function showCategoryModels(selectedCategory) {
   var subCategoryModels = document.querySelector(`.${selectedCategory}`).classList.toggle('showContentBlock');
 }
 
-function ShowSubCategorys(category){
+function ShowSubCategorys(category) {
   var subCategorys = document.querySelectorAll('.subs-category-ref')
-  subCategorys.forEach(element =>{
-    
-    element.classList[1] === category? element.classList.toggle('showContentBlock') : null;
+  subCategorys.forEach(element => {
+
+    element.classList[1] === category ? element.classList.toggle('showContentBlock') : null;
   })
 }
 
 /*
 function searchAndShowSlide() {
-    slideTitle();
-    var divimg2 = document.querySelectorAll('.w-slide img');
-    var spanSlide = document.querySelector('.slideshow');
-    divimg2.forEach(elements => {
-        setInterval(() => {
-            if (elements.naturalHeight == 0) {
-                var loader = document.querySelector('.loader').style.display = "block";
-                elements.innerHTML = "";
-            }
-            else {
-                console.log('hello')
-            }
-        }, 500)
 
-    })
-}
-*/
+  var divimg2 = document.querySelectorAll('.w-slide img');
+  var spanSlide = document.querySelector('.slideshow');
+  divimg2.forEach(elements => {
+    setInterval(() => {
+      if (elements.naturalHeight == 0) {
+        var loader = document.querySelector('.loader').style.display = "block";
+        elements.innerHTML = "";
+      }
+      else {
+        console.log('hello')
+      }
+    }, 500)
+
+  })
+}*/
