@@ -216,8 +216,11 @@ td,th {
 }
 
 .w-icon-nav-menu:before {
-  /*content: "\e602";*/
-  content: "☰";
+	/*content: "\e602";*/
+	content: "☰ MENU"!important;
+	font-weight: bolder;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	padding-bottom: 20px;
 }
 
 .w-icon-arrow-down:before,.w-icon-dropdown-toggle:before {
@@ -2514,7 +2517,7 @@ h1{
 }
 .logo-image{
   display: block;
-  height: 200px;
+  height: 150px;
 }
 .section {
   display: -webkit-box;
@@ -3019,6 +3022,11 @@ h1{
   }
   .showContentBlock{
     display: block;
+    animation: opacity 1s;
+    -moz-animation: opacity 1s;
+    -o-animation: opacity 1s;
+    -ms-zoom-animation: opacity 1s;
+    -webkit-animation: opacity 1s;
   }
   .sub-imgs{
     display: flex;
@@ -3036,6 +3044,7 @@ h1{
     display: flex;
     justify-content: space-around;
     flex-direction: row;
+    color: black;
   }
   .sub-texts p{
     font-size: 20px;
@@ -3206,6 +3215,10 @@ h1{
   border: solid 1px black
 }
 
+.style-sub-category{
+  background-color: white;
+}
+
 .loader{
 
   border: 16px solid rgb(209, 209, 209);
@@ -3259,6 +3272,7 @@ h1{
 .nav-bar-root{
   margin-top: 40px !important;
   width: 100%;
+  height: 40px;
   
 }
 .nav-bar-root a{
@@ -3275,12 +3289,6 @@ h1{
   background-color: white;
 }
 
-.subnav-model-content{
- margin-top: 20px;
- padding-top: 20px;
- height: 50px;
- background-color: red;
-}
 .contact-page{
   padding-top: 20px;
   display: flex;
@@ -3294,3 +3302,71 @@ h1{
   font-size: 20px;
   text-align: center;
 }
+
+.sub-imgs img {
+  width: 100% !important;  
+  height: 100% !important;
+  text-decoration: none !important;
+  outline: none !important;
+
+}
+
+.sub-imgs a{
+  border: none !important;
+}
+
+
+.popup-models-category{
+  position: absolute;
+  width: 100%;
+  height: 2000px;
+  background-color: white;
+  z-index: 999999;
+  animation: opacity 2s;
+}
+
+.close-btn{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 10px;
+  font-size: 25px;
+  color: black;
+}
+
+.top-title{
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  color: black;
+}
+
+.container-imgs{
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+
+}
+.img-models{
+  width: auto;
+  height: 450px;
+  margin: 10px;
+}
+
+.display-none-conent{
+  display: none;
+}
+
+.subnav-model-content{
+  display: inline-block;
+  margin-top: 20px;
+  padding-top: 20px;
+  height: 50px;
+  background-color: red;
+ }
+
+ 

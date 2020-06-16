@@ -55,9 +55,8 @@ function navBar() {
         <a class="nav-link-5 w-nav-link w--nav-link-open" onClick="ShowSubCategorys('sub-baby')">BABY</a>
         <div class="style-sub-category sub-baby subs-category-ref">
               <div class="sub-baby">
-                <div class="sub-imgs">
-                  <img href="" >
-                  <img href="">
+                <div class="sub-imgs" onClick="SelectedSubCategoryModels('baby')">
+                  <img src="./media/home/menu-category/BabyCategory.jpg" >
                 </div>
                 <div class="sub-texts">
                   <p>MAN</p>
@@ -67,10 +66,9 @@ function navBar() {
          </div>
         <a class="nav-link-5 w-nav-link w--nav-link-open" onClick="ShowSubCategorys('sub-kids')" style="">KID'S</a>
         <div class="style-sub-category sub-kids subs-category-ref">
-                      <div class="sub-baby">
-                        <div class="sub-imgs">
-                          <img href="" >
-                          <img href="">
+                      <div class="sub-kids">
+                        <div class="sub-imgs" onClick="SelectedSubCategoryModels('kids')">
+                        <img src="./media/home/menu-category/KidsCategory.jpg" >
                         </div>
                         <div class="sub-texts">
                           <p>MAN</p>
@@ -78,12 +76,11 @@ function navBar() {
                         </div>
                       </div>
                  </div>
-        <a   class="nav-link-5 w-nav-link w--nav-link-open" style="">PRÉ-TEEN</a>
+        <a   class="nav-link-5 w-nav-link w--nav-link-open" onClick="ShowSubCategorys('sub-teens')" style="">PRÉ-TEEN</a>
         <div class="style-sub-category sub-teens subs-category-ref">
-                      <div class="sub-baby">
-                        <div class="sub-imgs">
-                          <img href="" >
-                          <img href="">
+                      <div class="sub-teens">
+                        <div class="sub-imgs" onClick="SelectedSubCategoryModels('pre-teen')">
+                          <img src="./media/home/menu-category/PreTeenCategory.jpg" >
                         </div>
                         <div class="sub-texts">
                           <p>MAN</p>
@@ -91,12 +88,11 @@ function navBar() {
                         </div>
                       </div>
                  </div>
-        <a   class="nav-link-5 w-nav-link w--nav-link-open" style="">MORE AGE</a>
+        <a   class="nav-link-5 w-nav-link w--nav-link-open" onClick="ShowSubCategorys('sub-moreage')" style="">MORE AGE</a>
         <div class="style-sub-category sub-moreage subs-category-ref">
-                      <div class="sub-baby">
-                        <div class="sub-imgs">
-                          <img href="" >
-                          <img href="">
+                      <div class="sub-moreage">
+                        <div class="sub-imgs" onClick="SelectedSubCategoryModels('moreage')">
+                          <img src="./media/home/menu-category/MoreAgeCategory.jpg" >
                         </div>
                         <div class="sub-texts">
                           <p>MAN</p>
@@ -104,12 +100,11 @@ function navBar() {
                         </div>
                       </div>
                  </div>
-        <a   class="nav-link-5 w-nav-link w--nav-link-open" style="">PLUS SIZE</a>
+        <a   class="nav-link-5 w-nav-link w--nav-link-open" onClick="ShowSubCategorys('sub-plussize')" style="">PLUS SIZE</a>
         <div class="style-sub-category sub-plussize subs-category-ref">
-                      <div class="sub-baby">
-                        <div class="sub-imgs">
-                          <img href="" >
-                          <img href="">
+                      <div class="sub-plussize">
+                        <div class="sub-imgs" onClick="SelectedSubCategoryModels('plussize')">
+                          <img src="./media/home/menu-category/PlusSizeCategory.jpg" >
                         </div>
                         <div class="sub-texts">
                           <p>MAN</p>
@@ -117,12 +112,11 @@ function navBar() {
                         </div>
                       </div>
                  </div>
-        <a   class="nav-link-5 w-nav-link w--nav-link-open" style="">COMERCIAL</a>
+        <a   class="nav-link-5 w-nav-link w--nav-link-open" onClick="ShowSubCategorys('sub-comercial')" style="">COMERCIAL</a>
         <div class="style-sub-category sub-comercial subs-category-ref">
-                      <div class="sub-baby">
-                        <div class="sub-imgs">
-                          <img href="" >
-                          <img href="">
+                      <div class="sub-comercial">
+                        <div class="sub-imgs" onClick="SelectedSubCategoryModels('comercial')">
+                          <img src="./media/home/menu-category/ComercialCategory.jpg" >
                         </div>
                         <div class="sub-texts">
                           <p>MAN</p>
@@ -130,12 +124,11 @@ function navBar() {
                         </div>
                       </div>
                  </div>
-        <a   class="nav-link-5 w-nav-link w--nav-link-open" style="">FASHION</a>
-        <div class="style-sub-category sun-fashion subs-category-ref">
-                      <div class="sub-baby">
-                        <div class="sub-imgs">
-                          <img href="" >
-                          <img href="">
+        <a   class="nav-link-5 w-nav-link w--nav-link-open" onClick="ShowSubCategorys('sub-fashion')" style="">FASHION</a>
+        <div class="style-sub-category sub-fashion subs-category-ref">
+                      <div class="sub-fashion">
+                        <div class="sub-imgs" onClick="SelectedSubCategoryModels('fashion')">
+                          <img src="./media/home/menu-category/FashionCategory.jpg" >
                         </div>
                         <div class="sub-texts">
                           <p>MAN</p>
@@ -143,12 +136,11 @@ function navBar() {
                         </div>
                       </div>
                  </div>
-        <a   class="nav-link-5 w-nav-link w--nav-link-open" style="">FITNESS</a>
-        <div class="style-sub-category sun-fitness subs-category-ref">
-                      <div class="sub-baby">
-                        <div class="sub-imgs">
-                          <img href="" >
-                          <img href="">
+        <a   class="nav-link-5 w-nav-link w--nav-link-open" onClick="ShowSubCategorys('sub-fitness')" style="">FITNESS</a>
+        <div class="style-sub-category sub-fitness subs-category-ref">
+                      <div class="sub-fitness">
+                        <div class="sub-imgs" onClick="SelectedSubCategoryModels('fitness')">
+                          <img src="./media/home/menu-category/FitnessCategory.jpg" >
                         </div>
                         <div class="sub-texts">
                           <p>MAN</p>
@@ -156,12 +148,11 @@ function navBar() {
                         </div>
                       </div>
                  </div>
-        <a   class="nav-link-5 w-nav-link w--nav-link-open" style="">ANDROGYNOUS</a>
+        <a   class="nav-link-5 w-nav-link w--nav-link-open" onClick="ShowSubCategorys('sub-androgynous')" style="">ANDROGYNOUS</a>
         <div class="style-sub-category sub-androgynous subs-category-ref">
-                      <div class="sub-baby">
-                        <div class="sub-imgs">
-                          <img href="" >
-                          <img href="">
+                      <div class="sub-androgynous">
+                        <div class="sub-imgs" onClick="SelectedSubCategoryModels('androgeno')">
+                          <img src="./media/home/menu-category/AndrogenoCategory.jpg" >
                         </div>
                         <div class="sub-texts">
                           <p>MAN</p>
@@ -169,12 +160,11 @@ function navBar() {
                         </div>
                       </div>
                  </div>
-        <a   class="nav-link-5 w-nav-link w--nav-link-open" style="">URBAN</a>
+        <a   class="nav-link-5 w-nav-link w--nav-link-open" onClick="ShowSubCategorys('sub-urban')" style="">URBAN</a>
         <div class="style-sub-category sub-urban subs-category-ref">
-                      <div class="sub-baby">
-                        <div class="sub-imgs">
-                          <img href="" >
-                          <img href="">
+                      <div class="sub-urban">
+                        <div class="sub-imgs" onClick="SelectedSubCategoryModels('urbano')">
+                          <img src="./media/home/menu-category/UrbanCategory.jpg" >
                         </div>
                         <div class="sub-texts">
                           <p>MAN</p>
@@ -350,3 +340,80 @@ function searchAndShowSlide() {
 
   })
 }*/
+
+function SelectedSubCategoryModels(title) {
+  var titleSub = document.querySelector('.top-title p');
+  var popupCategory = document.querySelector('.sub-category');
+  var containerImgs = document.querySelector('.container-imgs');
+
+  popupCategory.classList.remove('display-none-conent')
+  popupCategory.classList.add('popup-models-category')
+
+  switch (title) {
+    case "baby":
+      titleSub.innerHTML = "Modelos Baby";
+      window.scrollTo(0, 0);
+      break;
+    case "kids":
+      titleSub.innerHTML = "Modelos Kid's";
+      window.scrollTo(0, 0);
+      break;
+    case "pre-teen":
+      titleSub.innerHTML = "Modelos Pré-Teens";
+      containerImgs.innerHTML = '<a href="http://alicediniz.brazilmodel.com.br"><img class="img-models" src="./media/home/models-category/AliceDinizPreTeen.jpg"></a>';
+      window.scrollTo(0, 0);
+      break;
+    case "moreage":
+      titleSub.innerHTML = "Modelos More Age";
+      containerImgs.innerHTML = '<a href="http://elianesantos.brazilmodel.com.br"><img class="img-models" src="./media/home/models-category/ElianeSantosMoreAge.jpg"></a>';
+      window.scrollTo(0, 0);
+      break;
+    case "plussize":
+      titleSub.innerHTML = "Modelos Plus-Size";
+      window.scrollTo(0, 0);
+      break;
+    case "comercial":
+      titleSub.innerHTML = "Modelos Comercial";
+      containerImgs.innerHTML = '<a href="http://isabellanunes.brazilmodel.com.br"><img class="img-models" src="./media/home/models-category/IsabellaNunesComercial.jpg"></a>';
+      window.scrollTo(0, 0);
+      break;
+    case "fashion":
+      titleSub.innerHTML = "Modelos Fashion";
+      containerImgs.innerHTML = `<a href="http://laviniacouto.brazilmodel.com.br"><img class="img-models" src="./media/home/models-category/LaviniaCoutoFashion.jpg"></a> 
+      <a href="http://marcosmaia.brazilmodel.com.br"><img class="img-models" src="./media/home/models-category/MarcosMaiaFashion.jpg"></a>`;
+      window.scrollTo(0, 0);
+      break;
+    case "fitness":
+      titleSub.innerHTML = "Modelos Fitness";
+      window.scrollTo(0, 0);
+      break;
+    case "androgeno":
+      titleSub.innerHTML = "Modelos Androgeno";
+      window.scrollTo(0, 0);
+      break;
+    case "urbano":
+      titleSub.innerHTML = "Modelos Urbano";
+      window.scrollTo(0, 0);
+      break;
+
+  }
+
+
+}
+
+function closeWindow() {
+  var popupCategory = document.querySelector('.sub-category');
+  popupCategory.classList.remove('popup-models-category')
+  popupCategory.classList.add('display-none-conent')
+}
+
+function displaySubMenu() {
+  var subMenu1 = document.querySelector('.sub-menu-1-ref');
+  if (subMenu1.classList[2] == "subnav-model-content") {
+    subMenu1.classList.remove("subnav-model-content")
+  } else {
+    subMenu1.classList.add("subnav-model-content")
+  }
+
+
+}
