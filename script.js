@@ -1,11 +1,15 @@
 window.onload = function () {
+  loadPageProgress();
   navBar()
   var pageName = location.pathname.split('/').pop()
   switch (pageName) {
     case "index.html":
       slideTitle();
       break;
-
+    case "facaparte.html":
+      HideOrShowCategoryModel();
+      checkUploadFiles();
+      break;
     case "shows.html":
       AudioControls();
       break;
@@ -36,7 +40,7 @@ function navBar() {
       /*navMenu.innerHTML = '';*/
       spanInset.innerHTML = `
         <nav role="navigation" class="nav-menu w-nav-menu mob-nav" style="transform: translateY(0px) translateX(0px); transition: transform 400ms ease 0s;" data-nav-menu-open="">
-        <a class="nav-link-2 w-nav-link w--nav-link-open" style="">HOME</a>
+        <a href="index.html" class="nav-link-2 w-nav-link w--nav-link-open" style="">HOME</a>
         <a class="nav-link-3 w-nav-link w--nav-link-open" style="" onClick = showCategoryModels("about-us")>SOBRE NÓS</a>
         <div class="style-sub-category about-us subs-category-ref">
         
@@ -174,16 +178,16 @@ function navBar() {
                  </div>
         </div>
         </a>
-        <a   class="nav-link-5 w-nav-link w--nav-link-open" style="">CURSOS</a>
+        <a   href="javascript:void(0)" class="nav-link-5 w-nav-link w--nav-link-open" style="" onclick="SelectedSubCategoryModels('manutencao', 'Cursos')">CURSOS</a>
         <div class="style-sub-category subs-category-ref">
           <a   class="nav-link-5 w-nav-link w--nav-link-open" style="">EM BREVE</a>
          </div>
-        <a href="./revista.html" class="nav-link-6 w-nav-link w--nav-link-open" style="">REVISTA</a>
+        <a href="javascript:void(0)" class="nav-link-6 w-nav-link w--nav-link-open" style="" onclick="SelectedSubCategoryModels('manutencao', 'Revistas')">REVISTA</a>
          <div class="style-sub-category subs-category-ref">
            <a   class="nav-link-5 w-nav-link w--nav-link-open" style="">EM BREVE</a>
         </div>
-        <a href="./eventos.html" class="nav-link-6 w-nav-link w--nav-link-open" style="">EVENTOS</a>
-        <a href="./artista.html" class="nav-link-6 w-nav-link w--nav-link-open" style="">ARTISTAS</a>
+        <a href="javascript:void(0)" class="nav-link-6 w-nav-link w--nav-link-open" style="" onclick="SelectedSubCategoryModels('manutencao', 'Eventos')">EVENTOS</a>
+        <a href="javascript:void(0)" class="nav-link-6 w-nav-link w--nav-link-open" style="" onclick="SelectedSubCategoryModels('manutencao', 'Artistas')">ARTISTAS</a>
         <div class="style-sub-category subs-category-ref">
                 <a   class="nav-link-5 w-nav-link w--nav-link-open" style="">BABY</a>
                 <a   class="nav-link-5 w-nav-link w--nav-link-open" style="">KID'S</a>
@@ -341,7 +345,7 @@ function searchAndShowSlide() {
   })
 }*/
 
-function SelectedSubCategoryModels(title) {
+function SelectedSubCategoryModels(title, menuTitle) {
   var titleSub = document.querySelector('.top-title p');
   var popupCategory = document.querySelector('.sub-category');
   var containerImgs = document.querySelector('.container-imgs');
@@ -352,47 +356,81 @@ function SelectedSubCategoryModels(title) {
   switch (title) {
     case "baby":
       titleSub.innerHTML = "Modelos Baby";
+      containerImgs.innerHTML = "";
       window.scrollTo(0, 0);
       break;
     case "kids":
       titleSub.innerHTML = "Modelos Kid's";
+      containerImgs.innerHTML = "";
       window.scrollTo(0, 0);
       break;
     case "pre-teen":
       titleSub.innerHTML = "Modelos Pré-Teens";
+      containerImgs.innerHTML = "";
       containerImgs.innerHTML = '<a href="http://alicediniz.brazilmodel.com.br"><img class="img-models" src="./media/home/models-category/AliceDinizPreTeen.jpg"></a>';
       window.scrollTo(0, 0);
       break;
     case "moreage":
       titleSub.innerHTML = "Modelos More Age";
+      containerImgs.innerHTML = "";
       containerImgs.innerHTML = '<a href="http://elianesantos.brazilmodel.com.br"><img class="img-models" src="./media/home/models-category/ElianeSantosMoreAge.jpg"></a>';
       window.scrollTo(0, 0);
       break;
     case "plussize":
       titleSub.innerHTML = "Modelos Plus-Size";
+      containerImgs.innerHTML = "";
       window.scrollTo(0, 0);
       break;
     case "comercial":
       titleSub.innerHTML = "Modelos Comercial";
+      containerImgs.innerHTML = "";
       containerImgs.innerHTML = '<a href="http://isabellanunes.brazilmodel.com.br"><img class="img-models" src="./media/home/models-category/IsabellaNunesComercial.jpg"></a>';
       window.scrollTo(0, 0);
       break;
     case "fashion":
       titleSub.innerHTML = "Modelos Fashion";
+      containerImgs.innerHTML = "";
       containerImgs.innerHTML = `<a href="http://laviniacouto.brazilmodel.com.br"><img class="img-models" src="./media/home/models-category/LaviniaCoutoFashion.jpg"></a> 
       <a href="http://marcosmaia.brazilmodel.com.br"><img class="img-models" src="./media/home/models-category/MarcosMaiaFashion.jpg"></a>`;
       window.scrollTo(0, 0);
       break;
     case "fitness":
       titleSub.innerHTML = "Modelos Fitness";
+      containerImgs.innerHTML = "";
       window.scrollTo(0, 0);
       break;
     case "androgeno":
       titleSub.innerHTML = "Modelos Androgeno";
+      containerImgs.innerHTML = "";
       window.scrollTo(0, 0);
       break;
     case "urbano":
       titleSub.innerHTML = "Modelos Urbano";
+      containerImgs.innerHTML = "";
+      window.scrollTo(0, 0);
+      break;
+    case "manutencao":
+      titleSub.innerHTML = menuTitle + "  em Manutenção";
+      containerImgs.innerHTML = "";
+      containerImgs.innerHTML = `<div class="msg-mnt-top"><div class="img-manutencao"><img class="img-manutencao" src ="./media/logoEmManutencao/manutencao.jpg"></div>
+                                <div class="manutencao-msg"><p>Conteúdo em criação, em breve estará disponível. Agradecemos a compreensão. </p><p>Att.: <b>Brazil Model Agency</b></p></div></div>`;
+      window.scrollTo(0, 0);
+      break;
+
+    case "sobre-nos":
+      titleSub.innerHTML = "Sobre nós";
+      containerImgs.innerHTML = "";
+      containerImgs.innerHTML = `<div class="sobre-nos-pc">
+        <p>
+          Atuante no mercado da moda, a Brazil Model Agency é uma empresa na assessoria e descoberta de novos talentos, levando até você cursos de modelo, manequim e workshop de passarela com professores altamente capacitados.Preparando os aspirantes e modelos para convenções e seletivas a nível nacional e internacional.
+           Preparando os modelos para o mercado de trabalho e para o mercado da moda. <br>Realizamos eventos corporativos, institucionais, particulares, espetáculos desportivos, produção de teatro, recepções, lançamentos de livros, workshop, desfiles, treinamentos, lançamentos de CD 's, inaugurações, feiras, shows, lançamentos de produtos, eventos gospel, danças, entre outros, de acordo com a necessidade de cada cliente.
+          Para tanto, contamos com uma equipe especializada na área e um casting de fornecedores sempre prontos para atender com qualidade, agilidade e bom gosto, buscando acima de tudo superar as expectativas do nosso cliente.
+        </p>
+        <div class="sub-team-pc">
+          <div class="sub-team-link-pc">
+            <a href="">EQUIPE BRAZIL MODEL</a></div>
+        </div>
+      </div>`
       window.scrollTo(0, 0);
       break;
 
@@ -407,12 +445,197 @@ function closeWindow() {
   popupCategory.classList.add('display-none-conent')
 }
 
-function displaySubMenu() {
+
+
+SendEventHouverButton();
+
+function SendEventHouverButton() {
   var subMenu1 = document.querySelector('.sub-menu-1-ref');
-  if (subMenu1.classList[2] == "subnav-model-content") {
-    subMenu1.classList.remove("subnav-model-content")
-  } else {
-    subMenu1.classList.add("subnav-model-content")
+  var modelButton = document.querySelector('.model-button');
+  var imgArrowMenu = document.querySelector('.arrow-menu');
+
+  modelButton.addEventListener('click', event => {
+
+    if (subMenu1.classList[2] == "subnav-model-content") {
+      modelButton.style.backgroundColor = "black";
+      modelButton.style.color = "white";
+      imgArrowMenu.setAttribute('src', './media/icon/arrowDownWhite.png');
+      subMenu1.classList.remove("subnav-model-content")
+    } else {
+      modelButton.style.color = "black";
+      imgArrowMenu.setAttribute('src', './media/icon/arrowUpBlack.png');
+      modelButton.style.backgroundColor = "white";
+      subMenu1.classList.add("subnav-model-content")
+    }
+  })
+
+
+  subMenu1.addEventListener('click', event => {
+    if (subMenu1.classList[2] == "subnav-model-content") {
+      subMenu1.classList.remove("subnav-model-content")
+      modelButton.style.backgroundColor = "black";
+      modelButton.style.color = 'white';
+      imgArrowMenu.setAttribute('src', './media/icon/arrowDownWhite.png');
+    } else {
+      subMenu1.classList.add("subnav-model-content")
+    }
+  })
+
+  modelButton.addEventListener('mouseenter', event => {
+
+    modelButton.style.backgroundColor = "white";
+    modelButton.style.color = 'black';
+    if (subMenu1.classList[2] != "subnav-model-content") imgArrowMenu.setAttribute('src', './media/icon/arrowDownBlack.png');
+
+  })
+
+  modelButton.addEventListener('mouseout', event => {
+    if (subMenu1.classList[2] != "subnav-model-content") {
+      modelButton.style.backgroundColor = "black";
+      imgArrowMenu.setAttribute('src', './media/icon/arrowDownWhite.png');
+      modelButton.style.color = 'white';
+    }
+
+
+  })
+
+
+}
+
+function SelectedContact() {
+  var selectRefContact = document.querySelector('.img-estado-selecionado');
+  selectRefContact.innerHTML = `<div class="container-contacts-1">
+                                      <div class="img-continer">
+                                      <a href="https://api.whatsapp.com/send?phone=5531994530485"><img src="./media/facaparte/socialMedia.png"></a>
+                                      </div>
+                                      <div class="text-container">
+                                      <p></p>
+                                      </div>
+                                </div>`
+
+}
+
+function loadPageProgress() {
+  var loadDiv = document.querySelector('.div-loader');
+  loadDiv.classList.add('hidden-loader');
+}
+
+
+
+
+function HideOrShowCategoryModel() {
+  var divCategory = document.querySelector('.model-category-select');
+  var valueSelected = document.querySelector('.talent-select');
+  valueSelected.addEventListener('change', event => {
+    if (valueSelected.value === 'modelo') {
+      divCategory.style.display = 'block';
+    } else {
+      divCategory.style.display = 'none';
+    }
+  })
+
+
+
+}
+
+
+function checkUploadFiles() {
+  var referenceField = document.querySelectorAll('.inpt');
+  var buttonSub = document.querySelector('.w-button');
+  var isUplodead = 0;
+  var talentSelect = document.querySelector('.talent-select');
+  buttonSub.addEventListener('click', event => {
+    if (talentSelect.value === 'modelo') {
+      referenceField.forEach(input => {
+        if (input.value != "") isUplodead += 1;
+      })
+      if (isUplodead < 5) {
+
+        event.preventDefault();
+        alert('Favor selecionar as fotos para enviar...');
+      }
+      isUplodead = 0;
+    }
+
+
+  })
+
+}
+
+
+function checkLenghtMax(id, lenghtFieldMax, referenceField, errMessage1) {
+  var Entervalue = referenceField.value;
+
+  var spanError = document.createElement("p");
+  var erroNode1 = document.createTextNode(errMessage1);
+  spanError.appendChild(erroNode1);
+  spanError.className = "errorMessage";
+  spanError.classList.add(id)
+  var errorMessageShow = document.querySelectorAll('.errorMessage')
+
+
+  if (Entervalue.length > lenghtFieldMax) {
+
+    referenceField.style.backgroundColor = "#ff9999";
+    if (!errorMessageShow != 'undefined') {
+
+      spanError.appendChild(erroNode1);
+      referenceField.parentNode.insertBefore(spanError, referenceField);
+
+      var checkMessagesDuplicate = document.querySelectorAll('.' + id)
+      if (checkMessagesDuplicate.length > 1) {
+        checkMessagesDuplicate[1].remove()
+      }
+
+    }
+
+  }
+  else {
+    referenceField.style.backgroundColor = "white"
+    if (!errorMessageShow != 'undefined') {
+      errorMessageShow.forEach(indexof => {
+        indexof.classList[1] === id ? indexof.remove() : console.log(indexof.classList[1])
+      })
+    }
+  }
+
+
+}
+
+
+function checkLenghtMin(id, lenghtFieldMin, referenceField, errMessage1) {
+  var Entervalue = referenceField.value;
+
+  var spanError = document.createElement("p");
+  var erroNode1 = document.createTextNode(errMessage1);
+  spanError.appendChild(erroNode1);
+  spanError.className = "errorMessage";
+  spanError.classList.add(id)
+  var errorMessageShow = document.querySelectorAll('.errorMessage')
+
+
+  if (Entervalue.length < lenghtFieldMin) {
+
+    //referenceField.style.backgroundColor = "#ff9999";
+    if (!errorMessageShow != 'undefined') {
+
+      spanError.appendChild(erroNode1);
+      referenceField.parentNode.insertBefore(spanError, referenceField);
+      var checkMessagesDuplicate = document.querySelectorAll('.' + id)
+      if (checkMessagesDuplicate.length > 1) {
+        checkMessagesDuplicate[1].remove()
+      }
+
+    }
+
+  }
+  else {
+    //referenceField.style.backgroundColor = "white"
+    if (!errorMessageShow != 'undefined') {
+      errorMessageShow.forEach(indexof => {
+        indexof.classList[1] === id ? indexof.remove() : console.log(indexof.classList[1])
+      })
+    }
   }
 
 

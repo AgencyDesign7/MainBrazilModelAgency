@@ -6,11 +6,12 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Contato - Brazil Model Site Preview</title>
+    <title>Faça Parte - Brazil Model Agency</title>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta content="Webflow" name="generator" />
-    <link href="./css/rootStyle.css" rel="stylesheet" type="text/css" />
+
     <link href="./css/facaparte.css" rel="stylesheet" type="text/css" />
+    <link href="./css/rootStyle.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">
 
 
@@ -24,32 +25,78 @@
 </head>
 
 <body class="body">
+    <div class="div-loader">
+        <img src="./media/loading/loader.gif" alt="">
+    </div>
+    <div class="logo-image">
+        <div class="section"><a href="http://www.brazilmodel.com.br""><img src=" ./media/logo/LogoMain.png" width="500"
+                sizes="(max-width: 767px) 100vw, 500px" alt="" class="image-2" /></a></div>
+    </div>
+    <div class="sub-category display-none-conent">
+        <div class="header-category">
+            <div class="close-btn">
+                <p onclick="closeWindow()">X</p>
+            </div>
+            <div class="top-title">
+                <p>Modelos Baby</p>
+            </div>
+
+        </div>
+        <div class="container-imgs">
+
+        </div>
+    </div>
+
+
     <div class="div-block-4">
-        <div class="section"><img
-                src="./contato/contents/5e6af21a03eb1a683f004c63/5e6cefc775d1aedfc599e866_logoBrazilModel2.png"
-                width="500" sizes="(max-width: 767px) 100vw, 500px" alt="" class="image-2" /></div>
+        <div class="section"></div>
         <div data-collapse="medium" data-animation="default" data-duration="400" class="navbar-2 w-nav">
-            <div class="container-3 w-container"><a href="#" class="w-nav-brand"></a>
-                <nav role="navigation" class="nav-menu w-nav-menu desk-nav">
-                    <a href="./index.html" class="nav-link-2 w-nav-link">HOME</a>
-                    <a href="./composite.html" class="nav-link-3 w-nav-link">SOBRE NÓS</a>
-                    <a href="./book.html" class="nav-link-4 w-nav-link">MODELOS</a>
-                    <a href="./parceiros.html" class="nav-link-5 w-nav-link">CURSOS</a>
-                    <a href="./parceiros.html" class="nav-link-5 w-nav-link">REVISTA</a>
-                    <a href="./parceiros.html" class="nav-link-5 w-nav-link">EVENTOS</a>
-                    <a href="./parceiros.html" class="nav-link-5 w-nav-link">ARTISTAS</a>
-                    <a href="./parceiros.html" class="nav-link-5 w-nav-link">PARCEIROS</a>
-                    <a href="./facaparte.html" class="nav-link-6 w-nav-link">FAÇA PARTE</a>
-                    <a href="./contato.html" class="nav-link-6 w-nav-link">CONTATOS</a>
+            <div class="container-3 w-container">
+                <a href="#" class="w-nav-brand"></a>
+                <nav class="nav-bar-root">
+                    <div class="nav-content">
+                        <a href="./index.html">HOME</a>
+                        <a href="javascript:void(0)">SOBRE NÓS</a>
+                        <a href="javascript:void(0)" class="model-button">MODELOS <span class="icon-navbar-sub"><img
+                                    class="arrow-menu" src="./media/icon/arrowDownWhite.png"></span>
+                        </a>
+                        <a href="javascript:void(0)" onclick="SelectedSubCategoryModels('manutencao', 'Cursos')">CURSOS
+                            <span class="
+                            icon-navbar-sub"></span></a>
+                        <a href="javascript:void(0)"
+                            onclick="SelectedSubCategoryModels('manutencao', 'Revista')">REVISTA
+                            <span class="icon-navbar-sub"></span></a>
+                        <a href="javascript:void(0)"
+                            onclick="SelectedSubCategoryModels('manutencao', 'Eventos')">EVENTOS
+                            <span class="icon-navbar-sub"></span></a>
+                        <a href="javascript:void(0)"
+                            onclick="SelectedSubCategoryModels('manutencao', 'Artistas')">ARTISTAS
+                            <span class="icon-navbar-sub"></span></a>
+                        <a href="./parceiros.html">PARCEIROS <span class="icon-navbar-sub"></span></a>
+                        <a href="./facaparte.html">FAÇA PARTE</a>
+                        <a href="./contatos.html">CONTATOS</a>
+                    </div>
+                    <div class="display-none-conent sub-menu-1-ref">
+                        <a href="javascript:void(0)" onclick="SelectedSubCategoryModels('baby')">BABY</a>
+                        <a href="javascript:void(0)" onclick="SelectedSubCategoryModels('kids')">KID'S</a>
+                        <a href="javascript:void(0)" onclick="SelectedSubCategoryModels('pre-teen')">PRÉ-TEENS</a>
+                        <a href="javascript:void(0)" onclick="SelectedSubCategoryModels('moreage')">MORE AGE</a>
+                        <a href="javascript:void(0)" onclick="SelectedSubCategoryModels('plussize')">PLUS SIZE</a>
+                        <a href="javascript:void(0)" onclick="SelectedSubCategoryModels('comercial')">COMERCIAL</a>
+                        <a href="javascript:void(0)" onclick="SelectedSubCategoryModels('fashion')">FASHION</a>
+                        <a href="javascript:void(0)" onclick="SelectedSubCategoryModels('fitness')">FITNESS</a>
+                        <a href="javascript:void(0)" onclick="SelectedSubCategoryModels('androgeno')">ANDROGYNOUS</a>
+                        <a href="javascript:void(0)" onclick="SelectedSubCategoryModels('urbano')">URBAN</a>
+                    </div>
                 </nav>
+
                 <div class="menu-button w-nav-button">
                     <div class="icon-2 w-icon-nav-menu"></div>
                 </div>
             </div>
-            <div class="w-nav-overlay" data-wf-ignore></div>
-        </div>
 
-    </div>
+        </div>
+        <div class="w-nav-overlay" data-wf-ignore></div>
     </div>
     <div class="div-block">
         <header class="header-block">
@@ -62,28 +109,31 @@
                 </section>
                 <div class="div-block-12">
                     <div class="form-block w-form">
-                        <form id="email-form" name="email-form" data-name="Email Form" class="form">
+                        <form method="post" action="./requestDoc.php" id="email-form" name="email-form"
+                            data-name="Email Form" class="form" enctype="multipart/form-data">
                             <label for="cadastro" class="center-marker-category">DADOS CADASTRAIS</label>
 
                             <label for="Ffname" class="field-label">NOME COMPLETO*</label>
-                            <input type="text" class="text-field-2 w-input" maxlength="30" name="Ffname"
+                            <input type="text" class="text-field-2 w-input" minlength="5" maxlength="100" name="Nome"
                                 data-name="Ffname" placeholder="Digite seu nome completo" id="Ffname" required="" />
 
                             <label for="Femail" class="field-label-7">EMAIL*</label>
-                            <input type="email" class="w-input" maxlength="256" name="Femail" data-name="Femail"
+                            <input type="email" class="w-input" maxlength="100" name="Email" data-name="Femail"
                                 placeholder="Ex.: exemplo@exemplo.com.br" id="Femail" required="" />
 
                             <label for="Fidade" class="field-label-2">IDADE*</label>
-                            <input type="number" class="text-field w-input" maxlength="2" minlength="2" name="Fidade"
-                                data-name="Fidade" placeholder="Digite sua idade" id="Fidade" required="" />
+                            <input type="number" class="text-field w-input" maxlength="2" name="Idade"
+                                data-name="Fidade" placeholder="Digite sua idade" id="Fidade" required=""
+                                onkeyup="checkLenghtMax('er1',2,this,'Texto muito grande, somente 2 dígitos')" />
 
                             <label for="Fnascimento" class="field-label-3">DATA NASCIMENTO*</label>
-                            <input type="number" class="text-field-3 w-input" maxlength="256" name="Fnascimento"
+                            <input type="date" class="text-field-3 w-input" maxlength="256" name="DataNascimento"
                                 data-name="Fnascimento" placeholder="Digite sua data de nascimento" id="Fnascimento"
-                                required="" />
+                                value="1992-01-01" required="" />
 
                             <label for="Fsexo" class="field-label-4">SEXO*</label>
-                            <select id="Fsexo" name="Fsexo" data-name="Fsexo" required="" class="select-field w-select">
+                            <select id="Fsexo" name="Sexo" data-name="Sexo" required="" class="select-field
+                                w-select">
                                 <option value="">Selecionar...</option>
                                 <option value="masculino">MASCULINO</option>
                                 <option value="feminino">FEMININO</option>
@@ -91,37 +141,40 @@
 
                             <label for="Ftelefone" class="field-label-5">DDD + TELEFONE FIXO</label>
                             <input type="number" class="text-field-4 w-input" maxlength="15" minlength="11"
-                                name="Ftelefone" data-name="Ftelefone" placeholder="Ex.: 033 3333 3333"
-                                id="Ftelefone" />
+                                name="TelefoneFixo" data-name="Ftelefone" placeholder="Ex.: 033 3333-3333"
+                                id="Ftelefone"
+                                onkeyup="checkLenghtMax('er2',11,this,'Número muito grande. Coloque como no exemplo: 033 3333-3333'); checkLenghtMin('er2m',11,this,'Número muito curto. Coloque como no exemplo: 033 3333-3333')" />
 
                             <label for="Fcelular" class="field-label-6">DDD + CELULAR*</label>
-                            <input type="text" class="text-field-5 w-input" maxlength="16" minlength="11"
-                                name="Fcelular" data-name="Fcelular" placeholder="Ex.: 099 9999 9999" id="Fcelular"
-                                required="" />
+                            <input type="number" class="text-field-5 w-input" maxlength="16" minlength="11"
+                                name="TelefoneCelular" data-name="Fcelular" placeholder="Ex.: 033 9 9999-9999"
+                                id="Fcelular" required=""
+                                onkeyup="checkLenghtMax('er3',12,this,'Número muito grande. Coloque como no exemplo: 033 9 9999-9999'); checkLenghtMin('er3m',12,this,'Número muito curto. Coloque como no exemplo: 033 9 9999-9999')" />
 
                             <label for="Fendereco" class="field-label">ENDEREÇO*</label>
-                            <input type="text" class="text-field-2 w-input" maxlength="100" name="Fendereco"
+                            <input type="text" class="text-field-2 w-input" maxlength="100" name="Endereco"
                                 data-name="Fendereco" placeholder="Digite seu endereço completo" id="Fendereco"
                                 required="" />
 
                             <label for="Fnumero" class="field-label">NÚMERO*</label>
-                            <input type="number" class="text-field-2 w-input" maxlength="100" name="Fnumero"
+                            <input type="number" class="text-field-2 w-input" maxlength="4" name="Numero"
                                 data-name="Fnumero" placeholder="Digite seu número" id="Fnumero" required="" />
 
                             <label for="Fbairro" class="field-label">BAIRRO*</label>
-                            <input type="text" class="text-field-2 w-input" maxlength="100" name="Fbairro"
+                            <input type="text" class="text-field-2 w-input" maxlength="100" name="Bairro"
                                 data-name="Fbairro" placeholder="Digite seu bairro" id="Fbairro" required="" />
 
                             <label for="Fcep" class="field-label">CEP*</label>
-                            <input type="number" class="text-field-2 w-input" maxlength="100" name="Fcep"
+                            <input type="number" class="text-field-2 w-input" maxlength="100" name="Cep"
                                 data-name="Fcep" placeholder="Digite seu cep" id="Fcep" required="" />
 
                             <label for="Fcidade" class="field-label">CIDADE*</label>
-                            <input type="text" class="text-field-2 w-input" maxlength="30" name="Fcidade"
+                            <input type="text" class="text-field-2 w-input" maxlength="30" name="Cidade"
                                 data-name="Fcidade" placeholder="Digite sua cidade" id="Fcidade" required="" />
 
                             <label for="Fuf" class="field-label-4">UF*</label>
-                            <select id="Fuf" name="Fuf" data-name="Fuf" required="" class="select-field w-select">
+                            <select id="Fuf" name="UF" data-name="Fuf" required="" class="select-field
+                                w-select">
                                 <option value="">Selecionar...</option>
                                 <option value="ac">AC</option>
                                 <option value="al">AL</option>
@@ -153,16 +206,16 @@
                             </select>
 
                             <label for="Fpais" class="field-label">PAIS*</label>
-                            <input type="text" class="text-field-2 w-input" maxlength="30" name="Fpais"
-                                data-name="Fpais" placeholder="Digite seu pais" id="Fpais" required="" />
+                            <input type="text" class="text-field-2 w-input" maxlength="30" name="Pais" data-name="Fpais"
+                                placeholder="Digite seu pais" id="Fpais" required="" />
 
                             <label for="FondCh" class="field-label">ONDE CONHECEU A BRAZIL MODEL?*</label>
-                            <input type="text" class="text-field-2 w-input" maxlength="30" name="FondCh"
+                            <input type="text" class="text-field-2 w-input" maxlength="30" name="OndeConheceu"
                                 data-name="FondCh" placeholder="" id="FondCh" required="" />
 
                             <label for="Ftalent" class="field-label-4">PRETENDE FAZER O TESTE PARA?*</label>
-                            <select id="ftalent" name="ftalent" data-name="ftalent" required=""
-                                class="select-field w-select">
+                            <select id="ftalent" name="TestePara" data-name="ftalent" required=""
+                                class="select-field w-select talent-select">
                                 <option value="">Selecionar...</option>
                                 <option value="ator">ATOR</option>
                                 <option value="cantor">CANTOR</option>
@@ -176,77 +229,84 @@
                                 <option value="standup">STAND UP</option>
                                 <option value="digitalInfluence">DIGITAL INFLUENCE</option>
                             </select>
+                            <div class="model-category-select" style="display: none;">
+                                <label for="medidas" class="center-marker-category">MEDIDAS</label>
 
-                            <label for="medidas" class="center-marker-category">MEDIDAS</label>
+                                <label for="Faltura" class="field-label-2">ALTURA*</label>
+                                <input type="number" class="text-field w-input" maxlength="3" minlength="2"
+                                    name="Altura" data-name="Faltura" placeholder="Digite sua altura" id="Faltura" />
 
-                            <label for="Faltura" class="field-label-2">ALTURA*</label>
-                            <input type="number" class="text-field w-input" maxlength="3" minlength="2" name="Faltura"
-                                data-name="Faltura" placeholder="Digite sua altura" id="Faltura" required="" />
+                                <label for="Fpeso" class="field-label-2">PESO*</label>
+                                <input type="number" class="text-field w-input" maxlength="3" minlength="2" name="Peso"
+                                    data-name="Fpeso" placeholder="Digite seu peso" id="Fpeso" />
 
-                            <label for="Fpeso" class="field-label-2">PESO*</label>
-                            <input type="number" class="text-field w-input" maxlength="3" minlength="2" name="Fpeso"
-                                data-name="Fpeso" placeholder="Digite seu peso" id="Fpeso" required="" />
+                                <label for="Fmanequim" class="field-label-2">MANEQUIM*</label>
+                                <input type="number" class="text-field w-input" maxlength="3" minlength="2"
+                                    name="Manequim" data-name="Fmanequim" placeholder="Digite seu manequim"
+                                    id="Fmanequim" />
 
-                            <label for="Fmanequim" class="field-label-2">MANEQUIM*</label>
-                            <input type="number" class="text-field w-input" maxlength="3" minlength="2" name="Fmanequim"
-                                data-name="Fmanequim" placeholder="Digite seu manequim" id="Fmanequim" required="" />
+                                <label for="Fsapato" class="field-label-2">SAPATO*</label>
+                                <input type="number" class="text-field w-input" maxlength="2" minlength="2"
+                                    name="Sapato" data-name="Fsapato" placeholder="Digite seu sapato" id="Fsapato" />
 
-                            <label for="Fsapato" class="field-label-2">SAPATO*</label>
-                            <input type="number" class="text-field w-input" maxlength="2" minlength="2" name="Fsapato"
-                                data-name="Fsapato" placeholder="Digite seu sapato" id="Fsapato" required="" />
+                                <label for="Fcintura" class="field-label-2">CINTURA*</label>
+                                <input type="number" class="text-field w-input" maxlength="3" minlength="2"
+                                    name="Cintura" data-name="Fcintura" placeholder="Digite sua cintura"
+                                    id="Fcintura" />
 
-                            <label for="Fcintura" class="field-label-2">CINTURA*</label>
-                            <input type="number" class="text-field w-input" maxlength="3" minlength="2" name="Fcintura"
-                                data-name="Fcintura" placeholder="Digite sua cintura" id="Fcintura" required="" />
+                                <label for="Fquadril" class="field-label-2">QUADRIL*</label>
+                                <input type="number" class="text-field w-input" maxlength="3" minlength="2"
+                                    name="Quadril" data-name="Fquadril" placeholder="Digite seu quadril"
+                                    id="Fquadril" />
 
-                            <label for="Fquadril" class="field-label-2">QUADRIL*</label>
-                            <input type="number" class="text-field w-input" maxlength="3" minlength="2" name="Fquadril"
-                                data-name="Fquadril" placeholder="Digite seu quadril" id="Fquadril" required="" />
+                                <label for="Fbustotorax" class="field-label-2">BUSTO - TÓRAX*</label>
+                                <input type="number" class="text-field w-input" maxlength="3" minlength="2"
+                                    name="BustoTorax" data-name="Fbustotorax" placeholder="Digite sua busto-tórax"
+                                    id="Fbustotorax" />
 
-                            <label for="Fbustotorax" class="field-label-2">BUSTO - TÓRAX*</label>
-                            <input type="number" class="text-field w-input" maxlength="3" minlength="2"
-                                name="Fbustotorax" data-name="Fbustotorax" placeholder="Digite sua busto-tórax"
-                                id="Fbustotorax" required="" />
+                                <label for="Folhos" class="field-label-4">OLHOS*</label>
+                                <select id="folhos" name="Olhos" data-name="folhos" class="select-field w-select">
+                                    <option value="">Selecionar...</option>
+                                    <option value="castanhos">CASTANHOS</option>
+                                    <option value="pretos">PRETOS</option>
+                                    <option value="azuis">AZUIS</option>
+                                    <option value="verdes">VERDES</option>
+                                </select>
 
-                            <label for="Folhos" class="field-label-4">OLHOS*</label>
-                            <select id="folhos" name="folhos" data-name="folhos" required=""
-                                class="select-field w-select">
-                                <option value="">Selecionar...</option>
-                                <option value="castanhos">CASTANHOS</option>
-                                <option value="pretos">PRETOS</option>
-                                <option value="azuis">AZUIS</option>
-                                <option value="verdes">VERDES</option>
-                            </select>
+                                <label for="Fcabelos" class="field-label-4">CABELOS*</label>
+                                <select id="fcabelos" name="Cabelos" data-name="fcabelos" class="select-field w-select">
+                                    <option value="">Selecionar...</option>
+                                    <option value="castanhos">CASTANHOS</option>
+                                    <option value="pretos">PRETOS</option>
+                                    <option value="azuis">LOIROS</option>
+                                    <option value="verdes">RUIVOS</option>
+                                </select>
 
-                            <label for="Fcabelos" class="field-label-4">CABELOS*</label>
-                            <select id="fcabelos" name="fcabelos" data-name="fcabelos" required=""
-                                class="select-field w-select">
-                                <option value="">Selecionar...</option>
-                                <option value="castanhos">CASTANHOS</option>
-                                <option value="pretos">PRETOS</option>
-                                <option value="azuis">LOIROS</option>
-                                <option value="verdes">RUIVOS</option>
-                            </select>
+                                <label for="fotos" class="center-marker-category">FOTOS</label>
 
-                            <label for="fotos" class="center-marker-category">FOTOS</label>
+                                <label for="LcorpoIteiro" class="field-label-7">CORPO INTEIRO*</label>
+                                <input type="file" name="file[]" data-wait="Please wait..." class="w-input inpt"
+                                    accept=".jpg,.jpeg,.png" />
 
-                            <label for="LcorpoIteiro" class="field-label-7">CORPO INTEIRO*</label>
-                            <input type="file" data-wait="Please wait..." class="w-input" />
+                                <label for="Lrosto" class="field-label-7">PERFIL*</label>
+                                <input type="file" name="file[]" data-wait="Please wait..." class="w-input inpt"
+                                    accept=".jpg,.jpeg,.png" />
 
-                            <label for="Lrosto" class="field-label-7">PERFIL*</label>
-                            <input type="file" data-wait="Please wait..." class="w-input" />
+                                <label for="Lrosto" class="field-label-7">CLOSE*</label>
+                                <input type="file" name="file[]" data-wait="Please wait..." class="w-input inpt"
+                                    accept=".jpg,.jpeg,.png" />
 
-                            <label for="Lrosto" class="field-label-7">CLOSE*</label>
-                            <input type="file" data-wait="Please wait..." class="w-input" />
+                                <label for="Lrosto" class="field-label-7">SORRINDO*</label>
+                                <input type="file" name="file[]" data-wait="Please wait..." class="w-input inpt"
+                                    accept=".jpg,.jpeg,.png" />
 
-                            <label for="Lrosto" class="field-label-7">SORRINDO*</label>
-                            <input type="file" data-wait="Please wait..." class="w-input" />
-
-                            <label for="Lrosto" class="field-label-7">CEBELO PRESO*</label>
-                            <input type="file" data-wait="Please wait..." class="w-input" />
+                                <label for="Lrosto" class="field-label-7">CEBELO PRESO*</label>
+                                <input type="file" name="file[]" data-wait="Please wait..." class="w-input inpt"
+                                    accept=".jpg,.jpeg,.png" />
+                            </div>
 
                             <label for="Fmensage" class="field-label-8">MENSAGEM</label>
-                            <textarea name="Fmensage" maxlength="5000" id="Fmensage"
+                            <textarea name="Mensagem" maxlength="5000" id="Fmensage"
                                 placeholder="Digite sua mensagem aqui" data-name="Fmensage" class="w-input"></textarea>
                             <input type="submit" value="ENVIAR" data-wait="Please wait..." class="w-button" />
 

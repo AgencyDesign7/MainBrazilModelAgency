@@ -7,7 +7,7 @@
 <head>
 
     <meta charset="utf-8" />
-    <title>Home - Brazil Model Site Preview</title>
+    <title>Contatos - Brazil Model Agency</title>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link href="./home/contents/img/webclip.png" rel="apple-touch-icon" />
     <link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">
@@ -16,10 +16,26 @@
 </head>
 
 <body class="body">
-
+    <div class="div-loader">
+        <img src="./media/loading/loader.gif" alt="">
+    </div>
     <div class="logo-image">
-        <div class="section"><a href="www.brazilmodel.com.br"><img src="./media/logo/LogoMain.png" width="500"
+        <div class="section"><a href="http://www.brazilmodel.com.br"><img src="./media/logo/LogoMain.png" width="500"
                     sizes="(max-width: 767px) 100vw, 500px" alt="" class="image-2" /></a></div>
+    </div>
+    <div class="sub-category display-none-conent">
+        <div class="header-category">
+            <div class="close-btn">
+                <p onclick="closeWindow()">X</p>
+            </div>
+            <div class="top-title">
+                <p>Modelos Baby</p>
+            </div>
+
+        </div>
+        <div class="container-imgs">
+
+        </div>
     </div>
     <!--<div data-collapse="medium" data-animation="default" data-duration="400" class="navbar-2 w-nav ">
         <div class="container-3 w-container"><a href="#" class="w-nav-brand"></a>
@@ -49,27 +65,34 @@
             <nav class="nav-bar-root">
                 <div class="nav-content">
                     <a href="./index.html">HOME</a>
-                    <a href="./composite.html">SOBRE NÓS</a>
-                    <a href="./book.html">MODELOS <span class="icon-navbar-sub"></span> </a>
-                    <a href="./parceiros.html">CURSOS <span class="icon-navbar-sub"></span></a>
-                    <a href="./contato.html">REVISTA <span class="icon-navbar-sub"></span></a>
-                    <a href="./shows.html">EVENTOS <span class="icon-navbar-sub"></span></a>
-                    <a href="./shows.html">ARTISTAS <span class="icon-navbar-sub"></span></a>
-                    <a href="./shows.html">PARCEIROS <span class="icon-navbar-sub"></span></a>
-                    <a href="./shows.html">FAÇA PARTE</a>
-                    <a href="./shows.html">CONTATOS</a>
+                    <a href="javascript:void(0)">SOBRE NÓS</a>
+                    <a href="javascript:void(0)" class="model-button">MODELOS <span class="icon-navbar-sub"><img
+                                class="arrow-menu" src="./media/icon/arrowDownWhite.png"></span>
+                    </a>
+                    <a href="javascript:void(0)" onclick="SelectedSubCategoryModels('manutencao', 'Cursos')">CURSOS
+                        <span class="
+                        icon-navbar-sub"></span></a>
+                    <a href="javascript:void(0)" onclick="SelectedSubCategoryModels('manutencao', 'Revista')">REVISTA
+                        <span class="icon-navbar-sub"></span></a>
+                    <a href="javascript:void(0)" onclick="SelectedSubCategoryModels('manutencao', 'Eventos')">EVENTOS
+                        <span class="icon-navbar-sub"></span></a>
+                    <a href="javascript:void(0)" onclick="SelectedSubCategoryModels('manutencao', 'Artistas')">ARTISTAS
+                        <span class="icon-navbar-sub"></span></a>
+                    <a href="./parceiros.html">PARCEIROS <span class="icon-navbar-sub"></span></a>
+                    <a href="./facaparte.html">FAÇA PARTE</a>
+                    <a href="./contatos.html">CONTATOS</a>
                 </div>
-                <div class="subnav-model-content">
-                    <a href="./index.html">BABY</a>
-                    <a href="./composite.html">KID'S</a>
-                    <a href="./book.html">PRÉ-TEENS</a>
-                    <a href="./parceiros.html">MORE AGE</a>
-                    <a href="./contato.html">PLUS SIZE</a>
-                    <a href="./shows.html">COMERCIAL</a>
-                    <a href="./shows.html">FASHION</a>
-                    <a href="./shows.html">FITNESS</a>
-                    <a href="./shows.html">ANDROGYNOUS</a>
-                    <a href="./shows.html">URBAN</a>
+                <div class="display-none-conent sub-menu-1-ref">
+                    <a href="javascript:void(0)" onclick="SelectedSubCategoryModels('baby')">BABY</a>
+                    <a href="javascript:void(0)" onclick="SelectedSubCategoryModels('kids')">KID'S</a>
+                    <a href="javascript:void(0)" onclick="SelectedSubCategoryModels('pre-teen')">PRÉ-TEENS</a>
+                    <a href="javascript:void(0)" onclick="SelectedSubCategoryModels('moreage')">MORE AGE</a>
+                    <a href="javascript:void(0)" onclick="SelectedSubCategoryModels('plussize')">PLUS SIZE</a>
+                    <a href="javascript:void(0)" onclick="SelectedSubCategoryModels('comercial')">COMERCIAL</a>
+                    <a href="javascript:void(0)" onclick="SelectedSubCategoryModels('fashion')">FASHION</a>
+                    <a href="javascript:void(0)" onclick="SelectedSubCategoryModels('fitness')">FITNESS</a>
+                    <a href="javascript:void(0)" onclick="SelectedSubCategoryModels('androgeno')">ANDROGYNOUS</a>
+                    <a href="javascript:void(0)" onclick="SelectedSubCategoryModels('urbano')">URBAN</a>
                 </div>
             </nav>
             <div class="menu-button w-nav-button">
@@ -83,7 +106,8 @@
         <div class="form-contacts">
             <form id="email-form" name="email-form" data-name="Email Form" class="form-contry">
                 <label for="contact-label-contry" class="contact-label-contry">SELECIONE UM ESTADO PARA CONTATO</label>
-                <select id="Fuf" name="Fuf" data-name="Fuf" required="" class="select-field  w-select w-select-contact">
+                <select id="Fuf" name="Fuf" data-name="Fuf" required="" class="select-field  w-select w-select-contact"
+                    onchange="SelectedContact()">
                     <option value="">Selecionar...</option>
                     <option value="ac">AC</option>
                     <option value="al">AL</option>
@@ -115,7 +139,7 @@
                 </select>
             </form>
         </div>
-
+        <div class="img-estado-selecionado"></div>
     </header>
     <div>
         <footer id="footer" class="footer">
