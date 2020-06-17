@@ -3499,11 +3499,13 @@ h1{
   list-style-type: solid circle;
 }
 
-.success-message{
+.sucess-mensage-form{
   background-color: #00c386;
   margin-top: 10px;
-  font-size: 17px;
+  font-size: 25px;
   color: black;
+  display: flex;
+  justify-content: center;
 }
 .w-form-fail{
   background-color: #ff9999;
