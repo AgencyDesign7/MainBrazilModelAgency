@@ -56,7 +56,7 @@
                 <nav class="nav-bar-root">
                     <div class="nav-content">
                         <a href="./index.html">HOME</a>
-                        <a href="javascript:void(0)">SOBRE NÓS</a>
+                        <a href="javascript:void(0)" onclick="SelectedSubCategoryModels('sobre-nos')">SOBRE NÓS</a>
                         <a href="javascript:void(0)" class="model-button">MODELOS <span class="icon-navbar-sub"><img
                                     class="arrow-menu" src="./media/icon/arrowDownWhite.png"></span>
                         </a>
@@ -327,8 +327,67 @@
                     src="./media/facaparte/socialMedia.png" alt=""></a></div>
     </section>
     <footer id="footer" class="footer">
-        <p class="paragraph">Create by: Brazil Model | <a href="#">Studio Designer 7</a> | © Copyright
-            2020. All rights reserved.</p>
+        <div class="footer-menu-acess">
+            <div class="main-menu">
+                <dl>
+                    <dt id="menu-top">MENU RÁPIDO</dt>
+                    <dt><a href="./index.html">Home</a></dt>
+                    <dt><a href="javascript:void(0)" onclick="SelectedSubCategoryModels('sobre-nos')">Sobre nós</a>
+                    </dt>
+                    <dt><a href="javascript:void(0)"
+                            onclick="SelectedSubCategoryModels('manutencao','Cursos')">Cursos</a></dt>
+                    <dt><a href="javascript:void(0)"
+                            onclick="SelectedSubCategoryModels('manutencao','Revista')">Revista</a></dt>
+                    <dt><a href="javascript:void(0)"
+                            onclick="SelectedSubCategoryModels('manutencao','Eventos')">Eventos</a></dt>
+                    <dt><a href="javascript:void(0)"
+                            onclick="SelectedSubCategoryModels('manutencao','Artistas')">Artistas</a></dt>
+                    <dt><a href="./parceiros.html">Parceiros</a></dt>
+                    <dt><a href="./facaparte.html">Faça Parte</a></dt>
+                </dl>
+            </div>
+            <div class="main-menu">
+                <dl>
+                    <dt id="menu-top">MODELOS</dt>
+                    <dt><a href="javascript:void(0)" onclick="SelectedSubCategoryModels('baby')">Baby</a></dt>
+                    <dt><a href="javascript:void(0)" onclick="SelectedSubCategoryModels('kids')">Kid's</a></dt>
+                    <dt><a href="javascript:void(0)" onclick="SelectedSubCategoryModels('pre-teen')">Pré-Teens</a> </dt>
+                    <dt><a href="javascript:void(0)" onclick="SelectedSubCategoryModels('moreage')">More Age</a> </dt>
+                    <dt><a href="javascript:void(0)" onclick="SelectedSubCategoryModels('plussize')">Plus Size</a> </dt>
+                    <dt><a href="javascript:void(0)" onclick="SelectedSubCategoryModels('comercial')">Comercial</a>
+                    </dt>
+                    <dt><a href="javascript:void(0)" onclick="SelectedSubCategoryModels('fashion')">Fashion</a></dt>
+                    <dt><a href="javascript:void(0)" onclick="SelectedSubCategoryModels('fitness')">Fitness</a></dt>
+                    <dt><a href="javascript:void(0)" onclick="SelectedSubCategoryModels('androgeno')">Androgynous</a>
+                    </dt>
+                    <dt><a href="javascript:void(0)" onclick="SelectedSubCategoryModels('urbano')">Urban</a></dt>
+                </dl>
+            </div>
+            <div class="main-menu">
+                <dl>
+                    <dt id="menu-top">CONTATO</dt> <span class="social-icon">
+                        <dt> <a href="https://api.whatsapp.com/send?phone=5531994530485"> <img id="iwatsapp"
+                                    src=" ./media/IconSocial/Iwatsapp.png" alt=""></a> </dt>
+                    </span>
+                </dl>
+            </div>
+            <div class="main-menu">
+                <dl>
+                    <dt id="menu-top">REDE SOCIAL</dt> <span class="social-icon">
+                        <dt><a href="https://www.facebook.com/BrazilModelAgency/"> <img id="ifacebook"
+                                    src="./media/IconSocial/Ifacebook.png" alt=""></a> </dt>
+                        <dt><a href="https://www.instagram.com/brazilmodelagency/?hl=en"> <img id="iinstagram"
+                                    src="./media/IconSocial/Iinstagram.png" alt=""></a> </dt>
+                        <dt><a href="https://api.whatsapp.com/send?phone=5531994530485"> <img id="iwatsapp"
+                                    src=" ./media/IconSocial/Iwatsapp.png" alt=""></a> </dt>
+                    </span>
+                </dl>
+            </div>
+        </div>
+        <div class="footer-footer">
+            <p class="paragraph">Create by: Brazil Model | <a href="#">Studio Designer 7</a> | © Copyright 2020. All
+                rights reserved</p>
+        </div>
     </footer>
     <script src="./script.js"></script>
     <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->

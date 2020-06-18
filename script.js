@@ -412,7 +412,7 @@ function SelectedSubCategoryModels(title, menuTitle) {
     case "manutencao":
       titleSub.innerHTML = menuTitle + "  em Manutenção";
       containerImgs.innerHTML = "";
-      containerImgs.innerHTML = `<div class="msg-mnt-top"><div class="img-manutencao"><img class="img-manutencao" src ="./media/logoEmManutencao/manutencao.jpg"></div>
+      containerImgs.innerHTML = `<div class="msg-mnt-top"><div class="img-manutencao"><img class="img-manutencao" src ="./media/logoEmManutencao/manutencao.gif"></div>
                                 <div class="manutencao-msg"><p>Conteúdo em criação, em breve estará disponível. Agradecemos a compreensão. </p><p>Att.: <b>Brazil Model Agency</b></p></div></div>`;
       window.scrollTo(0, 0);
       break;
@@ -640,3 +640,12 @@ function checkLenghtMin(id, lenghtFieldMin, referenceField, errMessage1) {
 
 
 }
+
+!function loadHideImg() {
+  document.head.insertAdjacentHTML('afterend', `<div style="display: none;">
+  <dt><img id="ifacebook" src="./media/IconSocial/IfacebookColor.png" alt=""></a>
+  <dt><img id="iinstagram" src="./media/IconSocial/IinstagramColor.png" alt=""></dt>
+  <dt><img id="iwatsapp" src=" ./media/IconSocial/IwatsappColor.png" alt=""></dt>
+</div>`)
+
+}()

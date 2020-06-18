@@ -3513,3 +3513,74 @@ h1{
   font-size: 17px;
   color: black;
 }
+
+
+.footer-menu-acess{
+  display: flex;
+  width:100%;
+  height: fit-content;
+  justify-content: space-around;
+  overflow: hidden;
+  margin-bottom: 20px;
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+    line-height: normal;
+    flex-wrap: wrap;
+
+}
+.footer{
+  padding: 0px;
+}
+dl{
+  display: inline-block;
+    
+}
+dt{
+  padding: 10px;
+}
+  
+.footer-footer{
+    display: block !important;
+  }
+body{
+  overflow-x: hidden;
+}  
+.social-icon{
+  display: flex;
+}
+.social-icon img{
+  width: auto;
+  max-height: 50px;
+}
+
+.main-menu{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.main-menu a{
+  text-decoration: none;
+  color: white;
+}
+
+.main-menu a:hover{
+  color: red;
+}
+
+#menu-top{
+  border-bottom: solid white 5px;
+  
+}
+#ifacebook:hover{
+  content: url("../media/IconSocial/IfacebookColor.png");
+}
+
+#iinstagram:hover{
+  content: url("../media/IconSocial/IinstagramColor.png");
+}
+
+#iwatsapp:hover{
+  content: url("../media/IconSocial/IwatsappColor.png");
+}
