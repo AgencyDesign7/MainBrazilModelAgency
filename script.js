@@ -384,7 +384,7 @@ function SelectedSubCategoryModels(title, menuTitle) {
     case "comercial":
       titleSub.innerHTML = "Modelos Comercial";
       containerImgs.innerHTML = "";
-      containerImgs.innerHTML = '<a href="http://isabellanunes.brazilmodel.com.br"><img class="img-models" src="./media/home/models-category/IsabellaNunesComercial.jpg"></a>';
+      containerImgs.innerHTML = '<a href="http://izabellanunes.brazilmodel.com.br"><img class="img-models" src="./media/home/models-category/IsabellaNunesComercial.jpg"></a>';
       window.scrollTo(0, 0);
       break;
     case "fashion":
@@ -648,4 +648,4 @@ function checkLenghtMin(id, lenghtFieldMin, referenceField, errMessage1) {
   <dt><img id="iwatsapp" src=" ./media/IconSocial/IwatsappColor.png" alt=""></dt>
 </div>`)
 
-}()
+}();
