@@ -3,6 +3,8 @@
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    flex-direction: column;
+    align-items: center;
 
 }
 .header-block{

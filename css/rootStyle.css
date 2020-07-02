@@ -3285,7 +3285,7 @@ h1{
 
 .nav-content{
   display: flex !important;
-  justify-content: space-between !important;
+  justify-content: space-around !important;
 }
 
 .nav-bar-root a{     
@@ -3294,6 +3294,7 @@ h1{
   color: white;
   text-decoration: none !important;
   padding:10px;
+  margin: 0px 20px 0px 20px;
   
   
 }
