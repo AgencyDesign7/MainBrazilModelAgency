@@ -54,8 +54,8 @@ function navBar() {
               <a href="">EQUIPE BRAZIL MODEL</a></div>
           </div>
         </div>
-        <a href="#" class="nav-link-4 w-nav-link w--nav-link-open" style="" onClick = showCategoryModels("sub-category-models") >MODELOS</a>
-        <div class="sub-category-models style-sub-category">
+        <a href="#" class="nav-link-4 w-nav-link w--nav-link-open" style="" onClick = showCategoryModels("sub-category-models") >MODELOS<span class="icon-navbar-sub"></span></a>
+        <div class="sub-category-models w-hidden style-sub-category">
         <a class="nav-link-5 w-nav-link w--nav-link-open" onClick="ShowSubCategorys('sub-baby')">BABY</a>
         <div class="style-sub-category sub-baby subs-category-ref">
               <div class="sub-baby">
@@ -178,7 +178,7 @@ function navBar() {
                  </div>
         </div>
         </a>
-        <a   href="javascript:void(0)" class="nav-link-5 w-nav-link w--nav-link-open" style="" onclick="SelectedSubCategoryModels('manutencao', 'Cursos')">CURSOS</a>
+        <a   href="javascript:void(0)" class="nav-link-5 w-nav-link w--nav-link-open" style="" onclick="SelectedSubCategoryModels('manutencao', 'Cursos')">CURSOS<span class="icon-navbar-sub"></span></a>
         <div class="style-sub-category subs-category-ref">
           <a   class="nav-link-5 w-nav-link w--nav-link-open" style="">EM BREVE</a>
          </div>
@@ -187,7 +187,7 @@ function navBar() {
            <a   class="nav-link-5 w-nav-link w--nav-link-open" style="">EM BREVE</a>
         </div>
         <a href="javascript:void(0)" class="nav-link-6 w-nav-link w--nav-link-open" style="" onclick="SelectedSubCategoryModels('manutencao', 'Eventos')">EVENTOS</a>
-        <a href="javascript:void(0)" class="nav-link-6 w-nav-link w--nav-link-open" style="" onclick="SelectedSubCategoryModels('manutencao', 'Artistas')">ARTISTAS</a>
+        <a href="javascript:void(0)" class="nav-link-6 w-nav-link w--nav-link-open" style="" onclick="SelectedSubCategoryModels('manutencao', 'Artistas')">ARTISTAS <span class="icon-navbar-sub"></span></a>
         <div class="style-sub-category subs-category-ref">
                 <a   class="nav-link-5 w-nav-link w--nav-link-open" style="">BABY</a>
                 <a   class="nav-link-5 w-nav-link w--nav-link-open" style="">KID'S</a>
@@ -290,7 +290,11 @@ function AudioControls() {
 
 function slideTitle() {
   var index = 0;
+  var index2 = 1;
+  var index3 = 2;
   nextSlide()
+  nextSlide2()
+  nextSlide3()
 
   function nextSlide() {
     var divImgs = document.querySelectorAll('.w-slide');
@@ -299,14 +303,46 @@ function slideTitle() {
     divImgs.forEach(element => element.style.display = "none")
     index++;
     if (index > divImgs.length) { index = 1 }
-    if (images[index - 1].naturalHeight < 1000) {
+    if (images[index - 1].naturalHeight < 0) {
       divImgs[index - 1].style.visibility = "none";
-      loader.style.display = "block";
+      loader.style.display = "none";
     } else {
       divImgs[index - 1].style.display = "block";
       loader.style.display = "none";
     }
     setTimeout(nextSlide, 7000)
+  }
+  function nextSlide2() {
+    var divImgs = document.querySelectorAll('.w-slide-2');
+    var images = document.querySelectorAll('.w-slide img')
+    var loader = document.querySelector('.loader');
+    divImgs.forEach(element => element.style.display = "none")
+    index2++;
+    if (index2 > divImgs.length) { index2 = 1 }
+    if (images[index2 - 1].naturalHeight < 0) {
+      divImgs[index2 - 1].style.visibility = "none";
+      loader.style.display = "none";
+    } else {
+      divImgs[index2 - 1].style.display = "block";
+      loader.style.display = "none";
+    }
+    setTimeout(nextSlide2, 7000)
+  }
+  function nextSlide3() {
+    var divImgs = document.querySelectorAll('.w-slide-3');
+    var images = document.querySelectorAll('.w-slide img')
+    var loader = document.querySelector('.loader');
+    divImgs.forEach(element => element.style.display = "none")
+    index3++;
+    if (index3 > divImgs.length) { index3 = 1 }
+    if (images[index3 - 1].naturalHeight < 0) {
+      divImgs[index3 - 1].style.visibility = "none";
+      loader.style.display = "none";
+    } else {
+      divImgs[index3 - 1].style.display = "block";
+      loader.style.display = "none";
+    }
+    setTimeout(nextSlide3, 7000)
   }
 
 
@@ -447,60 +483,7 @@ function closeWindow() {
 
 
 
-SendEventHouverButton();
 
-function SendEventHouverButton() {
-  var subMenu1 = document.querySelector('.sub-menu-1-ref');
-  var modelButton = document.querySelector('.model-button');
-  var imgArrowMenu = document.querySelector('.arrow-menu');
-
-  modelButton.addEventListener('click', event => {
-
-    if (subMenu1.classList[2] == "subnav-model-content") {
-      modelButton.style.backgroundColor = "black";
-      modelButton.style.color = "white";
-      imgArrowMenu.setAttribute('src', './media/icon/arrowDownWhite.png');
-      subMenu1.classList.remove("subnav-model-content")
-    } else {
-      modelButton.style.color = "black";
-      imgArrowMenu.setAttribute('src', './media/icon/arrowUpBlack.png');
-      modelButton.style.backgroundColor = "white";
-      subMenu1.classList.add("subnav-model-content")
-    }
-  })
-
-
-  subMenu1.addEventListener('click', event => {
-    if (subMenu1.classList[2] == "subnav-model-content") {
-      subMenu1.classList.remove("subnav-model-content")
-      modelButton.style.backgroundColor = "black";
-      modelButton.style.color = 'white';
-      imgArrowMenu.setAttribute('src', './media/icon/arrowDownWhite.png');
-    } else {
-      subMenu1.classList.add("subnav-model-content")
-    }
-  })
-
-  modelButton.addEventListener('mouseenter', event => {
-
-    modelButton.style.backgroundColor = "white";
-    modelButton.style.color = 'black';
-    if (subMenu1.classList[2] != "subnav-model-content") imgArrowMenu.setAttribute('src', './media/icon/arrowDownBlack.png');
-
-  })
-
-  modelButton.addEventListener('mouseout', event => {
-    if (subMenu1.classList[2] != "subnav-model-content") {
-      modelButton.style.backgroundColor = "black";
-      imgArrowMenu.setAttribute('src', './media/icon/arrowDownWhite.png');
-      modelButton.style.color = 'white';
-    }
-
-
-  })
-
-
-}
 
 function SelectedContact() {
   var selectRefContact = document.querySelector('.img-estado-selecionado');
