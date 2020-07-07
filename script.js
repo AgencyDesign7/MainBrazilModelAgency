@@ -345,9 +345,66 @@ function slideTitle() {
 }
 
 function showCategoryModels(selectedCategory) {
-  var subCategoryModels = document
-    .querySelector(`.${selectedCategory}`)
-    .classList.toggle("showContentBlock");
+  var HtmlCategoryModelsFirstSection = `
+                              <div>
+                                <li id="main-title-li">CATEGORIAS</li>
+                                <li>
+                                 <a href="javascript(0)">BABY</a>
+                                </li>
+                                <li>
+                                 <a href="javascript(0)">KID'S</a>
+                                </li>
+                                <li>
+                                 <a href="javascript(0)">PRÉ-TEENS</a>
+                                </li>
+                                <li>
+                                 <a href="javascript(0)">COMERCIAL</a>
+                                </li>
+                                <li>
+                                 <a href="javascript(0)">PLUS SIZE</a>
+                                </li>
+                                <li>
+                                 <a href="javascript(0)">MORE AGE</a>
+                                </li>
+                                <li>
+                                 <a href="javascript(0)">FASHION</a>
+                                </li>
+                                <li>
+                                 <a href="javascript(0)">FITNESS</a>
+                                </li>
+                                <li>
+                                 <a href="javascript(0)">URBAN</a>
+                                </li>
+                                <li>
+                                 <a href="javascript(0)">ANDROGENS</a>
+                                </li>
+                              </div>  
+  
+  `;
+
+  var subCategoryModels = document.querySelector(`.${selectedCategory}`);
+
+  if (subCategoryModels.classList.contains("showContentBlock")) {
+    subCategoryModels.classList.remove("showContentBlock");
+    subCategoryModels.innerHTML = "";
+  } else {
+    subCategoryModels.classList.add("showContentBlock");
+    subCategoryModels.innerHTML = HtmlCategoryModelsFirstSection;
+  }
+}
+
+function showSubs() {
+  var HtmlBabyCategody = `
+                    <div>
+                      <li>CATEGORIAS</li>
+                      <li><span></span><a href="">VOLTAR</a></li>
+                      <li>KID'S</li>
+                      <li><img src=""></li>
+                      <li>FEMININO</li>
+                      <li>MASCULINO</li>
+                      <li>TODOS</li>
+                    </div>
+  `;
 }
 
 function ShowSubCategorys(category) {
@@ -378,13 +435,13 @@ function searchAndShowSlide() {
   })
 }*/
 
-/*function SelectedSubCategoryModels(title, menuTitle) {
-  var titleSub = document.querySelector('.top-title p');
-  var popupCategory = document.querySelector('.sub-category');
-  var containerImgs = document.querySelector('.container-imgs');
+function SelectedSubCategoryModels(title, menuTitle) {
+  var titleSub = document.querySelector(".top-title p");
+  var popupCategory = document.querySelector(".sub-category");
+  var containerImgs = document.querySelector(".container-imgs");
 
-  popupCategory.classList.remove('display-none-conent')
-  popupCategory.classList.add('popup-models-category')
+  popupCategory.classList.remove("display-none-conent");
+  popupCategory.classList.add("popup-models-category");
 
   switch (title) {
     case "baby":
@@ -400,13 +457,15 @@ function searchAndShowSlide() {
     case "pre-teen":
       titleSub.innerHTML = "Modelos Pré-Teens";
       containerImgs.innerHTML = "";
-      containerImgs.innerHTML = '<a href="http://alicediniz.brazilmodel.com.br"><img class="img-models" src="./media/home/models-category/AliceDinizPreTeen.jpg"></a>';
+      containerImgs.innerHTML =
+        '<a href="http://alicediniz.brazilmodel.com.br"><img class="img-models" src="./media/home/models-category/AliceDinizPreTeen.jpg"></a>';
       window.scrollTo(0, 0);
       break;
     case "moreage":
       titleSub.innerHTML = "Modelos More Age";
       containerImgs.innerHTML = "";
-      containerImgs.innerHTML = '<a href="http://elianesantos.brazilmodel.com.br"><img class="img-models" src="./media/home/models-category/ElianeSantosMoreAge.jpg"></a>';
+      containerImgs.innerHTML =
+        '<a href="http://elianesantos.brazilmodel.com.br"><img class="img-models" src="./media/home/models-category/ElianeSantosMoreAge.jpg"></a>';
       window.scrollTo(0, 0);
       break;
     case "plussize":
@@ -417,7 +476,8 @@ function searchAndShowSlide() {
     case "comercial":
       titleSub.innerHTML = "Modelos Comercial";
       containerImgs.innerHTML = "";
-      containerImgs.innerHTML = '<a href="http://izabellanunes.brazilmodel.com.br"><img class="img-models" src="./media/home/models-category/IsabellaNunesComercial.jpg"></a>';
+      containerImgs.innerHTML =
+        '<a href="http://izabellanunes.brazilmodel.com.br"><img class="img-models" src="./media/home/models-category/IsabellaNunesComercial.jpg"></a>';
       window.scrollTo(0, 0);
       break;
     case "fashion":
@@ -463,14 +523,11 @@ function searchAndShowSlide() {
           <div class="sub-team-link-pc">
             <a href="">EQUIPE BRAZIL MODEL</a></div>
         </div>
-      </div>`
+      </div>`;
       window.scrollTo(0, 0);
       break;
-
   }
-
-
-}*/
+}
 
 function closeWindow() {
   var popupCategory = document.querySelector(".sub-category");

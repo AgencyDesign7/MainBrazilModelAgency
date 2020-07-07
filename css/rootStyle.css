@@ -2509,7 +2509,7 @@ textarea.w-input,textarea.w-select {
 }
 
 .nav-menu{
-  margin-top: 165px;
+  margin-top: 175px;
   min-height: 100%;
 }
 
@@ -2573,7 +2573,7 @@ textarea.w-input,textarea.w-select {
   width: 100%;
   height: 56px;
   border-bottom: 1px solid white;
-  overflow: hidden;
+  /*overflow: hidden;*/
   justify-content: center;
   align-items: center;
   
@@ -2897,4 +2897,37 @@ body{
 
 #iwatsapp:hover{
   content: url("../media/IconSocial/IwatsappColor.png");
+}
+
+
+.subnav-menu-model{
+  width: 352px;
+  height: fit-content;
+  position: absolute;
+  margin-left: 30px;
+  background-color: black;
+  z-index: 9999;
+}
+
+.subnav-menu-model li{
+  list-style: none;
+  border: solid 1px white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main-title-li{
+  background-color: white;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px;
+  color: black;
+}
+
+li:hover{
+  background-color: white;
+}
+li:hover a{
+  color: black;
 }

@@ -81,35 +81,59 @@
         <a href="#" class="w-nav-brand"></a>
         <nav class="nav-bar-root">
           <div class="nav-content">
-            <a href="./index.html">HOME</a>
-            <a
-              href="javascript:void(0)"
-              onclick="SelectedSubCategoryModels('sobre-nos')"
-              >SOBRE NÓS</a
-            >
-            <a href="javascript:void(0)" class="model-button"
-              >MODELOS <span class="icon-navbar-sub"></span>
-            </a>
-            <a
-              href="javascript:void(0)"
-              onclick="SelectedSubCategoryModels('manutencao', 'Cursos')"
-              >CURSOS <span class="icon-navbar-sub"></span
-            ></a>
-            <a
-              href="javascript:void(0)"
-              onclick="SelectedSubCategoryModels('manutencao', 'Revista')"
-              >REVISTA <span class="icon-navbar-sub"></span
-            ></a>
-            <a
-              href="javascript:void(0)"
-              onclick="SelectedSubCategoryModels('manutencao', 'Eventos')"
-              >EVENTOS <span class="icon-navbar-sub"></span
-            ></a>
-            <a
-              href="javascript:void(0)"
-              onclick="SelectedSubCategoryModels('manutencao', 'Artistas')"
-              >ARTISTAS <span class="icon-navbar-sub"></span
-            ></a>
+            <div>
+              <a href="./index.html">HOME</a>
+              <div class="subnav-menu"></div>
+            </div>
+            <div>
+              <a
+                href="javascript:void(0)"
+                onclick="SelectedSubCategoryModels('sobre-nos')"
+                >SOBRE NÓS</a
+              >
+              <div class="subnav-menu"></div>
+            </div>
+            <div>
+              <a
+                href="javascript:void(0)"
+                class="model-button"
+                onclick="showCategoryModels('subnav-menu-model')"
+                >MODELOS <span class="icon-navbar-sub"></span>
+              </a>
+              <div class="subnav-menu-model"></div>
+            </div>
+            <div>
+              <a
+                href="javascript:void(0)"
+                onclick="SelectedSubCategoryModels('manutencao', 'Cursos')"
+                >CURSOS <span class="icon-navbar-sub"></span
+              ></a>
+              <div class="subnav-menu"></div>
+            </div>
+            <div>
+              <a
+                href="javascript:void(0)"
+                onclick="SelectedSubCategoryModels('manutencao', 'Revista')"
+                >REVISTA <span class="icon-navbar-sub"></span
+              ></a>
+              <div class="subnav-menu"></div>
+            </div>
+            <div>
+              <a
+                href="javascript:void(0)"
+                onclick="SelectedSubCategoryModels('manutencao', 'Eventos')"
+                >EVENTOS <span class="icon-navbar-sub"></span
+              ></a>
+              <div class="subnav-menu"></div>
+            </div>
+            <div>
+              <a
+                href="javascript:void(0)"
+                onclick="SelectedSubCategoryModels('manutencao', 'Artistas')"
+                >ARTISTAS <span class="icon-navbar-sub"></span
+              ></a>
+              <div class="subnav-menu"></div>
+            </div>
             <a href="#">PARCEIROS</a>
             <a href="#">FAÇA PARTE</a>
             <a href="#">CONTATOS</a>
@@ -173,6 +197,7 @@
       </div>
       <div class="w-nav-overlay" data-wf-ignore></div>
     </div>
+
     <header id="hero" class="hero">
       <div class="hero-image-mask">
         <div class="slider-container">
