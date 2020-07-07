@@ -393,16 +393,19 @@ function showCategoryModels(selectedCategory) {
   }
 }
 
-function showSubs() {
+function showSubs(categorySelected) {
+  var nameCategory = [];
+  var categoryImg = [];
+
   var HtmlBabyCategody = `
                     <div>
                       <li>CATEGORIAS</li>
                       <li><span></span><a href="">VOLTAR</a></li>
-                      <li>KID'S</li>
-                      <li><img src=""></li>
-                      <li>FEMININO</li>
-                      <li>MASCULINO</li>
-                      <li>TODOS</li>
+                      <li>${nameCategory}</li>
+                      <li><img src="./media/home/menu-category/${categoryImg}"></li>
+                      <li><a href="#">FEMININO</a></li>
+                      <li><a href="#">MASCULINO</a></li>
+                      <li><a href="">TODOS</a></li>
                     </div>
   `;
 }
