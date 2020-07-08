@@ -37,15 +37,7 @@
         /></a>
       </div>
     </div>
-    <div class="sub-category display-none-conent">
-      <div class="header-category">
-        <div class="close-btn">
-          <p onclick="closeWindow()">X</p>
-        </div>
-        <div class="top-title">
-          <p>Modelos Baby</p>
-        </div>
-      </div>
+    <div class="sub-category display-none-conent category">
       <div class="container-imgs"></div>
     </div>
     <!--<div data-collapse="medium" data-animation="default" data-duration="400" class="navbar-2 w-nav ">
@@ -86,9 +78,7 @@
               <div class="subnav-menu"></div>
             </div>
             <div>
-              <a
-                href="javascript:void(0)"
-                onclick="SelectedSubCategoryModels('sobre-nos')"
+              <a href="javascript:void(0)" onclick="PopupMsg('sobre-nos')"
                 >SOBRE NÓS</a
               >
               <div class="subnav-menu"></div>
@@ -97,7 +87,7 @@
               <a
                 href="javascript:void(0)"
                 class="model-button"
-                onclick="showCategoryModels('subnav-menu-model')"
+                onclick="showCategoryModelsDesktop('subnav-menu-model',1)"
                 >MODELOS <span class="icon-navbar-sub"></span>
               </a>
               <div class="subnav-menu-model"></div>
@@ -105,7 +95,7 @@
             <div>
               <a
                 href="javascript:void(0)"
-                onclick="SelectedSubCategoryModels('manutencao', 'Cursos')"
+                onclick="PopupMsg('cursos', 'cursos')"
                 >CURSOS <span class="icon-navbar-sub"></span
               ></a>
               <div class="subnav-menu"></div>
@@ -113,7 +103,7 @@
             <div>
               <a
                 href="javascript:void(0)"
-                onclick="SelectedSubCategoryModels('manutencao', 'Revista')"
+                onclick="PopupMsg('manutencao', 'Revista')"
                 >REVISTA <span class="icon-navbar-sub"></span
               ></a>
               <div class="subnav-menu"></div>
@@ -121,7 +111,7 @@
             <div>
               <a
                 href="javascript:void(0)"
-                onclick="SelectedSubCategoryModels('manutencao', 'Eventos')"
+                onclick="PopupMsg('manutencao', 'Eventos')"
                 >EVENTOS <span class="icon-navbar-sub"></span
               ></a>
               <div class="subnav-menu"></div>
@@ -129,7 +119,7 @@
             <div>
               <a
                 href="javascript:void(0)"
-                onclick="SelectedSubCategoryModels('manutencao', 'Artistas')"
+                onclick="PopupMsg('manutencao', 'Artistas')"
                 >ARTISTAS <span class="icon-navbar-sub"></span
               ></a>
               <div class="subnav-menu"></div>
@@ -139,56 +129,30 @@
             <a href="#">CONTATOS</a>
           </div>
           <div class="display-none-conent sub-menu-1-ref">
-            <a
-              href="javascript:void(0)"
-              onclick="SelectedSubCategoryModels('baby')"
-              >BABY</a
-            >
-            <a
-              href="javascript:void(0)"
-              onclick="SelectedSubCategoryModels('kids')"
-              >KID'S</a
-            >
-            <a
-              href="javascript:void(0)"
-              onclick="SelectedSubCategoryModels('pre-teen')"
+            <a href="javascript:void(0)" onclick="PopupMsg('baby')">BABY</a>
+            <a href="javascript:void(0)" onclick="PopupMsg('kids')">KID'S</a>
+            <a href="javascript:void(0)" onclick="PopupMsg('pre-teen')"
               >PRÉ-TEENS</a
             >
-            <a
-              href="javascript:void(0)"
-              onclick="SelectedSubCategoryModels('moreage')"
+            <a href="javascript:void(0)" onclick="PopupMsg('moreage')"
               >MORE AGE</a
             >
-            <a
-              href="javascript:void(0)"
-              onclick="SelectedSubCategoryModels('plussize')"
+            <a href="javascript:void(0)" onclick="PopupMsg('plussize')"
               >PLUS SIZE</a
             >
-            <a
-              href="javascript:void(0)"
-              onclick="SelectedSubCategoryModels('comercial')"
+            <a href="javascript:void(0)" onclick="PopupMsg('comercial')"
               >COMERCIAL</a
             >
-            <a
-              href="javascript:void(0)"
-              onclick="SelectedSubCategoryModels('fashion')"
+            <a href="javascript:void(0)" onclick="PopupMsg('fashion')"
               >FASHION</a
             >
-            <a
-              href="javascript:void(0)"
-              onclick="SelectedSubCategoryModels('fitness')"
+            <a href="javascript:void(0)" onclick="PopupMsg('fitness')"
               >FITNESS</a
             >
-            <a
-              href="javascript:void(0)"
-              onclick="SelectedSubCategoryModels('androgeno')"
+            <a href="javascript:void(0)" onclick="PopupMsg('androgeno')"
               >ANDROGYNOUS</a
             >
-            <a
-              href="javascript:void(0)"
-              onclick="SelectedSubCategoryModels('urbano')"
-              >URBAN</a
-            >
+            <a href="javascript:void(0)" onclick="PopupMsg('urbano')">URBAN</a>
           </div>
         </nav>
         <div class="menu-button w-nav-button">
