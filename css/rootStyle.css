@@ -2011,6 +2011,10 @@ textarea.w-input,textarea.w-select {
   color: black
 }
 
+.mob-nav{
+  margin-top: 150px !important;
+}
+
 
 .flex-container {
   display: -webkit-box;
@@ -2522,6 +2526,11 @@ textarea.w-input,textarea.w-select {
 .style-sub-category{
   background-color: white;
 }
+.style-sub-category li{
+ list-style: none;
+ 
+
+}
 
 .loader{
   display: none;
@@ -2690,7 +2699,7 @@ textarea.w-input,textarea.w-select {
 }
 
 .display-none-conent{
-  display: none;
+  display: none !important;
 }
 
 .subnav-model-content{
@@ -3020,4 +3029,100 @@ li:hover a{
 .imgs-cursos img{
   width: 40vw;
   height: auto;
+  margin: 10px;
+  
+}
+
+.mobile-model-cat{
+  width: 100%;
+}
+.mobile-model-cat li{
+  color: black;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mobile-model-cat li > p{
+  margin: 0;
+  padding: 10px;
+}
+[ data-bg-black]{
+  background-color: black;
+}
+[ data-bg-black] > *{
+  color: white;
+}
+
+.container-about{
+  padding: 20px 100px;
+  color: white;
+}
+#title{
+  
+font-style: normal;
+font-weight: 500;
+font-size: 25px;
+line-height: 35px;
+text-align: center;
+}
+
+#text-aboutus{
+  
+font-style: normal;
+font-weight: normal;
+font-size: 17px;
+line-height: 26px;
+text-align: justify;
+}
+
+.equipe-brm{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 264px;
+height: 51px;
+margin-top: 80px;
+border: 1px solid #FFFFFF;
+border-radius: 89px;
+}
+.equipe-brm p{
+  margin: 0;
+  font-size: 18px;
+}
+#title-con{
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 30px;
+}
+
+.revista img{
+  width: 30vw;
+  margin: 0;
+}
+
+.subnav-events{
+  position: absolute;
+  background-color: black;
+  z-index: 9999;
+  margin-left: 35px;
+  width: 300px;
+}
+.subnav-events li{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid white;
+  justify-content: center;
+  align-items: center;
+}
+
+#back-btn{
+  flex-direction: row;
+  background-color: white;
+}
+#back-btn a{
+  color: black;
+  margin: 0;
+  padding: 5px;
 }

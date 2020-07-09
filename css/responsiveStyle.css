@@ -55,6 +55,10 @@
   }
 }
 @media screen and (max-width: 767px) {
+  .slide-2,
+  .slide-3 {
+    display: none !important;
+  }
   .w-hidden-main {
     display: inherit !important;
   }
@@ -114,6 +118,39 @@
     width: 100%;
     opacity: 1;
     animation: opacity 2s;
+  }
+  .container-about {
+    padding: 20px 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #title {
+    font-size: 20px;
+  }
+
+  #text-aboutus {
+    font-size: 15px;
+  }
+
+  .equipe-brm p {
+    margin: 0;
+  }
+
+  .popup-models-category {
+    min-height: 950px;
+  }
+  .container-imgs {
+    padding: 10px;
+  }
+  .imgs-cursos {
+    flex-direction: column;
+  }
+  .imgs-cursos img {
+    width: 100vw;
+    height: auto;
   }
 }
 @media screen and (max-width: 479px) {
@@ -541,8 +578,8 @@
     color: black;
   }
   .sub-texts p {
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 18px;
+    font-weight: normal;
   }
   .w-slider {
     position: relative;
