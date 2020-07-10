@@ -50,10 +50,10 @@ function navBarMobile() {
           </p>
           <div class="sub-team">
             <div class="sub-team-link">
-              <a href="">EQUIPE BRAZIL MODEL</a></div>
+              <a  href="javascript:void(0)">EQUIPE BRAZIL MODEL</a></div>
           </div>
         </div>
-        <a href="#" class="nav-link-4 w-nav-link w--nav-link-open menu-tops" style="" onClick = showOrHideContent("sub-category-model-mobile") >MODELOS<span class="icon-navbar-sub"></span></a>
+        <a href="#" class="nav-link-4 w-nav-link w--nav-link-open menu-tops" style="" onClick = showOrHideContent("sub-category-model-mobile") >MODELOS<span class="icon-navbar-sub mobile-icon"></span></a>
         <div class="sub-category-model-mobile w-hidden style-sub-category">
           <a class="nav-link-5 w-nav-link w--nav-link-open" onClick="ShowSCategorysMainMobile('sub-baby')">BABY</a>
           <div class="style-sub-category sub-baby subs-category-ref">
@@ -237,7 +237,7 @@ function navBarMobile() {
                  </div>
         </div>
         </a>
-        <a   href="javascript:void(0)" class="nav-link-5 w-nav-link w--nav-link-open" style="" onclick="PopupMsg('cursos', 'cursos',1)">CURSOS<span class="icon-navbar-sub"></span></a>
+        <a   href="javascript:void(0)" class="nav-link-5 w-nav-link w--nav-link-open" style="" onclick="PopupMsg('cursos', 'cursos',1)">CURSOS</a>
         <div class="style-sub-category subs-category-ref">
           <a   class="nav-link-5 w-nav-link w--nav-link-open" style="">EM BREVE</a>
          </div>
@@ -245,20 +245,36 @@ function navBarMobile() {
          <div class="style-sub-category subs-category-ref">
            <a   class="nav-link-5 w-nav-link w--nav-link-open" style="">EM BREVE</a>
         </div>
-        <a href="javascript:void(0)" class="nav-link-6 w-nav-link w--nav-link-open" style="" onclick="PopupMsg('manutencao', 'Eventos')">EVENTOS</a>
-        <a href="javascript:void(0)" class="nav-link-6 w-nav-link w--nav-link-open" style="" onclick="PopupMsg('manutencao', 'Artistas')">ARTISTAS <span class="icon-navbar-sub"></span></a>
-        <div class="style-sub-category subs-category-ref">
-                <a   class="nav-link-5 w-nav-link w--nav-link-open" style="">BABY</a>
-                <a   class="nav-link-5 w-nav-link w--nav-link-open" style="">KID'S</a>
-                <a   class="nav-link-5 w-nav-link w--nav-link-open" style="">PRÉ-TEEN</a>
-                <a   class="nav-link-5 w-nav-link w--nav-link-open" style="">MORE AGE</a>
-                <a   class="nav-link-5 w-nav-link w--nav-link-open" style="">PLUS SIZE</a>
-                <a   class="nav-link-5 w-nav-link w--nav-link-open" style="">COMERCIAL</a>
-                <a   class="nav-link-5 w-nav-link w--nav-link-open" style="">FASHION</a>
-                <a   class="nav-link-5 w-nav-link w--nav-link-open" style="">FITNESS</a>
-                <a   class="nav-link-5 w-nav-link w--nav-link-open" style="">ANDROGYNOUS</a>
-                <a   class="nav-link-5 w-nav-link w--nav-link-open" style="">URBAN</a>
+        <a href="javascript:void(0)" class="nav-link-6 w-nav-link w--nav-link-open" style="" onClick ="showOrHideContent('events-mobile-category')">EVENTOS<span class="icon-navbar-sub mobile-icon"></a>
+          <div class="style-sub-category subs-category-ref events-mobile-category">
+            <a   class="nav-link-5 w-nav-link w--nav-link-open" style="" onclick="PopupMsg('shows', 'shows',1)">SHOWS</a>
+            <a   class="nav-link-5 w-nav-link w--nav-link-open" style="" onclick="PopupMsg('desfiles', 'desfiles',1)">DESFILES</a>
+            <a   class="nav-link-5 w-nav-link w--nav-link-open" style=""onclick="PopupMsg('concursos', 'concursos',1)">CONCURSOS</a>
+            <a   class="nav-link-5 w-nav-link w--nav-link-open" style="" onclick="PopupMsg('lives', 'lives',1)">LIVES</a>
+          </div>
+        <a href="javascript:void(0)" class="nav-link-6 w-nav-link w--nav-link-open" style="" onClick="ShowOrHideSubMenus('artists-mobile-category')" >ARTISTAS</a>
+        <div class="style-sub-category subs-category-ref artists-mobile-category">
+                <div class="mobile-model-cat">
+                          <li data-bg-black><p>HOME</p></li>
+                          <li onClick="ShowOrHideSubMenus('artists-mobile-category', 1)"><span id="back-menu"></span><p>VOLTAR</p></li>
+                          <li data-bg-black><p>ARTISTAS</p></li>
                 </div>
+                <a   class="nav-link-5 w-nav-link w--nav-link-open" style="" onclick="PopupMsg('noneArtistas', 'noneArtistas',1)">ATORES</a>
+                <a   class="nav-link-5 w-nav-link w--nav-link-open" style="" onclick="PopupMsg('noneArtistas', 'noneArtistas',1)">BANDAS</a>
+                <a   class="nav-link-5 w-nav-link w--nav-link-open" style="" onClick="showOrHideContent('setanejo-categoria')">CANTORES</a>
+                  <div class="style-sub-category subs-category-ref artists-mobile-category setanejo-categoria">
+                    <a   class="nav-link-5 w-nav-link w--nav-link-open" href="sertanejo.html"  style="background-color: black; color: white !important;">SERTANEJO</a>
+                  </div>
+                <a   class="nav-link-5 w-nav-link w--nav-link-open" style="" onclick="PopupMsg('noneArtistas', 'noneArtistas',1)">COVERS</a>
+                <a   class="nav-link-5 w-nav-link w--nav-link-open" style="" onclick="PopupMsg('noneArtistas', 'noneArtistas',1)">DANÇARINOS</a>
+                <a   class="nav-link-5 w-nav-link w--nav-link-open" style="" onclick="PopupMsg('noneArtistas', 'noneArtistas',1)">DIGITAL INFLUENCERS</a>
+                <a   class="nav-link-5 w-nav-link w--nav-link-open" style="" onclick="PopupMsg('noneArtistas', 'noneArtistas',1)">DJS</a>
+                <a   class="nav-link-5 w-nav-link w--nav-link-open" style="" onclick="PopupMsg('noneArtistas', 'noneArtistas',1)">LOCUTORES</a>
+                <a   class="nav-link-5 w-nav-link w--nav-link-open" style="" onclick="PopupMsg('noneArtistas', 'noneArtistas',1)">MUSICOS</a>
+                <a   class="nav-link-5 w-nav-link w--nav-link-open" style="" onclick="PopupMsg('noneArtistas', 'noneArtistas',1)">SOSIAS</a>
+                <a   class="nav-link-5 w-nav-link w--nav-link-open" style="" onclick="PopupMsg('noneArtistas', 'noneArtistas',1)">STAND UP</a>
+                </div>
+                
         <a href="#" class="nav-link-2 w-nav-link w--nav-link-open" style="">PARCEIROS</a>
         <a href="#" class="nav-link-2 w-nav-link w--nav-link-open" style="">FAÇA PARTE</a>
         <a href="#" class="nav-link-2 w-nav-link w--nav-link-open" style="">CONTATOS</a>
@@ -269,6 +285,7 @@ function navBarMobile() {
       iconMenuClick.classList.add("w-menu-open-nav");
     }
   });
+
 
   var navMenuLink = document.querySelectorAll(".w-nav-menu a");
 
@@ -566,6 +583,8 @@ function showSubs(categorySelected) {
                     </div>
   `;
   refSpanContainer.innerHTML = HtmlBabyCategory;
+
+
 }
 
 function ShowSCategorysMainMobile(category) {
@@ -633,42 +652,139 @@ function PopupMsg(title, cat, closeMenuMobile = 0) {
     //popupCategory.classList.remove("popup-models-category");
     popupCategory.classList.add("display-none-conent");
   } else {
+    popupCategory.classList.remove("container-popup-mgs");
     popupCategory.classList.add("popup-models-category");
     popupCategory.classList.replace("category", actualCategory);
     popupCategory.classList.remove("display-none-conent");
+    setTimeout(() => {
+      popupCategory.classList.add("container-popup-mgs");
+    }, 200)
+
   }
   if (title === "revista") {
-    containerImgs.style.backgroundColor = "black";
+    popupCategory.style.backgroundColor = "black";
   }
 
   switch (title) {
     case "cursos":
-      containerImgs.style.backgroundColor = "white";
+      popupCategory.style.backgroundColor = "white";
 
       containerImgs.innerHTML = `
                       <div class="imgs-cursos ${title}">
-                          <a href=""><img src="./media/home/menu-cursos/cursoPassarela.png" ></a>
-                          <a href=""><img src="./media/home/menu-cursos/cursoFotografiaModa.png" ></a>
-                          <a href=""><img src="./media/home/menu-cursos/cursoTeatro.png" ></a>
-                          <a href=""><img src="./media/home/menu-cursos/cursoMaquiagem.png" ></a>
+                          <a  href="javascript:void(0)" onclick="PopupMsg('curso-passarela','curso-passarela',1)"><img src="./media/home/menu-cursos/cursoPassarela.png" ></a>
+                          <a  href="javascript:void(0)" onclick="PopupMsg('curso-modeloFotografica','curso-modeloFotografica',1)"><img src="./media/home/menu-cursos/cursoFotografiaModa.png" ></a>
+                          <a  href="javascript:void(0)" onclick="PopupMsg('curso-teatro','curso-teatro',1)"><img src="./media/home/menu-cursos/cursoTeatro.png" ></a>
+                          <a  href="javascript:void(0)" onclick="PopupMsg('curso-maquiagem','curso-maquiagem',1)"><img src="./media/home/menu-cursos/cursoMaquiagem.png" ></a>
                       </div>
       `;
       window.scrollTo(0, 0);
       break;
     case "revista":
-      containerImgs.style.backgroundColor = "black";
+      popupCategory.style.backgroundColor = "black";
       containerImgs.innerHTML = `
                       <div class="imgs-cursos ${title}">
-                          <a href=""><img src="./media/home/menu-revista/revista-fixa.png"></a>
+                      <a  href="javascript:void(0)"><img src="./media/home/menu-revista/revista-fixa.png"></a>
                       </div>
       `;
       window.scrollTo(0, 0);
       break;
-    case "pre-teen":
-      titleSub.innerHTML = "Modelos Pré-Teens";
-      containerImgs.innerHTML = "";
-      containerImgs.innerHTML =
-        '<a href="http://alicediniz.brazilmodel.com.br"><img class="img-models" src="./media/home/models-category/AliceDinizPreTeen.jpg"></a>';
+    case "noneArtistas":
+      popupCategory.style.backgroundColor = "black";
+      containerImgs.innerHTML = `
+                      <div class="imgs-cursos ${title}">
+                          <a  href="javascript:void(0)"><img src="./media/artistas/noneArtist.jpg"></a>
+                      </div>
+      `;
+      window.scrollTo(0, 0);
+      break;
+    case "shows":
+      popupCategory.style.backgroundColor = "black";
+      containerImgs.innerHTML = `
+                      <div class="imgs-cursos ${title}">
+                          <a  href="javascript:void(0)"><img src="./media/eventos-menu/Covid19shows.jpg"></a>
+                      </div>
+      `;
+      window.scrollTo(0, 0);
+      break;
+    case "desfiles":
+      popupCategory.style.backgroundColor = "black";
+      containerImgs.innerHTML = `
+                      <div class="imgs-cursos ${title}">
+                          <a  href="javascript:void(0)"><img src="./media/eventos-menu/Covid19desfiles.jpg"></a>
+                      </div>
+      `;
+      window.scrollTo(0, 0);
+      break;
+    case "concursos":
+      popupCategory.style.backgroundColor = "black";
+      containerImgs.innerHTML = `
+                      <div class="imgs-cursos ${title}">
+                          <a  href="javascript:void(0)"><img src="./media/eventos-menu/Covid19concursos.jpg"></a>
+                      </div>
+      `;
+      window.scrollTo(0, 0);
+      break;
+    case "lives":
+      popupCategory.style.backgroundColor = "black";
+      containerImgs.innerHTML = `
+                      
+      `;
+      window.scrollTo(0, 0);
+      break;
+    case "curso-passarela":
+      popupCategory.style.backgroundColor = "white";
+      containerImgs.innerHTML = `<div class="container-course-description">
+                                  <div class="image-course-container"><img src="./media/home/menu-cursos/imgs-cursos/curso-modeloManequim.png"></div>
+                                  <div class="description-course"><p>O Curso é totalmente On-line. Para obter seu Certificado, você deverá tirar nota 6,0 na avaliação e completar a carga horária.
+                                  Para a confecção e envio postal do certificado existe apenas uma taxa de R$ 79.90, que será enviado por e-mail e através dos Correios.
+                                  A Solicitação do Certificado é opcional e não impedirá você de estudar gratuitamente. </p></div> 
+                                  <div class="btn-aplly"><span class="apllyIcon"></span><p>CLIQUE AQUI PARA MATRICULAR AGORA</p></div>
+                                  <div class="contdown-apply"></div> 
+                                </div>
+                      
+      `;
+      window.scrollTo(0, 0);
+      break;
+    case "curso-modeloFotografica":
+      popupCategory.style.backgroundColor = "white";
+      containerImgs.innerHTML = `<div class="container-course-description">
+                                  <div class="image-course-container"><img src="./media/home/menu-cursos/imgs-cursos/curso-modeloFotografica.png"></div>
+                                  <div class="description-course"><p>O Curso é totalmente On-line. Para obter seu Certificado, você deverá tirar nota 6,0 na avaliação e completar a carga horária.
+                                  Para a confecção e envio postal do certificado existe apenas uma taxa de R$ 79.90, que será enviado por e-mail e através dos Correios.
+                                  A Solicitação do Certificado é opcional e não impedirá você de estudar gratuitamente.</p></div> 
+                                  <div class="btn-aplly"><span class="apllyIcon"></span><p>CLIQUE AQUI PARA MATRICULAR AGORA</p></div>
+                                  <div class="contdown-apply"></div> 
+                                </div>
+                      
+      `;
+      window.scrollTo(0, 0);
+      break;
+    case "curso-maquiagem":
+      popupCategory.style.backgroundColor = "white";
+      containerImgs.innerHTML = `<div class="container-course-description">
+                                  <div class="image-course-container"><img src="./media/home/menu-cursos/imgs-cursos/curso-maquiagem.png"></div>
+                                  <div class="description-course"><p>O Curso é totalmente On-line. Para obter seu Certificado, você deverá tirar nota 6,0 na avaliação e completar a carga horária.
+                                  Para a confecção e envio postal do certificado existe apenas uma taxa de R$ 39.90, que será enviado por e-mail e através dos Correios.
+                                  A Solicitação do Certificado é opcional e não impedirá você de estudar gratuitamente.</p></div> 
+                                  <div class="btn-aplly"><span class="apllyIcon"></span><p>CLIQUE AQUI PARA MATRICULAR AGORA</p></div>
+                                  <div class="contdown-apply"></div> 
+                                </div>
+                      
+      `;
+      window.scrollTo(0, 0);
+      break;
+    case "curso-teatro":
+      popupCategory.style.backgroundColor = "white";
+      containerImgs.innerHTML = `<div class="container-course-description">
+                                  <div class="image-course-container"><img src="./media/home/menu-cursos/imgs-cursos/curso-teatro.png"></div>
+                                  <div class="description-course"><p>O Curso é totalmente On-line. Para obter seu Certificado, você deverá tirar nota 6,0 na avaliação e completar a carga horária.
+                                  Para a confecção e envio postal do certificado existe apenas uma taxa de R$ 79.90, que será enviado por e-mail e através dos Correios.
+                                  A Solicitação do Certificado é opcional e não impedirá você de estudar gratuitamente.</p></div> 
+                                  <div class="btn-aplly"><span class="apllyIcon"></span><p>CLIQUE AQUI PARA MATRICULAR AGORA</p></div>
+                                  <div class="contdown-apply"></div> 
+                                </div>
+                      
+      `;
       window.scrollTo(0, 0);
       break;
     default:
@@ -821,6 +937,7 @@ function checkLenghtMin(id, lenghtFieldMin, referenceField, errMessage1) {
   var spanEvent = document.querySelector(".events-btn > span");
 
   var subdivCantores = document.querySelector(".sub-cantores-1");
+  divCantores.style.animation = "opacity 1s";
 
   artistDoc.addEventListener("click", (event) => {
     if (divArtista.classList.contains("display-none-conent")) {
@@ -862,3 +979,50 @@ function checkLenghtMin(id, lenghtFieldMin, referenceField, errMessage1) {
     }
   });
 })();
+
+function ShowOrHideSubMenus(classSelected, BackButton = 0) {
+  var arrayChildsNav = document.querySelectorAll('nav > a');
+  var ShowDiv = document.querySelector(`.${classSelected}`)
+  var ElementshowDiv = document.querySelectorAll(`.${classSelected} > a`)
+
+  if (BackButton === 0) {
+    arrayChildsNav.forEach(element => {
+      element.classList.add('noneForce');
+    })
+    ElementshowDiv.forEach(element => {
+      element.classList.remove('noneForce');
+      ShowDiv.style.display = "block";
+    })
+  } else {
+    arrayChildsNav.forEach(element => {
+      element.classList.remove('noneForce');
+    })
+    ElementshowDiv.forEach(element => {
+      element.classList.add('noneForce');
+      ShowDiv.style.display = "none";
+    })
+  }
+
+
+
+}
+
+
+function ArtistsMenus(classSelected) {
+  var divSelectd = document.querySelector(`.${classSelected}`)
+  if (!divSelectd.classList.contains('display-none-conent')) {
+    divSelectd.classList.add('display-none-conent')
+  } else {
+    divSelectd.classList.remove('display-none-conent')
+    divSelectd.innerHTML = `<p>Vinicius Cardoso Rocha Borges, nome artistico Vinicius Rocha,nascido em Divinopolis no ano de 1993, despertou o interesse pela musica aos 12 anos quando 
+    aprendeu a tocar a primeira musica no violao de seu irmão. Descendente de bisavó pianista, avó regente de orquestra e tia violoncelista na orquestra sinfônica da PM de Belo horizonte, teve de onde herdar o interesse pela musica.
+    Em 2005 Vinicius Rocha juntamente com seus amigos decidem criar uma banda de estilo alternativo denominada 360. A 360 teve varias formações até que foi decidido que Vinicius Rocha seria o vocalista. A partir deste momento o cantor despertou ainda mais o interesse pela musica. Algum tempo depois Vinicius e Breno Carvalho decidem sair da banda 360 e criam uma nova banda, Diaax, onde conseguiram durante dois anos seguidos fazer apresentação no Festival de inverno de Itapecerica-MG.
+    Algum tempo depois a rotina de vida dos integrantes foram aumentando e não tinham tempo para dedicar a banda. Então em 2013 Vinicius Rocha decide ingressar uma carreira solo na musica sertaneja, estilo que sempre pertenceu ao gosto musical desde pequeno.
+    Vinicius então lança sua carreira solo como Vinicius Rocha na 43° Divinaexpo no palco novos talentos,ganhando até o seu primeiro Fã Clube.
+    Então lança sua primeira musica de trabalho "Te Querer Tanto Assim" que em menos de uma semana teve mais de mil visualizações no youtube.</p>
+    <div class="backbtn-artist" onClick="ArtistsMenus('artist-2')"><p>VOLTAR</p></div>
+    `
+  }
+
+
+}

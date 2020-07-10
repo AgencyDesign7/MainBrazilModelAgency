@@ -13,6 +13,8 @@
 
 body {
   margin: 0;
+  height: 1319px;
+  position: relative;
 }
 
 label, p{
@@ -883,6 +885,7 @@ textarea.w-input,textarea.w-select {
   opacity: 1;
   animation: opacity 2s;
 }
+
 .icon-navbar-sub{
   display: inline-block;
   content: " ";
@@ -899,6 +902,10 @@ textarea.w-input,textarea.w-select {
     width: 15px;
     height: auto;
  }
+
+.mobile-icon{
+  margin-left: 5px ;
+}
  
 /* First 3*/
 
@@ -2433,7 +2440,7 @@ textarea.w-input,textarea.w-select {
 
 .paragraph {
   font-weight: lighter;
-  font-size: 10px;
+  font-size: 15px;
   margin-top: 5px;
 }
 
@@ -2515,6 +2522,9 @@ textarea.w-input,textarea.w-select {
 .nav-menu{
   margin-top: 175px;
   min-height: 100%;
+}
+.style-sub-category{
+  animation: opacity 1s;
 }
 
 .style-sub-category a{
@@ -2652,12 +2662,17 @@ textarea.w-input,textarea.w-select {
 .popup-models-category{
   position: absolute;
   width: 100%;
-  height: 758px;
+  height: 1120px;
   background-color: white;
   z-index: 9998;
-  animation: opacity 2s;
-  margin-top: 46px;
+  margin-top: 65px;
   overflow: hidden;
+  opacity: 0;
+  
+}
+.container-popup-mgs{
+  opacity: 1;
+  animation: opacity 2s;
 }
 
 .close-btn{
@@ -2858,7 +2873,19 @@ textarea.w-input,textarea.w-select {
 
 }
 .footer{
+  all: unset;
+  display: block !important;
   padding: 0px;
+  position: absolute;
+  bottom: 0px;
+  background-color: white;
+  width: 100%;
+  text-align: center;
+  color: black;
+}
+.footer a{
+  color: black;
+  text-decoration: none;
 }
 dl{
   display: inline-block;
@@ -2952,6 +2979,7 @@ li:hover a{
 .model-cat-sub{
   min-width: 500px;
   min-height: 407px;
+  animation: opacity 2s;
 }
 
 .title-category{
@@ -3107,6 +3135,7 @@ border-radius: 89px;
   z-index: 9999;
   margin-left: 35px;
   width: 300px;
+  animation: opacity 1s;
 }
 .subnav-events li{
   list-style: none;
@@ -3115,6 +3144,7 @@ border-radius: 89px;
   border: 1px solid white;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 #back-btn{
@@ -3125,4 +3155,163 @@ border-radius: 89px;
   color: black;
   margin: 0;
   padding: 5px;
+}
+
+.noneForce{
+  display: none !important;
+}
+
+.container-course-description{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0px 40px 40px 40px;
+}
+.image-course-container img{
+  width: 50vw;
+  height: auto;
+}
+.description-course p{
+  
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 21px;
+text-align: justify;
+padding-top: 20px;
+color: black;
+width: 50vw;
+}
+
+.btn-aplly{
+  background-color: #A0A0A0;
+  border-radius: 61px;
+  max-width: 506px;
+  max-height: 52px;
+  width: 506px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-aplly p{
+  font-style: normal;
+font-weight: bold;
+font-size: 20px;
+color: white;
+margin: 0;
+}
+
+.apllyIcon{
+  display: inline-block;
+  content: " ";
+  width:32px;
+  height:32px;
+  background-image: url('../media/icon/apllyIcon.png');
+  background-size: contain;
+  margin-right: 5px;
+}
+
+
+.title-sertanejo{
+  margin: 20px 0px 20px 0px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+.containerArtists{
+  background-color: white;
+  margin: 20px;
+  width:600px;
+  height: 300px;
+}
+.containerAllElements{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+.containerArtists{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+.containerArtists img{
+  max-width: 350px;
+  height: auto;
+}
+.menus-artists{
+  list-style: none;
+  
+}
+.menus-artists li{
+  border: 2px solid black;
+  width: 150px;
+  height: 20;
+  margin: 5px;
+  display: flex;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+}
+.menus-artists li:hover{
+  background-color: rgb(108, 199, 255);
+}
+.menus-artists a{
+  text-decoration: none;
+  font-weight: bold;
+  
+  color: black;
+  
+}
+
+.overall-msg{
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  background-color: white;
+  padding: 15px;
+  text-align: justify;
+  overflow-y: scroll;
+  animation: opacity 1s;
+}
+.overall-msg p{
+  color: black;
+  font-size: 15px;
+}
+.backbtn-artist{
+  background-color: black;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 20px;
+}
+
+.backbtn-artist p{
+  font-size: 10px;
+  color: white;
+  margin: 0;
+}
+.footerArtists{
+  background-color: white;
+  width: 100%;
+}
+[data-none-link]{
+  cursor: auto !important;
+}
+
+[data-none-link]:hover{
+  background-color: black !important;
+  color: white !important;
 }

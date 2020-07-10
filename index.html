@@ -1,319 +1,217 @@
-<!DOCTYPE html
-><!-- This site was created in Webflow. http://www.webflow.com -->
-<!-- Last Published: Sat Mar 14 2020 17:47:20 GMT+0000 (Coordinated Universal Time) -->
-<html
-  data-wf-domain="adeniltons-groovy-project.webflow.io"
-  data-wf-page="5e6af21a03eb1a62d4004c64"
-  data-wf-site="5e6af21a03eb1a683f004c63"
-  data-wf-status="1"
->
-  <!-- Mirrored from adeniltons-groovy-project.webflow.io/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 14 Mar 2020 17:48:33 GMT -->
+<!DOCTYPE html <html>
 
-  <head>
-    <meta charset="utf-8" />
-    <title>Home - Brazil Model Agency</title>
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <link href="./home/contents/img/webclip.png" rel="apple-touch-icon" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link href="./css/rootStyle.css" rel="stylesheet" type="text/css" />
-    <link href="./css/responsiveStyle.css" rel="stylesheet" type="text/css" />
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <title>Home - Brazil Model Agency</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <link href="./home/contents/img/webclip.png" rel="apple-touch-icon" />
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link href="./css/rootStyle.css" rel="stylesheet" type="text/css" />
+  <link href="./css/responsiveStyle.css" rel="stylesheet" type="text/css" />
+</head>
 
-  <body class="body">
-    <div class="div-loader">
-      <img src="./media/loading/loader.gif" alt="" />
+<body class="body">
+  <div class="div-loader">
+    <img src="./media/loading/loader.gif" alt="" />
+  </div>
+  <div class="logo-image">
+    <div class="section">
+      <a href="http://www.brazilmodel.com.br"><img src="./media/logo/LogoMain.png" alt="" class="image-2" /></a>
     </div>
-    <div class="logo-image">
-      <div class="section">
-        <a href="http://www.brazilmodel.com.br"
-          ><img src="./media/logo/LogoMain.png" alt="" class="image-2"
-        /></a>
+  </div>
+  <div class="sub-category display-none-conent category container-popup-mgs">
+    <div class="container-imgs"></div>
+  </div>
+  <div data-collapse="medium" data-animation="default" data-duration="400" class="navbar-2 w-nav">
+    <div class="container-3 w-container">
+      <a href="#" class="w-nav-brand"></a>
+      <nav class="nav-bar-root">
+        <div class="nav-content">
+          <div>
+            <a href="./index.html">HOME</a>
+            <div class="subnav-menu"></div>
+          </div>
+          <div>
+            <a href="sobrenos.html">SOBRE NÓS</a>
+            <div class="subnav-menu"></div>
+          </div>
+          <div>
+            <a href="javascript:void(0)" class="model-button"
+              onclick="showCategoryModelsDesktop('subnav-menu-model',1)">MODELOS <span class="icon-navbar-sub"></span>
+            </a>
+            <div class="subnav-menu-model"></div>
+          </div>
+          <div>
+            <a href="javascript:void(0)" onclick="PopupMsg('cursos', 'cursos')">CURSOS </a>
+            <div class="subnav-menu"></div>
+          </div>
+          <div>
+            <a href="javascript:void(0)" onclick="PopupMsg('revista', 'Revista')">REVISTA </a>
+            <div class="subnav-menu"></div>
+          </div>
+          <div>
+            <a href="javascript:void(0)" class="events-btn">EVENTOS <span class="icon-navbar-sub"></span></a>
+            <div class="subs-menus-desktop subnav-events subnav-evento display-none-conent">
+              <li onclick="PopupMsg('shows', 'shows')"><a href="javascript:void(0)">SHOWS</a></li>
+              <li onclick="PopupMsg('desfiles', 'desfiles')"><a href="javascript:void(0)">DESFILES</a></li>
+              <li onclick="PopupMsg('concursos', 'concursos')"><a href="javascript:void(0)">CONCURSOS</a></li>
+              <li onclick="PopupMsg('lives', 'lives')"><a href="javascript:void(0)">LIVES</a></li>
+            </div>
+          </div>
+          <div>
+            <a href="javascript:void(0)" class="artist-btn">ARTISTAS <span class="icon-navbar-sub"></span></a>
+            <div class="subs-menus-desktop subnav-events subnav-artista display-none-conent">
+              <div class="MainMenu-1">
+                <li onclick="PopupMsg('noneArtistas', 'noneArtistas')"><a href="javascript:void(0)">ATORES</a></li>
+              </div>
+              <div class="MainMenu-1">
+                <li onclick="PopupMsg('noneArtistas', 'noneArtistas')"><a href="javascript:void(0)">BANDAS</a></li>
+              </div>
+              <div class="MainMenu-1">
+                <li class="contores-btn">
+                  <a href="javascript:void(0)">CANTORES</a>
+                </li>
+              </div>
+              <div class="sub-cantores-1 display-none-conent">
+                <li data-none-link><a href="javascript:void(0)" data-none-link>ARTISTAS</a></li>
+                <li id="back-btn" class="voltar-artistas">
+                  <span id="back-menu"></span><a href="javascript:void(0)" class="">VOLTAR</a>
+                </li>
+                <li><a href="sertanejo.html">SERTANEJO</a></li>
+              </div>
+              <div class="MainMenu-1">
+                <li onclick="PopupMsg('noneArtistas', 'noneArtistas')"><a href="javascript:void(0)">COVERS</a></li>
+              </div>
+              <div class="MainMenu-1">
+                <li onclick="PopupMsg('noneArtistas', 'noneArtistas')"><a href="javascript:void(0)">DANÇARINOS</a></li>
+              </div>
+              <div class="MainMenu-1">
+                <li onclick="PopupMsg('noneArtistas', 'noneArtistas')"><a href="javascript:void(0)">DIGITAL
+                    INFLUENCERS</a></li>
+              </div>
+              <div class="MainMenu-1">
+                <li onclick="PopupMsg('noneArtistas', 'noneArtistas')"><a href="javascript:void(0)">DJS</a></li>
+              </div>
+              <div class="MainMenu-1">
+                <li onclick="PopupMsg('noneArtistas', 'noneArtistas')"><a href="javascript:void(0)">LOCUTORES</a></li>
+              </div>
+              <div class="MainMenu-1">
+                <li onclick="PopupMsg('noneArtistas', 'noneArtistas')"><a href="javascript:void(0)">MUSICOS</a></li>
+              </div>
+              <div class="MainMenu-1">
+                <li onclick="PopupMsg('noneArtistas', 'noneArtistas')"><a href="javascript:void(0)">SOSIAS</a></li>
+              </div>
+              <div class="MainMenu-1">
+                <li onclick="PopupMsg('noneArtistas', 'noneArtistas')"><a href="javascript:void(0)">STAND UP</a></li>
+              </div>
+            </div>
+          </div>
+          <a href="#">PARCEIROS</a>
+          <a href="#">FAÇA PARTE</a>
+          <a href="#">CONTATOS</a>
+        </div>
+        <div class="display-none-conent subnav-events sub-menu-1-ref">
+          <a href="javascript:void(0)" onclick="PopupMsg('baby')">BABY</a>
+          <a href="javascript:void(0)" onclick="PopupMsg('kids')">KID'S</a>
+          <a href="javascript:void(0)" onclick="PopupMsg('pre-teen')">PRÉ-TEENS</a>
+          <a href="javascript:void(0)" onclick="PopupMsg('moreage')">MORE AGE</a>
+          <a href="javascript:void(0)" onclick="PopupMsg('plussize')">PLUS SIZE</a>
+          <a href="javascript:void(0)" onclick="PopupMsg('comercial')">COMERCIAL</a>
+          <a href="javascript:void(0)" onclick="PopupMsg('fashion')">FASHION</a>
+          <a href="javascript:void(0)" onclick="PopupMsg('fitness')">FITNESS</a>
+          <a href="javascript:void(0)" onclick="PopupMsg('androgeno')">ANDROGYNOUS</a>
+          <a href="javascript:void(0)" onclick="PopupMsg('urbano')">URBAN</a>
+        </div>
+      </nav>
+      <div class="menu-button w-nav-button">
+        <div class="icon-2 w-icon-nav-menu"></div>
       </div>
     </div>
-    <div class="sub-category display-none-conent category">
-      <div class="container-imgs"></div>
-    </div>
-    <!--<div data-collapse="medium" data-animation="default" data-duration="400" class="navbar-2 w-nav ">
-        <div class="container-3 w-container"><a href="#" class="w-nav-brand"></a>
-            <nav role="navigation" class="nav-menu w-nav-menu">
-                <a href="./index.html" class="nav-link-2 w-nav-link">HOME</a>
-                <a href="./composite.html" class="nav-link-3 w-nav-link">SOBRE NÓS</a>
-                <a href="./book.html" class="nav-link-4 w-nav-link">MODELOS</a>
-                <a href="./parceiros.html" class="nav-link-5 w-nav-link">CURSOS</a>
-                <a href="./contato.html" class="nav-link-6 w-nav-link">REVISTA</a>
-                <a href="./shows.html" class="nav-link-6 w-nav-link">EVENTOS</a>
-                <a href="./shows.html" class="nav-link-6 w-nav-link">ARTISTAS</a>
-                <a href="./shows.html" class="nav-link-6 w-nav-link">PARCEIROS</a>
-                <a href="./shows.html" class="nav-link-6 w-nav-link">FAÇA PARTE</a>
-                <a href="./shows.html" class="nav-link-6 w-nav-link">CONTATOS</a>
-            </nav>
-            <div style="display: block; height: auto; width: 100%;"><a href="./book.html" class="sub-nav-models"
-                    style="display: table-row; position: absolute; color: red">BABY</a>
-            </div>
-            <div class="menu-button w-nav-button">
-                <div class="icon-2 w-icon-nav-menu"></div>
-            </div>
-        </div>
-        <div class="w-nav-overlay" data-wf-ignore></div>
-    </div>-->
-    <div
-      data-collapse="medium"
-      data-animation="default"
-      data-duration="400"
-      class="navbar-2 w-nav"
-    >
-      <div class="container-3 w-container">
-        <a href="#" class="w-nav-brand"></a>
-        <nav class="nav-bar-root">
-          <div class="nav-content">
-            <div>
-              <a href="./index.html">HOME</a>
-              <div class="subnav-menu"></div>
-            </div>
-            <div>
-              <a href="sobrenos.html">SOBRE NÓS</a>
-              <div class="subnav-menu"></div>
-            </div>
-            <div>
-              <a
-                href="javascript:void(0)"
-                class="model-button"
-                onclick="showCategoryModelsDesktop('subnav-menu-model',1)"
-                >MODELOS <span class="icon-navbar-sub"></span>
-              </a>
-              <div class="subnav-menu-model"></div>
-            </div>
-            <div>
-              <a
-                href="javascript:void(0)"
-                onclick="PopupMsg('cursos', 'cursos')"
-                >CURSOS <span class="icon-navbar-sub"></span
-              ></a>
-              <div class="subnav-menu"></div>
-            </div>
-            <div>
-              <a
-                href="javascript:void(0)"
-                onclick="PopupMsg('revista', 'Revista')"
-                >REVISTA <span class="icon-navbar-sub"></span
-              ></a>
-              <div class="subnav-menu"></div>
-            </div>
-            <div>
-              <a href="javascript:void(0)" class="events-btn"
-                >EVENTOS <span class="icon-navbar-sub"></span
-              ></a>
-              <div
-                class="subs-menus-desktop subnav-events subnav-evento display-none-conent"
-              >
-                <li><a href="">SHOWS</a></li>
-                <li><a href="">DESFILES</a></li>
-                <li><a href="">CONCURSOS</a></li>
-                <li><a href="">LIVES</a></li>
-              </div>
-            </div>
-            <div>
-              <a href="javascript:void(0)" class="artist-btn"
-                >ARTISTAS <span class="icon-navbar-sub"></span
-              ></a>
-              <div
-                class="subs-menus-desktop subnav-events subnav-artista display-none-conent"
-              >
-                <div class="MainMenu-1">
-                  <li><a href="">ATORES</a></li>
-                </div>
-                <div class="MainMenu-1">
-                  <li><a href="">BANDAS</a></li>
-                </div>
-                <div class="MainMenu-1">
-                  <li>
-                    <a href="javascript:void(0)" class="contores-btn"
-                      >CANTORES</a
-                    >
-                  </li>
-                </div>
-                <div class="sub-cantores-1 display-none-conent">
-                  <li><a href="">ARTISTAS</a></li>
-                  <li id="back-btn">
-                    <span id="back-menu"></span
-                    ><a href="javascript:void(0)" class="voltar-artistas"
-                      >VOLTAR</a
-                    >
-                  </li>
-                  <li><a href="">SERTANEJO</a></li>
-                </div>
-                <div class="MainMenu-1">
-                  <li><a href="">COVERS</a></li>
-                </div>
-                <div class="MainMenu-1">
-                  <li><a href="">DANÇARINOS</a></li>
-                </div>
-                <div class="MainMenu-1">
-                  <li><a href="">DIGITAL INFLUENCERS</a></li>
-                </div>
-                <div class="MainMenu-1">
-                  <li><a href="">DJS</a></li>
-                </div>
-                <div class="MainMenu-1">
-                  <li><a href="">LOCUTORES</a></li>
-                </div>
-                <div class="MainMenu-1">
-                  <li><a href="">MUSICOS</a></li>
-                </div>
-                <div class="MainMenu-1">
-                  <li><a href="">SOSIAS</a></li>
-                </div>
-                <div class="MainMenu-1">
-                  <li><a href="">STAND UP</a></li>
-                </div>
-              </div>
-            </div>
-            <a href="#">PARCEIROS</a>
-            <a href="#">FAÇA PARTE</a>
-            <a href="#">CONTATOS</a>
-          </div>
-          <div class="display-none-conent subnav-events sub-menu-1-ref">
-            <a href="javascript:void(0)" onclick="PopupMsg('baby')">BABY</a>
-            <a href="javascript:void(0)" onclick="PopupMsg('kids')">KID'S</a>
-            <a href="javascript:void(0)" onclick="PopupMsg('pre-teen')"
-              >PRÉ-TEENS</a
-            >
-            <a href="javascript:void(0)" onclick="PopupMsg('moreage')"
-              >MORE AGE</a
-            >
-            <a href="javascript:void(0)" onclick="PopupMsg('plussize')"
-              >PLUS SIZE</a
-            >
-            <a href="javascript:void(0)" onclick="PopupMsg('comercial')"
-              >COMERCIAL</a
-            >
-            <a href="javascript:void(0)" onclick="PopupMsg('fashion')"
-              >FASHION</a
-            >
-            <a href="javascript:void(0)" onclick="PopupMsg('fitness')"
-              >FITNESS</a
-            >
-            <a href="javascript:void(0)" onclick="PopupMsg('androgeno')"
-              >ANDROGYNOUS</a
-            >
-            <a href="javascript:void(0)" onclick="PopupMsg('urbano')">URBAN</a>
-          </div>
-        </nav>
-        <div class="menu-button w-nav-button">
-          <div class="icon-2 w-icon-nav-menu"></div>
-        </div>
-      </div>
-      <div class="w-nav-overlay" data-wf-ignore></div>
-    </div>
+    <div class="w-nav-overlay" data-wf-ignore></div>
+  </div>
 
-    <header id="hero" class="hero">
-      <div class="hero-image-mask">
-        <div class="slider-container slide-1">
-          <div
-            data-delay="500"
-            data-animation="fade"
-            data-autoplay="1"
-            data-easing="ease-in-out"
-            data-duration="10"
-            data-infinite="1"
-            class="slider w-slider"
-          >
-            <div class="loader"></div>
-            <div class="mask w-slider-mask">
-              <div class="w-slide">
-                <img src="./media/home/1.jpg" width="328" alt="" />
-              </div>
-              <div class="w-slide">
-                <img src="./media/home/2.jpg" width="328" alt="" />
-              </div>
-              <div class="w-slide">
-                <img src="./media/home/3.jpg" width="328" alt="" />
-              </div>
-              <!--<div class="w-slider-arrow-left"></div>
+  <header id="hero" class="hero">
+    <div class="hero-image-mask">
+      <div class="slider-container slide-1">
+        <div data-delay="500" data-animation="fade" data-autoplay="1" data-easing="ease-in-out" data-duration="10"
+          data-infinite="1" class="slider w-slider">
+          <div class="loader"></div>
+          <div class="mask w-slider-mask">
+            <div class="w-slide">
+              <img src="./media/home/1.jpg" width="328" alt="" />
+            </div>
+            <div class="w-slide">
+              <img src="./media/home/2.jpg" width="328" alt="" />
+            </div>
+            <div class="w-slide">
+              <img src="./media/home/3.jpg" width="328" alt="" />
+            </div>
+            <!--<div class="w-slider-arrow-left"></div>
                         <div class="w-slider-arrow-right"></div>
                         <div class="slide-nav w-slider-nav w-shadow w-round"></div>-->
-            </div>
-          </div>
-        </div>
-        <div class="slider-container slide-2">
-          <div
-            data-delay="500"
-            data-animation="fade"
-            data-autoplay="1"
-            data-easing="ease-in-out"
-            data-duration="10"
-            data-infinite="1"
-            class="slider w-slider"
-          >
-            <div class="loader"></div>
-            <div class="mask w-slider-mask">
-              <div class="w-slide-2">
-                <img src="./media/home/1.jpg" width="328" alt="" />
-              </div>
-              <div class="w-slide-2">
-                <img src="./media/home/2.jpg" width="328" alt="" />
-              </div>
-              <div class="w-slide-2">
-                <img src="./media/home/3.jpg" width="328" alt="" />
-              </div>
-              <!--<div class="w-slider-arrow-left"></div>
-                        <div class="w-slider-arrow-right"></div>
-                        <div class="slide-nav w-slider-nav w-shadow w-round"></div>-->
-            </div>
-          </div>
-        </div>
-        <div class="slider-container slide-3">
-          <div
-            data-delay="500"
-            data-animation="fade"
-            data-autoplay="1"
-            data-easing="ease-in-out"
-            data-duration="10"
-            data-infinite="1"
-            class="slider w-slider"
-          >
-            <div class="loader"></div>
-            <div class="mask w-slider-mask">
-              <div class="w-slide-3">
-                <img src="./media/home/1.jpg" width="328" alt="" />
-              </div>
-              <div class="w-slide-3">
-                <img src="./media/home/2.jpg" width="328" alt="" />
-              </div>
-              <div class="w-slide-3">
-                <img src="./media/home/3.jpg" width="328" alt="" />
-              </div>
-              <!--<div class="w-slider-arrow-left"></div>
-                        <div class="w-slider-arrow-right"></div>
-                        <div class="slide-nav w-slider-nav w-shadow w-round"></div>-->
-            </div>
           </div>
         </div>
       </div>
-    </header>
-    <div>
-      <footer id="footer" class="footer">
-        <div class="footer-footer">
-          <p class="paragraph">
-            Create by: Brazil Model | <a href="#">Studio Designer 7</a> | ©
-            Copyright 2020. All rights reserved
-          </p>
+      <div class="slider-container slide-2">
+        <div data-delay="500" data-animation="fade" data-autoplay="1" data-easing="ease-in-out" data-duration="10"
+          data-infinite="1" class="slider w-slider">
+          <div class="loader"></div>
+          <div class="mask w-slider-mask">
+            <div class="w-slide-2">
+              <img src="./media/home/1.jpg" width="328" alt="" />
+            </div>
+            <div class="w-slide-2">
+              <img src="./media/home/2.jpg" width="328" alt="" />
+            </div>
+            <div class="w-slide-2">
+              <img src="./media/home/3.jpg" width="328" alt="" />
+            </div>
+            <!--<div class="w-slider-arrow-left"></div>
+                        <div class="w-slider-arrow-right"></div>
+                        <div class="slide-nav w-slider-nav w-shadow w-round"></div>-->
+          </div>
         </div>
-      </footer>
+      </div>
+      <div class="slider-container slide-3">
+        <div data-delay="500" data-animation="fade" data-autoplay="1" data-easing="ease-in-out" data-duration="10"
+          data-infinite="1" class="slider w-slider">
+          <div class="loader"></div>
+          <div class="mask w-slider-mask">
+            <div class="w-slide-3">
+              <img src="./media/home/1.jpg" width="328" alt="" />
+            </div>
+            <div class="w-slide-3">
+              <img src="./media/home/2.jpg" width="328" alt="" />
+            </div>
+            <div class="w-slide-3">
+              <img src="./media/home/3.jpg" width="328" alt="" />
+            </div>
+            <!--<div class="w-slider-arrow-left"></div>
+                        <div class="w-slider-arrow-right"></div>
+                        <div class="slide-nav w-slider-nav w-shadow w-round"></div>-->
+          </div>
+        </div>
+      </div>
     </div>
+  </header>
+  <div>
+    <footer id="footer" class="footer">
+      <div class="footer-footer">
+        <p class="paragraph">
+          Create by: Brazil Model | <a href="#">Studio Designer 7</a> | ©
+          Copyright 2020. All rights reserved
+        </p>
+      </div>
+    </footer>
+  </div>
 
-    <script src="./script.js"></script>
+  <script src="./script.js"></script>
 
-    <!--[if lte IE 9
+  <!--[if lte IE 9
       ]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script
     ><![endif]-->
-  </body>
-  <!-- Mirrored from adeniltons-groovy-project.webflow.io/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 14 Mar 2020 17:48:37 GMT -->
+</body>
+<!-- Mirrored from adeniltons-groovy-project.webflow.io/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 14 Mar 2020 17:48:37 GMT -->
+
 </html>
