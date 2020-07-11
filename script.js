@@ -1,4 +1,4 @@
-window.onload = function () {
+function onLoad() {
   loadPageProgress();
   navBarMobile();
   var pageName = location.pathname.split("/").pop();
