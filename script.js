@@ -26,7 +26,7 @@ function navBarMobile() {
   var spanInset = document.querySelector(".w-nav-overlay");
   var navbarDiv = document.querySelector("[data-wf-ignore]");
 
-  iconMenuClick.addEventListener("click", () => {
+  iconMenuClick.addEventListener("click", function () {
     if (navButton.classList[2] == "w--open") {
       navButton.classList.remove("w--open");
       /*navMenu.innerHTML = `<a href="./index.html" class="nav-link-2 w-nav-link">HOME</a><a
@@ -291,11 +291,11 @@ function navBarMobile() {
   var navMenuLink = document.querySelectorAll(".w-nav-menu a");
 
   navMenuLink.forEach((element) => {
-    element.addEventListener("mouseenter", (event) => {
+    element.addEventListener("mouseenter", function (event) {
       event.target.style.backgroundColor = "white";
       event.target.style.color = "black";
     });
-    element.addEventListener("mouseout", (event) => {
+    element.addEventListener("mouseout", function (event) {
       event.target.style.backgroundColor = "";
       event.target.style.color = "white";
     });
@@ -339,7 +339,7 @@ function AudioControls() {
     iconAudioControl2.src = "./media/shows/playIcon.png";
   }
 
-  iconAudioControl1.addEventListener("click", () => {
+  iconAudioControl1.addEventListener("click", function () {
     if (!isplay1) {
       playAudio1();
       pauseAudio2();
@@ -348,7 +348,7 @@ function AudioControls() {
     }
   });
 
-  iconAudioControl2.addEventListener("click", () => {
+  iconAudioControl2.addEventListener("click", function () {
     if (!isplay2) {
       playAudio2();
       pauseAudio1();
