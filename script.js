@@ -1,6 +1,7 @@
 function onLoad() {
   loadPageProgress();
   navBarMobile();
+  alert('Work')
   var pageName = location.pathname.split("/").pop();
   switch (pageName) {
     case "index.html":
