@@ -17,6 +17,7 @@ function onLoad() {
       break;
   }
 };
+navBarMobile();
 
 function navBarMobile() {
   var navButton = document.querySelector(".menu-button");
