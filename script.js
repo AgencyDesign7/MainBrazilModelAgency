@@ -739,7 +739,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0) {
                                   Para a confecção e envio postal do certificado existe apenas uma taxa de R$ 79.90, que será enviado por e-mail e através dos Correios.
                                   A Solicitação do Certificado é opcional e não impedirá você de estudar gratuitamente. </p></div> 
                                   <div class="btn-aplly"><span class="apllyIcon"></span><p>CLIQUE AQUI PARA MATRICULAR AGORA</p></div>
-                                  <div class="contdown-apply"></div> 
+                                  <span class="countdown">countdown</span> 
                                 </div>
                       
       `;
@@ -753,7 +753,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0) {
                                   Para a confecção e envio postal do certificado existe apenas uma taxa de R$ 79.90, que será enviado por e-mail e através dos Correios.
                                   A Solicitação do Certificado é opcional e não impedirá você de estudar gratuitamente.</p></div> 
                                   <div class="btn-aplly"><span class="apllyIcon"></span><p>CLIQUE AQUI PARA MATRICULAR AGORA</p></div>
-                                  <div class="contdown-apply"></div> 
+                                  <span class="countdown">countdown</span> 
                                 </div>
                       
       `;
@@ -767,7 +767,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0) {
                                   Para a confecção e envio postal do certificado existe apenas uma taxa de R$ 39.90, que será enviado por e-mail e através dos Correios.
                                   A Solicitação do Certificado é opcional e não impedirá você de estudar gratuitamente.</p></div> 
                                   <div class="btn-aplly"><span class="apllyIcon"></span><p>CLIQUE AQUI PARA MATRICULAR AGORA</p></div>
-                                  <div class="contdown-apply"></div> 
+                                  <span class="countdown">countdown</span> 
                                 </div>
                       
       `;
@@ -781,7 +781,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0) {
                                   Para a confecção e envio postal do certificado existe apenas uma taxa de R$ 79.90, que será enviado por e-mail e através dos Correios.
                                   A Solicitação do Certificado é opcional e não impedirá você de estudar gratuitamente.</p></div> 
                                   <div class="btn-aplly"><span class="apllyIcon"></span><p>CLIQUE AQUI PARA MATRICULAR AGORA</p></div>
-                                  <div class="contdown-apply"></div> 
+                                  <span class="countdown">countdown</span> 
                                 </div>
                       
       `;
@@ -1008,21 +1008,100 @@ function ShowOrHideSubMenus(classSelected, BackButton = 0) {
 }
 
 
-function ArtistsMenus(classSelected) {
+function ArtistsMenus(classSelected, nameArtist) {
   var divSelectd = document.querySelector(`.${classSelected}`)
   if (!divSelectd.classList.contains('display-none-conent')) {
     divSelectd.classList.add('display-none-conent')
   } else {
-    divSelectd.classList.remove('display-none-conent')
-    divSelectd.innerHTML = `<p>Vinicius Cardoso Rocha Borges, nome artistico Vinicius Rocha,nascido em Divinopolis no ano de 1993, despertou o interesse pela musica aos 12 anos quando 
+    switch (nameArtist) {
+      case "Vinicius Rocha":
+        divSelectd.classList.remove('display-none-conent')
+        divSelectd.innerHTML = `<div class="title-bibliografia"><p>${nameArtist}</p></div>
+    <div><p>Vinicius Cardoso Rocha Borges, nome artistico Vinicius Rocha,nascido em Divinopolis no ano de 1993, despertou o interesse pela musica aos 12 anos quando 
     aprendeu a tocar a primeira musica no violao de seu irmão. Descendente de bisavó pianista, avó regente de orquestra e tia violoncelista na orquestra sinfônica da PM de Belo horizonte, teve de onde herdar o interesse pela musica.
     Em 2005 Vinicius Rocha juntamente com seus amigos decidem criar uma banda de estilo alternativo denominada 360. A 360 teve varias formações até que foi decidido que Vinicius Rocha seria o vocalista. A partir deste momento o cantor despertou ainda mais o interesse pela musica. Algum tempo depois Vinicius e Breno Carvalho decidem sair da banda 360 e criam uma nova banda, Diaax, onde conseguiram durante dois anos seguidos fazer apresentação no Festival de inverno de Itapecerica-MG.
     Algum tempo depois a rotina de vida dos integrantes foram aumentando e não tinham tempo para dedicar a banda. Então em 2013 Vinicius Rocha decide ingressar uma carreira solo na musica sertaneja, estilo que sempre pertenceu ao gosto musical desde pequeno.
     Vinicius então lança sua carreira solo como Vinicius Rocha na 43° Divinaexpo no palco novos talentos,ganhando até o seu primeiro Fã Clube.
-    Então lança sua primeira musica de trabalho "Te Querer Tanto Assim" que em menos de uma semana teve mais de mil visualizações no youtube.</p>
+    Então lança sua primeira musica de trabalho "Te Querer Tanto Assim" que em menos de uma semana teve mais de mil visualizações no youtube.</p></div>
     <div class="backbtn-artist" onClick="ArtistsMenus('artist-2')"><p>VOLTAR</p></div>
     `
+        break;
+    }
+
   }
 
 
 }
+
+!function contDown() {
+
+  var contDownDate = new Date("August 10, 2020 00:00:00").getTime();
+  var x = setInterval(() => {
+    var divCountdown = document.querySelector('.container-course-description > span')
+    var now = new Date().getTime();
+
+    var distance = contDownDate - now;
+
+    // time calculation for days, hors, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    console.log(divCountdown)
+    if (divCountdown) {
+      divCountdown.innerHTML = `<div class="container-contdown">
+                                    <div class="container-with-sub day-container">
+                                      <div class="container-data">
+                                        <p id="date-white">${days}</p>
+                                      </div>
+                                      <div id="sub-describe">
+                                        <p>Dias</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="container-with-sub">
+                                      <div class="container-dot">
+                                      <div class="container-data">
+                                        <p id="date-white">${hours}</p>
+    
+                                      </div>
+                                      <div class="dotsIcon"></div>
+                                      </div>
+                                      <div id="sub-describe">
+                                        <p>Horas</p>
+                                      </div>
+                                    </div>
+                                    
+                                    <div class="container-with-sub">
+                                      <div class="container-dot">
+                                        <div class="container-data">
+                                          <p id="date-white">${minutes}</p>
+                                        </div>
+                                        <div class="dotsIcon"></div>
+                                      </div>
+                                      
+                                      <div id="sub-describe">
+                                        <p>Min</p>
+                                      </div>
+                                    </div>
+                                    
+                                    <div class="container-with-sub">
+                                      <div class="container-data">
+                                        <p id="date-white">${seconds}</p>
+                                      </div>
+                                      <div id="sub-describe">
+                                        <p>Seg</p>
+                                      </div>
+                                    </div>
+                                    
+                                  </div>`
+    }
+
+
+    if (distance < 0) {
+      clearInterval(x);
+    }
+
+  }, 1000);
+
+}()

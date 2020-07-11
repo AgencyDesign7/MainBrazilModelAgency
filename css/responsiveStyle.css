@@ -2,6 +2,12 @@
   /*.w-container {
       max-width: 728px;
     }*/
+    .containerAllElements{
+      margin: 0px;
+    }
+    .containerArtists{
+      margin: 20px 0 20px 0 !important;
+    }
     .image-course-container img{
       width: 80vw;
     }
@@ -74,6 +80,10 @@
 
 }
 @media screen and (max-width: 767px) {
+  .container-contdown{
+    transform: scale(0.7);
+  }
+
   .containerArtists{
     background-color: white;
     margin: 5px 5px 20px 5px;
@@ -188,7 +198,7 @@
   }
 
   .popup-models-category {
-    min-height: 950px;
+    height: 100% + 100px;
   }
   .container-imgs {
     padding: 10px;
@@ -757,19 +767,30 @@
 }
 
 @media screen and (max-width: 980px){
+  .hero{
+    overflow: hidden !important;
+  }
   .footer{
     all: unset;
     display: block !important;
-    padding: 0px;
-    position: absolute;
+    padding: 0px !important;
+    position: absolute !important;
     bottom: 0px !important;
     background-color: white;
-    width: 100%;
-    text-align: center;
-    color: black;
+    width: 100% !important;
+    text-align: center !important;
+    color: black !important;
   }
   .footer a{
     color: black;
     text-decoration: none;
   }
 }
+@media screen and (max-width: 980px){
+  .footer{
+    bottom: unset !important;
+    margin: 0 !important;
+  }
+  
+}
+
