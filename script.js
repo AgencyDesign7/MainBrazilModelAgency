@@ -1036,6 +1036,7 @@ function ArtistsMenus(classSelected, nameArtist) {
 !function contDown() {
 
   var contDownDate = new Date("August 10, 2020 00:00:00").getTime();
+
   var x = setInterval(() => {
     var divCountdown = document.querySelector('.container-course-description > span')
     var now = new Date().getTime();
@@ -1047,7 +1048,6 @@ function ArtistsMenus(classSelected, nameArtist) {
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    console.log(divCountdown)
     if (divCountdown) {
       divCountdown.innerHTML = `<div class="container-contdown">
                                     <div class="container-with-sub day-container">
@@ -1103,5 +1103,6 @@ function ArtistsMenus(classSelected, nameArtist) {
     }
 
   }, 1000);
+
 
 }()
