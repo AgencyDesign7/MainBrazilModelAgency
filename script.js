@@ -911,7 +911,7 @@ function checkLenghtMin(id, lenghtFieldMin, referenceField, errMessage1) {
   }
 }
 
-!(function loadHideImg() {
+(function loadHideImg() {
   document.head.insertAdjacentHTML(
     "afterend",
     `<div style="display: none;">
@@ -920,7 +920,7 @@ function checkLenghtMin(id, lenghtFieldMin, referenceField, errMessage1) {
   <dt><img id="iwatsapp" src=" ./media/IconSocial/IwatsappColor.png" alt=""></dt>
 </div>`
   );
-})();
+});
 
 !(function buttonMenuEA() {
   var artistDoc = document.querySelector(".artist-btn");
