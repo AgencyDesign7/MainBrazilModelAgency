@@ -17,7 +17,6 @@ function onLoad() {
       break;
   }
 };
-navBarMobile();
 
 function navBarMobile() {
   var navButton = document.querySelector(".menu-button");
@@ -26,7 +25,7 @@ function navBarMobile() {
   var spanInset = document.querySelector(".w-nav-overlay");
   var navbarDiv = document.querySelector("[data-wf-ignore]");
 
-  iconMenuClick.addEventListener("click", function () {
+  iconMenuClick.addEventListener("click", () => {
     if (navButton.classList[2] == "w--open") {
       navButton.classList.remove("w--open");
       /*navMenu.innerHTML = `<a href="./index.html" class="nav-link-2 w-nav-link">HOME</a><a
@@ -291,11 +290,11 @@ function navBarMobile() {
   var navMenuLink = document.querySelectorAll(".w-nav-menu a");
 
   navMenuLink.forEach((element) => {
-    element.addEventListener("mouseenter", function (event) {
+    element.addEventListener("mouseenter", (event) => {
       event.target.style.backgroundColor = "white";
       event.target.style.color = "black";
     });
-    element.addEventListener("mouseout", function (event) {
+    element.addEventListener("mouseout", (event) => {
       event.target.style.backgroundColor = "";
       event.target.style.color = "white";
     });
@@ -339,7 +338,7 @@ function AudioControls() {
     iconAudioControl2.src = "./media/shows/playIcon.png";
   }
 
-  iconAudioControl1.addEventListener("click", function () {
+  iconAudioControl1.addEventListener("click", () => {
     if (!isplay1) {
       playAudio1();
       pauseAudio2();
@@ -348,7 +347,7 @@ function AudioControls() {
     }
   });
 
-  iconAudioControl2.addEventListener("click", function () {
+  iconAudioControl2.addEventListener("click", () => {
     if (!isplay2) {
       playAudio2();
       pauseAudio1();
