@@ -492,6 +492,24 @@
   .hero {
     padding: 0px;
   }
+  .aboutus{
+    display: block;
+    margin: 5px 10px;
+    
+  }
+  .container-about{
+    height: 100%;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  body{
+    height: 3000px;
+  }
+  #text-aboutus{
+    word-spacing: -1;
+  }
+
+  
   .flex-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -651,6 +669,9 @@
   }
   .w-slide {
     padding: 5px;
+  }
+  .logo-image{
+    margin-bottom: 0px;
   }
 }
 @media screen and (max-width: 479px) {

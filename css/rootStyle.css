@@ -2297,6 +2297,7 @@ textarea.w-input,textarea.w-select {
 .logo-image{
   display: block;
   height: 100px;
+  margin-bottom: 20px;
 }
 .section {
   display: -webkit-box;
@@ -3083,10 +3084,22 @@ li:hover a{
 [ data-bg-black] > *{
   color: white;
 }
-
+.aboutus{
+  display: flex;
+  justify-content: center;
+  margin: 20px 20px;
+}
 .container-about{
-  padding: 20px 100px;
+  justify-content: flex-start;
+  width: 1272px;
+  height: 310px;
+  /*padding: 20px 150px;*/
   color: white;
+  margin: 0 auto;
+  margin: 0;
+}
+.container-sub{
+  height: fit-content;
 }
 #title{
   
@@ -3098,12 +3111,12 @@ text-align: center;
 }
 
 #text-aboutus{
-  
 font-style: normal;
 font-weight: normal;
-font-size: 17px;
-line-height: 26px;
+font-size: 22px;
+line-height: 30px;
 text-align: justify;
+text-justify: distribute;
 }
 
 .equipe-brm{
