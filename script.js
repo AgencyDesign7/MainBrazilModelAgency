@@ -237,10 +237,19 @@ function navBarMobile() {
                  </div>
         </div>
         </a>
-        <a   href="javascript:void(0)" class="nav-link-5 w-nav-link w--nav-link-open" style="" onclick="PopupMsg('cursos', 'cursos',1)">CURSOS</a>
+        <a   href="javascript:void(0)" class="nav-link-5 w-nav-link w--nav-link-open" style="" onClick="ShowOrHideSubMenus('course-mobile-category')"">CURSOS<span class="icon-navbar-sub mobile-icon"></a>
         <div class="style-sub-category subs-category-ref">
-          <a   class="nav-link-5 w-nav-link w--nav-link-open" style="">EM BREVE</a>
          </div>
+         <div class="style-sub-category subs-category-ref course-mobile-category">
+                <div class="mobile-model-cat">
+                          <li onClick="ShowOrHideSubMenus('course-mobile-category', 1)"><span id="back-menu"></span><p>VOLTAR</p></li>
+                          <li data-bg-black><p>CURSOS</p></li>
+                </div>
+                <a   class="nav-link-5 w-nav-link w--nav-link-open" style="" onclick="PopupMsg('curso-passarela', 'curso-passarela',1)">PASSARELA</a>
+                <a   class="nav-link-5 w-nav-link w--nav-link-open" style="" onclick="PopupMsg('curso-modeloFotografica', 'curso-modeloFotografica',1)">FOTOGRAFIA DE MODA</a>
+                <a   class="nav-link-5 w-nav-link w--nav-link-open" style="" onclick="PopupMsg('curso-teatro', 'curso-teatro',1)">TEATRO</a>
+                <a   class="nav-link-5 w-nav-link w--nav-link-open" style="" onclick="PopupMsg('curso-maquiagem', 'curso-maquiagem',1)">MAKE-UP</a>
+                </div>
         <a href="javascript:void(0)" class="nav-link-6 w-nav-link w--nav-link-open" style="" onclick="PopupMsg('revista', 'Revistas', 1)">REVISTA</a>
          <div class="style-sub-category subs-category-ref">
            <a   class="nav-link-5 w-nav-link w--nav-link-open" style="">EM BREVE</a>
@@ -252,7 +261,7 @@ function navBarMobile() {
             <a   class="nav-link-5 w-nav-link w--nav-link-open" style=""onclick="PopupMsg('concursos', 'concursos',1)">CONCURSOS</a>
             <a   class="nav-link-5 w-nav-link w--nav-link-open" style="" onclick="PopupMsg('lives', 'lives',1)">LIVES</a>
           </div>
-        <a href="javascript:void(0)" class="nav-link-6 w-nav-link w--nav-link-open" style="" onClick="ShowOrHideSubMenus('artists-mobile-category')" >ARTISTAS</a>
+        <a href="javascript:void(0)" class="nav-link-6 w-nav-link w--nav-link-open" style="" onClick="ShowOrHideSubMenus('artists-mobile-category')" >ARTISTAS<span class="icon-navbar-sub mobile-icon"></a>
         <div class="style-sub-category subs-category-ref artists-mobile-category">
                 <div class="mobile-model-cat">
                           <li data-bg-black><p>HOME</p></li>
@@ -422,67 +431,15 @@ function slideTitle() {
 }
 
 function showCategoryModelsDesktop(selectedCategory, counterVal) {
-  var counter = 1;
-  counter = counterVal;
-  var HtmlCategoryModelsFirstSection = `
-                              <div>
-                                <li id="main-title-li">CATEGORIAS</li>
-                                <li data-link-on onclick="showSubs('Baby')">
-                                 <a href="javascript:void(0)">BABY</a>
-                                </li>
-                                <li data-link-on onclick="showSubs('Kids')">
-                                 <a data-link-on href="javascript:void(0)">KIDS</a>
-                                </li>
-                                <li data-link-on onclick="showSubs('PreTeens')">
-                                 <a href="javascript:void(0)">PRÉ-TEENS</a>
-                                </li>
-                                <li data-link-on onclick="showSubs('Commercials')">
-                                 <a href="javascript:void(0)">COMMERCIALS</a>
-                                </li>
-                                <li data-link-on onclick="showSubs('PlusSize')">
-                                 <a href="javascript:void(0)">PLUS SIZE</a>
-                                </li>
-                                <li data-link-on onclick="showSubs('MoreAge')">
-                                 <a href="javascript:void(0)">MORE AGE</a>
-                                </li>
-                                <li data-link-on onclick="showSubs('Fashion')">
-                                 <a href="javascript:void(0)">FASHION</a>
-                                </li>
-                                <li data-link-on onclick="showSubs('Fitness')">
-                                 <a href="javascript:void(0)">FITNESS</a>
-                                </li>
-                                <li data-link-on onclick="showSubs('Urban')">
-                                 <a href="javascript:void(0)">URBAN</a>
-                                </li>
-                                <li data-link-on onclick="showSubs('Androgens')">
-                                 <a href="javascript:void(0)">ANDROGENS</a>
-                                </li>
-                              </div>  
-  
-  `;
+  var Modelcategory = document.querySelector(`.${selectedCategory}`)
+  var subcatSub = document.querySelector('.model-cat-sub')
+  var subSubDivContainer = document.querySelector('.sub-sub-model')
 
-  var subCategoryModels = document.querySelector(`.${selectedCategory}`);
-  var ModelBtn = document.querySelector(".model-button");
-  var spanModelbtn = document.querySelector(".model-button span");
-  subCategoryModels.innerHTML = HtmlCategoryModelsFirstSection;
-  if (
-    subCategoryModels.classList.contains("showContentBlock") &&
-    counter == !0
-  ) {
-    subCategoryModels.classList.remove("showContentBlock");
+  subSubDivContainer.style.display = "none";
 
-    ModelBtn.classList.remove("activeBtn");
-    spanModelbtn.classList.remove("activeIconArrow");
+  Modelcategory.classList.remove('display-none-content');
+  subcatSub.innerHTML = '';
 
-    subCategoryModels.innerHTML = "";
-  } else {
-    subCategoryModels.classList.add("showContentBlock");
-    ModelBtn.classList.add("activeBtn");
-    spanModelbtn.classList.add("activeIconArrow");
-    subCategoryModels.innerHTML = HtmlCategoryModelsFirstSection;
-
-    counterVal = 1;
-  }
 }
 
 function showOrHideContent(selectedCategory) {
@@ -493,7 +450,11 @@ function showOrHideContent(selectedCategory) {
 }
 
 function showSubs(categorySelected) {
-  var refSpanContainer = document.querySelector(".subnav-menu-model");
+  var refSpanContainer = document.querySelector(".sub-sub-model");
+  var modelMain = document.querySelector('.main-categorys')
+  var subSubDivContainer = document.querySelector('.sub-sub-model')
+  subSubDivContainer.style.display = "block";
+  modelMain.classList.add('display-none-content')
   var CategoryObjects = {
     Category: {
       Baby: {
@@ -572,7 +533,7 @@ function showSubs(categorySelected) {
   var HtmlBabyCategory = `
                     <div class="model-cat-sub">
                       <li class="title-category">CATEGORIAS</li>
-                      <li data-link-on onclick="showCategoryModelsDesktop('subnav-menu-model',0)" class="back-li"><span id="back-menu"></span><a href="javascript:void(0)">VOLTAR</a></li>
+                      <li data-link-on onclick="showCategoryModelsDesktop('main-categorys',0)" class="back-li"><span id="back-menu"></span><a href="javascript:void(0)">VOLTAR</a></li>
                       <li id="title-sub">${CategoryObjects["Category"][categorySelected]["title"]}</li>
                       <li><img src="${CategoryObjects["Category"][categorySelected]["imgSrc"]}"></li>
                       <div class="options-models">
@@ -597,10 +558,10 @@ function ShowSCategorysMainMobile(category) {
   });
 
   allLinks.forEach((element) => {
-    if (element.classList.contains("display-none-conent")) {
-      element.classList.remove("display-none-conent");
+    if (element.classList.contains("display-none-content")) {
+      element.classList.remove("display-none-content");
     } else {
-      element.classList.add("display-none-conent");
+      element.classList.add("display-none-content");
       window.scrollTo(0, 0);
     }
   });
@@ -625,7 +586,7 @@ function searchAndShowSlide() {
   })
 }*/
 
-function PopupMsg(title, cat, closeMenuMobile = 0) {
+function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
   var navButtonMenuMobile = document.querySelector(".menu-button");
   var popupCategory = document.querySelector(".sub-category");
   var containerImgs = document.querySelector(".container-imgs");
@@ -636,6 +597,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0) {
   var navMenu = document.querySelector(".nav-menu");
   var spanInset = document.querySelector(".w-nav-overlay");
   var navbarDiv = document.querySelector("[data-wf-ignore]");
+
 
   if (closeMenuMobile === 1) {
     navButton.classList.remove("w--open");
@@ -650,12 +612,12 @@ function PopupMsg(title, cat, closeMenuMobile = 0) {
 
   if (false) {
     //popupCategory.classList.remove("popup-models-category");
-    popupCategory.classList.add("display-none-conent");
+    popupCategory.classList.add("display-none-content");
   } else {
     popupCategory.classList.remove("container-popup-mgs");
     popupCategory.classList.add("popup-models-category");
     popupCategory.classList.replace("category", actualCategory);
-    popupCategory.classList.remove("display-none-conent");
+    popupCategory.classList.remove("display-none-content");
     setTimeout(() => {
       popupCategory.classList.add("container-popup-mgs");
     }, 200)
@@ -790,12 +752,63 @@ function PopupMsg(title, cat, closeMenuMobile = 0) {
     default:
       break;
   }
+
+  if (classCloseMenu) {
+    var artistDoc = document.querySelector(".artist-btn");
+    var spanIconArtist = document.querySelector(".artist-btn > span");
+    var divArtista = document.querySelector(".subnav-artista");
+
+    var cantoresBtn = document.querySelector(".contores-btn");
+    var divCantores = document.querySelector(".sub-cantores-1");
+    var mainLi = document.querySelectorAll(".MainMenu-1");
+
+    var eventsDoc = document.querySelector(".events-btn");
+    var divEvento = document.querySelector(".subnav-evento");
+    var spanEvent = document.querySelector(".events-btn > span");
+
+    var courseBtn = document.querySelector('.course-btn')
+    var courseSpan = document.querySelector('.course-btn > span')
+    var divCourse = document.querySelector('.subnav-course')
+
+    var modelsDiv = document.querySelector('.main-categorys')
+    var modelbtn = document.querySelector('.model-button')
+    var modelspan = document.querySelector('.model-button  > span')
+
+    modelsDiv.classList.remove('showContentBlock')
+    modelbtn.classList.remove('activeBtn')
+    modelspan.classList.remove('activeIconArrow')
+
+    artistDoc.classList.remove("activeBtn");
+    divArtista.classList.add("display-none-content");
+    spanIconArtist.classList.remove("activeIconArrow");
+
+    divCantores.classList.add("display-none-content");
+
+
+    artistDoc.classList.remove("activeBtn");
+    divArtista.classList.add("display-none-content");
+    spanIconArtist.classList.remove("activeIconArrow");
+
+
+    divEvento.classList.add("display-none-content");
+    spanEvent.classList.remove("activeIconArrow");
+    eventsDoc.classList.remove("activeBtn");
+
+
+
+    divCourse.classList.add("display-none-content");
+    courseSpan.classList.remove("activeIconArrow");
+    courseBtn.classList.remove("activeBtn");
+
+    divCantores.classList.add("display-none-content");
+
+  }
 }
 
 function closeWindow() {
   var popupCategory = document.querySelector(".sub-category");
   popupCategory.classList.remove("popup-models-category");
-  popupCategory.classList.add("display-none-conent");
+  popupCategory.classList.add("display-none-content");
 }
 
 function SelectedContact() {
@@ -936,48 +949,162 @@ function checkLenghtMin(id, lenghtFieldMin, referenceField, errMessage1) {
   var divEvento = document.querySelector(".subnav-evento");
   var spanEvent = document.querySelector(".events-btn > span");
 
+  var courseBtn = document.querySelector('.course-btn')
+  var courseSpan = document.querySelector('.course-btn > span')
+  var divCourse = document.querySelector('.subnav-course')
+
+  var modelsBtn = document.querySelector('.model-button')
+  var spanBtnModel = document.querySelector('.model-button > span')
+  var divModel = document.querySelector('.main-categorys')
+
+  var subcatModel = document.querySelector('.sub-sub-model')
+
+  var hideContent = (menuNoClose) => {
+
+    switch (menuNoClose) {
+      case 'modelo':
+        artistDoc.classList.remove("activeBtn");
+        divArtista.classList.add("display-none-content");
+        spanIconArtist.classList.remove("activeIconArrow");
+
+        divCourse.classList.add("display-none-content");
+        courseSpan.classList.remove("activeIconArrow");
+        courseBtn.classList.remove("activeBtn");
+
+        divEvento.classList.add("display-none-content");
+        spanEvent.classList.remove("activeIconArrow");
+        eventsDoc.classList.remove("activeBtn");
+
+        break;
+      case 'artista':
+
+        divModel.classList.add("display-none-content");
+        spanBtnModel.classList.remove("activeIconArrow");
+        modelsBtn.classList.remove("activeBtn");
+
+        divCourse.classList.add("display-none-content");
+        courseSpan.classList.remove("activeIconArrow");
+        courseBtn.classList.remove("activeBtn");
+
+        divEvento.classList.add("display-none-content");
+        spanEvent.classList.remove("activeIconArrow");
+        eventsDoc.classList.remove("activeBtn");
+
+        break;
+      case 'curso':
+        divModel.classList.add("display-none-content");
+        spanBtnModel.classList.remove("activeIconArrow");
+        modelsBtn.classList.remove("activeBtn");
+
+        divEvento.classList.add("display-none-content");
+        spanEvent.classList.remove("activeIconArrow");
+        eventsDoc.classList.remove("activeBtn")
+
+        artistDoc.classList.remove("activeBtn");
+        divArtista.classList.add("display-none-content");
+        spanIconArtist.classList.remove("activeIconArrow");
+
+        break;
+      case 'eventos':
+        divModel.classList.add("display-none-content");
+        spanBtnModel.classList.remove("activeIconArrow");
+        modelsBtn.classList.remove("activeBtn");
+
+        artistDoc.classList.remove("activeBtn");
+        divArtista.classList.add("display-none-content");
+        spanIconArtist.classList.remove("activeIconArrow");
+
+        divCourse.classList.add("display-none-content");
+        courseSpan.classList.remove("activeIconArrow");
+        courseBtn.classList.remove("activeBtn");
+        break;
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+  }
+
   var subdivCantores = document.querySelector(".sub-cantores-1");
   divCantores.style.animation = "opacity 1s";
 
   artistDoc.addEventListener("click", (event) => {
-    if (divArtista.classList.contains("display-none-conent")) {
-      divArtista.classList.remove("display-none-conent");
+    hideContent('artista')
+    if (divArtista.classList.contains("display-none-content")) {
+      divArtista.classList.remove("display-none-content");
       spanIconArtist.classList.add("activeIconArrow");
       artistDoc.classList.add("activeBtn");
     } else {
       artistDoc.classList.remove("activeBtn");
-      divArtista.classList.add("display-none-conent");
+      divArtista.classList.add("display-none-content");
       spanIconArtist.classList.remove("activeIconArrow");
     }
   });
 
   btnVoltarArtistas.addEventListener("click", (event) => {
     mainLi.forEach((li) => {
-      li.classList.remove("display-none-conent");
+      li.classList.remove("display-none-content");
     });
-    divCantores.classList.add("display-none-conent");
+    divCantores.classList.add("display-none-content");
   });
 
   cantoresBtn.addEventListener("click", (event) => {
-    if (divCantores.classList.contains("display-none-conent")) {
-      divCantores.classList.remove("display-none-conent");
+    if (divCantores.classList.contains("display-none-content")) {
+      divCantores.classList.remove("display-none-content");
       mainLi.forEach((li) => {
-        li.classList.add("display-none-conent");
+        li.classList.add("display-none-content");
       });
     }
   });
 
   eventsDoc.addEventListener("click", (event) => {
-    if (divEvento.classList.contains("display-none-conent")) {
-      divEvento.classList.remove("display-none-conent");
+    hideContent('eventos')
+    if (divEvento.classList.contains("display-none-content")) {
+      divEvento.classList.remove("display-none-content");
       spanEvent.classList.add("activeIconArrow");
       eventsDoc.classList.add("activeBtn");
     } else {
-      divEvento.classList.add("display-none-conent");
+      divEvento.classList.add("display-none-content");
       spanEvent.classList.remove("activeIconArrow");
       eventsDoc.classList.remove("activeBtn");
     }
   });
+
+  courseBtn.addEventListener("click", (event) => {
+    hideContent('curso')
+    if (divCourse.classList.contains("display-none-content")) {
+      divCourse.classList.remove("display-none-content");
+      courseSpan.classList.add("activeIconArrow");
+      courseBtn.classList.add("activeBtn");
+    } else {
+      divCourse.classList.add("display-none-content");
+      courseSpan.classList.remove("activeIconArrow");
+      courseBtn.classList.remove("activeBtn");
+    }
+  });
+
+  modelsBtn.addEventListener("click", (event) => {
+    hideContent('modelo')
+    if (divModel.classList.contains("display-none-content")) {
+      divModel.classList.remove("display-none-content");
+      spanBtnModel.classList.add("activeIconArrow");
+      modelsBtn.classList.add("activeBtn");
+    } else {
+      divModel.classList.add("display-none-content");
+      spanBtnModel.classList.remove("activeIconArrow");
+      modelsBtn.classList.remove("activeBtn");
+
+    }
+  });
+
 })();
 
 function ShowOrHideSubMenus(classSelected, BackButton = 0) {
@@ -1010,12 +1137,12 @@ function ShowOrHideSubMenus(classSelected, BackButton = 0) {
 
 function ArtistsMenus(classSelected, nameArtist) {
   var divSelectd = document.querySelector(`.${classSelected}`)
-  if (!divSelectd.classList.contains('display-none-conent')) {
-    divSelectd.classList.add('display-none-conent')
+  if (!divSelectd.classList.contains('display-none-content')) {
+    divSelectd.classList.add('display-none-content')
   } else {
     switch (nameArtist) {
       case "Vinicius Rocha":
-        divSelectd.classList.remove('display-none-conent')
+        divSelectd.classList.remove('display-none-content')
         divSelectd.innerHTML = `<div class="title-bibliografia"><p>${nameArtist}</p></div>
     <div><p>Vinicius Cardoso Rocha Borges, nome artistico Vinicius Rocha,nascido em Divinopolis no ano de 1993, despertou o interesse pela musica aos 12 anos quando 
     aprendeu a tocar a primeira musica no violao de seu irmão. Descendente de bisavó pianista, avó regente de orquestra e tia violoncelista na orquestra sinfônica da PM de Belo horizonte, teve de onde herdar o interesse pela musica.

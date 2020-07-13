@@ -20,7 +20,7 @@
       <a href="http://www.brazilmodel.com.br"><img src="./media/logo/LogoMain.png" alt="" class="image-2" /></a>
     </div>
   </div>
-  <div class="sub-category display-none-conent category container-popup-mgs">
+  <div class="sub-category display-none-content category container-popup-mgs">
     <div class="container-imgs"></div>
   </div>
   <div data-collapse="medium" data-animation="default" data-duration="400" class="navbar-2 w-nav">
@@ -37,14 +37,59 @@
             <div class="subnav-menu"></div>
           </div>
           <div>
-            <a href="javascript:void(0)" class="model-button"
-              onclick="showCategoryModelsDesktop('subnav-menu-model',1)">MODELOS <span class="icon-navbar-sub"></span>
+            <a href="javascript:void(0)" class="model-button">MODELOS <span class="icon-navbar-sub"></span>
             </a>
-            <div class="subnav-menu-model"></div>
+            <div class="subnav-menu-model">
+              <div class="main-categorys subnav-events display-none-content">
+                <li id="main-title-li">CATEGORIAS</li>
+                <li data-link-on onclick="showSubs('Baby')">
+                  <a href="javascript:void(0)">BABY</a>
+                </li>
+                <li data-link-on onclick="showSubs('Kids')">
+                  <a data-link-on href="javascript:void(0)">KIDS</a>
+                </li>
+                <li data-link-on onclick="showSubs('PreTeens')">
+                  <a href="javascript:void(0)">PRÉ-TEENS</a>
+                </li>
+                <li data-link-on onclick="showSubs('Commercials')">
+                  <a href="javascript:void(0)">COMMERCIALS</a>
+                </li>
+                <li data-link-on onclick="showSubs('PlusSize')">
+                  <a href="javascript:void(0)">PLUS SIZE</a>
+                </li>
+                <li data-link-on onclick="showSubs('MoreAge')">
+                  <a href="javascript:void(0)">MORE AGE</a>
+                </li>
+                <li data-link-on onclick="showSubs('Fashion')">
+                  <a href="javascript:void(0)">FASHION</a>
+                </li>
+                <li data-link-on onclick="showSubs('Fitness')">
+                  <a href="javascript:void(0)">FITNESS</a>
+                </li>
+                <li data-link-on onclick="showSubs('Urban')">
+                  <a href="javascript:void(0)">URBAN</a>
+                </li>
+                <li data-link-on onclick="showSubs('Androgens')">
+                  <a href="javascript:void(0)">ANDROGENS</a>
+                </li>
+              </div>
+              <div class="sub-sub-model"></div>
+            </div>
           </div>
+
           <div>
-            <a href="javascript:void(0)" onclick="PopupMsg('cursos', 'cursos')">CURSOS </a>
+            <a href="javascript:void(0)" class="course-btn">CURSOS <span class="icon-navbar-sub"></span></a>
             <div class="subnav-menu"></div>
+            <div class="subs-menus-desktop subnav-events subnav-course display-none-content">
+              <li onclick="PopupMsg('curso-passarela', 'curso-passarela',1,this)"><a
+                  href="javascript:void(0)">PASSARELA</a>
+              </li>
+              <li onclick="PopupMsg('curso-modeloFotografica', 'curso-modeloFotografica',1,this)"><a
+                  href="javascript:void(0)">FOTOGRAFIA DE MODA</a></li>
+              <li onclick="PopupMsg('curso-teatro', 'curso-teatro',1,this)"><a href="javascript:void(0)">TEATRO</a></li>
+              <li onclick="PopupMsg('curso-maquiagem', 'curso-maquiagem',1,this)"><a href="javascript:void(0)">MAKE-UP
+                </a></li>
+            </div>
           </div>
           <div>
             <a href="javascript:void(0)" onclick="PopupMsg('revista', 'Revista')">REVISTA </a>
@@ -52,16 +97,16 @@
           </div>
           <div>
             <a href="javascript:void(0)" class="events-btn">EVENTOS <span class="icon-navbar-sub"></span></a>
-            <div class="subs-menus-desktop subnav-events subnav-evento display-none-conent">
-              <li onclick="PopupMsg('shows', 'shows')"><a href="javascript:void(0)">SHOWS</a></li>
-              <li onclick="PopupMsg('desfiles', 'desfiles')"><a href="javascript:void(0)">DESFILES</a></li>
-              <li onclick="PopupMsg('concursos', 'concursos')"><a href="javascript:void(0)">CONCURSOS</a></li>
-              <li onclick="PopupMsg('lives', 'lives')"><a href="javascript:void(0)">LIVES</a></li>
+            <div class="subs-menus-desktop subnav-events subnav-evento display-none-content">
+              <li onclick="PopupMsg('shows', 'shows',1,this)"><a href="javascript:void(0)">SHOWS</a></li>
+              <li onclick="PopupMsg('desfiles', 'desfiles',1,this)"><a href="javascript:void(0)">DESFILES</a></li>
+              <li onclick="PopupMsg('concursos', 'concursos',1,this)"><a href="javascript:void(0)">CONCURSOS</a></li>
+              <li onclick="PopupMsg('lives', 'lives',1,this)"><a href="javascript:void(0)">LIVES</a></li>
             </div>
           </div>
           <div>
             <a href="javascript:void(0)" class="artist-btn">ARTISTAS <span class="icon-navbar-sub"></span></a>
-            <div class="subs-menus-desktop subnav-events subnav-artista display-none-conent">
+            <div class="subs-menus-desktop subnav-events subnav-artista display-none-content">
               <div class="MainMenu-1">
                 <li onclick="PopupMsg('noneArtistas', 'noneArtistas')"><a href="javascript:void(0)">ATORES</a></li>
               </div>
@@ -73,7 +118,7 @@
                   <a href="javascript:void(0)">CANTORES</a>
                 </li>
               </div>
-              <div class="sub-cantores-1 display-none-conent">
+              <div class="sub-cantores-1 display-none-content">
                 <li data-none-link><a href="javascript:void(0)" data-none-link>ARTISTAS</a></li>
                 <li id="back-btn" class="voltar-artistas">
                   <span id="back-menu"></span><a href="javascript:void(0)" class="">VOLTAR</a>
@@ -111,7 +156,7 @@
           <a href="#">FAÇA PARTE</a>
           <a href="#">CONTATOS</a>
         </div>
-        <div class="display-none-conent subnav-events sub-menu-1-ref">
+        <div class="display-none-content subnav-events sub-menu-1-ref">
           <a href="javascript:void(0)" onclick="PopupMsg('baby')">BABY</a>
           <a href="javascript:void(0)" onclick="PopupMsg('kids')">KID'S</a>
           <a href="javascript:void(0)" onclick="PopupMsg('pre-teen')">PRÉ-TEENS</a>
@@ -131,6 +176,7 @@
     <div class="w-nav-overlay" data-wf-ignore></div>
   </div>
 
+
   <header id="hero" class="hero">
     <div class="title-sertanejo">SERTANEJO</div>
     <div class="containerAllElements">
@@ -145,7 +191,7 @@
         </div>
       </div>
       <div class="containerArtists">
-        <div class="overall-msg artist-2 display-none-conent"></div>
+        <div class="overall-msg artist-2 display-none-content"></div>
         <div><img src="./media/artistas/sertanejo/viniciosRocha.jpg" alt=""></div>
         <div class="menus-artists">
           <li><a href="javascript:void(0)">FOTOS</a></li>
