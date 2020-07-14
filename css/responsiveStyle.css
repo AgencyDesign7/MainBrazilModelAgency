@@ -489,6 +489,9 @@
   }
 }
 @media screen and (max-width: 767px) {
+  .container-about{
+    padding: 20px 50px 20px 3px !important;
+  }
   .consultores-sub{
     flex-direction: column;
   }
@@ -817,3 +820,10 @@
   
 }
 
+@media screen and (max-width: 1417px)
+{
+  
+.container-about{
+  padding: 20px 100px;
+}
+}
