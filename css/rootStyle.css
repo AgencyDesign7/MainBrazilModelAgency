@@ -13,9 +13,7 @@
 
 body {
   margin: 0;
-  min-height: 1319px;
-  position: relative;
-  height: fit-content;
+  height: 100%;
   overflow-y: scroll !important;
 }
 
@@ -1974,7 +1972,7 @@ textarea.w-input,textarea.w-select {
    ========================================================================== */
 .hero {
   min-height: 100vh;
-  display: block;
+  display: block !important;
   overflow: visible;
   margin-top: 0px;
   padding-top: 0px;
@@ -2922,7 +2920,13 @@ body{
   width: auto;
   max-height: 50px;
 }
+.footerContainer{
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 500px;
 
+}
 .main-menu{
   display: flex;
   justify-content: center;
@@ -3094,6 +3098,11 @@ li:hover a{
 }
 [ data-bg-black] > *{
   color: white;
+}
+.about-main-cont{
+  display: block;
+  width: fit-content;
+  height: fit-content;
 }
 .aboutus{
   display: flex;
@@ -3435,4 +3444,34 @@ margin: 0;
 .container-dot{
   display: flex;
 
+}
+
+.consultores-sub{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: fit-content;
+
+}
+
+.container-consultores{
+  display: flex;
+  flex-direction: column;
+  margin: 40px 25px 40px 5px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 300px;
+  min-width: 250px;
+  padding: 0;
+}
+.container-consultores > p{
+  font-size: 18px;
+  margin-top: 10px;
+
+}
+
+.container-consultores > img{
+  width: 150px;
+  height: auto;
 }
