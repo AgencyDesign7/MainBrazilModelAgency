@@ -1992,6 +1992,7 @@ textarea.w-input,textarea.w-select {
   -ms-flex-align: center;
   align-items: center;
   background-color: black;
+  position: relative;
 }
 .titleName{
   display: -webkit-box;
@@ -2585,10 +2586,6 @@ textarea.w-input,textarea.w-select {
 
 
 
-@keyframes opacity{
-  0%{ opacity: 0;}
-  100%{opacity: 1;}
-}
 .w-container{
   display: flex;
   width: 100%;
@@ -3470,10 +3467,28 @@ margin: 0;
 .container-consultores > p{
   font-size: 18px;
   margin-top: 15px;
+  
 
 }
-
+.navbar-mobile-root{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  animation: opacity 1s;
+}
 .container-consultores > img{
   width: 150px;
   height: auto;
+}
+
+.container-navbar-m > a{
+  border: 1px solid white;
+  color: white;
+  background-color: black;
+}
+
+@keyframes opacity{
+  0%{ opacity: 0;}
+  100%{opacity: 1;}
 }

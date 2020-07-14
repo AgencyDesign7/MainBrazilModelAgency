@@ -21,277 +21,22 @@ function onLoad() {
 function navBarMobile() {
   var navButton = document.querySelector(".menu-button");
   var iconMenuClick = document.querySelector(".icon-2");
-  var navMenu = document.querySelector(".nav-menu");
-  var spanInset = document.querySelector(".w-nav-overlay");
   var navbarDiv = document.querySelector("[data-wf-ignore]");
+
+  var navbarRootDiv = document.querySelector('.navbar-mobile-root')
 
   iconMenuClick.addEventListener("click", () => {
     if (navButton.classList[2] == "w--open") {
       navButton.classList.remove("w--open");
-      /*navMenu.innerHTML = `<a href="./index.html" class="nav-link-2 w-nav-link">HOME</a><a
-        href="./composite.html" class="nav-link-3 w-nav-link">COMPOSITE</a><a href="./book.html"
-        class="nav-link-4 w-nav-link">BOOK</a><a href="./parceiros.html" class="nav-link-5 w-nav-link">PARCEIROS</a><a
-        href="./contato.html" class="nav-link-6 w-nav-link">CONTATO</a>`*/
-      spanInset.innerHTML = "";
       navbarDiv.classList.remove("an-nav-bf");
       iconMenuClick.classList.remove("w-menu-open-nav");
+      navbarRootDiv.classList.add('display-none-content');
     } else {
-      /*navMenu.innerHTML = '';*/
-      spanInset.innerHTML = `
-        <nav role="navigation" class="nav-menu w-nav-menu mob-nav" style="transform: translateY(0px) translateX(0px); transition: transform 400ms ease 0s;" data-nav-menu-open="">
-        <a href="index.html" class="nav-link-2 w-nav-link w--nav-link-open menu-tops" style="">HOME</a>
-        <a class="nav-link-3 w-nav-link w--nav-link-open menu-tops" style="" href="./sobrenos.html">SOBRE NÓS</a>
-        <div class="style-sub-category about-us subs-category-ref">
-        
-          <p>
-            Atuante no mercado da moda, a Brazil Model Agency é uma empresa na assessoria e descoberta de novos talentos, levando até você cursos de modelo, manequim e workshop de passarela com professores altamente capacitados.Preparando os aspirantes e modelos para convenções e seletivas a nível nacional e internacional.
-             Preparando os modelos para o mercado de trabalho e para o mercado da moda. <br>Realizamos eventos corporativos, institucionais, particulares, espetáculos desportivos, produção de teatro, recepções, lançamentos de livros, workshop, desfiles, treinamentos, lançamentos de CD 's, inaugurações, feiras, shows, lançamentos de produtos, eventos gospel, danças, entre outros, de acordo com a necessidade de cada cliente.
-            Para tanto, contamos com uma equipe especializada na área e um casting de fornecedores sempre prontos para atender com qualidade, agilidade e bom gosto, buscando acima de tudo superar as expectativas do nosso cliente.
-          </p>
-          <div class="sub-team">
-            <div class="sub-team-link">
-              <a  href="javascript:void(0)">EQUIPE BRAZIL MODEL</a></div>
-          </div>
-        </div>
-        <a href="#" class="nav-link-4 w-nav-link w--nav-link-open menu-tops" style="" onClick = showOrHideContent("sub-category-model-mobile") >MODELOS<span class="icon-navbar-sub mobile-icon"></span></a>
-        <div class="sub-category-model-mobile w-hidden style-sub-category">
-          <a class="nav-link-5 w-nav-link w--nav-link-open" onClick="ShowSCategorysMainMobile('sub-baby')">BABY</a>
-          <div class="style-sub-category sub-baby subs-category-ref">
-              <div class="sub-baby">
-                <div class="mobile-model-cat">
-                  <li data-bg-black><p>CATEGORIAS</p></li>
-                  <li onClick="ShowSCategorysMainMobile('sub-baby')"><span id="back-menu"></span><p>VOLTAR</p></li>
-                  <li data-bg-black><p>BABY</p></li>
-                </div>
-                <div class="sub-imgs" onClick="PopupMsg('baby')">
-                  <img src="./media/home/menu-category/BabyCategory.jpg" >
-                </div>
-                <div class="sub-texts">
-                  <p>FEMININO</p>
-                  <p>MASCULINO</p>
-                  <p>TODOS</p>
-                </div>
-              </div>
-          </div>
-        <a class="nav-link-5 w-nav-link w--nav-link-open" onClick="ShowSCategorysMainMobile('sub-kids')" style="">KID'S</a>
-        <div class="style-sub-category sub-kids subs-category-ref">
-                        <div class="sub-kids">
-                          <div class="mobile-model-cat">
-                          <li data-bg-black><p>CATEGORIAS</p></li>
-                          <li onClick="ShowSCategorysMainMobile('sub-kids')"><span id="back-menu"></span><p>VOLTAR</p></li>
-                          <li data-bg-black><p>KIDS</p></li>
-                         </div>
-                        <div class="sub-imgs" onClick="PopupMsg('kids')">
-                        <img src="./media/home/menu-category/KidsCategory.jpg" >
-                        </div>
-                        <div class="sub-texts">
-                          <p>FEMININO</p>
-                          <p>MASCULINO</p>
-                          <p>TODOS</p>
-                        </div>
-                      </div>
-                 </div>
-        <a   class="nav-link-5 w-nav-link w--nav-link-open" onClick="ShowSCategorysMainMobile('sub-teens')" style="">PRÉ-TEEN</a>
-        <div class="style-sub-category sub-teens subs-category-ref">
-                      <div class="sub-teens">
-                        <div class="mobile-model-cat">
-                            <li data-bg-black><p>CATEGORIAS</p></li>
-                            <li onClick="ShowSCategorysMainMobile('sub-teens')"><span id="back-menu"></span><p>VOLTAR</p></li>
-                            <li data-bg-black><p>PRE-TEENS</p></li>
-                        </div>
-                        <div class="sub-imgs" onClick="PopupMsg('pre-teen')">
-                          <img src="./media/home/menu-category/PreTeenCategory.jpg" >
-                        </div>
-                        <div class="sub-texts">
-                          <p>FEMININO</p>
-                          <p>MASCULINO</p>
-                          <p>TODOS</p>
-                        </div>
-                      </div>
-                 </div>
-        <a   class="nav-link-5 w-nav-link w--nav-link-open" onClick="ShowSCategorysMainMobile('sub-moreage')" style="">MORE AGE</a>
-        <div class="style-sub-category sub-moreage subs-category-ref">
-                      <div class="sub-moreage">
-                        <div class="mobile-model-cat">
-                          <li data-bg-black><p>CATEGORIAS</p></li>
-                          <li onClick="ShowSCategorysMainMobile('sub-moreage')"><span id="back-menu"></span><p>VOLTAR</p></li>
-                          <li data-bg-black><p>MORE AGE</p></li>
-                        </div>
-                        <div class="sub-imgs" onClick="PopupMsg('moreage')">
-                          <img src="./media/home/menu-category/MoreAgeCategory.jpg" >
-                        </div>
-                        <div class="sub-texts">
-                          <p>FEMININO</p>
-                          <p>MASCULINO</p>
-                          <p>TODOS</p>
-                        </div>
-                      </div>
-                 </div>
-        <a   class="nav-link-5 w-nav-link w--nav-link-open" onClick="ShowSCategorysMainMobile('sub-plussize')" style="">PLUS SIZE</a>
-        <div class="style-sub-category sub-plussize subs-category-ref">
-                      <div class="sub-plussize">
-                        <div class="mobile-model-cat">
-                          <li data-bg-black><p>CATEGORIAS</p></li>
-                          <li onClick="ShowSCategorysMainMobile('sub-plussize')"><span id="back-menu"></span><p>VOLTAR</p></li>
-                          <li data-bg-black><p>PLUS SIZE</p></li>
-                        </div>
-                        <div class="sub-imgs" onClick="PopupMsg('plussize')">
-                          <img src="./media/home/menu-category/PlusSizeCategory.jpg" >
-                        </div>
-                        <div class="sub-texts">
-                          <p>FEMININO</p>
-                          <p>MASCULINO</p>
-                          <p>TODOS</p>
-                        </div>
-                      </div>
-                 </div>
-        <a   class="nav-link-5 w-nav-link w--nav-link-open" onClick="ShowSCategorysMainMobile('sub-comercial')" style="">COMMERCIAL</a>
-        <div class="style-sub-category sub-comercial subs-category-ref">
-                      <div class="sub-comercial">
-                        <div class="mobile-model-cat">
-                          <li data-bg-black><p>CATEGORIAS</p></li>
-                          <li onClick="ShowSCategorysMainMobile('sub-comercial')"><span id="back-menu"></span><p>VOLTAR</p></li>
-                          <li data-bg-black><p>COMMERCIAL</p></li>
-                        </div>
-                        <div class="sub-imgs" onClick="PopupMsg('comercial')">
-                          <img src="./media/home/menu-category/CommercialsCategory.jpg" >
-                        </div>
-                        <div class="sub-texts">
-                          <p>FEMININO</p>
-                          <p>MASCULINO</p>
-                          <p>TODOS</p>
-                        </div>
-                      </div>
-                 </div>
-        <a   class="nav-link-5 w-nav-link w--nav-link-open" onClick="ShowSCategorysMainMobile('sub-fashion')" style="">FASHION</a>
-        <div class="style-sub-category sub-fashion subs-category-ref">
-                      <div class="sub-fashion">
-                        <div class="mobile-model-cat">
-                          <li data-bg-black><p>CATEGORIAS</p></li>
-                          <li onClick="ShowSCategorysMainMobile('sub-fashion')"><span id="back-menu"></span><p>VOLTAR</p></li>
-                          <li data-bg-black><p>FASHION</p></li>
-                        </div>
-                        <div class="sub-imgs" onClick="PopupMsg('fashion')">
-                          <img src="./media/home/menu-category/FashionCategory.jpg" >
-                        </div>
-                        <div class="sub-texts">
-                          <p>FEMININO</p>
-                          <p>MASCULINO</p>
-                          <p>TODOS</p>
-                        </div>
-                      </div>
-                 </div>
-        <a   class="nav-link-5 w-nav-link w--nav-link-open" onClick="ShowSCategorysMainMobile('sub-fitness')" style="">FITNESS</a>
-        <div class="style-sub-category sub-fitness subs-category-ref">
-                      <div class="sub-fitness">
-                        <div class="mobile-model-cat">
-                          <li data-bg-black><p>CATEGORIAS</p></li>
-                          <li onClick="ShowSCategorysMainMobile('sub-fitness')"><span id="back-menu"></span><p>VOLTAR</p></li>
-                          <li data-bg-black><p>FITNESS</p></li>
-                        </div>
-                        <div class="sub-imgs" onClick="PopupMsg('fitness')">
-                          <img src="./media/home/menu-category/FitnessCategory.jpg" >
-                        </div>
-                        <div class="sub-texts">
-                          <p>FEMININO</p>
-                          <p>MASCULINO</p>
-                          <p>TODOS</p>
-                        </div>
-                      </div>
-                 </div>
-        <a   class="nav-link-5 w-nav-link w--nav-link-open" onClick="ShowSCategorysMainMobile('sub-androgynous')" style="">ANDROGENS</a>
-        <div class="style-sub-category sub-androgynous subs-category-ref">
-                      <div class="sub-androgynous">
-                        <div class="mobile-model-cat">
-                          <li data-bg-black><p>CATEGORIAS</p></li>
-                          <li onClick="ShowSCategorysMainMobile('sub-androgynous')"><span id="back-menu"></span><p>VOLTAR</p></li>
-                          <li data-bg-black><p>ANDROGENS</p></li>
-                        </div>
-                        <div class="sub-imgs" onClick="PopupMsg('androgeno')">
-                          <img src="./media/home/menu-category/AndrogensCategory.jpg" >
-                        </div>
-                        <div class="sub-texts">
-                          <p>FEMININO</p>
-                          <p>MASCULINO</p>
-                          <p>TODOS</p>
-                        </div>
-                      </div>
-                 </div>
-        <a   class="nav-link-5 w-nav-link w--nav-link-open" onClick="ShowSCategorysMainMobile('sub-urban')" style="">URBAN</a>
-        <div class="style-sub-category sub-urban subs-category-ref">
-                      <div class="sub-urban">
-                        <div class="mobile-model-cat">
-                          <li data-bg-black><p>CATEGORIAS</p></li>
-                          <li onClick="ShowSCategorysMainMobile('sub-urban')"><span id="back-menu"></span><p>VOLTAR</p></li>
-                          <li data-bg-black><p>URBAN</p></li>
-                        </div>
-                        <div class="sub-imgs" onClick="PopupMsg('urbano')">
-                          <img src="./media/home/menu-category/UrbanCategory.jpg" >
-                        </div>
-                        <div class="sub-texts">
-                          <p>FEMININO</p>
-                          <p>MASCULINO</p>
-                          <p>TODOS</p>
-                        </div>
-                      </div>
-                 </div>
-        </div>
-        </a>
-        <a   href="javascript:void(0)" class="nav-link-5 w-nav-link w--nav-link-open" style="" onClick="ShowOrHideSubMenus('course-mobile-category')"">CURSOS<span class="icon-navbar-sub mobile-icon"></a>
-        <div class="style-sub-category subs-category-ref">
-         </div>
-         <div class="style-sub-category subs-category-ref course-mobile-category">
-                <div class="mobile-model-cat">
-                          <li onClick="ShowOrHideSubMenus('course-mobile-category', 1)"><span id="back-menu"></span><p>VOLTAR</p></li>
-                          <li data-bg-black><p>CURSOS</p></li>
-                </div>
-                <a   class="nav-link-5 w-nav-link w--nav-link-open" style="" onclick="PopupMsg('curso-passarela', 'curso-passarela',1)">PASSARELA</a>
-                <a   class="nav-link-5 w-nav-link w--nav-link-open" style="" onclick="PopupMsg('curso-modeloFotografica', 'curso-modeloFotografica',1)">FOTOGRAFIA DE MODA</a>
-                <a   class="nav-link-5 w-nav-link w--nav-link-open" style="" onclick="PopupMsg('curso-teatro', 'curso-teatro',1)">TEATRO</a>
-                <a   class="nav-link-5 w-nav-link w--nav-link-open" style="" onclick="PopupMsg('curso-maquiagem', 'curso-maquiagem',1)">MAKE-UP</a>
-                </div>
-        <a href="javascript:void(0)" class="nav-link-6 w-nav-link w--nav-link-open" style="" onclick="PopupMsg('revista', 'Revistas', 1)">REVISTA</a>
-         <div class="style-sub-category subs-category-ref">
-           <a   class="nav-link-5 w-nav-link w--nav-link-open" style="">EM BREVE</a>
-        </div>
-        <a href="javascript:void(0)" class="nav-link-6 w-nav-link w--nav-link-open" style="" onClick ="showOrHideContent('events-mobile-category')">EVENTOS<span class="icon-navbar-sub mobile-icon"></a>
-          <div class="style-sub-category subs-category-ref events-mobile-category">
-            <a   class="nav-link-5 w-nav-link w--nav-link-open" style="" onclick="PopupMsg('shows', 'shows',1)">SHOWS</a>
-            <a   class="nav-link-5 w-nav-link w--nav-link-open" style="" onclick="PopupMsg('desfiles', 'desfiles',1)">DESFILES</a>
-            <a   class="nav-link-5 w-nav-link w--nav-link-open" style=""onclick="PopupMsg('concursos', 'concursos',1)">CONCURSOS</a>
-            <a   class="nav-link-5 w-nav-link w--nav-link-open" style="" onclick="PopupMsg('lives', 'lives',1)">LIVES</a>
-          </div>
-        <a href="javascript:void(0)" class="nav-link-6 w-nav-link w--nav-link-open" style="" onClick="ShowOrHideSubMenus('artists-mobile-category')" >ARTISTAS<span class="icon-navbar-sub mobile-icon"></a>
-        <div class="style-sub-category subs-category-ref artists-mobile-category">
-                <div class="mobile-model-cat">
-                          <li data-bg-black><p>HOME</p></li>
-                          <li onClick="ShowOrHideSubMenus('artists-mobile-category', 1)"><span id="back-menu"></span><p>VOLTAR</p></li>
-                          <li data-bg-black><p>ARTISTAS</p></li>
-                </div>
-                <a   class="nav-link-5 w-nav-link w--nav-link-open" style="" onclick="PopupMsg('noneArtistas', 'noneArtistas',1)">ATORES</a>
-                <a   class="nav-link-5 w-nav-link w--nav-link-open" style="" onclick="PopupMsg('noneArtistas', 'noneArtistas',1)">BANDAS</a>
-                <a   class="nav-link-5 w-nav-link w--nav-link-open" style="" onClick="showOrHideContent('setanejo-categoria')">CANTORES</a>
-                  <div class="style-sub-category subs-category-ref artists-mobile-category setanejo-categoria">
-                    <a   class="nav-link-5 w-nav-link w--nav-link-open" href="sertanejo.html"  style="background-color: black; color: white !important;">SERTANEJO</a>
-                  </div>
-                <a   class="nav-link-5 w-nav-link w--nav-link-open" style="" onclick="PopupMsg('noneArtistas', 'noneArtistas',1)">COVERS</a>
-                <a   class="nav-link-5 w-nav-link w--nav-link-open" style="" onclick="PopupMsg('noneArtistas', 'noneArtistas',1)">DANÇARINOS</a>
-                <a   class="nav-link-5 w-nav-link w--nav-link-open" style="" onclick="PopupMsg('noneArtistas', 'noneArtistas',1)">DIGITAL INFLUENCERS</a>
-                <a   class="nav-link-5 w-nav-link w--nav-link-open" style="" onclick="PopupMsg('noneArtistas', 'noneArtistas',1)">DJS</a>
-                <a   class="nav-link-5 w-nav-link w--nav-link-open" style="" onclick="PopupMsg('noneArtistas', 'noneArtistas',1)">LOCUTORES</a>
-                <a   class="nav-link-5 w-nav-link w--nav-link-open" style="" onclick="PopupMsg('noneArtistas', 'noneArtistas',1)">MUSICOS</a>
-                <a   class="nav-link-5 w-nav-link w--nav-link-open" style="" onclick="PopupMsg('noneArtistas', 'noneArtistas',1)">SOSIAS</a>
-                <a   class="nav-link-5 w-nav-link w--nav-link-open" style="" onclick="PopupMsg('noneArtistas', 'noneArtistas',1)">STAND UP</a>
-                </div>
-                
-        <a href="#" class="nav-link-2 w-nav-link w--nav-link-open" style="">PARCEIROS</a>
-        <a href="#" class="nav-link-2 w-nav-link w--nav-link-open" style="">FAÇA PARTE</a>
-        <a href="#" class="nav-link-2 w-nav-link w--nav-link-open" style="">CONTATOS</a>
-        </nav>
-    </div>`;
+
       navButton.classList.add("w--open");
       navbarDiv.classList.add("an-nav-bf");
       iconMenuClick.classList.add("w-menu-open-nav");
+      navbarRootDiv.classList.remove('display-none-content');
     }
   });
 
@@ -598,6 +343,8 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
   var spanInset = document.querySelector(".w-nav-overlay");
   var navbarDiv = document.querySelector("[data-wf-ignore]");
 
+  var navbarRootDiv = document.querySelector('.navbar-mobile-root');
+
 
   if (closeMenuMobile === 1) {
     navButton.classList.remove("w--open");
@@ -605,9 +352,9 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
         href="./composite.html" class="nav-link-3 w-nav-link">COMPOSITE</a><a href="./book.html"
         class="nav-link-4 w-nav-link">BOOK</a><a href="./parceiros.html" class="nav-link-5 w-nav-link">PARCEIROS</a><a
         href="./contato.html" class="nav-link-6 w-nav-link">CONTATO</a>`*/
-    spanInset.innerHTML = "";
     navbarDiv.classList.remove("an-nav-bf");
     iconMenuClick.classList.remove("w-menu-open-nav");
+    navbarRootDiv.classList.add('display-none-content');
   }
 
   if (false) {
