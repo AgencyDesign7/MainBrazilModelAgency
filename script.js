@@ -436,6 +436,9 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
     case "lives":
       popupCategory.style.backgroundColor = "black";
       containerImgs.innerHTML = `
+                      <div class="imgs-cursos ${title}">
+                      <a  href="javascript:void(0)"><img src="./media/"></a>
+                      </div>
                       
       `;
       window.scrollTo(0, 0);
