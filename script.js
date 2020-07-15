@@ -210,21 +210,21 @@ function showSubs(categorySelected) {
         AllLink: "",
       },
       Kids: {
-        title: "KIDS",
+        title: "KID",
         imgSrc: "./media/home/menu-category/KidsCategory.jpg",
         Mlink: "",
         FLink: "",
         AllLink: "",
       },
       PreTeens: {
-        title: "PRE-TEENS",
+        title: "PRE-TEEN",
         imgSrc: "./media/home/menu-category/PreTeenCategory.jpg",
         Mlink: "",
         FLink: "",
         AllLink: "",
       },
       Commercials: {
-        title: "COMMERCIALS",
+        title: "COMMERCIAL",
         imgSrc: "./media/home/menu-category/CommercialsCategory.jpg",
         Mlink: "",
         FLink: "",
@@ -266,7 +266,7 @@ function showSubs(categorySelected) {
         AllLink: "",
       },
       Androgens: {
-        title: "ANDROGENS",
+        title: "ANDROGYNE",
         imgSrc: "./media/home/menu-category/AndrogensCategory.jpg",
         Mlink: "",
         FLink: "",
@@ -278,7 +278,7 @@ function showSubs(categorySelected) {
   var HtmlBabyCategory = `
                     <div class="model-cat-sub">
                       <li class="title-category">CATEGORIAS</li>
-                      <li data-link-on onclick="showCategoryModelsDesktop('main-categorys',0)" class="back-li"><span id="back-menu"></span><a href="javascript:void(0)">VOLTAR</a></li>
+                      <li data-link-on onclick="showCategoryModelsDesktop('main-categorys',0)" id="back-btn"><span id="back-menu"></span><a href="javascript:void(0)">VOLTAR</a></li>
                       <li id="title-sub">${CategoryObjects["Category"][categorySelected]["title"]}</li>
                       <li><img src="${CategoryObjects["Category"][categorySelected]["imgSrc"]}"></li>
                       <div class="options-models">
@@ -520,10 +520,12 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
     var modelsDiv = document.querySelector('.main-categorys')
     var modelbtn = document.querySelector('.model-button')
     var modelspan = document.querySelector('.model-button  > span')
+    var modelSubCategory = document.querySelector('.sub-sub-model')
 
     modelsDiv.classList.remove('showContentBlock')
     modelbtn.classList.remove('activeBtn')
     modelspan.classList.remove('activeIconArrow')
+    modelSubCategory.style.display = "none";
 
     artistDoc.classList.remove("activeBtn");
     divArtista.classList.add("display-none-content");

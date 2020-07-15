@@ -46,13 +46,13 @@
                   <a href="javascript:void(0)">BABY</a>
                 </li>
                 <li data-link-on onclick="showSubs('Kids')">
-                  <a data-link-on href="javascript:void(0)">KIDS</a>
+                  <a data-link-on href="javascript:void(0)">KID</a>
                 </li>
                 <li data-link-on onclick="showSubs('PreTeens')">
                   <a href="javascript:void(0)">PRÉ-TEENS</a>
                 </li>
                 <li data-link-on onclick="showSubs('Commercials')">
-                  <a href="javascript:void(0)">COMMERCIALS</a>
+                  <a href="javascript:void(0)">COMMERCIAL</a>
                 </li>
                 <li data-link-on onclick="showSubs('PlusSize')">
                   <a href="javascript:void(0)">PLUS SIZE</a>
@@ -70,7 +70,7 @@
                   <a href="javascript:void(0)">URBAN</a>
                 </li>
                 <li data-link-on onclick="showSubs('Androgens')">
-                  <a href="javascript:void(0)">ANDROGENS</a>
+                  <a href="javascript:void(0)">ANDROGYNE</a>
                 </li>
               </div>
               <div class="sub-sub-model"></div>
@@ -119,11 +119,15 @@
                 </li>
               </div>
               <div class="sub-cantores-1 display-none-content">
-                <li data-none-link><a href="javascript:void(0)" data-none-link>ARTISTAS</a></li>
                 <li id="back-btn" class="voltar-artistas">
                   <span id="back-menu"></span><a href="javascript:void(0)" class="">VOLTAR</a>
                 </li>
+                <li data-none-link><a>CANTORES</a></li>
                 <li><a href="sertanejo.html">SERTANEJO</a></li>
+                <li><a href="#" onclick="PopupMsg('noneArtistas', 'noneArtistas')">FUNK</a></li>
+                <li><a href="#" onclick="PopupMsg('noneArtistas', 'noneArtistas')">GOSPEL</a></li>
+                <li><a href="#" onclick="PopupMsg('noneArtistas', 'noneArtistas')">INTERNACIONAL</a></li>
+                <li><a href="#" onclick="PopupMsg('noneArtistas', 'noneArtistas')">MPB</a></li>
               </div>
               <div class="MainMenu-1">
                 <li onclick="PopupMsg('noneArtistas', 'noneArtistas')"><a href="javascript:void(0)">COVERS</a></li>
@@ -158,14 +162,14 @@
         </div>
         <div class="display-none-content subnav-events sub-menu-1-ref">
           <a href="javascript:void(0)" onclick="PopupMsg('baby')">BABY</a>
-          <a href="javascript:void(0)" onclick="PopupMsg('kids')">KID'S</a>
-          <a href="javascript:void(0)" onclick="PopupMsg('pre-teen')">PRÉ-TEENS</a>
+          <a href="javascript:void(0)" onclick="PopupMsg('kids')">KID</a>
+          <a href="javascript:void(0)" onclick="PopupMsg('pre-teen')">PRÉ-TEEN</a>
           <a href="javascript:void(0)" onclick="PopupMsg('moreage')">MORE AGE</a>
           <a href="javascript:void(0)" onclick="PopupMsg('plussize')">PLUS SIZE</a>
           <a href="javascript:void(0)" onclick="PopupMsg('comercial')">COMERCIAL</a>
           <a href="javascript:void(0)" onclick="PopupMsg('fashion')">FASHION</a>
           <a href="javascript:void(0)" onclick="PopupMsg('fitness')">FITNESS</a>
-          <a href="javascript:void(0)" onclick="PopupMsg('androgeno')">ANDROGYNOUS</a>
+          <a href="javascript:void(0)" onclick="PopupMsg('androgeno')">ANDROGYNE</a>
           <a href="javascript:void(0)" onclick="PopupMsg('urbano')">URBAN</a>
         </div>
       </nav>
@@ -220,7 +224,7 @@
                 <p>VOLTAR</p>
               </li>
               <li data-bg-black>
-                <p>KIDS</p>
+                <p>KID</p>
               </li>
             </div>
             <div class="sub-imgs" onClick="PopupMsg('kids')">
@@ -245,7 +249,7 @@
                 <p>VOLTAR</p>
               </li>
               <li data-bg-black>
-                <p>PRE-TEENS</p>
+                <p>PRE-TEEN</p>
               </li>
             </div>
             <div class="sub-imgs" onClick="PopupMsg('pre-teen')">
@@ -384,7 +388,7 @@
           </div>
         </div>
         <a class="nav-link-5 w-nav-link w--nav-link-open" onClick="ShowSCategorysMainMobile('sub-androgynous')"
-          style="">ANDROGENS</a>
+          style="">ANDROGYNE</a>
         <div class="style-sub-category sub-androgynous subs-category-ref">
           <div class="sub-androgynous">
             <div class="mobile-model-cat">
@@ -395,7 +399,7 @@
                 <p>VOLTAR</p>
               </li>
               <li data-bg-black>
-                <p>ANDROGENS</p>
+                <p>ANDROGYNE</p>
               </li>
             </div>
             <div class="sub-imgs" onClick="PopupMsg('androgeno')">
@@ -494,7 +498,19 @@
           onClick="showOrHideContent('setanejo-categoria')">CANTORES</a>
         <div class="style-sub-category subs-category-ref artists-mobile-category setanejo-categoria">
           <a class="nav-link-5 w-nav-link w--nav-link-open" href="sertanejo.html"
-            style="background-color: black; color: white !important;">SERTANEJO</a>
+            style="background-color: black; color: white !important; border: 1px solid white;">SERTANEJO</a>
+          <a href="#" class="nav-link-5 w-nav-link w--nav-link-open"
+            onclick="PopupMsg('noneArtistas', 'noneArtistas',1)"
+            style="background-color: black; color: white !important; border: 1px solid white;">FUNK</a>
+          <a href="#" class="nav-link-5 w-nav-link w--nav-link-open"
+            onclick="PopupMsg('noneArtistas', 'noneArtistas',1)"
+            style="background-color: black; color: white !important; border: 1px solid white;">GOSPEL</a>
+          <a href="#" class="nav-link-5 w-nav-link w--nav-link-open"
+            onclick="PopupMsg('noneArtistas', 'noneArtistas',1)"
+            style="background-color: black; color: white !important; border: 1px solid white;">INTERNACIONAL</a>
+          <a href="#" class="nav-link-5 w-nav-link w--nav-link-open"
+            onclick="PopupMsg('noneArtistas', 'noneArtistas',1)"
+            style="background-color: black; color: white !important; border: 1px solid white;">MPB</a>
         </div>
         <a class="nav-link-5 w-nav-link w--nav-link-open" style=""
           onclick="PopupMsg('noneArtistas', 'noneArtistas',1)">COVERS</a>
@@ -520,8 +536,6 @@
     </nav>
   </div>
   </div>
-
-
 
   <header id="hero" class="hero">
     <div class="title-sertanejo">SERTANEJO</div>
@@ -558,8 +572,12 @@
         </div>
       </div>
       <div class="footerArtists">
-        <p>CONTRATE ARTISTA</p>
-        <P>Faça de seu evento um verdadeiro SHOW</P>
+        <div class="container-infos">
+          <img src="" alt="">
+          <p>CONTRATE ARTISTA</p>
+          <P>Faça de seu evento um verdadeiro SHOW</P>
+        </div>
+        <div class="watsapp-contact"></div>
       </div>
     </div>
   </header>

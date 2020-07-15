@@ -209,6 +209,7 @@
   .imgs-cursos img {
     width: 100vw;
     height: auto;
+    margin: 0;
   }
 }
 @media screen and (max-width: 479px) {
