@@ -440,9 +440,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
       popupCategory.style.backgroundColor = "white";
       containerImgs.innerHTML = `<div class="container-course-description">
                                   <div class="image-course-container"><img src="./media/home/menu-cursos/imgs-cursos/curso-modeloManequim.png"></div>
-                                  <div class="description-course"><p>O Curso é totalmente On-line. Para obter seu Certificado, você deverá tirar nota 6,0 na avaliação e completar a carga horária.
-                                  Para a confecção e envio postal do certificado existe apenas uma taxa de R$ 79.90, que será enviado por e-mail e através dos Correios.
-                                  A Solicitação do Certificado é opcional e não impedirá você de estudar gratuitamente. </p></div> 
+                                  <div class="description-course"><p>O curso é totalmente on-line. Para obter o certificado, você deverá atingir a nota minima 6,0 na avaliação e completar a carga horária. Para a confecção e envio postal do certificado existe apenas uma taxa de R$ 79.90, que será enviado por e-mail e através dos correios. A solicitação do certificado é opcional e não impedirá você de estudar gratuitamente. </p></div> 
                                   <div class="btn-aplly"><span class="apllyIcon"></span><p>CLIQUE AQUI PARA MATRICULAR AGORA</p></div>
                                   <span class="countdown">countdown</span> 
                                 </div>
@@ -454,9 +452,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
       popupCategory.style.backgroundColor = "white";
       containerImgs.innerHTML = `<div class="container-course-description">
                                   <div class="image-course-container"><img src="./media/home/menu-cursos/imgs-cursos/curso-modeloFotografica.png"></div>
-                                  <div class="description-course"><p>O Curso é totalmente On-line. Para obter seu Certificado, você deverá tirar nota 6,0 na avaliação e completar a carga horária.
-                                  Para a confecção e envio postal do certificado existe apenas uma taxa de R$ 79.90, que será enviado por e-mail e através dos Correios.
-                                  A Solicitação do Certificado é opcional e não impedirá você de estudar gratuitamente.</p></div> 
+                                  <div class="description-course"><p>O curso é totalmente on-line. Para obter o certificado, você deverá atingir a nota minima 6,0 na avaliação e completar a carga horária. Para a confecção e envio postal do certificado existe apenas uma taxa de R$ 79.90, que será enviado por e-mail e através dos correios. A solicitação do certificado é opcional e não impedirá você de estudar gratuitamente.</p></div> 
                                   <div class="btn-aplly"><span class="apllyIcon"></span><p>CLIQUE AQUI PARA MATRICULAR AGORA</p></div>
                                   <span class="countdown">countdown</span> 
                                 </div>
@@ -468,9 +464,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
       popupCategory.style.backgroundColor = "white";
       containerImgs.innerHTML = `<div class="container-course-description">
                                   <div class="image-course-container"><img src="./media/home/menu-cursos/imgs-cursos/curso-maquiagem.png"></div>
-                                  <div class="description-course"><p>O Curso é totalmente On-line. Para obter seu Certificado, você deverá tirar nota 6,0 na avaliação e completar a carga horária.
-                                  Para a confecção e envio postal do certificado existe apenas uma taxa de R$ 39.90, que será enviado por e-mail e através dos Correios.
-                                  A Solicitação do Certificado é opcional e não impedirá você de estudar gratuitamente.</p></div> 
+                                  <div class="description-course"><p>O curso é totalmente on-line. Para obter o certificado, você deverá atingir a nota minima 6,0 na avaliação e completar a carga horária. Para a confecção e envio postal do certificado existe apenas uma taxa de R$ 39.90, que será enviado por e-mail e através dos correios. A solicitação do certificado é opcional e não impedirá você de estudar gratuitamente.</p></div> 
                                   <div class="btn-aplly"><span class="apllyIcon"></span><p>CLIQUE AQUI PARA MATRICULAR AGORA</p></div>
                                   <span class="countdown">countdown</span> 
                                 </div>
@@ -482,9 +476,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
       popupCategory.style.backgroundColor = "white";
       containerImgs.innerHTML = `<div class="container-course-description">
                                   <div class="image-course-container"><img src="./media/home/menu-cursos/imgs-cursos/curso-teatro.png"></div>
-                                  <div class="description-course"><p>O Curso é totalmente On-line. Para obter seu Certificado, você deverá tirar nota 6,0 na avaliação e completar a carga horária.
-                                  Para a confecção e envio postal do certificado existe apenas uma taxa de R$ 79.90, que será enviado por e-mail e através dos Correios.
-                                  A Solicitação do Certificado é opcional e não impedirá você de estudar gratuitamente.</p></div> 
+                                  <div class="description-course"><p>O curso é totalmente on-line. Para obter o certificado, você deverá atingir a nota minima 6,0 na avaliação e completar a carga horária. Para a confecção e envio postal do certificado existe apenas uma taxa de R$ 79.90, que será enviado por e-mail e através dos correios. A solicitação do certificado é opcional e não impedirá você de estudar gratuitamente.</p></div> 
                                   <div class="btn-aplly"><span class="apllyIcon"></span><p>CLIQUE AQUI PARA MATRICULAR AGORA</p></div>
                                   <span class="countdown">countdown</span> 
                                 </div>
