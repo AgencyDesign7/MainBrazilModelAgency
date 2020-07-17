@@ -2,30 +2,29 @@
   /*.w-container {
       max-width: 728px;
     }*/
-    .containerAllElements{
-      margin: 0px;
-    }
-    .containerArtists{
-      margin: 20px 0 20px 0 !important;
-    }
-    .image-course-container img{
-      width: 80vw;
-    }
-    .description-course p{
-    
+  .containerAllElements {
+    margin: 0px;
+  }
+  .containerArtists {
+    margin: 20px 0 20px 0 !important;
+  }
+  .image-course-container img {
     width: 80vw;
-    }
-    .btn-aplly{
-      width: 50vw;
-      height: 50vw;
-    }
-    .btn-aplly p{
-      font-size: 1.8vw;
-    }
-    .apllyIcon{
-      width: 25px;
-      height: 25px;
-    }
+  }
+  .description-course p {
+    width: 80vw;
+  }
+  .btn-aplly {
+    width: 50vw;
+    height: 50vw;
+  }
+  .btn-aplly p {
+    font-size: 1.8vw;
+  }
+  .apllyIcon {
+    width: 25px;
+    height: 25px;
+  }
   .icon-navbar-sub {
     width: 15px;
     height: 15px;
@@ -77,39 +76,37 @@
     left: auto;
     right: auto;
   }
-
 }
 @media screen and (max-width: 767px) {
-  .container-contdown{
+  .container-contdown {
     transform: scale(0.7);
   }
 
-  .containerArtists{
+  .containerArtists {
     background-color: white;
     margin: 5px 5px 50px 5px !important;
-    width:100%;
+    width: 100%;
     height: 600px;
   }
 
-  .containerArtists{
+  .containerArtists {
     flex-direction: column;
   }
 
-  .image-course-container img{
+  .image-course-container img {
     width: 95vw;
   }
-  .description-course p{
-    
+  .description-course p {
     width: 95vw;
-    }
-  .btn-aplly{
+  }
+  .btn-aplly {
     width: 90vw;
     height: 90vw;
   }
-  .btn-aplly p{
+  .btn-aplly p {
     font-size: 2.8vw;
   }
-  .apllyIcon{
+  .apllyIcon {
     width: 25px;
     height: 25px;
   }
@@ -299,6 +296,9 @@
   }
 }
 @media screen and (max-width: 479px) {
+  .description {
+    flex-direction: column;
+  }
   .w-nav[data-collapse="tiny"] .w-nav-menu {
     display: none;
   }
@@ -490,10 +490,24 @@
   }
 }
 @media screen and (max-width: 767px) {
-  .container-about{
+  .footerArtists {
+    height: 500px;
+  }
+  #imgContact {
+    width: 100vw;
+    height: auto;
+  }
+
+  form,
+  .w-form,
+  .div-block-12 {
+    width: 100%;
+    padding: 0px 5px 0 5px !important;
+  }
+  .container-about {
     padding: 20px 50px 20px 3px !important;
   }
-  .consultores-sub{
+  .consultores-sub {
     flex-direction: column;
   }
   .hero {
@@ -505,16 +519,15 @@
     margin: 5px 10px;
     
   }*/
-  .container-about{
+  .container-about {
     height: 100%;
     width: 100%;
     justify-content: flex-start;
   }
-  #text-aboutus{
+  #text-aboutus {
     word-spacing: -1;
   }
 
-  
   .flex-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -633,9 +646,7 @@
   label {
     font-size: 20px;
   }
-  input::placeholder {
-    font-size: 20px;
-  }
+
   /*
         .sub-category-models{
           display: none;
@@ -675,7 +686,7 @@
   .w-slide {
     padding: 5px;
   }
-  .logo-image{
+  .logo-image {
     margin-bottom: 0px;
   }
 }
@@ -793,8 +804,8 @@
   }
 }
 
-@media screen and (max-width: 980px){
-  .hero{
+@media screen and (max-width: 980px) {
+  .hero {
     overflow: hidden !important;
   }
   /*.footer{
@@ -813,18 +824,20 @@
     text-decoration: none;
   }*/
 }
-@media screen and (max-width: 980px){
+@media screen and (max-width: 980px) {
   /*.footer{
     bottom: unset !important;
     margin: 0 !important;
   }*/
-  
+  form,
+  .w-form,
+  .div-block-12 {
+    padding: 0px 10px 0 10px;
+  }
 }
 
-@media screen and (max-width: 1417px)
-{
-  
-.container-about{
-  padding: 20px 100px;
-}
+@media screen and (max-width: 1417px) {
+  .container-about {
+    padding: 20px 100px;
+  }
 }

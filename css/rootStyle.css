@@ -202,6 +202,7 @@ td,th {
   font-style: normal;
 }*/
 
+
 [class^="w-icon-"],[class*=" w-icon-"] {
   font-family: 'webflow-icons' !important;
   speak: none;
@@ -3597,4 +3598,9 @@ form > input{
   font-size: 18px;
   color: white;
   margin: 20px 0 20px 0;
+}
+
+input::placeholder {
+  font-size: 15px;
+  color: rgb(202, 202, 202) !important;
 }
