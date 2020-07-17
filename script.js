@@ -16,30 +16,28 @@ function onLoad() {
     default:
       break;
   }
-};
+}
 
 function navBarMobile() {
   var navButton = document.querySelector(".menu-button");
   var iconMenuClick = document.querySelector(".icon-2");
   var navbarDiv = document.querySelector("[data-wf-ignore]");
 
-  var navbarRootDiv = document.querySelector('.navbar-mobile-root')
+  var navbarRootDiv = document.querySelector(".navbar-mobile-root");
 
   iconMenuClick.addEventListener("click", () => {
     if (navButton.classList[2] == "w--open") {
       navButton.classList.remove("w--open");
       navbarDiv.classList.remove("an-nav-bf");
       iconMenuClick.classList.remove("w-menu-open-nav");
-      navbarRootDiv.classList.add('display-none-content');
+      navbarRootDiv.classList.add("display-none-content");
     } else {
-
       navButton.classList.add("w--open");
       navbarDiv.classList.add("an-nav-bf");
       iconMenuClick.classList.add("w-menu-open-nav");
-      navbarRootDiv.classList.remove('display-none-content');
+      navbarRootDiv.classList.remove("display-none-content");
     }
   });
-
 
   var navMenuLink = document.querySelectorAll(".w-nav-menu a");
 
@@ -176,15 +174,14 @@ function slideTitle() {
 }
 
 function showCategoryModelsDesktop(selectedCategory, counterVal) {
-  var Modelcategory = document.querySelector(`.${selectedCategory}`)
-  var subcatSub = document.querySelector('.model-cat-sub')
-  var subSubDivContainer = document.querySelector('.sub-sub-model')
+  var Modelcategory = document.querySelector(`.${selectedCategory}`);
+  var subcatSub = document.querySelector(".model-cat-sub");
+  var subSubDivContainer = document.querySelector(".sub-sub-model");
 
-  subSubDivContainer.style.display = "none";
+  subSubDivContainer.classList.add("display-none-content");
 
-  Modelcategory.classList.remove('display-none-content');
-  subcatSub.innerHTML = '';
-
+  Modelcategory.classList.remove("display-none-content");
+  subcatSub.innerHTML = "";
 }
 
 function showOrHideContent(selectedCategory) {
@@ -196,10 +193,10 @@ function showOrHideContent(selectedCategory) {
 
 function showSubs(categorySelected) {
   var refSpanContainer = document.querySelector(".sub-sub-model");
-  var modelMain = document.querySelector('.main-categorys')
-  var subSubDivContainer = document.querySelector('.sub-sub-model')
-  subSubDivContainer.style.display = "block";
-  modelMain.classList.add('display-none-content')
+  var modelMain = document.querySelector(".main-categorys");
+  var subSubDivContainer = document.querySelector(".sub-sub-model");
+  subSubDivContainer.classList.remove("display-none-content");
+  modelMain.classList.add("display-none-content");
   var CategoryObjects = {
     Category: {
       Baby: {
@@ -289,8 +286,6 @@ function showSubs(categorySelected) {
                     </div>
   `;
   refSpanContainer.innerHTML = HtmlBabyCategory;
-
-
 }
 
 function ShowSCategorysMainMobile(category) {
@@ -343,8 +338,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
   var spanInset = document.querySelector(".w-nav-overlay");
   var navbarDiv = document.querySelector("[data-wf-ignore]");
 
-  var navbarRootDiv = document.querySelector('.navbar-mobile-root');
-
+  var navbarRootDiv = document.querySelector(".navbar-mobile-root");
 
   if (closeMenuMobile === 1) {
     navButton.classList.remove("w--open");
@@ -354,7 +348,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
         href="./contato.html" class="nav-link-6 w-nav-link">CONTATO</a>`*/
     navbarDiv.classList.remove("an-nav-bf");
     iconMenuClick.classList.remove("w-menu-open-nav");
-    navbarRootDiv.classList.add('display-none-content');
+    navbarRootDiv.classList.add("display-none-content");
   }
 
   if (false) {
@@ -367,8 +361,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
     popupCategory.classList.remove("display-none-content");
     setTimeout(() => {
       popupCategory.classList.add("container-popup-mgs");
-    }, 200)
-
+    }, 200);
   }
   if (title === "revista") {
     popupCategory.style.backgroundColor = "black";
@@ -516,19 +509,19 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
     var divEvento = document.querySelector(".subnav-evento");
     var spanEvent = document.querySelector(".events-btn > span");
 
-    var courseBtn = document.querySelector('.course-btn')
-    var courseSpan = document.querySelector('.course-btn > span')
-    var divCourse = document.querySelector('.subnav-course')
+    var courseBtn = document.querySelector(".course-btn");
+    var courseSpan = document.querySelector(".course-btn > span");
+    var divCourse = document.querySelector(".subnav-course");
 
-    var modelsDiv = document.querySelector('.main-categorys')
-    var modelbtn = document.querySelector('.model-button')
-    var modelspan = document.querySelector('.model-button  > span')
-    var modelSubCategory = document.querySelector('.sub-sub-model')
+    var modelsDiv = document.querySelector(".main-categorys");
+    var modelbtn = document.querySelector(".model-button");
+    var modelspan = document.querySelector(".model-button  > span");
+    var modelSubCategory = document.querySelector(".sub-sub-model");
 
-    modelsDiv.classList.remove('showContentBlock')
-    modelbtn.classList.remove('activeBtn')
-    modelspan.classList.remove('activeIconArrow')
-    modelSubCategory.style.display = "none";
+    modelsDiv.classList.remove("showContentBlock");
+    modelbtn.classList.remove("activeBtn");
+    modelspan.classList.remove("activeIconArrow");
+    modelSubCategory.classList.add("display-none-content");
 
     artistDoc.classList.remove("activeBtn");
     divArtista.classList.add("display-none-content");
@@ -536,24 +529,19 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
 
     divCantores.classList.add("display-none-content");
 
-
     artistDoc.classList.remove("activeBtn");
     divArtista.classList.add("display-none-content");
     spanIconArtist.classList.remove("activeIconArrow");
 
-
     divEvento.classList.add("display-none-content");
     spanEvent.classList.remove("activeIconArrow");
     eventsDoc.classList.remove("activeBtn");
-
-
 
     divCourse.classList.add("display-none-content");
     courseSpan.classList.remove("activeIconArrow");
     courseBtn.classList.remove("activeBtn");
 
     divCantores.classList.add("display-none-content");
-
   }
 }
 
@@ -701,20 +689,19 @@ function checkLenghtMin(id, lenghtFieldMin, referenceField, errMessage1) {
   var divEvento = document.querySelector(".subnav-evento");
   var spanEvent = document.querySelector(".events-btn > span");
 
-  var courseBtn = document.querySelector('.course-btn')
-  var courseSpan = document.querySelector('.course-btn > span')
-  var divCourse = document.querySelector('.subnav-course')
+  var courseBtn = document.querySelector(".course-btn");
+  var courseSpan = document.querySelector(".course-btn > span");
+  var divCourse = document.querySelector(".subnav-course");
 
-  var modelsBtn = document.querySelector('.model-button')
-  var spanBtnModel = document.querySelector('.model-button > span')
-  var divModel = document.querySelector('.main-categorys')
+  var modelsBtn = document.querySelector(".model-button");
+  var spanBtnModel = document.querySelector(".model-button > span");
+  var divModel = document.querySelector(".main-categorys");
 
-  var subcatModel = document.querySelector('.sub-sub-model')
+  var subcatModel = document.querySelector(".sub-sub-model");
 
   var hideContent = (menuNoClose) => {
-
     switch (menuNoClose) {
-      case 'modelo':
+      case "modelo":
         artistDoc.classList.remove("activeBtn");
         divArtista.classList.add("display-none-content");
         spanIconArtist.classList.remove("activeIconArrow");
@@ -727,9 +714,10 @@ function checkLenghtMin(id, lenghtFieldMin, referenceField, errMessage1) {
         spanEvent.classList.remove("activeIconArrow");
         eventsDoc.classList.remove("activeBtn");
 
-        break;
-      case 'artista':
+        subcatModel.classList.add("display-none-content");
 
+        break;
+      case "artista":
         divModel.classList.add("display-none-content");
         spanBtnModel.classList.remove("activeIconArrow");
         modelsBtn.classList.remove("activeBtn");
@@ -742,22 +730,26 @@ function checkLenghtMin(id, lenghtFieldMin, referenceField, errMessage1) {
         spanEvent.classList.remove("activeIconArrow");
         eventsDoc.classList.remove("activeBtn");
 
+        subcatModel.classList.add("display-none-content");
+
         break;
-      case 'curso':
+      case "curso":
         divModel.classList.add("display-none-content");
         spanBtnModel.classList.remove("activeIconArrow");
         modelsBtn.classList.remove("activeBtn");
 
         divEvento.classList.add("display-none-content");
         spanEvent.classList.remove("activeIconArrow");
-        eventsDoc.classList.remove("activeBtn")
+        eventsDoc.classList.remove("activeBtn");
 
         artistDoc.classList.remove("activeBtn");
         divArtista.classList.add("display-none-content");
         spanIconArtist.classList.remove("activeIconArrow");
 
+        subcatModel.classList.add("display-none-content");
+
         break;
-      case 'eventos':
+      case "eventos":
         divModel.classList.add("display-none-content");
         spanBtnModel.classList.remove("activeIconArrow");
         modelsBtn.classList.remove("activeBtn");
@@ -769,27 +761,17 @@ function checkLenghtMin(id, lenghtFieldMin, referenceField, errMessage1) {
         divCourse.classList.add("display-none-content");
         courseSpan.classList.remove("activeIconArrow");
         courseBtn.classList.remove("activeBtn");
-        break;
 
+        subcatModel.classList.add("display-none-content");
+        break;
     }
-
-
-
-
-
-
-
-
-
-
-
-  }
+  };
 
   var subdivCantores = document.querySelector(".sub-cantores-1");
   divCantores.style.animation = "opacity 1s";
 
   artistDoc.addEventListener("click", (event) => {
-    hideContent('artista')
+    hideContent("artista");
     if (divArtista.classList.contains("display-none-content")) {
       divArtista.classList.remove("display-none-content");
       spanIconArtist.classList.add("activeIconArrow");
@@ -818,7 +800,7 @@ function checkLenghtMin(id, lenghtFieldMin, referenceField, errMessage1) {
   });
 
   eventsDoc.addEventListener("click", (event) => {
-    hideContent('eventos')
+    hideContent("eventos");
     if (divEvento.classList.contains("display-none-content")) {
       divEvento.classList.remove("display-none-content");
       spanEvent.classList.add("activeIconArrow");
@@ -831,7 +813,7 @@ function checkLenghtMin(id, lenghtFieldMin, referenceField, errMessage1) {
   });
 
   courseBtn.addEventListener("click", (event) => {
-    hideContent('curso')
+    hideContent("curso");
     if (divCourse.classList.contains("display-none-content")) {
       divCourse.classList.remove("display-none-content");
       courseSpan.classList.add("activeIconArrow");
@@ -844,7 +826,7 @@ function checkLenghtMin(id, lenghtFieldMin, referenceField, errMessage1) {
   });
 
   modelsBtn.addEventListener("click", (event) => {
-    hideContent('modelo')
+    hideContent("modelo");
     if (divModel.classList.contains("display-none-content")) {
       divModel.classList.remove("display-none-content");
       spanBtnModel.classList.add("activeIconArrow");
@@ -853,48 +835,42 @@ function checkLenghtMin(id, lenghtFieldMin, referenceField, errMessage1) {
       divModel.classList.add("display-none-content");
       spanBtnModel.classList.remove("activeIconArrow");
       modelsBtn.classList.remove("activeBtn");
-
     }
   });
-
 })();
 
 function ShowOrHideSubMenus(classSelected, BackButton = 0) {
-  var arrayChildsNav = document.querySelectorAll('nav > a');
-  var ShowDiv = document.querySelector(`.${classSelected}`)
-  var ElementshowDiv = document.querySelectorAll(`.${classSelected} > a`)
+  var arrayChildsNav = document.querySelectorAll("nav > a");
+  var ShowDiv = document.querySelector(`.${classSelected}`);
+  var ElementshowDiv = document.querySelectorAll(`.${classSelected} > a`);
 
   if (BackButton === 0) {
-    arrayChildsNav.forEach(element => {
-      element.classList.add('noneForce');
-    })
-    ElementshowDiv.forEach(element => {
-      element.classList.remove('noneForce');
+    arrayChildsNav.forEach((element) => {
+      element.classList.add("noneForce");
+    });
+    ElementshowDiv.forEach((element) => {
+      element.classList.remove("noneForce");
       ShowDiv.style.display = "block";
-    })
+    });
   } else {
-    arrayChildsNav.forEach(element => {
-      element.classList.remove('noneForce');
-    })
-    ElementshowDiv.forEach(element => {
-      element.classList.add('noneForce');
+    arrayChildsNav.forEach((element) => {
+      element.classList.remove("noneForce");
+    });
+    ElementshowDiv.forEach((element) => {
+      element.classList.add("noneForce");
       ShowDiv.style.display = "none";
-    })
+    });
   }
-
-
-
 }
 
-
 function ArtistsMenus(classSelected, nameArtist) {
-  var divSelectd = document.querySelector(`.${classSelected}`)
-  if (!divSelectd.classList.contains('display-none-content')) {
-    divSelectd.classList.add('display-none-content')
+  var divSelectd = document.querySelector(`.${classSelected}`);
+  if (!divSelectd.classList.contains("display-none-content")) {
+    divSelectd.classList.add("display-none-content");
   } else {
     switch (nameArtist) {
       case "Vinicius Rocha":
-        divSelectd.classList.remove('display-none-content')
+        divSelectd.classList.remove("display-none-content");
         divSelectd.innerHTML = `<div class="title-bibliografia"><p>${nameArtist}</p></div>
     <div><p>Vinicius Cardoso Rocha Borges, nome artistico Vinicius Rocha,nascido em Divinopolis no ano de 1993, despertou o interesse pela musica aos 12 anos quando 
     aprendeu a tocar a primeira musica no violao de seu irmão. Descendente de bisavó pianista, avó regente de orquestra e tia violoncelista na orquestra sinfônica da PM de Belo horizonte, teve de onde herdar o interesse pela musica.
@@ -903,28 +879,28 @@ function ArtistsMenus(classSelected, nameArtist) {
     Vinicius então lança sua carreira solo como Vinicius Rocha na 43° Divinaexpo no palco novos talentos,ganhando até o seu primeiro Fã Clube.
     Então lança sua primeira musica de trabalho "Te Querer Tanto Assim" que em menos de uma semana teve mais de mil visualizações no youtube.</p></div>
     <div class="backbtn-artist" onClick="ArtistsMenus('artist-2')"><p>VOLTAR</p></div>
-    `
+    `;
         break;
     }
-
   }
-
-
 }
 
-!function contDown() {
-
+!(function contDown() {
   var contDownDate = new Date("August 10, 2020 00:00:00").getTime();
 
   var x = setInterval(() => {
-    var divCountdown = document.querySelector('.container-course-description > span')
+    var divCountdown = document.querySelector(
+      ".container-course-description > span"
+    );
     var now = new Date().getTime();
 
     var distance = contDownDate - now;
 
     // time calculation for days, hors, minutes and seconds
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     if (divCountdown) {
@@ -973,15 +949,11 @@ function ArtistsMenus(classSelected, nameArtist) {
                                       </div>
                                     </div>
                                     
-                                  </div>`
+                                  </div>`;
     }
-
 
     if (distance < 0) {
       clearInterval(x);
     }
-
   }, 1000);
-
-
-}()
+})();
