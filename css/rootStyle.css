@@ -3604,3 +3604,17 @@ input::placeholder {
   font-size: 15px;
   color: rgb(202, 202, 202) !important;
 }
+
+.photos-container{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.photos-container img{
+  width:auto;
+  height: 250px;
+}

@@ -861,9 +861,9 @@ function ArtistsMenus(classSelected, nameArtist) {
     divSelectd.classList.add("display-none-content");
   } else {
     switch (nameArtist) {
-      case "Vinicius Rocha":
+      case "ViniciusRocha-bibliografia":
         divSelectd.classList.remove("display-none-content");
-        divSelectd.innerHTML = `<div class="title-bibliografia"><p>${nameArtist}</p></div>
+        divSelectd.innerHTML = `<div class="title-bibliografia"><p>Vinicius Rocha</p></div>
     <div><p>Vinicius Cardoso Rocha Borges, nome artistico Vinicius Rocha,nascido em Divinopolis no ano de 1993, despertou o interesse pela musica aos 12 anos quando 
     aprendeu a tocar a primeira musica no violao de seu irmão. Descendente de bisavó pianista, avó regente de orquestra e tia violoncelista na orquestra sinfônica da PM de Belo horizonte, teve de onde herdar o interesse pela musica.
     Em 2005 Vinicius Rocha juntamente com seus amigos decidem criar uma banda de estilo alternativo denominada 360. A 360 teve varias formações até que foi decidido que Vinicius Rocha seria o vocalista. A partir deste momento o cantor despertou ainda mais o interesse pela musica. Algum tempo depois Vinicius e Breno Carvalho decidem sair da banda 360 e criam uma nova banda, Diaax, onde conseguiram durante dois anos seguidos fazer apresentação no Festival de inverno de Itapecerica-MG.
@@ -872,6 +872,19 @@ function ArtistsMenus(classSelected, nameArtist) {
     Então lança sua primeira musica de trabalho "Te Querer Tanto Assim" que em menos de uma semana teve mais de mil visualizações no youtube.</p></div>
     <div class="backbtn-artist" onClick="ArtistsMenus('artist-2')"><p>VOLTAR</p></div>
     `;
+        break;
+      case "ViniciusRocha-fotos":
+        divSelectd.classList.remove("display-none-content");
+        divSelectd.innerHTML = `
+          <div class="title-bibliografia"><p>Vinicius Rocha</p></div>
+          <div class='photos-container'>
+            <img src="./media/artistas/sertanejo/fotos-viniciusRocha/viniciusRocha1.jpg">
+            <img src="./media/artistas/sertanejo/fotos-viniciusRocha/viniciusRocha2.jpg">
+            <img src="./media/artistas/sertanejo/fotos-viniciusRocha/viniciusRocha3.jpg">
+          </div>
+          <div class="backbtn-artist" onClick="ArtistsMenus('artist-2')"><p>VOLTAR</p></div>
+        `;
+
         break;
     }
   }
