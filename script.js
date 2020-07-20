@@ -351,7 +351,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
     heroMain.setAttribute('style', 'height: 700px !important;');
     containerImgs.setAttribute('style', 'height: 700px !important;');
   } else {
-    heroMain.setAttribute('style', 'height: 1100px !important;');
+    heroMain.setAttribute('style', 'height: 1100px !important; overflow: hidden !important;');
     containerImgs.setAttribute('style', 'height: 1090px !important;');
     if (form !== null && sectionSocialMedia !== null) {
       sectionSocialMedia.setAttribute('style', 'display: none !important;');
