@@ -340,6 +340,25 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
 
   var navbarRootDiv = document.querySelector(".navbar-mobile-root");
 
+  var heroMain = document.querySelector('.hero')
+  var sectionSocialMedia = document.querySelector('.contact-socialMedia')
+  var form = document.querySelector('form')
+
+  var MediaQueryAjust = window.matchMedia("(max-width: 768px )")
+
+  if (MediaQueryAjust.matches === true) {
+    alert(MediaQueryAjust)
+    heroMain.setAttribute('style', 'height: 700px !important;');
+    containerImgs.setAttribute('style', 'height: 700px !important;');
+  } else {
+    heroMain.setAttribute('style', 'height: 1100px !important;');
+    containerImgs.setAttribute('style', 'height: 1090px !important;');
+    if (form !== null && sectionSocialMedia !== null) {
+      sectionSocialMedia.setAttribute('style', 'display: none !important;');
+      form.setAttribute('style', 'display: none !important;');
+    }
+  }
+
   if (closeMenuMobile === 1) {
     navButton.classList.remove("w--open");
     /*navMenu.innerHTML = `<a href="./index.html" class="nav-link-2 w-nav-link">HOME</a><a
@@ -362,6 +381,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
     setTimeout(() => {
       popupCategory.classList.add("container-popup-mgs");
     }, 200);
+
   }
   if (title === "revista") {
     popupCategory.style.backgroundColor = "black";
@@ -483,6 +503,20 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                       
       `;
       window.scrollTo(0, 0);
+      break;
+    case "parceiros":
+      popupCategory.style.backgroundColor = "white";
+      containerImgs.innerHTML =
+        `
+                        <div class="container-parceiros">
+                          <div class="images-container-parceiros">
+                            <img src="./media/parceiros/parceiro1.jpg" alt="parceiro">
+                            <img src="./media/parceiros/parceiro2.jpg" alt="parceiro">
+                            <img src="./media/parceiros/parceiro3.jpg" alt="parceiro">
+                            <img src="./media/parceiros/parceiro5.jpg" alt="parceiro">
+                          </div>
+                        </div>
+                      `
       break;
     default:
       break;
@@ -885,6 +919,12 @@ function ArtistsMenus(classSelected, nameArtist) {
           <div class="backbtn-artist" onClick="ArtistsMenus('artist-2')"><p>VOLTAR</p></div>
         `;
 
+        break;
+      case "ViniciusRocha-videos":
+        break;
+      case "ViniciusRocha-musicas":
+        break;
+      case "ViniciusRocha-faClube":
         break;
     }
   }

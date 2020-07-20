@@ -182,20 +182,13 @@
     align-items: center;
     flex-direction: column;
   }
-  #title {
-    font-size: 20px;
-  }
-
-  #text-aboutus {
-    font-size: 15px;
-  }
 
   .equipe-brm p {
     margin: 0;
   }
 
   .popup-models-category {
-    height: 100% + 100px;
+   height: max-content;
   }
   .container-imgs {
     padding: 10px;
@@ -298,6 +291,27 @@
 @media screen and (max-width: 479px) {
   .description {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .div-contact-social{
+    justify-content: center;
+  }
+  .div-contact-social img{
+    width: 40px;
+  }
+  .div-contact-social{
+    padding: 0;
+  }
+  .footerArtists img{
+    height: 100%;
+  }
+  .divfooter-container{
+    padding-top: 50px;
+  }
+  #star-brazilModel{
+    height: 140px;
+    margin: 0;
   }
   .w-nav[data-collapse="tiny"] .w-nav-menu {
     display: none;
@@ -490,6 +504,20 @@
   }
 }
 @media screen and (max-width: 767px) {
+  
+  .hero{
+    padding: 20px;
+  }
+
+  .container-sub video{
+    width: 400px;
+  }
+
+  #text-aboutus{
+    font-size: 15px;
+    padding-right: 10px;
+  }
+
   .footerArtists {
     height: 500px;
   }
@@ -510,9 +538,7 @@
   .consultores-sub {
     flex-direction: column;
   }
-  .hero {
-    padding: 0px;
-  }
+
   /*
   .aboutus{
     display: block;
@@ -842,5 +868,9 @@
 @media screen and (max-width: 1417px) {
   .container-about {
     padding: 20px 100px;
+  }
+  .container-sub{
+    flex-direction: column;
+    width: 100vw;
   }
 }
