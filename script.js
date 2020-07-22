@@ -895,6 +895,48 @@ function ArtistsMenus(classSelected, nameArtist) {
     divSelectd.classList.add("display-none-content");
   } else {
     switch (nameArtist) {
+
+
+      case "FernandoFidel-fotos":
+        divSelectd.classList.remove("display-none-content");
+        divSelectd.innerHTML = `
+          <div class="title-release"><p>Fernando e Fedel</p></div>
+          <div class='photos-container'>
+            <img src="./media/artistas/sertanejo/FernandoFidel/fotos/FernandoFidel1.jpg">
+          </div>
+          <div class="backbtn-artist" onClick="ArtistsMenus('artist-1')"><p>VOLTAR</p></div>
+        `;
+
+        break;
+      case "FernandoFidel-musicas":
+        playerMusic('FernandoFidel')
+
+        break;
+      case "FernandoFidel-videos":
+        divSelectd.classList.remove("display-none-content");
+        divSelectd.innerHTML = `
+                                <div class="container-videos">
+                                <iframe width="350" height="300" src="https://www.youtube.com/embed/-T76WtLCY1I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe width="350" height="300" src="https://www.youtube.com/embed/QRxwX--Kyxk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                                <div class="backbtn-artist" onClick="ArtistsMenus('artist-1')"><p>VOLTAR</p></div>
+                                `
+        break;
+
+      case "FernandoFidel-faClube":
+        break;
+
+      case "FernandoFidel-release":
+        divSelectd.classList.remove("display-none-content");
+        divSelectd.innerHTML = `<div class="title-release"><p>Fernando e Fidel</p></div>
+                  <div><p> ... </p></div>
+                  <div class="backbtn-artist" onClick="ArtistsMenus('artist-1')"><p>VOLTAR</p></div>
+                  `;
+        break;
+
+      //end Fernando Fidel
+
+
       case "ViniciusRocha-fotos":
         divSelectd.classList.remove("display-none-content");
         divSelectd.innerHTML = `
@@ -939,95 +981,232 @@ function ArtistsMenus(classSelected, nameArtist) {
                   `;
         break;
 
+      //End Vinicius Rocha
+
+
+      case "RogerioSoares-fotos":
+        divSelectd.classList.remove("display-none-content");
+        divSelectd.innerHTML = `
+          <div class="title-release"><p>Rogerio Soares</p></div>
+          <div class='photos-container'>
+            <img src="./media/artistas/sertanejo/RogerioSoares/fotos/RogerioSoares1.jpg">
+            <img src="./media/artistas/sertanejo/RogerioSoares/fotos/RogerioSoares2.jpg">
+          </div>
+          <div class="backbtn-artist" onClick="ArtistsMenus('artist-3')"><p>VOLTAR</p></div>
+        `;
+
+        break;
+      case "RogerioSoares-musicas":
+        playerMusic('RogerioSoares')
+
+        break;
+      case "RogerioSoares-videos":
+        divSelectd.classList.remove("display-none-content");
+        divSelectd.innerHTML = `
+                                <div class="container-videos">
+                                <iframe width="350" height="300" src="https://www.youtube.com/embed/fkFmngqw9oo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe width="350" height="300" src="https://www.youtube.com/embed/e8pSa7ZARP8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                                <div class="backbtn-artist" onClick="ArtistsMenus('artist-3')"><p>VOLTAR</p></div>
+                                `
+        break;
+
+      case "RogerioSoares-faClube":
+        break;
+
+      case "RogerioSoares-release":
+        divSelectd.classList.remove("display-none-content");
+        divSelectd.innerHTML = `<div class="title-release"><p>Rogerio Soares</p></div>
+                  <div><p> Rogério Jorge Soares Campos, nome artístico Rogério Soares, 
+                  nasceu no dia 06 de outubro de 1986, em Governador Valadares MG, filho de caminhoneiro e de dona de casa, desde criança sempre ouvindo músicas sertaneja junto com seus pais, principalmente sertanejo raizes, começou a ter o primeiro contato com o violão com 12 anos, quando seu irmão mais velho pegava o violão do vizinho emprestado que o seu irmão estava aprendendo a tocar e o Rogerio aprendendo junto com ele, seu irmão desistiu de aprender e parou de pegar o violão do vizinho, foi ai que o Rogerio insistiu com o seu pai até os 14 anos de idade, até que ele ganhou o seu primeiro violão do seu pai.
+                  Foi ai que começou  a aprender a tocar.
+                  Com 17 anos começou  a cantar, aos 19 anos entrou na  primeira banda em Governador Valadares, uma banda que cantava de tudo, (banda baile),  depois acabou  formando duplas duas vezes, a primeira Rogério e Fabrício, a  segunda era Tião Mineiro e Rogério, com 27 anos resolveu fazer carreira solo, Rogério Soares (cantor e compositor) tem uma bagagem musical muito grande de vários estilos. </p></div>
+                  <div class="backbtn-artist" onClick="ArtistsMenus('artist-3')"><p>VOLTAR</p></div>
+                  `;
+        break;
+
+
+
     }
   }
 }
 
-function ElementSelect(element) {
+function PhothosShow(element) {
+  var photos = document.querySelectorAll('')
+}
 
-  var ElementSelected = element
-  var getArtists = ObjectsArtists(`${ElementSelected.getAttribute('data-Artist')}`)
-  var musicSelected = element.getAttribute('data-value')
+function ElementSelect(artistObject) {
+
+  //var ElementSelected = element
+  var getArtists = artistObject
+  //var getArtists = ObjectsArtists(`${ElementSelected.getAttribute('data-Artist')}`)
   var totalMusics = getArtists['musicas']['totalMusics']
 
+  var playBtn = document.querySelector('#play-btn')
+  var nextBtn = document.querySelector('#next-btn')
+  var backBtn = document.querySelector('#back-btn-m')
+  var audioPlayer = document.querySelectorAll('#audioFiles')
+  var musicName = document.querySelector('#music-name')
+  var musicBtn = document.querySelectorAll('.btn-music')
+  var musicSelected = ''
+  var progressbar = document.querySelector('#progress-track')
+  var volumeBtn = document.querySelector('#volume-btn')
+  var volumeInput = document.querySelector('#volume-bar')
+  var closeWindow = document.querySelector('.close-container-music a')
+  var divPlayer = document.querySelector('.player-musics')
+  var heroDiv = document.querySelector('.hero')
+  musicName.innerHTML = '---------------'
+  volumeBtn.addEventListener('click', () => {
+    volumeInput.classList.contains('display-none-content') ? volumeInput.classList.remove('display-none-content') : volumeInput.classList.add('display-none-content')
+  })
 
-  var x = setInterval(() => {
-    var playBtn = document.querySelector('#play-btn')
-    var nextBtn = document.querySelector('#next-btn')
-    var backBtn = document.querySelector('#back-btn-m')
+  musicBtn.forEach(btn => {
+    btn.addEventListener('click', () => {
+      audioPlayer.forEach(audio => {
+        audio.pause()
+        audio.currentTime = 0;
+      })
 
-    var audioPlayer = document.querySelectorAll('#audioFiles')
+      audioPlayer[parseInt(btn.getAttribute('data-value'))].play()
+      musicSelected = parseInt(btn.getAttribute('data-value'))
+      musicName.innerHTML = getArtists['musicas'][musicSelected + 1]['name']
+      playBtn.classList.add('pausebtn')
+      getTimeMusic(audioPlayer[musicSelected])
+    })
+  })
 
+  volumeInput.addEventListener('change', () => {
+    audioPlayer[musicSelected].volume = (volumeInput.value / 100)
+  })
+
+
+  closeWindow.addEventListener('click', () => {
     audioPlayer.forEach(audio => {
       audio.pause()
       audio.currentTime = 0;
     })
+    divPlayer.classList.add('display-none-content')
+    heroDiv.style.visibility = 'visible'
 
-    audioPlayer[musicSelected].play()
-
-    if (playBtn && nextBtn && backBtn) {
-      clearInterval(x)
-      playBtn.addEventListener('click', () => {
-        if (audioPlayer[musicSelected].paused === true) {
-          audioPlayer[musicSelected].play()
-        } else {
-          audioPlayer[musicSelected].pause()
-        }
+  })
 
 
-
-
-      })
-
-      nextBtn.addEventListener('click', () => {
-
-      })
-
-      backBtn.addEventListener('click', () => {
-
-      })
-
+  playBtn.addEventListener('click', () => {
+    if (musicSelected !== '') {
+      if (audioPlayer[musicSelected].paused === true) {
+        audioPlayer[musicSelected].play()
+        playBtn.classList.add('pausebtn')
+      } else {
+        audioPlayer[musicSelected].pause()
+        playBtn.classList.remove('pausebtn')
+      }
+    } else {
 
     }
-  }, 500);
+
+
+
+  })
+
+  nextBtn.addEventListener('click', () => {
+    audioPlayer.forEach(audio => {
+      audio.pause()
+      audio.currentTime = 0;
+    })
+    if (musicSelected < totalMusics - 1) {
+
+      getTimeMusic(audioPlayer[musicSelected])
+      audioPlayer[musicSelected + 1].play()
+      musicSelected += 1
+      musicName.innerHTML = getArtists['musicas'][musicSelected + 1]['name']
+
+    } else {
+
+      musicSelected = totalMusics - 1
+      musicName.innerHTML = getArtists['musicas'][musicSelected + 1]['name']
+      getTimeMusic(audioPlayer[musicSelected])
+      audioPlayer[musicSelected].play()
+    }
+
+  })
+
+  backBtn.addEventListener('click', () => {
+    audioPlayer.forEach(audio => {
+      audio.pause()
+      audio.currentTime = 0;
+    })
+    if (musicSelected > 0) {
+      musicSelected -= 1
+      getTimeMusic(audioPlayer[musicSelected])
+      audioPlayer[musicSelected].play()
+      musicName.innerHTML = getArtists['musicas'][musicSelected + 1]['name']
+
+    } else {
+      musicSelected = 0
+      musicName.innerHTML = getArtists['musicas'][1]['name']
+      getTimeMusic(audioPlayer[musicSelected])
+      audioPlayer[musicSelected].play()
+    }
+  })
+
+
+  function getTimeMusic(elementAudio) {
+    //console.log(audioPlayer[musicSelected].duration)
+    elementAudio.addEventListener('timeupdate', () => {
+      progressbar.style.width = (audioPlayer[musicSelected].currentTime / audioPlayer[musicSelected].duration) * 100 + '%';
+    })
+
+  }
+
+
+
+
+
+
+
+
+  //onClick="ElementSelect(this)"" 
+
+
 }
 
 
-
-
-
-
 function playerMusic(selectedArtist, musicSelected = 0) {
-
   var divPlayer = document.querySelector('.player-musics')
 
   divPlayer.classList.remove('display-none-content')
-
+  var heroDiv = document.querySelector('.hero')
+  heroDiv.style.visibility = 'hidden'
 
   var getArtists = ObjectsArtists([selectedArtist])
+
   var totalMusics = getArtists['musicas']['totalMusics']
 
   var playList = setInterval(() => {
     var listMusics = document.querySelector('.list-musics-container')
     if (listMusics) {
       clearInterval(playList)
-      for (var value = 1; value < 3; value++) {
+      for (var value = 1; value <= totalMusics; value++) {
         listMusics.innerHTML += `
           <div class="music-list" data-link-pointer>
-          <div onClick="ElementSelect(this)" data-value="${value - 1}" data-Artist ="${getArtists[`selectName`]}"><p>${getArtists['musicas'][value]['name']}</p></div>
+          <div class="btn-music"  data-value="${value - 1}" data-Artist ="${getArtists[`selectName`]}"><p>${getArtists['musicas'][value]['name']}</p></div>
           <p>${getArtists['musicas'][value]['length']}</p>
         </div>
           `
+
+
       }
     }
 
   }, 500);
 
+
   divPlayer.innerHTML = `
     <div class="container-music">
+    <div class="close-container-music"><a href="#">X</a></div>
     <div class="container-Elements">
         <div id="playthis"></div>
-        <div class="photo-container"><img id="artistPhoto" src="./media/artistas/sertanejo/viniciusRocha/fotos/viniciusRocha3.jpg"
+        <div class="photo-container"><img id="artistPhoto" src="${getArtists[`tumbPhotoUrl`]}"
                 alt=""></div>
         <div class="controls-music">
             <div class="titles-artist">
@@ -1038,7 +1217,7 @@ function playerMusic(selectedArtist, musicSelected = 0) {
                     <div id="play-btn" data-link-pointer></div>
                     <div id="next-btn" data-link-pointer></div>
                     <div id="volume-controlers" >
-                        <input id="volume-bar" type="range" class="display-none-content">
+                        <input id="volume-bar" type="range" min="0" max="100" class="display-none-content">
                         <div id="volume-btn" data-link-pointer></div>
 
                     </div>
@@ -1060,15 +1239,18 @@ function playerMusic(selectedArtist, musicSelected = 0) {
   var htmlAudio = '';
   for (var a = 1; a < totalMusics + 1; a++) {
     htmlAudio += `
-      <audio id="audioFiles" src="${getArtists['musicas'][a]['src']}"></audio>
-    `
+        <audio id="audioFiles" src="${getArtists['musicas'][a]['src']}"></audio>
+      `
   }
 
   var divAudios = document.getElementById("playthis")
   divAudios.innerHTML = htmlAudio
+
+  setTimeout(() => {
+    ElementSelect(getArtists)
+  }, 700);
+
 }
-
-
 
 
 function ObjectsArtists(selectArtistName) {
@@ -1077,8 +1259,9 @@ function ObjectsArtists(selectArtistName) {
     ViniciusRocha: {
       selectName: 'ViniciusRocha',
       nameArtist: 'Vinicius Rocha',
+      tumbPhotoUrl: './media/artistas/sertanejo/viniciusRocha/fotos/viniciusRocha3.jpg',
       musicas: {
-        totalMusics: 2,
+        totalMusics: 3,
         1: {
           name: 'A Lua',
           src: './media/artistas/sertanejo/viniciusRocha/musicas/A Lua.mp3',
@@ -1088,37 +1271,92 @@ function ObjectsArtists(selectArtistName) {
           name: 'Tentar Te Ligar',
           src: './media/artistas/sertanejo/viniciusRocha/musicas/Tentar Te Ligar.mp3',
           length: '03:40'
+        },
+        3: {
+          name: 'Para te convencer',
+          src: './media/artistas/sertanejo/viniciusRocha/musicas/Pra te Convencer.mp3',
+          length: '03:47'
         }
       }
     },
     FernandoFidel: {
+      selectName: 'FernandoFidel',
       nameArtist: 'Fernando e Fidel',
+      tumbPhotoUrl: './media/artistas/sertanejo/FernandoFidel/fotos/FernandoFidel1.jpg',
       musicas: {
-        totalMusics: 2,
+        totalMusics: 5,
         1: {
-          name: 'A Lua',
-          src: './media/artistas/sertanejo/viniciusRocha/musicas/A Lua.mp3',
-          length: ''
+          name: 'Cachaceiro sem noção',
+          src: './media/artistas/sertanejo/FernandoFidel/musicas/Cachaceiro Sem Noção.mp3',
+          length: '02:51'
         },
         2: {
-          name: 'Tentar Te Ligar',
-          src: './media/artistas/sertanejo/viniciusRocha/musicas/Tentar Te Ligar.mp3',
-          length: ''
+          name: 'Farra',
+          src: './media/artistas/sertanejo/FernandoFidel/musicas/Farra.mp3',
+          length: '02:47'
+        },
+        3: {
+          name: 'La Pinga',
+          src: './media/artistas/sertanejo/FernandoFidel/musicas/La Pinga.mp3',
+          length: '03:14'
+        },
+        4: {
+          name: 'Sera que foi saudades (Cover)',
+          src: './media/artistas/sertanejo/FernandoFidel/musicas/Sera que foi saudade (Cover).mp3',
+          length: '03:41'
+        },
+        5: {
+          name: 'Você Sempre Será (Cover)',
+          src: './media/artistas/sertanejo/FernandoFidel/musicas/Você Sempre Será (Cover).mp3',
+          length: '01:24'
         }
       }
     },
     RogerioSoares: {
+      selectName: 'RogerioSoares',
       nameArtist: 'Rogerio Soares',
+      tumbPhotoUrl: './media/artistas/sertanejo/RogerioSoares/fotos/rogerioSoares1.jpg',
       musicas: {
+        totalMusics: 8,
         1: {
-          name: 'Para te Convencer',
-          src: './media/artistas/sertanejo/viniciusRocha/musicas/paraTeConvencer.mp3',
-          length: ''
+          name: 'Rosas',
+          src: './media/artistas/sertanejo/RogerioSoares/musicas/Rosas.mp3',
+          length: '03:02'
         },
         2: {
-          name: 'Te Amar Tanto Assim',
-          src: './media/artistas/sertanejo/viniciusRocha/musicas/paraTeConvencer.mp3',
-          length: ''
+          name: 'Sorriso Amarelo',
+          src: './media/artistas/sertanejo/RogerioSoares/musicas/Sorriso Amarelo.mp3',
+          length: '01:28'
+        },
+        3: {
+          name: 'Fica Amor (Cover)',
+          src: './media/artistas/sertanejo/RogerioSoares/musicas/Fica Amor (Cover).mp3',
+          length: '02:24'
+        },
+        4: {
+          name: 'Inquilina (Cover)',
+          src: './media/artistas/sertanejo/RogerioSoares/musicas/Inquilina (Cover).mp3',
+          length: '03:48'
+        },
+        5: {
+          name: 'Jogo do Amor (Cover)',
+          src: './media/artistas/sertanejo/RogerioSoares/musicas/Jogo do Amor (Cover).mp3',
+          length: '02:13'
+        },
+        6: {
+          name: 'Não Deixo Não (Cover)',
+          src: './media/artistas/sertanejo/RogerioSoares/musicas/Não Deixo Não (Cover).mp3',
+          length: '03:36'
+        },
+        7: {
+          name: 'Por te Amar Demais (Cover)',
+          src: './media/artistas/sertanejo/RogerioSoares/musicas/Por te Amar Demais (Cover).mp3',
+          length: '02:53'
+        },
+        8: {
+          name: 'Vai Doer (Cover)',
+          src: './media/artistas/sertanejo/RogerioSoares/musicas/Vai Doer (Cover).mp3',
+          length: '02:54'
         }
       }
     },

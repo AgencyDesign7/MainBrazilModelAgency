@@ -3280,7 +3280,7 @@ margin: 0;
   background-color: white;
   margin-bottom: 50px;
   width:600px;
-  height: 300px;
+  height: 400px;
 }
 .containerAllElements{
   display: flex;
@@ -3681,6 +3681,8 @@ input::placeholder {
 .container-videos{
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .container-videos iframe{
@@ -3796,6 +3798,16 @@ input::placeholder {
   align-self: center;
 }
 
+.pausebtn{
+  content: "";
+  width: 40px;
+  height: 40px;
+  background-image: url('../media/icon/playerIcons/pause\ btn.png') !important;
+  background-size: 40px auto;
+  background-repeat: no-repeat;
+  align-self: center;
+}
+
 #next-btn{
   content: "";
   width: 40px;
@@ -3821,6 +3833,7 @@ input::placeholder {
 }
 #volume-bar{
   position: absolute;
+  width: 70px;
   transform: translate(-30px, -18px) rotate(270deg);
 }
 .progress-bar-music{
@@ -3831,11 +3844,26 @@ input::placeholder {
 }
 
 #progress-track{
-  width: 35%;
+  width: 0%;
   height: 5px;
   background-color: rgb(50, 183, 250);
 }
-
+.close-container-music{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  position: relative;
+}
+.close-container-music a{
+  text-decoration: none;
+  font-size: 25px;
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  border: 1px solid white;
+  padding: 10px;
+}
 [data-link-pointer]:hover{
   cursor: pointer;
   color: rgb(255, 255, 255);
