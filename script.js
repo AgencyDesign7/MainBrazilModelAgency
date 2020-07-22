@@ -348,10 +348,10 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
 
   if (MediaQueryAjust.matches === true) {
     alert(MediaQueryAjust)
-    heroMain.setAttribute('style', 'height: 700px !important;');
+    heroMain.setAttribute('style', 'height: 700px !important; visibility: hidden !important;');
     containerImgs.setAttribute('style', 'height: 700px !important;');
   } else {
-    heroMain.setAttribute('style', 'height: 1100px !important; overflow: hidden !important;');
+    heroMain.setAttribute('style', 'height: 1100px !important; overflow: hidden !important; visibility: hidden !important;');
     containerImgs.setAttribute('style', 'height: 1090px !important;');
     if (form !== null && sectionSocialMedia !== null) {
       sectionSocialMedia.setAttribute('style', 'display: none !important;');
@@ -895,39 +895,239 @@ function ArtistsMenus(classSelected, nameArtist) {
     divSelectd.classList.add("display-none-content");
   } else {
     switch (nameArtist) {
-      case "ViniciusRocha-bibliografia":
-        divSelectd.classList.remove("display-none-content");
-        divSelectd.innerHTML = `<div class="title-bibliografia"><p>Vinicius Rocha</p></div>
-    <div><p>Vinicius Cardoso Rocha Borges, nome artistico Vinicius Rocha,nascido em Divinopolis no ano de 1993, despertou o interesse pela musica aos 12 anos quando 
-    aprendeu a tocar a primeira musica no violao de seu irmão. Descendente de bisavó pianista, avó regente de orquestra e tia violoncelista na orquestra sinfônica da PM de Belo horizonte, teve de onde herdar o interesse pela musica.
-    Em 2005 Vinicius Rocha juntamente com seus amigos decidem criar uma banda de estilo alternativo denominada 360. A 360 teve varias formações até que foi decidido que Vinicius Rocha seria o vocalista. A partir deste momento o cantor despertou ainda mais o interesse pela musica. Algum tempo depois Vinicius e Breno Carvalho decidem sair da banda 360 e criam uma nova banda, Diaax, onde conseguiram durante dois anos seguidos fazer apresentação no Festival de inverno de Itapecerica-MG.
-    Algum tempo depois a rotina de vida dos integrantes foram aumentando e não tinham tempo para dedicar a banda. Então em 2013 Vinicius Rocha decide ingressar uma carreira solo na musica sertaneja, estilo que sempre pertenceu ao gosto musical desde pequeno.
-    Vinicius então lança sua carreira solo como Vinicius Rocha na 43° Divinaexpo no palco novos talentos,ganhando até o seu primeiro Fã Clube.
-    Então lança sua primeira musica de trabalho "Te Querer Tanto Assim" que em menos de uma semana teve mais de mil visualizações no youtube.</p></div>
-    <div class="backbtn-artist" onClick="ArtistsMenus('artist-2')"><p>VOLTAR</p></div>
-    `;
-        break;
       case "ViniciusRocha-fotos":
         divSelectd.classList.remove("display-none-content");
         divSelectd.innerHTML = `
-          <div class="title-bibliografia"><p>Vinicius Rocha</p></div>
+          <div class="title-release"><p>Vinicius Rocha</p></div>
           <div class='photos-container'>
-            <img src="./media/artistas/sertanejo/fotos-viniciusRocha/viniciusRocha1.jpg">
-            <img src="./media/artistas/sertanejo/fotos-viniciusRocha/viniciusRocha2.jpg">
-            <img src="./media/artistas/sertanejo/fotos-viniciusRocha/viniciusRocha3.jpg">
+            <img src="./media/artistas/sertanejo/viniciusRocha/fotos/viniciusRocha1.jpg">
+            <img src="./media/artistas/sertanejo/viniciusRocha/fotos/viniciusRocha2.jpg">
+            <img src="./media/artistas/sertanejo/viniciusRocha/fotos/viniciusRocha3.jpg">
           </div>
           <div class="backbtn-artist" onClick="ArtistsMenus('artist-2')"><p>VOLTAR</p></div>
         `;
 
         break;
-      case "ViniciusRocha-videos":
-        break;
       case "ViniciusRocha-musicas":
+        playerMusic('ViniciusRocha')
+
         break;
+      case "ViniciusRocha-videos":
+        divSelectd.classList.remove("display-none-content");
+        divSelectd.innerHTML = `
+                                <div class="container-videos">
+                                  <iframe width="350" height="300" src="https://www.youtube.com/embed/aF5s44CNO0o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                  <iframe width="350" height="300" src="https://www.youtube.com/embed/daWsdxBs15A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                                <div class="backbtn-artist" onClick="ArtistsMenus('artist-2')"><p>VOLTAR</p></div>
+                                `
+        break;
+
       case "ViniciusRocha-faClube":
         break;
+
+      case "ViniciusRocha-release":
+        divSelectd.classList.remove("display-none-content");
+        divSelectd.innerHTML = `<div class="title-release"><p>Vinicius Rocha</p></div>
+                  <div><p>Vinicius Cardoso Rocha Borges, nome artistico Vinicius Rocha,nascido em Divinopolis no ano de 1993, despertou o interesse pela musica aos 12 anos quando 
+                  aprendeu a tocar a primeira musica no violao de seu irmão. Descendente de bisavó pianista, avó regente de orquestra e tia violoncelista na orquestra sinfônica da PM de Belo horizonte, teve de onde herdar o interesse pela musica.
+                  Em 2005 Vinicius Rocha juntamente com seus amigos decidem criar uma banda de estilo alternativo denominada 360. A 360 teve varias formações até que foi decidido que Vinicius Rocha seria o vocalista. A partir deste momento o cantor despertou ainda mais o interesse pela musica. Algum tempo depois Vinicius e Breno Carvalho decidem sair da banda 360 e criam uma nova banda, Diaax, onde conseguiram durante dois anos seguidos fazer apresentação no Festival de inverno de Itapecerica-MG.
+                  Algum tempo depois a rotina de vida dos integrantes foram aumentando e não tinham tempo para dedicar a banda. Então em 2013 Vinicius Rocha decide ingressar uma carreira solo na musica sertaneja, estilo que sempre pertenceu ao gosto musical desde pequeno.
+                  Vinicius então lança sua carreira solo como Vinicius Rocha na 43° Divinaexpo no palco novos talentos,ganhando até o seu primeiro Fã Clube.
+                  Então lança sua primeira musica de trabalho "Te Querer Tanto Assim" que em menos de uma semana teve mais de mil visualizações no youtube.</p></div>
+                  <div class="backbtn-artist" onClick="ArtistsMenus('artist-2')"><p>VOLTAR</p></div>
+                  `;
+        break;
+
     }
   }
+}
+
+function ElementSelect(element) {
+
+  var ElementSelected = element
+  var getArtists = ObjectsArtists(`${ElementSelected.getAttribute('data-Artist')}`)
+  var musicSelected = element.getAttribute('data-value')
+  var totalMusics = getArtists['musicas']['totalMusics']
+
+
+  var x = setInterval(() => {
+    var playBtn = document.querySelector('#play-btn')
+    var nextBtn = document.querySelector('#next-btn')
+    var backBtn = document.querySelector('#back-btn-m')
+
+    var audioPlayer = document.querySelectorAll('#audioFiles')
+
+    audioPlayer.forEach(audio => {
+      audio.pause()
+      audio.currentTime = 0;
+    })
+
+    audioPlayer[musicSelected].play()
+
+    if (playBtn && nextBtn && backBtn) {
+      clearInterval(x)
+      playBtn.addEventListener('click', () => {
+        if (audioPlayer[musicSelected].paused === true) {
+          audioPlayer[musicSelected].play()
+        } else {
+          audioPlayer[musicSelected].pause()
+        }
+
+
+
+
+      })
+
+      nextBtn.addEventListener('click', () => {
+
+      })
+
+      backBtn.addEventListener('click', () => {
+
+      })
+
+
+    }
+  }, 500);
+}
+
+
+
+
+
+
+function playerMusic(selectedArtist, musicSelected = 0) {
+
+  var divPlayer = document.querySelector('.player-musics')
+
+  divPlayer.classList.remove('display-none-content')
+
+
+  var getArtists = ObjectsArtists([selectedArtist])
+  var totalMusics = getArtists['musicas']['totalMusics']
+
+  var playList = setInterval(() => {
+    var listMusics = document.querySelector('.list-musics-container')
+    if (listMusics) {
+      clearInterval(playList)
+      for (var value = 1; value < 3; value++) {
+        listMusics.innerHTML += `
+          <div class="music-list" data-link-pointer>
+          <div onClick="ElementSelect(this)" data-value="${value - 1}" data-Artist ="${getArtists[`selectName`]}"><p>${getArtists['musicas'][value]['name']}</p></div>
+          <p>${getArtists['musicas'][value]['length']}</p>
+        </div>
+          `
+      }
+    }
+
+  }, 500);
+
+  divPlayer.innerHTML = `
+    <div class="container-music">
+    <div class="container-Elements">
+        <div id="playthis"></div>
+        <div class="photo-container"><img id="artistPhoto" src="./media/artistas/sertanejo/viniciusRocha/fotos/viniciusRocha3.jpg"
+                alt=""></div>
+        <div class="controls-music">
+            <div class="titles-artist">
+                <p id="music-name"></p>
+                <p id="author-name">Autor: ${getArtists[`nameArtist`]}</p>
+                <div class="contolers">
+                    <div id="back-btn-m" data-link-pointer></div>
+                    <div id="play-btn" data-link-pointer></div>
+                    <div id="next-btn" data-link-pointer></div>
+                    <div id="volume-controlers" >
+                        <input id="volume-bar" type="range" class="display-none-content">
+                        <div id="volume-btn" data-link-pointer></div>
+
+                    </div>
+                </div>
+                <div class="progress-bar-music">
+                    <div id="progress-track"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="list-musics-container">
+        
+    </div>
+</div>
+    
+                            `
+
+
+  var htmlAudio = '';
+  for (var a = 1; a < totalMusics + 1; a++) {
+    htmlAudio += `
+      <audio id="audioFiles" src="${getArtists['musicas'][a]['src']}"></audio>
+    `
+  }
+
+  var divAudios = document.getElementById("playthis")
+  divAudios.innerHTML = htmlAudio
+}
+
+
+
+
+function ObjectsArtists(selectArtistName) {
+
+  Artists = {
+    ViniciusRocha: {
+      selectName: 'ViniciusRocha',
+      nameArtist: 'Vinicius Rocha',
+      musicas: {
+        totalMusics: 2,
+        1: {
+          name: 'A Lua',
+          src: './media/artistas/sertanejo/viniciusRocha/musicas/A Lua.mp3',
+          length: '03:49'
+        },
+        2: {
+          name: 'Tentar Te Ligar',
+          src: './media/artistas/sertanejo/viniciusRocha/musicas/Tentar Te Ligar.mp3',
+          length: '03:40'
+        }
+      }
+    },
+    FernandoFidel: {
+      nameArtist: 'Fernando e Fidel',
+      musicas: {
+        totalMusics: 2,
+        1: {
+          name: 'A Lua',
+          src: './media/artistas/sertanejo/viniciusRocha/musicas/A Lua.mp3',
+          length: ''
+        },
+        2: {
+          name: 'Tentar Te Ligar',
+          src: './media/artistas/sertanejo/viniciusRocha/musicas/Tentar Te Ligar.mp3',
+          length: ''
+        }
+      }
+    },
+    RogerioSoares: {
+      nameArtist: 'Rogerio Soares',
+      musicas: {
+        1: {
+          name: 'Para te Convencer',
+          src: './media/artistas/sertanejo/viniciusRocha/musicas/paraTeConvencer.mp3',
+          length: ''
+        },
+        2: {
+          name: 'Te Amar Tanto Assim',
+          src: './media/artistas/sertanejo/viniciusRocha/musicas/paraTeConvencer.mp3',
+          length: ''
+        }
+      }
+    },
+
+
+  } //end object
+
+
+  return Artists[selectArtistName];
 }
 
 !(function contDown() {
