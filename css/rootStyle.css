@@ -3098,15 +3098,14 @@ li:hover a{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px 20px;
   
 }
 
 .container-about{
   justify-content: flex-start;
-  /*width: 1272px;
-  height: 310px;*/
-  padding: 20px 300px;
+  width: 100%;
+  height: fit-content;
+  /*padding: 20px 300px;*/
   color: white;
   margin: 0 auto;
   margin: 0;
@@ -3126,7 +3125,7 @@ font-weight: 500;
 font-size: 25px;
 line-height: 35px;
 text-align: center;
-margin-bottom: 20px;
+margin: 10px 0 20px 0;
 }
 
 #text-aboutus{
@@ -3145,7 +3144,7 @@ justify-content: center;
 align-items: center;
 width: 264px;
 height: 51px;
-margin-top: 80px;
+margin: 30px 0 0 10px;
 border: 1px solid #FFFFFF;
 border-radius: 89px;
 }
@@ -3156,7 +3155,7 @@ border-radius: 89px;
 #title-con{
   font-weight: bold;
   font-size: 22px;
-  margin-top: 30px;
+  margin: 30px 0 10px 10px;
 }
 
 .revista img{
@@ -3864,6 +3863,41 @@ input::placeholder {
   border: 1px solid white;
   padding: 10px;
 }
+
+.about-2{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.about-2 p{
+  font-size: 16px;
+  line-height: 28px;
+  text-align: justify;
+}
+
+.about-2 #title-2{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.sub-about-2c{
+  width: 700px;
+  margin: 20px;
+}
+
+.socialMedia-container{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.socialMedia-container img{
+  margin:2px;
+  width: 60px;
+  height: auto;
+}
+
 [data-link-pointer]:hover{
   cursor: pointer;
   color: rgb(255, 255, 255);
