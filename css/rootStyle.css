@@ -3898,6 +3898,59 @@ input::placeholder {
   height: auto;
 }
 
+.container-propaganda{
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+}
+.images-main{
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.slider-propaganda{
+  height: 500px;
+  width: 500px;
+  position: relative;
+}
+
+.slider-propaganda img{
+  width: 500px;
+  height: auto;
+  position: absolute;
+}
+.contact-watsapp{
+  display: flex;
+  justify-content: space-between;
+}
+.contact-watsapp-icons{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contact-watsapp-icons img{
+  width: 80px;
+  height: auto;
+}
+.contact-watsapp-icons p{
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.container-text-propa{
+  margin: 20px 0 20px 0;
+}
+.container-text-propa p{
+  font-size: 20px;
+}
+
 [data-link-pointer]:hover{
   cursor: pointer;
   color: rgb(255, 255, 255);
