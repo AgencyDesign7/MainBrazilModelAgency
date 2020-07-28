@@ -3949,6 +3949,7 @@ input::placeholder {
 }
 .container-text-propa p{
   font-size: 20px;
+  color: #000;
 }
 
 [data-link-pointer]:hover{
