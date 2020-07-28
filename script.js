@@ -327,6 +327,28 @@ function searchAndShowSlide() {
 }*/
 
 function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
+  var ObjectsContainer = {
+    Hero: {
+      ref: document.querySelector('.hero'),
+      StyleAttributes(Style) { this.ref.setAttribute('style', `${Style}`) },
+    },
+    PopUpMsgContainer: {
+      ref: document.querySelector('.container-popup-mgs'),
+      refImgs: document.querySelector('.container-imgs'),
+      CopyContainer(copy) { this.refImgs.setAttribute('style', `${copy}`) },
+      StyleAttributes(Style) {
+        this.ref.setAttribute('style', `${Style}`)
+        this.CopyContainer(Style)
+      },
+
+    }
+
+  }
+
+
+
+
+
   var navButtonMenuMobile = document.querySelector(".menu-button");
   var popupCategory = document.querySelector(".sub-category");
   var containerImgs = document.querySelector(".container-imgs");
@@ -340,24 +362,18 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
 
   var navbarRootDiv = document.querySelector(".navbar-mobile-root");
 
-  var heroMain = document.querySelector(".hero");
   var sectionSocialMedia = document.querySelector(".contact-socialMedia");
   var form = document.querySelector("form");
 
   var MediaQueryAjust = window.matchMedia("(max-width: 768px )");
 
   if (MediaQueryAjust.matches === true) {
-    alert(MediaQueryAjust);
-    heroMain.setAttribute(
-      "style",
-      "height: 700px !important; visibility: hidden !important;"
-    );
+    ObjectsContainer.Hero.StyleAttributes('height: 700px !important; visibility:hidden !important')
+
     containerImgs.setAttribute("style", "height: 700px !important;");
   } else {
-    heroMain.setAttribute(
-      "style",
-      "height: 1100px !important; overflow: hidden !important; visibility: hidden !important;"
-    );
+    ObjectsContainer.Hero.StyleAttributes('height: 1100px !important; visibility:hidden !important')
+
     containerImgs.setAttribute("style", "height: 1090px !important;");
     if (form !== null && sectionSocialMedia !== null) {
       sectionSocialMedia.setAttribute("style", "display: none !important;");
@@ -367,10 +383,6 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
 
   if (closeMenuMobile === 1) {
     navButton.classList.remove("w--open");
-    /*navMenu.innerHTML = `<a href="./index.html" class="nav-link-2 w-nav-link">HOME</a><a
-        href="./composite.html" class="nav-link-3 w-nav-link">COMPOSITE</a><a href="./book.html"
-        class="nav-link-4 w-nav-link">BOOK</a><a href="./parceiros.html" class="nav-link-5 w-nav-link">PARCEIROS</a><a
-        href="./contato.html" class="nav-link-6 w-nav-link">CONTATO</a>`*/
     navbarDiv.classList.remove("an-nav-bf");
     iconMenuClick.classList.remove("w-menu-open-nav");
     navbarRootDiv.classList.add("display-none-content");
@@ -390,6 +402,13 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
   }
   if (title === "revista") {
     popupCategory.style.backgroundColor = "black";
+  }
+
+  if (title === 'parceiros' || title === 'pitagoras-propaganda') {
+    ObjectsContainer.Hero.StyleAttributes('height: 1100px !important; visibility:hidden !important')
+    ObjectsContainer.PopUpMsgContainer.StyleAttributes('height: 1100px !important;')
+  } else {
+    ObjectsContainer.Hero.StyleAttributes('height: fit-content !important; visibility:hidden !important')
   }
 
   switch (title) {
@@ -948,6 +967,7 @@ function ArtistsMenus(classSelected, nameArtist) {
         divSelectd.innerHTML = `
                                 <div class="container-videos">
                                 <iframe width="350" height="300" src="https://www.youtube.com/embed/-T76WtLCY1I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                
                                 <iframe width="350" height="300" src="https://www.youtube.com/embed/QRxwX--Kyxk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                 </div>
                                 <div class="backbtn-artist" onClick="ArtistsMenus('artist-1')"><p>VOLTAR</p></div>
@@ -1170,7 +1190,7 @@ function ElementSelect(artistObject) {
       progressbar.style.width =
         (audioPlayer[musicSelected].currentTime /
           audioPlayer[musicSelected].duration) *
-          100 +
+        100 +
         "%";
     });
   }
@@ -1199,7 +1219,7 @@ function playerMusic(selectedArtist, musicSelected = 0) {
           <div class="music-list" data-link-pointer>
           <div class="btn-music"  data-value="${value - 1}" data-Artist ="${
           getArtists[`selectName`]
-        }"><p>${getArtists["musicas"][value]["name"]}</p></div>
+          }"><p>${getArtists["musicas"][value]["name"]}</p></div>
           <p>${getArtists["musicas"][value]["length"]}</p>
         </div>
           `;
@@ -1213,8 +1233,8 @@ function playerMusic(selectedArtist, musicSelected = 0) {
     <div class="container-Elements">
         <div id="playthis"></div>
         <div class="photo-container"><img id="artistPhoto" src="${
-          getArtists[`tumbPhotoUrl`]
-        }"
+    getArtists[`tumbPhotoUrl`]
+    }"
                 alt=""></div>
         <div class="controls-music">
             <div class="titles-artist">
