@@ -109,6 +109,26 @@ function AudioControls() {
   });
 }
 
+
+function slideParceiros() {
+  var index = 0;
+
+  nextSlide()
+  function nextSlide() {
+    var Divimgs = document.querySelectorAll('.imgp-slide')
+    Divimgs.forEach((img) => img.style.display = "none")
+
+    index++;
+    if (index > Divimgs.length) index = 1;
+    Divimgs[index - 1].style.display = "block"
+
+    setTimeout(nextSlide, 4000)
+  }
+
+
+
+}
+
 function slideTitle() {
   var index = 0;
   var index2 = 1;
@@ -368,11 +388,14 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
   var MediaQueryAjust = window.matchMedia("(max-width: 768px )");
 
   if (MediaQueryAjust.matches === true) {
-    ObjectsContainer.Hero.StyleAttributes('height: 700px !important; visibility:hidden !important')
-
+    ObjectsContainer.Hero.StyleAttributes('height: 700px !important; visibility:hidden !important; overflow: hidden !important;')
     containerImgs.setAttribute("style", "height: 700px !important;");
+    if (title === 'parceiros' || title === 'pitagoras-propaganda') {
+      ObjectsContainer.Hero.StyleAttributes('height: 1100px !important; visibility:hidden !important; overflow: hidden !important;')
+      ObjectsContainer.PopUpMsgContainer.StyleAttributes('height: 1100px !important;')
+    }
   } else {
-    ObjectsContainer.Hero.StyleAttributes('height: 1100px !important; visibility:hidden !important')
+    ObjectsContainer.Hero.StyleAttributes('height: 1100px !important; visibility:hidden !important; overflow: hidden !important;')
 
     containerImgs.setAttribute("style", "height: 1090px !important;");
     if (form !== null && sectionSocialMedia !== null) {
@@ -404,12 +427,12 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
     popupCategory.style.backgroundColor = "black";
   }
 
-  if (title === 'parceiros' || title === 'pitagoras-propaganda') {
+  /*if (title === 'parceiros' || title === 'pitagoras-propaganda') {
     ObjectsContainer.Hero.StyleAttributes('height: 1100px !important; visibility:hidden !important')
     ObjectsContainer.PopUpMsgContainer.StyleAttributes('height: 1100px !important;')
   } else {
     ObjectsContainer.Hero.StyleAttributes('height: fit-content !important; visibility:hidden !important')
-  }
+  }*/
 
   switch (title) {
     case "cursos":
@@ -548,27 +571,28 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                         <div class="container-propaganda">
                           <div class="images-main">
                             <div class="slider-propaganda">
-                              <img src="./media/parceiros/pitagoras/propaganda-pitagoras-1.png" alt="pitagoras">
-                              <img src="./media/parceiros/pitagoras/propaganda-pitagoras-2.png" alt="piragoras">
-                              <img src="./media/parceiros/pitagoras/propaganda-pitagoras-3.png" style="display: none;" alt="pitagoras">
+                              <img src="./media/parceiros/pitagoras/propaganda-pitagoras-1.png" class="imgp-slide" alt="pitagoras">
+                              <img src="./media/parceiros/pitagoras/propaganda-pitagoras-2.png" class="imgp-slide" alt="piragoras">
+                              <img src="./media/parceiros/pitagoras/propaganda-pitagoras-3.png" class="imgp-slide" alt="pitagoras">
                             </div>
                           </div>
                           <div class="txts-propaganda">
                             <div class="container-text-propa"><p>Os alunos da <b>Brazil Model Agency</b> tem descontos especial nos cursos de graduações e pôs na Faculdade Pitágoras</p><div>
                             <div class="contact-watsapp">
                               <div class="contact-watsapp-icons">
-                                <a href="https://api.whatsapp.com/send?phone=5531994530485"><img src="./media/iconSocial/IwatsappColor.png"></a>
+                                <a href="https://api.whatsapp.com/send?phone=553183846820"><img src="./media/IconSocial/IwatsappColor.png"></a>
                                 <p>Barreiro</p>
                               </div>
                               <div class="contact-watsapp-icons">
-                              <a href="https://api.whatsapp.com/send?phone=5531994530485"><img src="./media/iconSocial/IwatsappColor.png"></a>
-                              <p>Contagem</p>
+                                <a href="https://api.whatsapp.com/send?phone=553193112775"><img src="./media/IconSocial/IwatsappColor.png"></a>
+                                <p>Contagem</p>
                             </div>
                             </div>
                           </div>
 
                         </div>
                       `;
+      setTimeout(slideParceiros(), 500)
       break;
     default:
       break;
