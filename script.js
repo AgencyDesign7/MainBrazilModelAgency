@@ -577,7 +577,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                             </div>
                           </div>
                           <div class="txts-propaganda">
-                            <div class="container-text-propa"><p>Os alunos da <b>Brazil Model Agency</b> tem descontos especial nos cursos de graduações e pôs na Faculdade Pitágoras</p><div>
+                            <div class="container-text-propa"><p>Os alunos da <b>Brazil Model Agency</b> tem descontos especial nos cursos de graduação e pós-graduação na Faculdade Pitágoras. Não perca tempo, matricule-se já!</p><div>
                             <div class="contact-watsapp">
                               <div class="contact-watsapp-icons">
                                 <a href="https://api.whatsapp.com/send?phone=553183846820"><img src="./media/IconSocial/IwatsappColor.png"></a>
