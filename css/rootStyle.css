@@ -3958,3 +3958,11 @@ input::placeholder {
   filter:brightness(1.50);
 }
 
+.imgp-slide{
+  opacity: 0;
+}
+
+.show-img{
+  opacity: 1;
+  transition: opacity 2s;
+}

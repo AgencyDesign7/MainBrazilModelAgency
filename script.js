@@ -113,17 +113,33 @@ function AudioControls() {
 function slideParceiros() {
   var index = 0;
 
-  nextSlide()
-  function nextSlide() {
-    var Divimgs = document.querySelectorAll('.imgp-slide')
-    Divimgs.forEach((img) => img.style.display = "none")
 
-    index++;
-    if (index > Divimgs.length) index = 1;
-    Divimgs[index - 1].style.display = "block"
+  // function nextSlide() {
+  //   var Divimgs = document.querySelectorAll('.imgp-slide')
+  //   Divimgs.forEach((img) => img.style.display = "none")
 
-    setTimeout(nextSlide, 4000)
-  }
+  //   index++;
+  //   if (index > Divimgs.length) index = 1;
+  //   Divimgs[index - 1].style.display = "block"
+
+  //   setTimeout(nextSlide, 4000)
+  // }
+
+  let time = 4000,
+    imags = document.querySelectorAll('.imgp-slide'),
+    imgsLenght = imags.length,
+    imgIndex = 0
+
+  setInterval(() => {
+
+    imags[imgIndex].classList.remove('show-img')
+    imgIndex++
+    if (imgIndex >= imgsLenght) imgIndex = 0
+    imags[imgIndex].classList.add('show-img')
+
+  }, time);
+
+
 
 
 
@@ -571,7 +587,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                         <div class="container-propaganda">
                           <div class="images-main">
                             <div class="slider-propaganda">
-                              <img src="./media/parceiros/pitagoras/propaganda-pitagoras-1.png" class="imgp-slide" alt="pitagoras">
+                              <img src="./media/parceiros/pitagoras/propaganda-pitagoras-1.png" class="imgp-slide show-img" alt="pitagoras">
                               <img src="./media/parceiros/pitagoras/propaganda-pitagoras-2.png" class="imgp-slide" alt="piragoras">
                               <img src="./media/parceiros/pitagoras/propaganda-pitagoras-3.png" class="imgp-slide" alt="pitagoras">
                             </div>
@@ -1004,7 +1020,16 @@ function ArtistsMenus(classSelected, nameArtist) {
       case "FernandoFidel-release":
         divSelectd.classList.remove("display-none-content");
         divSelectd.innerHTML = `<div class="title-release"><p>Fernando e Fidel</p></div>
-                  <div><p> ... </p></div>
+                  <div><p>
+                  Fernando Miguel de Almeida, 30 anos, nasceu em 16/03/1990, solteiro, mora com os pais na cidade de São José do Rio Preto, 1,73 de altura e 65 kg. Aprendeu a tocar violão sozinho e sempre muito divertido animando os amigos em festas e churrascos,  cantando os sucessos dos seus idolos 
+                  Teodoro e Sampaio , Matogrosso e Mathias, Jads e jadson e Tiao Carreiro.<br><br>
+                  
+                 
+                  Fidelcino Alves Costa Neto, 29 anos, nasceu em 31/07/1991, casado, mora na cidade de São José do Rio Preto, 1,90 de altura e 90 kg. Inspirado por seus idolos Tiao Carreiro, Almir Sater, João Carreiro, sempre cantando e  animando as festas com parentes e amigos.<br><br>
+                  
+                  
+                  Fernando e Fidel.
+                  Se conheceram  em uma festa de confraternização musical, cantaram algumas músicas juntos na festa, todos que ouviram gostaram e os dois  combinaram de  cantar algumas vezes e deram o início a dupla Fernando e Fidel com grandes projetos, ja  estão na estrada a 3 anos de muita parceria e uma amizade de irmão. </p></div>
                   <div class="backbtn-artist" onClick="ArtistsMenus('artist-1')"><p>VOLTAR</p></div>
                   `;
         break;
@@ -1046,9 +1071,9 @@ function ArtistsMenus(classSelected, nameArtist) {
         divSelectd.classList.remove("display-none-content");
         divSelectd.innerHTML = `<div class="title-release"><p>Vinicius Rocha</p></div>
                   <div><p>Vinicius Cardoso Rocha Borges, nome artistico Vinicius Rocha,nascido em Divinopolis no ano de 1993, despertou o interesse pela musica aos 12 anos quando 
-                  aprendeu a tocar a primeira musica no violao de seu irmão. Descendente de bisavó pianista, avó regente de orquestra e tia violoncelista na orquestra sinfônica da PM de Belo horizonte, teve de onde herdar o interesse pela musica.
-                  Em 2005 Vinicius Rocha juntamente com seus amigos decidem criar uma banda de estilo alternativo denominada 360. A 360 teve varias formações até que foi decidido que Vinicius Rocha seria o vocalista. A partir deste momento o cantor despertou ainda mais o interesse pela musica. Algum tempo depois Vinicius e Breno Carvalho decidem sair da banda 360 e criam uma nova banda, Diaax, onde conseguiram durante dois anos seguidos fazer apresentação no Festival de inverno de Itapecerica-MG.
-                  Algum tempo depois a rotina de vida dos integrantes foram aumentando e não tinham tempo para dedicar a banda. Então em 2013 Vinicius Rocha decide ingressar uma carreira solo na musica sertaneja, estilo que sempre pertenceu ao gosto musical desde pequeno.
+                  aprendeu a tocar a primeira musica no violao de seu irmão. Descendente de bisavó pianista, avó regente de orquestra e tia violoncelista na orquestra sinfônica da PM de Belo horizonte, teve de onde herdar o interesse pela musica.<br>
+                  Em 2005 Vinicius Rocha juntamente com seus amigos decidem criar uma banda de estilo alternativo denominada 360. A 360 teve varias formações até que foi decidido que Vinicius Rocha seria o vocalista. A partir deste momento o cantor despertou ainda mais o interesse pela musica. Algum tempo depois Vinicius e Breno Carvalho decidem sair da banda 360 e criam uma nova banda, Diaax, onde conseguiram durante dois anos seguidos fazer apresentação no Festival de inverno de Itapecerica-MG.<br>
+                  Algum tempo depois a rotina de vida dos integrantes foram aumentando e não tinham tempo para dedicar a banda. Então em 2013 Vinicius Rocha decide ingressar uma carreira solo na musica sertaneja, estilo que sempre pertenceu ao gosto musical desde pequeno.<br>
                   Vinicius então lança sua carreira solo como Vinicius Rocha na 43° Divinaexpo no palco novos talentos,ganhando até o seu primeiro Fã Clube.
                   Então lança sua primeira musica de trabalho "Te Querer Tanto Assim" que em menos de uma semana teve mais de mil visualizações no youtube.</p></div>
                   <div class="backbtn-artist" onClick="ArtistsMenus('artist-2')"><p>VOLTAR</p></div>
@@ -1091,8 +1116,8 @@ function ArtistsMenus(classSelected, nameArtist) {
         divSelectd.classList.remove("display-none-content");
         divSelectd.innerHTML = `<div class="title-release"><p>Rogerio Soares</p></div>
                   <div><p> Rogério Jorge Soares Campos, nome artístico Rogério Soares, 
-                  nasceu no dia 06 de outubro de 1986, em Governador Valadares MG, filho de caminhoneiro e de dona de casa, desde criança sempre ouvindo músicas sertaneja junto com seus pais, principalmente sertanejo raizes, começou a ter o primeiro contato com o violão com 12 anos, quando seu irmão mais velho pegava o violão do vizinho emprestado que o seu irmão estava aprendendo a tocar e o Rogerio aprendendo junto com ele, seu irmão desistiu de aprender e parou de pegar o violão do vizinho, foi ai que o Rogerio insistiu com o seu pai até os 14 anos de idade, até que ele ganhou o seu primeiro violão do seu pai.
-                  Foi ai que começou  a aprender a tocar.
+                  nasceu no dia 06 de outubro de 1986, em Governador Valadares MG, filho de caminhoneiro e de dona de casa, desde criança sempre ouvindo músicas sertaneja junto com seus pais, principalmente sertanejo raizes, começou a ter o primeiro contato com o violão com 12 anos, quando seu irmão mais velho pegava o violão do vizinho emprestado que o seu irmão estava aprendendo a tocar e o Rogerio aprendendo junto com ele, seu irmão desistiu de aprender e parou de pegar o violão do vizinho, foi ai que o Rogerio insistiu com o seu pai até os 14 anos de idade, até que ele ganhou o seu primeiro violão do seu pai.<br>
+                  Foi ai que começou  a aprender a tocar.<br>
                   Com 17 anos começou  a cantar, aos 19 anos entrou na  primeira banda em Governador Valadares, uma banda que cantava de tudo, (banda baile),  depois acabou  formando duplas duas vezes, a primeira Rogério e Fabrício, a  segunda era Tião Mineiro e Rogério, com 27 anos resolveu fazer carreira solo, Rogério Soares (cantor e compositor) tem uma bagagem musical muito grande de vários estilos. </p></div>
                   <div class="backbtn-artist" onClick="ArtistsMenus('artist-3')"><p>VOLTAR</p></div>
                   `;

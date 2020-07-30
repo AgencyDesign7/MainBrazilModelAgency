@@ -499,6 +499,12 @@
   .hero {
     padding: 20px;
   }
+  .container-music{
+    width: 98%;
+  }
+  .progress-bar-music, .progress-track{
+    width: 90%;
+  }
 
   .container-sub video {
     width: 400px;
@@ -877,4 +883,17 @@
     margin-right: 40px !important;
   }
 
+}
+
+@media screen and (max-width: 823px) and (orientation: landscape){
+  .container-music{
+    margin-top: 300px;
+  }
+
+  .container-music{
+    width: 400px;
+  }
+  .progress-bar-music, .progress-track{
+    width: 90%;
+  }
 }
