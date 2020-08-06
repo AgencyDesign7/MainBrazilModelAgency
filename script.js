@@ -572,7 +572,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                         <div class="container-parceiros">
                           <div class="images-container-parceiros">
                             <a href="#" onClick="PopupMsg('pitagoras-propaganda', 'pitagoras-propaganda',1,1)"><img src="./media/parceiros/parceiro1.jpg" alt="parceiro"></a>
-                            <a href="#" onClick="PopupMsg('constance-propaganda', 'constance-propaganda',1,1)"><img src="./media/parceiros/parceiro2.jpg" alt="parceiro"></a>
+                            <a href="#"><img src="./media/parceiros/parceiro2.jpg" alt="parceiro"></a>
                             <img src="./media/parceiros/parceiro3.jpg" alt="parceiro">
                             <img src="./media/parceiros/parceiro5.jpg" alt="parceiro">
                           </div>
@@ -584,6 +584,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
       popupCategory.style.backgroundColor = "white";
       containerImgs.innerHTML = `
                         <div class="container-propaganda">
+                          <div><h3>Pitágoras</h3></div>
                           <div class="images-main">
                             <div class="slider-propaganda">
                               <img src="./media/parceiros/pitagoras/propaganda-pitagoras-1.png" class="imgp-slide show-img" alt="pitagoras">
@@ -749,8 +750,8 @@ function selectedState() {
     },
     AllContainerMsgPopUp: {
       SetHeight(height) {
-        ObjectsContainer.Hero.StyleAttributes(height);
-        ObjectsContainer.PopUpMsgContainer.StyleAttributes(height);
+        ObjectsContainer.Hero.StyleAttributes(height + 500);
+        ObjectsContainer.PopUpMsgContainer.StyleAttributes(height + 600);
       },
     },
   };
