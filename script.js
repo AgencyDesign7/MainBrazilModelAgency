@@ -391,6 +391,8 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
   var form = document.querySelector("form");
 
   var MediaQueryAjust = window.matchMedia("(max-width: 768px )");
+  if (sectionSocialMedia)
+    sectionSocialMedia.setAttribute("style", "display: none !important;");
 
   if (MediaQueryAjust.matches === true) {
     ObjectsContainer.Hero.StyleAttributes(
@@ -570,7 +572,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                         <div class="container-parceiros">
                           <div class="images-container-parceiros">
                             <a href="#" onClick="PopupMsg('pitagoras-propaganda', 'pitagoras-propaganda',1,1)"><img src="./media/parceiros/parceiro1.jpg" alt="parceiro"></a>
-                            <img src="./media/parceiros/parceiro2.jpg" alt="parceiro">
+                            <a href="#" onClick="PopupMsg('constance-propaganda', 'constance-propaganda',1,1)"><img src="./media/parceiros/parceiro2.jpg" alt="parceiro"></a>
                             <img src="./media/parceiros/parceiro3.jpg" alt="parceiro">
                             <img src="./media/parceiros/parceiro5.jpg" alt="parceiro">
                           </div>
@@ -594,6 +596,10 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                             Não perca tempo, matricule-se já!<br><b>ESCOLHA A FACULDADE MAIS PRÓXIMA DE VOCÊ</b></p><div>
                             
                             <div class="contact-watsapp">
+                            <div class="contact-watsapp-icons" style="display: none;">
+                                <a href="https://api.whatsapp.com/send?phone=5531994530485"><img src="./media/IconSocial/IwatsappColor.png"></a>
+                                <p>Whatsapp</p>
+                              </div>
                             <select id="state-pitagoras" name="select-state" onchange="selectedState()">
                               <option>Selecione um estado...</option>
                               <option value="ac">AC</option>
@@ -626,15 +632,35 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                             </select>
                               <div class="list-pitagoras-states"></div>
                             </div>
-                            <div class="contact-watsapp-icons">
-                                <a href="https://api.whatsapp.com/send?phone=5531994530485"><img src="./media/IconSocial/IwatsappColor.png"></a>
-                                <p>WatsApp</p>
-                              </div>
                           </div>
 
                         </div>
                       `;
       setTimeout(slideParceiros(), 500);
+      break;
+    case "constance-propaganda":
+      popupCategory.style.backgroundColor = "white";
+      containerImgs.innerHTML = `
+                        <div class="container-propaganda">
+                          <div class="images-main">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/s5sBoWJ41vM?autoplay=1&controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          </div>
+                          <div class="txts-propaganda">
+                            <div class="container-text-propa"><p>Os alunos da Brazil Model Agency tem ofertas especiais na Constance. Confira já!</p><div>
+                            
+                            <div class="contact-watsapp">
+                            <div class="contact-watsapp-icons">
+                                <a href="https://api.whatsapp.com/send?phone=5531994530485"><img src="./media/IconSocial/IwatsappColor.png"></a>
+                                <p>Whatsapp</p>
+                              </div>
+                            
+                              <div class="list-pitagoras-states"></div>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      `;
       break;
     default:
       break;
@@ -693,10 +719,42 @@ function selectedState() {
   let Selected = document.querySelector("#state-pitagoras");
   let divList = document.querySelector(".list-pitagoras-states");
 
-  let HeroContainer = document.querySelector(".hero");
-  let ContainerPopUp = document.querySelector(".container-popup-mgs");
-  let ContainerImgs = document.querySelector(".container-imgs");
+  // let HeroContainer = document.querySelector(".hero");
+  // let ContainerPopUp = document.querySelector(".container-popup-mgs");
+  // let ContainerImgs = document.querySelector(".container-imgs");
 
+  let SocialWhatsapp = document.querySelector(".contact-watsapp-icons");
+  if (SocialWhatsapp) SocialWhatsapp.setAttribute("style", "display: block");
+
+  var ObjectsContainer = {
+    Hero: {
+      ref: document.querySelector(".hero"),
+      StyleAttributes(height) {
+        this.ref.setAttribute(
+          "style",
+          `height: ${height}px; visibility: hidden !important; `
+        );
+      },
+    },
+    PopUpMsgContainer: {
+      ref: document.querySelector(".container-popup-mgs"),
+      refImgs: document.querySelector(".container-imgs"),
+      CopyContainer(copy) {
+        this.refImgs.setAttribute("style", `height: ${copy}px !important;`);
+      },
+      StyleAttributes(Style) {
+        this.ref.setAttribute("style", `height: ${Style}px !important;`);
+        this.CopyContainer(Style);
+      },
+    },
+    AllContainerMsgPopUp: {
+      SetHeight(height) {
+        ObjectsContainer.Hero.StyleAttributes(height);
+        ObjectsContainer.PopUpMsgContainer.StyleAttributes(height);
+      },
+    },
+  };
+  ObjectsContainer.AllContainerMsgPopUp.SetHeight(1500);
   switch (Selected.value) {
     case "ac":
       divList.innerHTML = `
@@ -722,6 +780,7 @@ function selectedState() {
                           `;
       break;
     case "ap":
+      ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
       divList.innerHTML = `
       
         <p id="not-found"><b>NÃO ENCONTRADO</b></p>
@@ -729,6 +788,7 @@ function selectedState() {
                           `;
       break;
     case "am":
+      ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
       divList.innerHTML = `
       
         <p id="not-found"><b>NÃO ENCONTRADO</b></p>
@@ -839,6 +899,7 @@ function selectedState() {
                           `;
       break;
     case "df":
+      ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
       divList.innerHTML = `
       
       <p id="not-found"><b>NÃO ENCONTRADO</b></p>
@@ -903,6 +964,7 @@ function selectedState() {
                           `;
       break;
     case "mt":
+      ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
       divList.innerHTML = `
       
       <p id="not-found"><b>NÃO ENCONTRADO</b></p>
@@ -910,6 +972,7 @@ function selectedState() {
                         `;
       break;
     case "ms":
+      ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
       divList.innerHTML = `
       
       <p id="not-found"><b>NÃO ENCONTRADO</b></p>
@@ -1103,6 +1166,7 @@ function selectedState() {
                           `;
       break;
     case "pi":
+      ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
       divList.innerHTML = `
       
         <p id="not-found"><b>NÃO ENCONTRADO</b></p>
@@ -1110,6 +1174,7 @@ function selectedState() {
                           `;
       break;
     case "rj":
+      ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
       divList.innerHTML = `
       
       <p id="not-found"><b>NÃO ENCONTRADO</b></p>
@@ -1117,6 +1182,7 @@ function selectedState() {
                         `;
       break;
     case "rn":
+      ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
       divList.innerHTML = `
       <li>
         <p><b>MOSSORO/RN</b></p>
@@ -1126,6 +1192,7 @@ function selectedState() {
                           `;
       break;
     case "rs":
+      ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
       divList.innerHTML = `
       
         <p id="not-found"><b>NÃO ENCONTRADO</b></p>
@@ -1133,6 +1200,7 @@ function selectedState() {
                           `;
       break;
     case "ro":
+      ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
       divList.innerHTML = `
       
         <p id="not-found"><b>NÃO ENCONTRADO</b></p>
@@ -1140,6 +1208,7 @@ function selectedState() {
                           `;
       break;
     case "rr":
+      ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
       divList.innerHTML = `
       
       <p id="not-found"><b>NÃO ENCONTRADO</b></p>
@@ -1147,6 +1216,7 @@ function selectedState() {
                         `;
       break;
     case "sc":
+      ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
       divList.innerHTML = `
       
         <p id="not-found"><b>NÃO ENCONTRADO</b></p>
@@ -1154,6 +1224,7 @@ function selectedState() {
                           `;
       break;
     case "sp":
+      ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
       divList.innerHTML = `
       
         <p id="not-found"><b>NÃO ENCONTRADO</b></p>
@@ -1161,6 +1232,7 @@ function selectedState() {
                           `;
       break;
     case "se":
+      ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
       divList.innerHTML = `
       
         <p id="not-found"><b>NÃO ENCONTRADO</b></p>
@@ -1168,6 +1240,7 @@ function selectedState() {
                           `;
       break;
     case "to":
+      ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
       divList.innerHTML = `
       
       <p id="not-found"><b>NÃO ENCONTRADO</b></p>

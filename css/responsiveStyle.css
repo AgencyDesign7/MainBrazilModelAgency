@@ -270,6 +270,20 @@
   }
 }
 @media screen and (max-width: 767px) {
+  .list-pitagoras-states li p {
+    font-size: 4vw;
+  }
+  #end-id {
+    font-size: 4vw;
+  }
+
+  .images-main {
+    height: 400px;
+  }
+  .slider-propaganda {
+    height: 400px;
+  }
+
   .w-nav[data-collapse="small"] .w-nav-menu {
     display: none;
   }
@@ -278,6 +292,14 @@
   }
   .w-nav-brand {
     padding-left: 10px;
+  }
+}
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .images-main {
+    height: 500px;
+  }
+  .slider-propaganda {
+    height: 500px;
   }
 }
 @media screen and (max-width: 479px) {
@@ -499,10 +521,11 @@
   .hero {
     padding: 20px;
   }
-  .container-music{
+  .container-music {
     width: 98%;
   }
-  .progress-bar-music, .progress-track{
+  .progress-bar-music,
+  .progress-track {
     width: 90%;
   }
 
@@ -879,21 +902,21 @@
 }
 
 @media screen and (min-width: 1830px) {
-  .container-sub{
+  .container-sub {
     margin-right: 40px !important;
   }
-
 }
 
-@media screen and (max-width: 823px) and (orientation: landscape){
-  .container-music{
+@media screen and (max-width: 823px) and (orientation: landscape) {
+  .container-music {
     margin-top: 300px;
   }
 
-  .container-music{
+  .container-music {
     width: 400px;
   }
-  .progress-bar-music, .progress-track{
+  .progress-bar-music,
+  .progress-track {
     width: 90%;
   }
 }

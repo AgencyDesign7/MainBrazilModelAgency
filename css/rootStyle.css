@@ -3918,6 +3918,7 @@ input::placeholder {
   justify-content: center;
   align-items: center;
   display: flex;
+  height: fit-content;
 }
 
 .slider-propaganda{
@@ -3951,6 +3952,18 @@ input::placeholder {
   font-size: 15px;
   font-weight: bold;
 }
+.list-pitagoras-states{
+  height: 500px;
+  overflow-y: scroll;
+  margin-top: 40px;
+  padding: 5px;
+  
+}
+
+.list-pitagoras-states::-webkit-scrollbar {
+  width: 2px;
+  
+}
 
 .list-pitagoras-states li{
   list-style: none;
@@ -3960,6 +3973,7 @@ input::placeholder {
   justify-content: center;
   align-items: center;
   border-bottom: solid rgb(184, 184, 184) 1px;
+ 
 }
 
 .list-pitagoras-states li p{
