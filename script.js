@@ -593,8 +593,9 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                             </div>
                           </div>
                           <div class="txts-propaganda">
-                            <div class="container-text-propa"><p>Os alunos da Brazil Model Agency tem descontos especial nos cursos de graduação e pós-graduação na Faculdade Pitágoras.<br>
-                            Não perca tempo, matricule-se já!<br><b>ESCOLHA A FACULDADE MAIS PRÓXIMA DE VOCÊ</b></p><div>
+                            <div class="container-text-propa"><p>Os alunos da <b>Brazil Model Agency</b> tem descontos especial nos cursos de graduação e pós-graduação na Faculdade Pitágoras.</p>
+                            <div class="sub-prop-text"><p><b>ESCOLHA A FACULDADE MAIS PRÓXIMA DE VOCÊ</b></p>
+                            <p>Não perca tempo, matricule-se já!</p></div><div>
                             
                             <div class="contact-watsapp">
                             <div class="contact-watsapp-icons" style="display: none;">
@@ -719,7 +720,6 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
 function selectedState() {
   let Selected = document.querySelector("#state-pitagoras");
   let divList = document.querySelector(".list-pitagoras-states");
-
   // let HeroContainer = document.querySelector(".hero");
   // let ContainerPopUp = document.querySelector(".container-popup-mgs");
   // let ContainerImgs = document.querySelector(".container-imgs");
@@ -756,6 +756,7 @@ function selectedState() {
     },
   };
   ObjectsContainer.AllContainerMsgPopUp.SetHeight(1500);
+  divList.setAttribute("style", "overflow-y: hidden;");
   switch (Selected.value) {
     case "ac":
       divList.innerHTML = `
@@ -797,6 +798,7 @@ function selectedState() {
                           `;
       break;
     case "ba":
+      divList.setAttribute("style", "overflow-y: scroll;");
       divList.innerHTML = `
       <li>
         <p><b>ALAGOINHAS/BA</b></p>
@@ -981,6 +983,7 @@ function selectedState() {
                         `;
       break;
     case "mg":
+      divList.setAttribute("style", "overflow-y: scroll;");
       divList.innerHTML = `
       <li>
         <p><b>BELO HORIZONTE/MG - AFONSO PENA</b></p>
