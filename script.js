@@ -593,7 +593,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                             </div>
                           </div>
                           <div class="txts-propaganda">
-                            <div class="container-text-propa"><p>Os alunos da <b>Brazil Model Agency</b> tem descontos especial nos cursos de graduação e pós-graduação na Faculdade Pitágoras.</p>
+                            <div class="container-text-propa"><p>Os alunos da <b>Brazil Model Agency</b> tem descontos especiais nos cursos de graduação e pós-graduação na Faculdade Pitágoras.</p>
                             <div class="sub-prop-text"><p><b>ESCOLHA A FACULDADE MAIS PRÓXIMA DE VOCÊ</b></p>
                             <p>Não perca tempo, matricule-se já!</p></div><div>
                             
