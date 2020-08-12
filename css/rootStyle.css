@@ -3674,6 +3674,7 @@ input::placeholder {
 .images-container-parceiros{
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .images-container-parceiros img{
   width: 400px;
@@ -4027,4 +4028,23 @@ input::placeholder {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.texts-parceiros-main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.texts-parceiros-main p{
+  color: #000;
+}
+
+.texts-parceiros-main #title-Pmain{
+  font-size: 18px;
+  font-weight: bold;
 }

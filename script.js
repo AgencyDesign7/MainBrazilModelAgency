@@ -570,6 +570,10 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
       popupCategory.style.backgroundColor = "white";
       containerImgs.innerHTML = `
                         <div class="container-parceiros">
+                          <div class="texts-parceiros-main">
+                            <p id="title-Pmain">CLUBE DE VANTAGENS BRAZIL MODEL</p>
+                            <p>Clica na logo dos nossos parceiros e veja os descontos e ofertas que cada um  oferece.</p>
+                          </div>
                           <div class="images-container-parceiros">
                             <a href="#" onClick="PopupMsg('pitagoras-propaganda', 'pitagoras-propaganda',1,1)"><img src="./media/parceiros/parceiro1.jpg" alt="parceiro"></a>
                             <a href="#"><img src="./media/parceiros/parceiro2.jpg" alt="parceiro"></a>
@@ -1830,7 +1834,7 @@ function ElementSelect(artistObject) {
       progressbar.style.width =
         (audioPlayer[musicSelected].currentTime /
           audioPlayer[musicSelected].duration) *
-          100 +
+        100 +
         "%";
     });
   }
@@ -1859,7 +1863,7 @@ function playerMusic(selectedArtist, musicSelected = 0) {
           <div class="music-list" data-link-pointer>
           <div class="btn-music"  data-value="${value - 1}" data-Artist ="${
           getArtists[`selectName`]
-        }"><p>${getArtists["musicas"][value]["name"]}</p></div>
+          }"><p>${getArtists["musicas"][value]["name"]}</p></div>
           <p>${getArtists["musicas"][value]["length"]}</p>
         </div>
           `;
@@ -1873,8 +1877,8 @@ function playerMusic(selectedArtist, musicSelected = 0) {
     <div class="container-Elements">
         <div id="playthis"></div>
         <div class="photo-container"><img id="artistPhoto" src="${
-          getArtists[`tumbPhotoUrl`]
-        }"
+    getArtists[`tumbPhotoUrl`]
+    }"
                 alt=""></div>
         <div class="controls-music">
             <div class="titles-artist">
