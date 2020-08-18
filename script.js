@@ -358,25 +358,25 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
     Hero: {
       ref: document.querySelector(".hero"),
       StyleAttributes(Style) {
-        this.ref.setAttribute("style", `${Style}`);
+        //this.ref.setAttribute("style", `${Style}`);
       },
     },
     PopUpMsgContainer: {
       ref: document.querySelector(".container-popup-mgs"),
       refImgs: document.querySelector(".container-imgs"),
       CopyContainer(copy) {
-        this.refImgs.setAttribute("style", `${copy}`);
+        //this.refImgs.setAttribute("style", `${copy}`);
       },
       StyleAttributes(Style) {
-        this.ref.setAttribute("style", `${Style}`);
-        this.CopyContainer(Style);
+        //this.ref.setAttribute("style", `${Style}`);
+        //this.CopyContainer(Style);
       },
     },
   };
 
   var navButtonMenuMobile = document.querySelector(".menu-button");
   var popupCategory = document.querySelector(".sub-category");
-  var containerImgs = document.querySelector(".container-imgs");
+  var containerImgs = document.querySelector(".hero");
   var actualCategory = cat;
 
   var navButton = document.querySelector(".menu-button");
@@ -399,7 +399,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
     ObjectsContainer.Hero.StyleAttributes(
       "height: 700px !important; visibility:hidden !important; overflow: hidden !important;"
     );
-    containerImgs.setAttribute("style", "height: 700px !important;");
+    //containerImgs.setAttribute("style", "height: 700px !important;");
     if (title === "parceiros" || title === "pitagoras-propaganda") {
       ObjectsContainer.Hero.StyleAttributes(
         "height: 1100px !important; visibility:hidden !important; overflow: hidden !important;"
@@ -413,7 +413,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
       "height: 1100px !important; visibility:hidden !important; overflow: hidden !important;"
     );
 
-    containerImgs.setAttribute("style", "height: 1090px !important;");
+    //containerImgs.setAttribute("style", "height: 1090px !important;");
     if (form !== null && sectionSocialMedia !== null) {
       sectionSocialMedia.setAttribute("style", "display: none !important;");
       form.setAttribute("style", "display: none !important;");
@@ -443,6 +443,9 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
     popupCategory.style.backgroundColor = "black";
   }
 
+  popupCategory.classList.add("display-none-content");
+  containerImgs.style.backgroundColor = "white"
+  containerImgs.classList.add('flex-d-column-center')
   /*if (title === 'parceiros' || title === 'pitagoras-propaganda') {
     ObjectsContainer.Hero.StyleAttributes('height: 1100px !important; visibility:hidden !important')
     ObjectsContainer.PopUpMsgContainer.StyleAttributes('height: 1100px !important;')
@@ -520,6 +523,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
       window.scrollTo(0, 0);
       break;
     case "curso-passarela":
+      countdown()
       popupCategory.style.backgroundColor = "white";
       containerImgs.innerHTML = `<div class="container-course-description">
                                   <div class="image-course-container"><img src="./media/home/menu-cursos/imgs-cursos/curso-modeloManequim.png"></div>
@@ -532,6 +536,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
       window.scrollTo(0, 0);
       break;
     case "curso-modeloFotografica":
+      countdown()
       popupCategory.style.backgroundColor = "white";
       containerImgs.innerHTML = `<div class="container-course-description">
                                   <div class="image-course-container"><img src="./media/home/menu-cursos/imgs-cursos/curso-modeloFotografica.png"></div>
@@ -544,6 +549,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
       window.scrollTo(0, 0);
       break;
     case "curso-maquiagem":
+      countdown()
       popupCategory.style.backgroundColor = "white";
       containerImgs.innerHTML = `<div class="container-course-description">
                                   <div class="image-course-container"><img src="./media/home/menu-cursos/imgs-cursos/curso-maquiagem.png"></div>
@@ -556,6 +562,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
       window.scrollTo(0, 0);
       break;
     case "curso-teatro":
+      countdown()
       popupCategory.style.backgroundColor = "white";
       containerImgs.innerHTML = `<div class="container-course-description">
                                   <div class="image-course-container"><img src="./media/home/menu-cursos/imgs-cursos/curso-teatro.png"></div>
@@ -611,6 +618,8 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
     case "pitagoras-propaganda":
       popupCategory.style.backgroundColor = "white";
       containerImgs.innerHTML = `
+                      <div class="propaganda-nv-2">
+                        <div class="back-parceiros-prop" onClick="PopupMsg('parceiros', 'parceiros',1,1)" data-link-on ><p>Voltar Parceiros</p></div>
                         <div class="container-propaganda">
                           <div><h3>Pitágoras</h3></div>
                           <div class="images-main">
@@ -665,12 +674,15 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                           </div>
 
                         </div>
+                        </div>
                       `;
       setTimeout(slideParceiros(), 500);
       break;
     case "constance-propaganda":
       popupCategory.style.backgroundColor = "white";
       containerImgs.innerHTML = `
+                      <div class="propaganda-nv-2">
+                        <div class="back-parceiros-prop" onClick="PopupMsg('parceiros', 'parceiros',1,1)" data-link-on ><p>Voltar Parceiros</p></div>
                         <div class="container-propaganda">
                           <div class="images-main flex-d-column">
                             <a href="https://www.constance.com.br"> <img class="logo-cost" src='https://www.constance.com.br/skin/frontend/constance-v2018/default/images/constance-nova-marca.png' ></a>
@@ -679,29 +691,22 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                           <div class="txts-propaganda">
                             <div id="const-link"><a href="https://www.constance.com.br/"><b>www.constance.com.br</b></a></div>
                             <div class="container-text-propa"><p>Vá em uma loja constance de sua preferência com sua carteirinha de estudante Brazil Model Agency ou Faculdade Pitágoras e confira as vantagens que só você tem.</p><div>
-                            
-                            
-                            
-                              <div class="list-pitagoras-states"></div>
+
                               </div>
                             </div>
                           </div>
 
                         </div>
+                        </div>
                       `;
 
       break;
     case "fha-propaganda":
-      if (MediaQueryAjust768.matches === true) {
-        ObjectsContainer.Hero.StyleAttributes(
-          "height: 3000px !important; visibility:hidden !important; overflow: hidden !important;"
-        );
-        ObjectsContainer.PopUpMsgContainer.StyleAttributes(
-          "height: 3000px !important;"
-        );
-      }
+
       popupCategory.style.backgroundColor = "white";
       containerImgs.innerHTML = `
+                       <div class="propaganda-nv-2">
+                        <div class="back-parceiros-prop" onClick="PopupMsg('parceiros', 'parceiros',1,1)" data-link-on ><p>Voltar Parceiros</p></div>
                         <div class="container-propaganda" style="max-width: 100% !important;">
                            <div class="fha-prop-container">
                             <p>Fundação Helena Antipoff em parceria com a Brazil Model Agency, oferecem curso gratuito de Modelo e Manequim.</p>
@@ -718,17 +723,21 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                            </div>
 
                         </div>
+                        </div>
                       `;
 
       break;
     case "only-propaganda":
       popupCategory.style.backgroundColor = "white";
       containerImgs.innerHTML = `
+                      <div class="propaganda-nv-2">
+                        <div class="back-parceiros-prop" onClick="PopupMsg('parceiros', 'parceiros',1,1)" data-link-on ><p>Voltar Parceiros</p></div>
                         <div class="container-propaganda images-main-only">
                           
-                            <a href="https://www.constance.com.br"> <img class="logo-cost" src='./media/parceiros/only/parceiro10.jpg' ></a>
+                            <a href="https://www.instagram.com/oonlyexclusive_oficial/"> <img class="logo-cost" src='./media/parceiros/only/parceiro10.jpg' ></a>
                           
 
+                        </div>
                         </div>
                       `;
     default:
@@ -798,21 +807,21 @@ function selectedState() {
     Hero: {
       ref: document.querySelector(".hero"),
       StyleAttributes(height) {
-        this.ref.setAttribute(
+        /*this.ref.setAttribute(
           "style",
           `height: ${height}px; visibility: hidden !important; `
-        );
+        );*/
       },
     },
     PopUpMsgContainer: {
       ref: document.querySelector(".container-popup-mgs"),
       refImgs: document.querySelector(".container-imgs"),
       CopyContainer(copy) {
-        this.refImgs.setAttribute("style", `height: ${copy}px !important;`);
+        //this.refImgs.setAttribute("style", `height: ${copy}px !important;`);
       },
       StyleAttributes(Style) {
-        this.ref.setAttribute("style", `height: ${Style}px !important;`);
-        this.CopyContainer(Style);
+        //this.ref.setAttribute("style", `height: ${Style}px !important;`);
+        //this.CopyContainer(Style);
       },
     },
     AllContainerMsgPopUp: {
@@ -2111,8 +2120,8 @@ function ObjectsArtists(selectArtistName) {
   return Artists[selectArtistName];
 }
 
-!(function contDown() {
-  var contDownDate = new Date("August 10, 2020 00:00:00").getTime();
+function countdown() {
+  var contDownDate = new Date("September 20, 2020 15:10:00").getTime();
 
   var x = setInterval(() => {
     var divCountdown = document.querySelector(
@@ -2129,6 +2138,16 @@ function ObjectsArtists(selectArtistName) {
     );
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    if (seconds < 10)
+      seconds = '0' + seconds
+    if (days < 10)
+      days = '0' + days
+    if (hours < 10)
+      hours = '0' + hours
+    if (minutes < 10)
+      minutes = '0' + minutes
+
     if (divCountdown) {
       divCountdown.innerHTML = `<div class="container-contdown">
                                     <div class="container-with-sub day-container">
@@ -2182,4 +2201,4 @@ function ObjectsArtists(selectArtistName) {
       clearInterval(x);
     }
   }, 1000);
-})();
+};
