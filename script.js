@@ -441,7 +441,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
   if (title === "revista") {
     popupCategory.style.backgroundColor = "black";
   }
-
+    
   /*if (title === 'parceiros' || title === 'pitagoras-propaganda') {
     ObjectsContainer.Hero.StyleAttributes('height: 1100px !important; visibility:hidden !important')
     ObjectsContainer.PopUpMsgContainer.StyleAttributes('height: 1100px !important;')
@@ -576,9 +576,14 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                           </div>
                           <div class="images-container-parceiros">
                             <a href="#" onClick="PopupMsg('pitagoras-propaganda', 'pitagoras-propaganda',1,1)"><img src="./media/parceiros/parceiro1.jpg" alt="parceiro"></a>
-                            <a href="#"><img src="./media/parceiros/parceiro2.jpg" alt="parceiro"></a>
+                            <a href="#" onClick="PopupMsg('constance-propaganda', 'constance-propaganda', 1, 1)"><img src="./media/parceiros/parceiro2.jpg" alt="parceiro"></a>
                             <img src="./media/parceiros/parceiro3.jpg" alt="parceiro">
                             <img src="./media/parceiros/parceiro5.jpg" alt="parceiro">
+                            <img src="./media/parceiros/parceiro7.jpg" alt="parceiro">
+                            <img src="./media/parceiros/parceiro8.jpg" alt="parceiro">
+                            <img src="./media/parceiros/parceiro9.jpg" alt="parceiro">
+                            <img src="./media/parceiros/parceiro11.jpg" alt="parceiro">
+                            <img src="./media/parceiros/parceiro12.jpg" alt="parceiro">
                           </div>
                         </div>
                       `;
@@ -610,31 +615,31 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                               <option>Selecione um estado...</option>
                               <option value="ac">AC</option>
                               <option value="al">AL</option>
-                              <option value="ap">AP</option>
-                              <option value="am">AM</option>
+                              <!--<option value="ap">AP</option>-->
+                              <!--<option value="am">AM</option>-->
                               <option value="ba">BA</option>
                               <option value="ce">CE</option>
-                              <option value="df">DF</option>
+                              <!--<option value="df">DF</option>-->
                               <option value="es">ES</option>
                               <option value="go">GO</option>
                               <option value="ma">MA</option>
-                              <option value="mt">MT</option>
-                              <option value="ms">MS</option>
+                              <!--<option value="mt">MT</option>-->
+                              <!--<option value="ms">MS</option>-->
                               <option value="mg">MG</option>
                               <option value="pa">PA</option>
                               <option value="pb">PB</option>
                               <option value="pr">PR</option>
                               <option value="pe">PE</option>
-                              <option value="pi">PI</option>
-                              <option value="rj">RJ</option>
+                              <!--<option value="pi">PI</option>-->
+                              <!--<option value="rj">RJ</option>-->
                               <option value="rn">RN</option>
-                              <option value="rs">RS</option>
-                              <option value="ro">RO</option>
-                              <option value="rr">RR</option>
-                              <option value="sc">SC</option>
-                              <option value="sp">SP</option>
-                              <option value="se">SE</option>
-                              <option value="to">TO</option>
+                              <!--<option value="rs">RS</option>-->
+                              <!--<option value="ro">RO</option>-->
+                              <!--<option value="rr">RR</option>-->
+                              <!--<option value="sc">SC</option>-->
+                              <!--<option value="sp">SP</option>-->
+                              <!--<option value="se">SE</option>-->
+                              <!--<option value="to">TO</option>-->
                             </select>
                               <div class="list-pitagoras-states"></div>
                             </div>
@@ -648,17 +653,15 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
       popupCategory.style.backgroundColor = "white";
       containerImgs.innerHTML = `
                         <div class="container-propaganda">
-                          <div class="images-main">
-                          <iframe width="560" height="315" src="https://www.youtube.com/embed/s5sBoWJ41vM?autoplay=1&controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          <div class="images-main flex-d-column">
+                            <a href="https://www.constance.com.br"> <img class="logo-cost" src='https://www.constance.com.br/skin/frontend/constance-v2018/default/images/constance-nova-marca.png' ></a>
+                           <iframe src="https://www.youtube.com/embed/s5sBoWJ41vM?autoplay=1&amp;mute=1&amp;controls=0&amp;loop=1&amp;rel=0&amp;version=3&amp;playlist=diGLn0kUPXk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
                           </div>
                           <div class="txts-propaganda">
-                            <div class="container-text-propa"><p>Os alunos da Brazil Model Agency tem ofertas especiais na Constance. Confira já!</p><div>
+                            <div id="const-link"><a href="https://www.constance.com.br/"><b>www.constance.com.br</b></a></div>
+                            <div class="container-text-propa"><p>Vá em uma loja constance de sua preferência com sua carteirinha de estudante Brazil Model Agency ou Faculdade Pitágoras e confira as vantagens que só você tem.</p><div>
                             
-                            <div class="contact-watsapp">
-                            <div class="contact-watsapp-icons">
-                                <a href="https://api.whatsapp.com/send?phone=5531994530485"><img src="./media/IconSocial/IwatsappColor.png"></a>
-                                <p>Whatsapp</p>
-                              </div>
+                            
                             
                               <div class="list-pitagoras-states"></div>
                               </div>
@@ -667,6 +670,29 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
 
                         </div>
                       `;
+                      
+      break;
+      case "fha-propaganda":
+      popupCategory.style.backgroundColor = "white";
+      containerImgs.innerHTML = `
+                        <div class="container-propaganda">
+                            <a href="https://www.constance.com.br"> <img class="logo-cost" src='https://www.constance.com.br/skin/frontend/constance-v2018/default/images/constance-nova-marca.png' ></a>
+                           <iframe src="https://www.youtube.com/embed/s5sBoWJ41vM?autoplay=1&amp;mute=1&amp;controls=0&amp;loop=1&amp;rel=0&amp;version=3&amp;playlist=diGLn0kUPXk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                          </div>
+                          <div class="txts-propaganda">
+                            <div id="const-link"><a href="https://www.constance.com.br/"><b>www.constance.com.br</b></a></div>
+                            <div class="container-text-propa"><p>Vá em uma loja constance de sua preferência com sua carteirinha de estudante Brazil Model Agency ou Faculdade Pitágoras e confira as vantagens que só você tem.</p><div>
+                            
+                            
+                            
+                              <div class="list-pitagoras-states"></div>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      `;
+                      
       break;
     default:
       break;

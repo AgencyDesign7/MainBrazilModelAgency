@@ -3922,6 +3922,11 @@ input::placeholder {
   height: fit-content;
 }
 
+.flex-d-column{
+  display: flex;
+  flex-direction: column;
+}
+
 .slider-propaganda{
   height: 500px;
   width: 500px;
@@ -4047,4 +4052,28 @@ input::placeholder {
 .texts-parceiros-main #title-Pmain{
   font-size: 18px;
   font-weight: bold;
+}
+
+.images-main iframe{
+  width: 700px;
+  height: 400px;
+}
+
+.logo-cost{
+  margin-bottom: 10px;
+  width: 200px;
+  height:auto;
+}
+
+#const-link{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  font-size: 16px;
+  color: black;
+}
+
+#const-link a:visited{
+  color: black;
 }
