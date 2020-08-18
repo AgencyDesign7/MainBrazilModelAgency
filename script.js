@@ -600,7 +600,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                             <img src="./media/parceiros/parceiro5.jpg" alt="parceiro">
                             <img src="./media/parceiros/parceiro7.jpg" alt="parceiro">
                             <img src="./media/parceiros/parceiro8.jpg" alt="parceiro">
-                            <img src="./media/parceiros/parceiro9.jpg" alt="parceiro">
+                            <a href="#" onClick="PopupMsg('only-propaganda', 'only-propaganda', 1, 1)"><img src="./media/parceiros/only/parceiro9.jpg" alt="parceiro"></a>
                             <img src="./media/parceiros/parceiro11.jpg" alt="parceiro">
                             <img src="./media/parceiros/parceiro12.jpg" alt="parceiro">
                           </div>
@@ -721,6 +721,16 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                       `;
 
       break;
+    case "only-propaganda":
+      popupCategory.style.backgroundColor = "white";
+      containerImgs.innerHTML = `
+                        <div class="container-propaganda images-main-only">
+                          
+                            <a href="https://www.constance.com.br"> <img class="logo-cost" src='./media/parceiros/only/parceiro10.jpg' ></a>
+                          
+
+                        </div>
+                      `;
     default:
       break;
   }
