@@ -4094,10 +4094,19 @@ input::placeholder {
   height: 240px;
   margin: 8px;
 }
+.fha-prop-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 20px 0 20px
+}
+
 .fha-prop-container p{
   color: black;
-  text-align: center;
+  text-align: justify;
   font-size: 18px;
+  margin: 15px 0 15px 0;
 }
 .images-main-only{
   max-width: 700px !important;
@@ -4139,4 +4148,13 @@ input::placeholder {
 
 .propaganda-nv-2{
   animation: opacity 1s;
+}
+
+.details-course, .details-course a, .details-course a:visited{
+  color: black;
+  margin: 20px 0 20px 0;
+}
+
+.details-nv-2{
+  margin-top: 15px;
 }

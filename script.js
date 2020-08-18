@@ -528,6 +528,24 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
       containerImgs.innerHTML = `<div class="container-course-description">
                                   <div class="image-course-container"><img src="./media/home/menu-cursos/imgs-cursos/curso-modeloManequim.png"></div>
                                   <div class="description-course"><p>O curso é totalmente on-line. Para obter o certificado, você deverá atingir a nota minima 6,0 na avaliação e completar a carga horária. Para a confecção e envio postal do certificado existe apenas uma taxa de R$ 79.90, que será enviado por e-mail e através dos correios. A solicitação do certificado é opcional e não impedirá você de estudar gratuitamente. </p></div> 
+                                  <div class="details-course" onClick="DisplayDetail()"><a href="javascript:void(0)">Mostrar detalhes</a>
+                                    <div class="details-nv-2 display-none-content">
+                                      <p>CONTEÚDO PROGRAMÁTICO</P>
+                                      <p>* Mercado de Trabalho</p>
+                                      <p>* Técnica em Passarela</p>
+                                      <p>* Fotografia, Fotogenia e Filmagem</p>
+                                      <p>* Interpretação</p>
+                                      <p>* Video</p>
+                                      <p>* Expressão Corporal e Facial</p>
+                                      <p>* Etiqueta Social e Profissional</p>
+                                      <p>* Comportamento</p>
+                                      <p>* Legislação Trabalhista</p>
+                                      <p>* Vestuário / Moda e Estilo</p>
+                                      <p>* Nutrição, Higiene e Beleza</p>
+                                      <p>* Marketing Pessoal</p>
+                                      <p>* Gerenciamento de Carreira</p>
+                                    </div>
+                                  </div>
                                   <div class="btn-aplly"><span class="apllyIcon"></span><p>CLIQUE AQUI PARA MATRICULAR AGORA</p></div>
                                   <span class="countdown">countdown</span> 
                                 </div>
@@ -718,7 +736,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                               <img src="./media/parceiros/fha/fha-propaganda-5.jpg" alt="propaganda-fha">
                               <img src="./media/parceiros/fha/fha-propaganda-6.jpg" alt="propaganda-fha">
                             </div>
-                            <p>Curso de Modelo e Manequim com objetivo de trabalhar postura, técnica, desenvolvimento em passarela, noções de vestuário, noções de uma vida saudável e principalmente formar modelos e manequins, além de auxiliar o desenvolvimento pessoal em situações cotidianas.</p>
+                            <p>Curso de Modelo e Manequim com objetivo de trabalhar postura, técnica, desenvolvimento em passarela, noções de vestuário, noções de uma vida saudável e principalmente formar modelos e manequins, além de auxiliar o desenvolvimento pessoal em situações cotidianas.  Ao final do curso, o aluno estará capacitado, atualizado e alinhado no mundo da moda, beleza e publicidade. Podendo assim com o certificado de conclusão do curso de modelo em mãos, dar entrada ao seu registro para adquirir o DRT e se tornar um modelo profissional.</p>
                             <p> Acesse: <a href="http://www.fha.mg.gov.br/">www.fha.mg.gov.br</a></p>
                            </div>
 
@@ -790,6 +808,13 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
     courseBtn.classList.remove("activeBtn");
 
     divCantores.classList.add("display-none-content");
+  }
+}
+
+function DisplayDetail() {
+  var Detailnv2 = document.querySelector('.details-nv-2')
+  if (Detailnv2 !== null) {
+    Detailnv2.classList.toggle('display-none-content')
   }
 }
 
