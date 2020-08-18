@@ -390,11 +390,12 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
   var sectionSocialMedia = document.querySelector(".contact-socialMedia");
   var form = document.querySelector("form");
 
-  var MediaQueryAjust = window.matchMedia("(max-width: 768px )");
+  var MediaQueryAjust768 = window.matchMedia("(max-width: 768px) and (min-width: 320px)");
+  var MediaQueryAjust1322 = window.matchMedia("(max-width: 1322px) and (min-width: 800px)");
   if (sectionSocialMedia)
     sectionSocialMedia.setAttribute("style", "display: none !important;");
 
-  if (MediaQueryAjust.matches === true) {
+  if (MediaQueryAjust768.matches === true) {
     ObjectsContainer.Hero.StyleAttributes(
       "height: 700px !important; visibility:hidden !important; overflow: hidden !important;"
     );
@@ -441,7 +442,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
   if (title === "revista") {
     popupCategory.style.backgroundColor = "black";
   }
-    
+
   /*if (title === 'parceiros' || title === 'pitagoras-propaganda') {
     ObjectsContainer.Hero.StyleAttributes('height: 1100px !important; visibility:hidden !important')
     ObjectsContainer.PopUpMsgContainer.StyleAttributes('height: 1100px !important;')
@@ -567,15 +568,24 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
       window.scrollTo(0, 0);
       break;
     case "parceiros":
-      if (MediaQueryAjust.matches === true) 
-     {
+      if (MediaQueryAjust768.matches === true) {
         ObjectsContainer.Hero.StyleAttributes(
-        "height: 3000px !important; visibility:hidden !important; overflow: hidden !important;"
-      );
-      ObjectsContainer.PopUpMsgContainer.StyleAttributes(
-        "height: 3000px !important;"
-      );
-    }
+          "height: 3000px !important; visibility:hidden !important; overflow: hidden !important;"
+        );
+        ObjectsContainer.PopUpMsgContainer.StyleAttributes(
+          "height: 3000px !important;"
+        );
+      }
+      if (MediaQueryAjust1322.matches === true) {
+        ObjectsContainer.Hero.StyleAttributes(
+          "height: 1600px !important; visibility:hidden !important; overflow: hidden !important;"
+        );
+
+        ObjectsContainer.PopUpMsgContainer.StyleAttributes(
+          "height: 1600px !important;"
+        );
+      }
+
       popupCategory.style.backgroundColor = "white";
       containerImgs.innerHTML = `
                         <div class="container-parceiros">
@@ -679,18 +689,17 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
 
                         </div>
                       `;
-                      
+
       break;
-      case "fha-propaganda":
-        if (MediaQueryAjust.matches === true) 
-        {
-           ObjectsContainer.Hero.StyleAttributes(
-           "height: 3000px !important; visibility:hidden !important; overflow: hidden !important;"
-         );
-         ObjectsContainer.PopUpMsgContainer.StyleAttributes(
-           "height: 3000px !important;"
-         );
-       }
+    case "fha-propaganda":
+      if (MediaQueryAjust768.matches === true) {
+        ObjectsContainer.Hero.StyleAttributes(
+          "height: 3000px !important; visibility:hidden !important; overflow: hidden !important;"
+        );
+        ObjectsContainer.PopUpMsgContainer.StyleAttributes(
+          "height: 3000px !important;"
+        );
+      }
       popupCategory.style.backgroundColor = "white";
       containerImgs.innerHTML = `
                         <div class="container-propaganda" style="max-width: 100% !important;">
@@ -710,7 +719,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
 
                         </div>
                       `;
-                      
+
       break;
     default:
       break;
