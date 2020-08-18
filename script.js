@@ -708,7 +708,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                           </div>
                           <div class="txts-propaganda">
                             <div id="const-link"><a href="https://www.constance.com.br/"><b>www.constance.com.br</b></a></div>
-                            <div class="container-text-propa"><p>Vá em uma loja constance de sua preferência com sua carteirinha de estudante Brazil Model Agency ou Faculdade Pitágoras e confira as vantagens que só você tem.</p><div>
+                            <div class="container-text-propa"><p>Vá em uma loja constance com sua carteirinha de estudante Brazil Model Agency ou Faculdade Pitágoras e confira as vantagens que só você tem.</p><div>
 
                               </div>
                             </div>
@@ -736,7 +736,11 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                               <img src="./media/parceiros/fha/fha-propaganda-5.jpg" alt="propaganda-fha">
                               <img src="./media/parceiros/fha/fha-propaganda-6.jpg" alt="propaganda-fha">
                             </div>
-                            <p>Curso de Modelo e Manequim com objetivo de trabalhar postura, técnica, desenvolvimento em passarela, noções de vestuário, noções de uma vida saudável e principalmente formar modelos e manequins, além de auxiliar o desenvolvimento pessoal em situações cotidianas.  Ao final do curso, o aluno estará capacitado, atualizado e alinhado no mundo da moda, beleza e publicidade. Podendo assim com o certificado de conclusão do curso de modelo em mãos, dar entrada ao seu registro para adquirir o DRT e se tornar um modelo profissional.</p>
+                            <p id="fha-description-course">Curso de Modelo e Manequim com objetivo de trabalhar postura, técnica, desenvolvimento em passarela, noções de vestuário, noções de uma vida saudável e principalmente formar modelos e manequins, além de auxiliar o desenvolvimento pessoal em situações cotidianas.  Ao final do curso, o aluno estará capacitado, atualizado e alinhado no mundo da moda, beleza e publicidade. Podendo assim com o certificado de conclusão do curso de modelo em mãos, dar entrada ao seu registro para adquirir o DRT e se tornar um modelo profissional.</p>
+                            <div class="contact-watsapp-icons">
+                                <a href="https://api.whatsapp.com/send?phone=5531994530485"><img src="./media/IconSocial/IwatsappColor.png"></a>
+                                <p>Para maiores informações: Whatsapp</p>
+                              </div>
                             <p> Acesse: <a href="http://www.fha.mg.gov.br/">www.fha.mg.gov.br</a></p>
                            </div>
 

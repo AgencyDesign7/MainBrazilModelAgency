@@ -201,6 +201,9 @@
    
     padding: 0;
   }
+  #fha-description-course{
+    width: 98%;
+  }
 }
 @media screen and (max-width: 479px) {
   .w-container {

@@ -4108,6 +4108,10 @@ input::placeholder {
   font-size: 18px;
   margin: 15px 0 15px 0;
 }
+
+#fha-description-course{
+  width: 85%;
+}
 .images-main-only{
   max-width: 700px !important;
   height: auto;
