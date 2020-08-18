@@ -78,6 +78,9 @@
   }
 }
 @media screen and (max-width: 767px) {
+  .fha-prop-container p{
+    text-align: justify;
+  }
   .container-contdown {
     transform: scale(0.7);
   }

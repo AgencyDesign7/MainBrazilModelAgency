@@ -586,7 +586,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                           <div class="images-container-parceiros">
                             <a href="#" onClick="PopupMsg('pitagoras-propaganda', 'pitagoras-propaganda',1,1)"><img src="./media/parceiros/parceiro1.jpg" alt="parceiro"></a>
                             <a href="#" onClick="PopupMsg('constance-propaganda', 'constance-propaganda', 1, 1)"><img src="./media/parceiros/parceiro2.jpg" alt="parceiro"></a>
-                            <img src="./media/parceiros/parceiro3.jpg" alt="parceiro">
+                            <a href="#" onClick="PopupMsg('fha-propaganda', 'fha-propaganda', 1, 1)"><img src="./media/parceiros/parceiro3.jpg" alt="parceiro"></a>
                             <img src="./media/parceiros/parceiro5.jpg" alt="parceiro">
                             <img src="./media/parceiros/parceiro7.jpg" alt="parceiro">
                             <img src="./media/parceiros/parceiro8.jpg" alt="parceiro">
@@ -682,10 +682,31 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                       
       break;
       case "fha-propaganda":
+        if (MediaQueryAjust.matches === true) 
+        {
+           ObjectsContainer.Hero.StyleAttributes(
+           "height: 3000px !important; visibility:hidden !important; overflow: hidden !important;"
+         );
+         ObjectsContainer.PopUpMsgContainer.StyleAttributes(
+           "height: 3000px !important;"
+         );
+       }
       popupCategory.style.backgroundColor = "white";
       containerImgs.innerHTML = `
-                        <div class="container-propaganda">
-                           
+                        <div class="container-propaganda" style="max-width: 100% !important;">
+                           <div class="fha-prop-container">
+                            <p>Fundação Helena Antipoff em parceria com a Brazil Model Agency, oferecem curso gratuito de Modelo e Manequim.</p>
+                            <div class="container-img-fha">
+                              <img src="./media/parceiros/fha/fha-propaganda-1.jpg" alt="propaganda-fha">
+                              <img src="./media/parceiros/fha/fha-propaganda-2.jpg" alt="propaganda-fha">
+                              <img src="./media/parceiros/fha/fha-propaganda-3.jpg" alt="propaganda-fha">
+                              <img src="./media/parceiros/fha/fha-propaganda-4.jpg" alt="propaganda-fha">
+                              <img src="./media/parceiros/fha/fha-propaganda-5.jpg" alt="propaganda-fha">
+                              <img src="./media/parceiros/fha/fha-propaganda-6.jpg" alt="propaganda-fha">
+                            </div>
+                            <p>Curso de Modelo e Manequim com objetivo de trabalhar postura, técnica, desenvolvimento em passarela, noções de vestuário, noções de uma vida saudável e principalmente formar modelos e manequins, além de auxiliar o desenvolvimento pessoal em situações cotidianas.</p>
+                            <p> Acesse: <a href="http://www.fha.mg.gov.br/">www.fha.mg.gov.br</a></p>
+                           </div>
 
                         </div>
                       `;

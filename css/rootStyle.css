@@ -4077,3 +4077,23 @@ input::placeholder {
 #const-link a:visited{
   color: black;
 }
+
+.container-img-fha{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 100%
+  
+}
+
+.container-img-fha img{
+  width: auto;
+  height: 240px;
+  margin: 8px;
+}
+.fha-prop-container p{
+  color: black;
+  text-align: center;
+  font-size: 18px;
+}
