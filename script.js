@@ -738,8 +738,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                             </div>
                             <p id="fha-description-course">Curso de Modelo e Manequim com objetivo de trabalhar postura, técnica, desenvolvimento em passarela, noções de vestuário, noções de uma vida saudável e principalmente formar modelos e manequins, além de auxiliar o desenvolvimento pessoal em situações cotidianas.  Ao final do curso, o aluno estará capacitado, atualizado e alinhado no mundo da moda, beleza e publicidade. Podendo assim com o certificado de conclusão do curso de modelo em mãos, dar entrada ao seu registro para adquirir o DRT e se tornar um modelo profissional.</p>
                             <div class="contact-watsapp-icons">
-                                <a href="https://api.whatsapp.com/send?phone=5531994530485"><img src="./media/IconSocial/IwatsappColor.png"></a>
-                                <p>Para maiores informações: Whatsapp</p>
+                                <p>Para maiores informações: <a href="https://api.whatsapp.com/send?phone=5531994530485"><img src="./media/IconSocial/IwatsappColor.png"></a></p>
                               </div>
                             <p> Acesse: <a href="http://www.fha.mg.gov.br/">www.fha.mg.gov.br</a></p>
                            </div>
