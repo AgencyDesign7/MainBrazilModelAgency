@@ -567,6 +567,15 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
       window.scrollTo(0, 0);
       break;
     case "parceiros":
+      if (MediaQueryAjust.matches === true) 
+     {
+        ObjectsContainer.Hero.StyleAttributes(
+        "height: 3000px !important; visibility:hidden !important; overflow: hidden !important;"
+      );
+      ObjectsContainer.PopUpMsgContainer.StyleAttributes(
+        "height: 3000px !important;"
+      );
+    }
       popupCategory.style.backgroundColor = "white";
       containerImgs.innerHTML = `
                         <div class="container-parceiros">
@@ -676,19 +685,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
       popupCategory.style.backgroundColor = "white";
       containerImgs.innerHTML = `
                         <div class="container-propaganda">
-                            <a href="https://www.constance.com.br"> <img class="logo-cost" src='https://www.constance.com.br/skin/frontend/constance-v2018/default/images/constance-nova-marca.png' ></a>
-                           <iframe src="https://www.youtube.com/embed/s5sBoWJ41vM?autoplay=1&amp;mute=1&amp;controls=0&amp;loop=1&amp;rel=0&amp;version=3&amp;playlist=diGLn0kUPXk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-                          </div>
-                          <div class="txts-propaganda">
-                            <div id="const-link"><a href="https://www.constance.com.br/"><b>www.constance.com.br</b></a></div>
-                            <div class="container-text-propa"><p>Vá em uma loja constance de sua preferência com sua carteirinha de estudante Brazil Model Agency ou Faculdade Pitágoras e confira as vantagens que só você tem.</p><div>
-                            
-                            
-                            
-                              <div class="list-pitagoras-states"></div>
-                              </div>
-                            </div>
-                          </div>
+                           
 
                         </div>
                       `;
