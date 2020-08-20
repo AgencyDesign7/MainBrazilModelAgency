@@ -526,10 +526,13 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
       countdown()
       popupCategory.style.backgroundColor = "white";
       containerImgs.innerHTML = `<div class="container-course-description">
-                                  <div class="image-course-container"><img src="./media/home/menu-cursos/imgs-cursos/curso-modeloManequim.png"></div>
+                                  <div class="image-course-container"><a href="./media/home/menu-cursos/imgs-cursos/curso-modeloManequim.png" target="_blank"><img src="./media/home/menu-cursos/imgs-cursos/curso-modeloManequim.png"></a></div>
                                   <div class="description-course"><p>O curso é totalmente on-line. Para obter o certificado, você deverá atingir a nota minima 6,0 na avaliação e completar a carga horária. Para a confecção e envio postal do certificado existe apenas uma taxa de R$ 79.90, que será enviado por e-mail e através dos correios. A solicitação do certificado é opcional e não impedirá você de estudar gratuitamente. </p></div> 
                                   <div class="details-course" onClick="DisplayDetail()"><a href="javascript:void(0)">Mostrar detalhes</a>
-                                    <div class="details-nv-2 display-none-content">
+                                    
+                                  </div>
+                                  <div class="details-nv-2 display-none-content">
+                                      <p>CURSO DE MODELO E MANEQUIM</P>
                                       <p>CONTEÚDO PROGRAMÁTICO</P>
                                       <p>* Mercado de Trabalho</p>
                                       <p>* Técnica em Passarela</p>
@@ -545,7 +548,6 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                                       <p>* Marketing Pessoal</p>
                                       <p>* Gerenciamento de Carreira</p>
                                     </div>
-                                  </div>
                                   <div class="btn-aplly"><span class="apllyIcon"></span><p>CLIQUE AQUI PARA MATRICULAR AGORA</p></div>
                                   <span class="countdown">countdown</span> 
                                 </div>
@@ -557,8 +559,20 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
       countdown()
       popupCategory.style.backgroundColor = "white";
       containerImgs.innerHTML = `<div class="container-course-description">
-                                  <div class="image-course-container"><img src="./media/home/menu-cursos/imgs-cursos/curso-modeloFotografica.png"></div>
+                                  <div class="image-course-container"><a href="./media/home/menu-cursos/imgs-cursos/curso-modeloFotografica.png" target="_blank"><img src="./media/home/menu-cursos/imgs-cursos/curso-modeloFotografica.png"></a></div>
                                   <div class="description-course"><p>O curso é totalmente on-line. Para obter o certificado, você deverá atingir a nota minima 6,0 na avaliação e completar a carga horária. Para a confecção e envio postal do certificado existe apenas uma taxa de R$ 79.90, que será enviado por e-mail e através dos correios. A solicitação do certificado é opcional e não impedirá você de estudar gratuitamente.</p></div> 
+                                  <div class="details-course" onClick="DisplayDetail()"><a href="javascript:void(0)">Mostrar detalhes</a>
+                                  </div>
+                                  <div class="details-nv-2 display-none-content">
+                                      <p>CURSO DE MODELO FOTOGRÁFICO</P>
+                                      <p>CONTEÚDO PROGRAMÁTICO</P>
+                                      <p>* Expressão Corporal</p>
+                                      <p>* Expressão Facial</p>
+                                      <p>* Etiqueta Profissional</p>
+                                      <p>* Orientação e Prática para Seleção de Modelagem</p>
+                                      <p>* Postura Fotográfica</p>
+                                      <p>* Compreensão da Postura</p>
+                                    </div>
                                   <div class="btn-aplly"><span class="apllyIcon"></span><p>CLIQUE AQUI PARA MATRICULAR AGORA</p></div>
                                   <span class="countdown">countdown</span> 
                                 </div>
@@ -570,8 +584,22 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
       countdown()
       popupCategory.style.backgroundColor = "white";
       containerImgs.innerHTML = `<div class="container-course-description">
-                                  <div class="image-course-container"><img src="./media/home/menu-cursos/imgs-cursos/curso-maquiagem.png"></div>
+                                  <div class="image-course-container"><a href="./media/home/menu-cursos/imgs-cursos/curso-maquiagem.png" target="_blank"><img src="./media/home/menu-cursos/imgs-cursos/curso-maquiagem.png"></a></div>
                                   <div class="description-course"><p>O curso é totalmente on-line. Para obter o certificado, você deverá atingir a nota minima 6,0 na avaliação e completar a carga horária. Para a confecção e envio postal do certificado existe apenas uma taxa de R$ 39.90, que será enviado por e-mail e através dos correios. A solicitação do certificado é opcional e não impedirá você de estudar gratuitamente.</p></div> 
+                                  <div class="details-course" onClick="DisplayDetail()"><a href="javascript:void(0)">Mostrar detalhes</a>
+                                  </div>
+                                  <div class="details-nv-2 display-none-content">
+                                      <p>CURSO DE MAQUIAGEM PROFISSIONAL</P>
+                                      <p>CONTEÚDO PROGRAMÁTICO</P>
+                                      <p>* Preparação da Pele</p>
+                                      <p>* Sobracelhas</p>
+                                      <p>* Delineador</p>
+                                      <p>* Maquiagem Masculina</p>
+                                      <p>* Maquiagem Dourada</p>
+                                      <p>* Cuidado com as Maquiagens</p>
+                                      <p>* Maquiagem para o Dia / Noite / Desfiles</p>
+                                      <p>* Maquiagem para Noivas</p>
+                                    </div>
                                   <div class="btn-aplly"><span class="apllyIcon"></span><p>CLIQUE AQUI PARA MATRICULAR AGORA</p></div>
                                   <span class="countdown">countdown</span> 
                                 </div>
@@ -583,8 +611,20 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
       countdown()
       popupCategory.style.backgroundColor = "white";
       containerImgs.innerHTML = `<div class="container-course-description">
-                                  <div class="image-course-container"><img src="./media/home/menu-cursos/imgs-cursos/curso-teatro.png"></div>
+                                  <div class="image-course-container"><a href="./media/home/menu-cursos/imgs-cursos/curso-teatro.png" target="_blank"><img src="./media/home/menu-cursos/imgs-cursos/curso-teatro.png"></a></div>
                                   <div class="description-course"><p>O curso é totalmente on-line. Para obter o certificado, você deverá atingir a nota minima 6,0 na avaliação e completar a carga horária. Para a confecção e envio postal do certificado existe apenas uma taxa de R$ 79.90, que será enviado por e-mail e através dos correios. A solicitação do certificado é opcional e não impedirá você de estudar gratuitamente.</p></div> 
+                                  <div class="details-course" onClick="DisplayDetail()"><a href="javascript:void(0)">Mostrar detalhes</a>
+                                  </div>
+                                  <div class="details-nv-2 display-none-content">
+                                      <p>CURSO DE TEATRO</P>
+                                      <p>CONTEÚDO PROGRAMÁTICO</P>
+                                      <p>* Oficinas Teatrais</p>
+                                      <p>* Conceito Èpico</p>
+                                      <p>* Conceito de Teatro Épico</p>
+                                      <p>* Conceito de Teatro</p>
+                                      <p>* Evolução do Teatro</p>
+                                      <p>* Metodologia</p>
+                                    </div>
                                   <div class="btn-aplly"><span class="apllyIcon"></span><p>CLIQUE AQUI PARA MATRICULAR AGORA</p></div>
                                   <span class="countdown">countdown</span> 
                                 </div>
