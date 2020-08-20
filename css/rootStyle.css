@@ -4160,10 +4160,16 @@ input::placeholder {
 }
 
 .details-nv-2{
-  height: 420px;
+  height: 0px !important;
   margin-top: 15px;
   color: black;
   text-align: center;
   animation: opacity 1s;
+  transition: height 0.33s ease-out;
+  overflow: hidden;
+}
 
+.heightTransition{
+  height: 420px !important;
+  transition: height 0.33s ease-out;
 }

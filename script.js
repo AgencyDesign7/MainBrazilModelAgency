@@ -531,7 +531,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                                   <div class="details-course" onClick="DisplayDetail()"><a href="javascript:void(0)">Mostrar detalhes</a>
                                     
                                   </div>
-                                  <div class="details-nv-2 display-none-content">
+                                  <div class="details-nv-2">
                                       <p>CURSO DE MODELO E MANEQUIM</P>
                                       <p>CONTEÚDO PROGRAMÁTICO</P>
                                       <p>* Mercado de Trabalho</p>
@@ -563,7 +563,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                                   <div class="description-course"><p>O curso é totalmente on-line. Para obter o certificado, você deverá atingir a nota minima 6,0 na avaliação e completar a carga horária. Para a confecção e envio postal do certificado existe apenas uma taxa de R$ 79.90, que será enviado por e-mail e através dos correios. A solicitação do certificado é opcional e não impedirá você de estudar gratuitamente.</p></div> 
                                   <div class="details-course" onClick="DisplayDetail()"><a href="javascript:void(0)">Mostrar detalhes</a>
                                   </div>
-                                  <div class="details-nv-2 display-none-content">
+                                  <div class="details-nv-2">
                                       <p>CURSO DE MODELO FOTOGRÁFICO</P>
                                       <p>CONTEÚDO PROGRAMÁTICO</P>
                                       <p>* Expressão Corporal</p>
@@ -588,7 +588,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                                   <div class="description-course"><p>O curso é totalmente on-line. Para obter o certificado, você deverá atingir a nota minima 6,0 na avaliação e completar a carga horária. Para a confecção e envio postal do certificado existe apenas uma taxa de R$ 39.90, que será enviado por e-mail e através dos correios. A solicitação do certificado é opcional e não impedirá você de estudar gratuitamente.</p></div> 
                                   <div class="details-course" onClick="DisplayDetail()"><a href="javascript:void(0)">Mostrar detalhes</a>
                                   </div>
-                                  <div class="details-nv-2 display-none-content">
+                                  <div class="details-nv-2">
                                       <p>CURSO DE MAQUIAGEM PROFISSIONAL</P>
                                       <p>CONTEÚDO PROGRAMÁTICO</P>
                                       <p>* Preparação da Pele</p>
@@ -615,7 +615,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                                   <div class="description-course"><p>O curso é totalmente on-line. Para obter o certificado, você deverá atingir a nota minima 6,0 na avaliação e completar a carga horária. Para a confecção e envio postal do certificado existe apenas uma taxa de R$ 79.90, que será enviado por e-mail e através dos correios. A solicitação do certificado é opcional e não impedirá você de estudar gratuitamente.</p></div> 
                                   <div class="details-course" onClick="DisplayDetail()"><a href="javascript:void(0)">Mostrar detalhes</a>
                                   </div>
-                                  <div class="details-nv-2 display-none-content">
+                                  <div class="details-nv-2">
                                       <p>CURSO DE TEATRO</P>
                                       <p>CONTEÚDO PROGRAMÁTICO</P>
                                       <p>* Oficinas Teatrais</p>
@@ -856,8 +856,19 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
 
 function DisplayDetail() {
   var Detailnv2 = document.querySelector('.details-nv-2')
+  var contentDetail = document.querySelector('.details-nv-2 > p')
   if (Detailnv2 !== null) {
-    Detailnv2.classList.toggle('display-none-content')
+    if (Detailnv2.classList.contains('heightTransition')) {
+      Detailnv2.classList.remove('heightTransition')
+
+    }
+    else {
+
+      Detailnv2.classList.add('heightTransition')
+    }
+
+    //Detailnv2.setAttribute('style', 'transition:height 0;')
+    //Detailnv2.classList.toggle('display-none-content')
   }
 }
 
