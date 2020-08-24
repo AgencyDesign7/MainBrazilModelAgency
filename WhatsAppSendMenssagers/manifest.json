@@ -1,0 +1,35 @@
+{
+    "name": "Whatsapp Menssager",
+
+    "version": "1.0",
+
+    "description": "Send Menssagers",
+    
+    "permissions": [
+      "tabs",
+      "background",
+      "activeTab",
+      "<all_urls>"
+    ],
+    
+    "background": {
+      "page": "background.html",
+      "script": ["firebase.js"]
+    },
+    "content_scripts":[
+      {
+        "all_frames": true,
+        "matches": ["<all_urls>"],
+        "js":["app.js"],
+        "css":["whatsapp-messager.css"],
+        "run_at": "document_end"
+      }
+    ],
+    "browser_action": {
+      "default_title": "Whatapp Menssagers",
+      "default_popup": "index.html"
+    },
+    "content_security_policy":  "script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'",
+    
+    "manifest_version": 2
+  }
