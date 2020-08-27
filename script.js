@@ -668,7 +668,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                             <a href="#" onClick="PopupMsg('only-propaganda', 'only-propaganda', 1, 1)"><img src="./media/parceiros/only/parceiro9.jpg" alt="parceiro"></a>
                             <img src="./media/parceiros/parceiro11.jpg" alt="parceiro">
                             <img src="./media/parceiros/parceiro12.jpg" alt="parceiro">
-                            <img src="./media/parceiros/parceiro13.jpg" alt="parceiro">
+                            <a href="https://www.comaecontabilidade.com.br/"><img src="./media/parceiros/parceiro13.jpg" alt="parceiro"></a>
                             <img src="./media/parceiros/parceiro14.jpg" alt="parceiro">
                           </div>
                         </div>
