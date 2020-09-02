@@ -697,6 +697,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                             <div class="contact-watsapp">
                             <div class="contact-watsapp-icons" style="display: none;">
                                 <a href="https://api.whatsapp.com/send?phone=5531994530485"><img src="./media/IconSocial/IwatsappColor.png"></a>
+                                <p>Entre em contato com nosso consultor de carreira</p>
                                 <p>Whatsapp</p>
                               </div>
                             <select id="state-pitagoras" name="select-state" onchange="selectedState()">
@@ -882,7 +883,7 @@ function selectedState() {
   // let ContainerImgs = document.querySelector(".container-imgs");
 
   let SocialWhatsapp = document.querySelector(".contact-watsapp-icons");
-  if (SocialWhatsapp) SocialWhatsapp.setAttribute("style", "display: block");
+  if (SocialWhatsapp) SocialWhatsapp.setAttribute("style", "display: flex");
 
   var ObjectsContainer = {
     Hero: {
