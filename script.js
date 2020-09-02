@@ -669,7 +669,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                             <img src="./media/parceiros/parceiro11.jpg" alt="parceiro">
                             <img src="./media/parceiros/parceiro12.jpg" alt="parceiro">
                             <a href="https://www.comaecontabilidade.com.br/"><img src="./media/parceiros/parceiro13.jpg" alt="parceiro"></a>
-                            <img src="./media/parceiros/parceiro14.jpg" alt="parceiro">
+                            <a href="https://www.termas.com.br/"><img src="./media/parceiros/parceiro14.jpg" alt="parceiro"></a>
                           </div>
                         </div>
                       `;
