@@ -4173,3 +4173,21 @@ input::placeholder {
   height: 420px !important;
   transition: height 0.33s ease-out;
 }
+
+.propaganda-contabilidade{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.images-main-contabilidade img{
+  width: 500px;
+  height: auto;
+}
+
+.contabilidade-texts p{
+  text-align: justify;
+  font-size: 20px;
+  max-width: 700px;
+  color: black;
+}

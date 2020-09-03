@@ -668,8 +668,8 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                             <a href="#" onClick="PopupMsg('only-propaganda', 'only-propaganda', 1, 1)"><img src="./media/parceiros/only/parceiro9.jpg" alt="parceiro"></a>
                             <img src="./media/parceiros/parceiro11.jpg" alt="parceiro">
                             <img src="./media/parceiros/parceiro12.jpg" alt="parceiro">
-                            <a href="https://www.comaecontabilidade.com.br/"><img src="./media/parceiros/parceiro13.jpg" alt="parceiro"></a>
-                            <a href="https://www.termas.com.br/"><img src="./media/parceiros/parceiro14.jpg" alt="parceiro"></a>
+                            <a href="#"  onClick="PopupMsg('contabilidade-propaganda', 'contabilidade-propaganda',1,1)"><img src="./media/parceiros/parceiro13.jpg" alt="parceiro"></a>
+                            <a href="#" onClick="PopupMsg('thermas-propaganda', 'thermas-propaganda',1,1)"><img src="./media/parceiros/parceiro14.jpg" alt="parceiro"></a>
                           </div>
                         </div>
                       `;
@@ -804,6 +804,45 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                         </div>
                         </div>
                       `;
+      break;
+    case "contabilidade-propaganda":
+      popupCategory.style.backgroundColor = "white";
+      containerImgs.innerHTML = `
+                      <div class="propaganda-contabilidade propaganda-nv-2">
+                        <div class="back-parceiros-prop" onClick="PopupMsg('parceiros', 'parceiros',1,1)" data-link-on ><p>Voltar Parceiros</p></div>
+                        <div class="container-propaganda images-main-contabilidade">
+                          
+                            <a href="https://www.comaecontabilidade.com.br/"> <img class="logo-cost" src='./media/parceiros/parceiro13.jpg' ></a>
+                          
+
+                        </div>
+                        <div class="contabilidade-texts">
+                          <p>Precisando abrir uma empresa? Não deixe de fazer um orçamento na COMAE CONTABILIDADE.</p>
+                          <p>Alunos da Brazil Model Agency e das Faculdades Pitágoras indicando pessoas para abertura de empresas com a COMAE CONTABILIDADE  receberá desconto de 10% sobre o valor do contrato. </p>
+                          <p>Escritório de contabilidade de  confiança a 12 anos no mercado tomando conta  das melhores empresas de Belo Horizonte, Contagem e região com segurança e agilidade.</p>
+                        </div>
+                        </div>
+                      `;
+      break;
+    case "thermas-propaganda":
+      popupCategory.style.backgroundColor = "white";
+      containerImgs.innerHTML = `
+                      <div class="propaganda-contabilidade propaganda-nv-2">
+                        <div class="back-parceiros-prop" onClick="PopupMsg('parceiros', 'parceiros',1,1)" data-link-on ><p>Voltar Parceiros</p></div>
+                        <div class="container-propaganda images-main-contabilidade">
+                          
+                            <a href="https://www.termas.com.br/"> <img class="logo-cost" src='./media/parceiros/parceiro14.jpg' ></a>
+                          
+
+                        </div>
+                        <div class="contabilidade-texts">
+                          <p>Faça sua reserva e venha conhecer o melhor parque aquático do estado de São Paulo.</p>
+                          <p>Park Thermas Resort completo, descanso e Lazer com sua família ou amigos. </p>
+                          <p>Alunos da Brazil Model Agency e das Faculdades Pitágoras pagam meia entrada.</p>
+                        </div>
+                        </div>
+                      `;
+      break;
     default:
       break;
   }
