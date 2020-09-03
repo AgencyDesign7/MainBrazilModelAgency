@@ -818,7 +818,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                         </div>
                         <div class="contabilidade-texts">
                           <p>Precisando abrir uma empresa? Não deixe de fazer um orçamento na COMAE CONTABILIDADE.</p>
-                          <p>Alunos da Brazil Model Agency e das Faculdades Pitágoras indicando pessoas para abertura de empresas com a COMAE CONTABILIDADE  receberá desconto de 10% sobre o valor do contrato. </p>
+                          <p>Alunos da Brazil Model Agency e da Faculdade Pitágoras indicando pessoas para abertura de empresas com a COMAE CONTABILIDADE  receberá 10% do valor contratado e os indicados terão  desconto de 10% sobre o valor do contrato.</p>
                           <p>Escritório de contabilidade de  confiança a 12 anos no mercado tomando conta  das melhores empresas de Belo Horizonte, Contagem e região com segurança e agilidade.</p>
                         </div>
                         </div>
