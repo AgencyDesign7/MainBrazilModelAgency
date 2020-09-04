@@ -829,13 +829,12 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
       containerImgs.innerHTML = `
                       <div class="propaganda-contabilidade propaganda-nv-2">
                         <div class="back-parceiros-prop" onClick="PopupMsg('parceiros', 'parceiros',1,1)" data-link-on ><p>Voltar Parceiros</p></div>
-                        <div class="container-propaganda images-main-contabilidade">
-                          
-                            <a href="https://www.termas.com.br/"> <img class="logo-cost" src='./media/parceiros/parceiro14.jpg' ></a>
-                          
+                        <div class="images-main">
+              
+                          <iframe src="https://www.youtube.com/embed/s6fNWA5HtG0?autoplay=1&amp;mute=1&amp;controls=0&amp;loop=1&amp;rel=0&amp;version=3&amp;playlist="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 
                         </div>
-                        <div class="contabilidade-texts">
+                        <div class="contabilidade-texts" style="margin-top: 10px;">
                           <p>Faça sua reserva e venha conhecer o melhor parque aquático do estado de São Paulo.</p>
                           <p>Park Thermas Resort completo, descanso e Lazer com sua família ou amigos. </p>
                           <p>Alunos da Brazil Model Agency e das Faculdades Pitágoras pagam meia entrada.</p>
