@@ -3962,7 +3962,7 @@ input::placeholder {
   font-weight: bold;
 }
 .list-pitagoras-states{
-  height: 1000px;
+  height: fit-content !important;
   margin-top: 40px;
   padding: 5px;
 }
@@ -3993,6 +3993,12 @@ input::placeholder {
 .container-text-propa p{
   font-size: 20px;
   color: #000;
+}
+
+.container-logos img{
+  width: 100px;
+  height: auto;
+  margin: 10px 20px 10px 20px;
 }
 
 [data-link-pointer]:hover{
@@ -4049,6 +4055,7 @@ input::placeholder {
 
 .texts-parceiros-main p{
   color: #000;
+  font-size: 18px;
 }
 
 .texts-parceiros-main #title-Pmain{

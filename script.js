@@ -670,6 +670,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                             <img src="./media/parceiros/parceiro12.jpg" alt="parceiro">
                             <a href="#"  onClick="PopupMsg('contabilidade-propaganda', 'contabilidade-propaganda',1,1)"><img src="./media/parceiros/parceiro13.jpg" alt="parceiro"></a>
                             <a href="#" onClick="PopupMsg('thermas-propaganda', 'thermas-propaganda',1,1)"><img src="./media/parceiros/parceiro14.jpg" alt="parceiro"></a>
+                            <a href="#" onClick="PopupMsg('aflorar-propaganda', 'aflorar-propaganda',1,1)"><img src="./media/parceiros/parceiro15.jpg" alt="parceiro"></a>
                           </div>
                         </div>
                       `;
@@ -690,9 +691,23 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                             </div>
                           </div>
                           <div class="txts-propaganda">
-                            <div class="container-text-propa"><p>Os alunos da <b>Brazil Model Agency</b> tem descontos especiais nos cursos de graduação e pós-graduação na Faculdade Pitágoras.</p>
+                            <div class="container-text-propa">
+                              <p>Faculdade Pitágoras em parceria com a Brazil Model Agency.</p>
+                              <p>Gustavo Becari diretor da Brazil Model Agency, consultor de carreira, e promotor educacional, representante da marca Kroton, está      disponibilizando</p>
+                              <p>Aos alunos da Brazil model,  e a todos que possuem um sonho de carreira profissional, descontos especiais nos cursos de graduação e pós-graduação nas Faculdades que pertencem ao grupo.</p>
+                              <div class="container-logos">
+                                <img src="./media/parceiros/pitagoras/faculdades-logos/1.jpg" alt="Faculdade">
+                                <img src="./media/parceiros/pitagoras/faculdades-logos/2.jpg" alt="Faculdade">
+                                <img src="./media/parceiros/pitagoras/faculdades-logos/3.jpg" alt="Faculdade">
+                                <img src="./media/parceiros/pitagoras/faculdades-logos/4.jpg" alt="Faculdade">
+                                <img src="./media/parceiros/pitagoras/faculdades-logos/5.jpg" alt="Faculdade">
+                                <img src="./media/parceiros/pitagoras/faculdades-logos/6.jpg" alt="Faculdade">
+                                <img src="./media/parceiros/pitagoras/faculdades-logos/7.jpg" alt="Faculdade">
+                                <img src="./media/parceiros/pitagoras/faculdades-logos/8.jpg" alt="Faculdade"> 
+                              </div>
+                            
                             <div class="sub-prop-text"><p><b>ESCOLHA A FACULDADE MAIS PRÓXIMA DE VOCÊ</b></p>
-                            <p>Não perca tempo, matricule-se já!</p></div><div>
+                            <p>Não perca tempo, contacte a Brazil Model e matrícula -se já!</p></div><div>
                             
                             <div class="contact-watsapp">
                             <div class="contact-watsapp-icons" style="display: none;">
@@ -812,7 +827,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                         <div class="back-parceiros-prop" onClick="PopupMsg('parceiros', 'parceiros',1,1)" data-link-on ><p>Voltar Parceiros</p></div>
                         <div class="container-propaganda images-main-contabilidade">
                           
-                            <a href="https://www.comaecontabilidade.com.br/"> <img class="logo-cost" src='./media/parceiros/parceiro13.jpg' ></a>
+                            <a href="https://www.comaecontabilidade.com.br/"> <img class="logo-cost" src='./media/parceiros/propaganda-contabilidade.jpg' ></a>
                           
 
                         </div>
@@ -834,11 +849,34 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                           <iframe src="https://www.youtube.com/embed/s6fNWA5HtG0?autoplay=1&amp;mute=1&amp;controls=0&amp;loop=1&amp;rel=0&amp;version=3&amp;playlist="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 
                         </div>
-                        <div class="contabilidade-texts" style="margin-top: 10px;">
+                        <div class="contabilidade-texts" style="margin: 20px 0 30px 0;">
+                          <p style="text-align: center;"><b>Thermas dos Laranjais</b></p>
                           <p>Faça sua reserva e venha conhecer o melhor parque aquático do estado de São Paulo.</p>
-                          <p>Park Thermas Resort completo, descanso e Lazer com sua família ou amigos. </p>
-                          <p>Alunos da Brazil Model Agency e das Faculdades Pitágoras pagam meia entrada.</p>
+                          <p>Park Thermas Resort.</p>
+                          <p>Um clube  completo, descanso e Lazer para sua família e amigos.</p>
+                          <p>Alunos da Brazil Model Agency e da Faculdade Pitágoras pagam meia entrada.</p>
+                          </div>
                         </div>
+                      `;
+      break;
+      case "aflorar-propaganda":
+      popupCategory.style.backgroundColor = "white";
+      containerImgs.innerHTML = `
+                      <div class="propaganda-nv-2">
+                        <div class="back-parceiros-prop" onClick="PopupMsg('parceiros', 'parceiros',1,1)" data-link-on ><p>Voltar Parceiros</p></div>
+                        <div class="container-propaganda images-main-only">
+                          
+                            <a href="https://www.instagram.com/oonlyexclusive_oficial/"> <img class="logo-cost" src='./media/parceiros/propaganda-aflorar.jpg' ></a>
+                          
+
+                        </div>
+                        <div class="contabilidade-texts" style="margin: 20px 0 30px 0;">
+                          <p>Alunos da Brazil Model e Faculdade Pitágoras apresentando a carteirinha tem descontos especiais</p>
+                          </div>
+                        </div>
+                        <div class="contact-watsapp-icons">
+                                <p style="font-size: 18px; color: black;">Para maiores informações: <a href="https://api.whatsapp.com/send?phone=5531988971990"><img src="./media/IconSocial/IwatsappColor.png"></a></p>
+                              </div>
                         </div>
                       `;
       break;
