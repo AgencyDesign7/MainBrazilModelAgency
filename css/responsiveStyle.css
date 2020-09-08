@@ -911,6 +911,11 @@
   .div-block-12 {
     padding: 0px 10px 0 10px;
   }
+  .texts-parceiros-main p{
+    color: #000;
+    font-size: 18px;
+    max-width: 90%;
+  }
 }
 
 @media screen and (max-width: 1824px) {

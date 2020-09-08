@@ -656,7 +656,8 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                         <div class="container-parceiros">
                           <div class="texts-parceiros-main">
                             <p id="title-Pmain">CLUBE DE VANTAGENS BRAZIL MODEL</p>
-                            <p>Clica na logo dos nossos parceiros e veja os descontos e ofertas que cada um  oferece.</p>
+                            <p>Clica na logo dos nossos parceiros e veja os descontos, ofertas e benfícios que cada um oferece.<br>
+                            Aproveite a grande variedade de promoções, incluindo cursos de graduação e pós-graduação, artigos, estética, viagens, restaurantes, entreterimento, laser, diversões e muito mais.</p>
                           </div>
                           <div class="images-container-parceiros">
                             <a href="#" onClick="PopupMsg('pitagoras-propaganda', 'pitagoras-propaganda',1,1)"><img src="./media/parceiros/parceiro1.jpg" alt="parceiro"></a>

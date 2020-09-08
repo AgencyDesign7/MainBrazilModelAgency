@@ -4056,6 +4056,7 @@ input::placeholder {
 .texts-parceiros-main p{
   color: #000;
   font-size: 18px;
+  max-width: 70%;
 }
 
 .texts-parceiros-main #title-Pmain{
