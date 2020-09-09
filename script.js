@@ -655,9 +655,10 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
       containerImgs.innerHTML = `
                         <div class="container-parceiros">
                           <div class="texts-parceiros-main">
-                            <p id="title-Pmain">CLUBE DE VANTAGENS BRAZIL MODEL</p>
-                            <p>Clica na logo dos nossos parceiros e veja os descontos, ofertas e benfícios que cada um oferece.<br>
-                            Aproveite a grande variedade de promoções, incluindo cursos de graduação e pós-graduação, artigos, estética, viagens, restaurantes, entreterimento, laser, diversões e muito mais.</p>
+                            <p id="title-Pmain">CLUBE DE VANTAGENS BRAZIL MODEL AGENCY</p>
+                            <p>Clica na logo de nossos parceiros e veja os descontos, ofertas e benefícios que cada um oferece para os alunos da Brazil Model e para os alunos da Faculdade Pitágoras.<br>
+                            Vantagens exclusivas para os estudantes apresentando a carteirinha.<br>
+                            Aproveita a grande variedade de promoções, incluindo descontos especiais em cursos de graduação e pós -graduação, artigos, estética, viagens, fest food, restaurantes, hotéis, entretenimento, lazer, diversões e muito mais.</p>
                           </div>
                           <div class="images-container-parceiros">
                             <a href="#" onClick="PopupMsg('pitagoras-propaganda', 'pitagoras-propaganda',1,1)"><img src="./media/parceiros/parceiro1.jpg" alt="parceiro"></a>
@@ -860,7 +861,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                         </div>
                       `;
       break;
-      case "aflorar-propaganda":
+    case "aflorar-propaganda":
       popupCategory.style.backgroundColor = "white";
       containerImgs.innerHTML = `
                       <div class="propaganda-nv-2">
@@ -1517,9 +1518,11 @@ function HideOrShowCategoryModel() {
   var valueSelected = document.querySelector(".talent-select");
   valueSelected.addEventListener("change", (event) => {
     if (valueSelected.value === "modelo") {
-      divCategory.style.display = "block";
+      //divCategory.style.display = "block";
+      divCategory.classList.add('model-category-open')
     } else {
-      divCategory.style.display = "none";
+      //divCategory.style.display = "none";
+      divCategory.classList.remove('model-category-open')
     }
   });
 }

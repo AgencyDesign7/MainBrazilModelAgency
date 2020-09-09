@@ -2851,6 +2851,7 @@ textarea.w-input,textarea.w-select {
   background-color: #ff9999;
   color: black;
   list-style-type: solid circle;
+  animation: opacity 1s;
 }
 
 .sucess-mensage-form{
@@ -3635,6 +3636,19 @@ form > input, select, textarea{
 }
 
 
+.model-category-select{
+  transition: height 1s;
+  height: 0px;
+  overflow: hidden;
+}
+
+.model-category-open{
+  transition: height 1s;
+  height: 1300px;
+}
+
+
+
 .title-facaparte{
   display: flex;
   justify-content: center;
@@ -3651,6 +3665,7 @@ input::placeholder {
   font-size: 15px;
   color: rgb(202, 202, 202) !important;
 }
+
 
 .photos-container{
   width: 100%;
@@ -3676,6 +3691,7 @@ input::placeholder {
   flex-wrap: wrap;
   justify-content: center;
   animation: opacity 1s;
+  margin-bottom: 30px;
 }
 .images-container-parceiros img{
   width: 400px;
@@ -4057,10 +4073,12 @@ input::placeholder {
   color: #000;
   font-size: 18px;
   max-width: 70%;
+  text-align: justify;
+  line-height: 30px;
 }
 
 .texts-parceiros-main #title-Pmain{
-  font-size: 18px;
+  font-size: 24px;
   font-weight: bold;
 }
 

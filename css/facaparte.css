@@ -44,6 +44,10 @@ input[type=text], input[type=number], input[type=password], input[type=email],in
     border-top: dashed 2px rgb(136, 136, 136);
 }
 
+.model-category-select{
+    height: 0px !important;
+}
+
 @media screen and (max-width:767px){
     .div-block-15{
         flex-direction: column;

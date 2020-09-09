@@ -564,7 +564,7 @@
               placeholder="Ex.: exemplo@exemplo.com.br" id="Femail" required="" />
 
             <label for="Fidade" class="field-label-2">IDADE*</label>
-            <input type="number" class="text-field w-input" maxlength="2" name="Idade" data-name="Fidade"
+            <input type="text" class="text-field w-input" maxlength="2" name="Idade" data-name="Fidade"
               placeholder="Digite sua idade" id="Fidade" required=""
               onkeyup="checkLenghtMax('er1',2,this,'Texto muito grande, somente 2 dígitos')" />
 
@@ -582,21 +582,21 @@
             </select>
 
             <label for="Ftelefone" class="field-label-5">DDD + TELEFONE FIXO</label>
-            <input type="number" class="text-field-4 w-input" maxlength="15" minlength="11" name="TelefoneFixo"
-              data-name="Ftelefone" placeholder="Ex.: 033 3333-3333" id="Ftelefone"
+            <input type="tel" pattern="[0-9]{11}" class="text-field-4 w-input" maxlength="15" minlength="11"
+              name="TelefoneFixo" data-name="Ftelefone" placeholder="Ex.: 033 3333-3333" id="Ftelefone"
               onkeyup="checkLenghtMax('er2',11,this,'Número muito grande. Coloque como no exemplo: 033 3333-3333'); checkLenghtMin('er2m',11,this,'Número muito curto. Coloque como no exemplo: 033 3333-3333')" />
 
             <label for="Fcelular" class="field-label-6">DDD + CELULAR*</label>
-            <input type="number" class="text-field-5 w-input" maxlength="16" minlength="11" name="TelefoneCelular"
-              data-name="Fcelular" placeholder="Ex.: 033 9 9999-9999" id="Fcelular" required=""
-              onkeyup="checkLenghtMax('er3',12,this,'Número muito grande. Coloque como no exemplo: 033 9 9999-9999'); checkLenghtMin('er3m',12,this,'Número muito curto. Coloque como no exemplo: 033 9 9999-9999')" />
+            <input type="tel" pattern="[0-9]{11}" class="text-field-5 w-input" maxlength="16" minlength="11"
+              name="TelefoneCelular" data-name="Fcelular" placeholder="Ex.: 033 9999-9999" id="Fcelular" required=""
+              onkeyup="checkLenghtMax('er3',11,this,'Número muito grande. Coloque como no exemplo: 033 9999-9999'); checkLenghtMin('er3m',11,this,'Número muito curto. Coloque como no exemplo: 033 9999-9999')" />
 
             <label for="Fendereco" class="field-label">ENDEREÇO*</label>
             <input type="text" class="text-field-2 w-input" maxlength="100" name="Endereco" data-name="Fendereco"
               placeholder="Digite seu endereço completo" id="Fendereco" required="" />
 
             <label for="Fnumero" class="field-label">NÚMERO*</label>
-            <input type="number" class="text-field-2 w-input" maxlength="4" name="Numero" data-name="Fnumero"
+            <input type="text" class="text-field-2 w-input" maxlength="4" name="Numero" data-name="Fnumero"
               placeholder="Digite seu número" id="Fnumero" required="" />
 
             <label for="Fbairro" class="field-label">BAIRRO*</label>
@@ -604,7 +604,7 @@
               placeholder="Digite seu bairro" id="Fbairro" required="" />
 
             <label for="Fcep" class="field-label">CEP*</label>
-            <input type="number" class="text-field-2 w-input" maxlength="100" name="Cep" data-name="Fcep"
+            <input type="text" class="text-field-2 w-input" maxlength="100" name="Cep" data-name="Fcep"
               placeholder="Digite seu cep" id="Fcep" required="" />
 
             <label for="Fcidade" class="field-label">CIDADE*</label>
@@ -668,35 +668,35 @@
               <option value="standup">STAND UP</option>
               <option value="digitalInfluence">DIGITAL INFLUENCE</option>
             </select>
-            <div class="model-category-select" style="display: none;">
+            <div class="model-category-select">
               <label for="medidas" class="center-marker-category">MEDIDAS</label>
 
               <label for="Faltura" class="field-label-2">ALTURA*</label>
-              <input type="number" class="text-field w-input" maxlength="3" minlength="2" name="Altura"
+              <input type="text" class="text-field w-input" maxlength="3" minlength="2" name="Altura"
                 data-name="Faltura" placeholder="Digite sua altura" id="Faltura" />
 
               <label for="Fpeso" class="field-label-2">PESO*</label>
-              <input type="number" class="text-field w-input" maxlength="3" minlength="2" name="Peso" data-name="Fpeso"
+              <input type="text" class="text-field w-input" maxlength="3" minlength="2" name="Peso" data-name="Fpeso"
                 placeholder="Digite seu peso" id="Fpeso" />
 
               <label for="Fmanequim" class="field-label-2">MANEQUIM*</label>
-              <input type="number" class="text-field w-input" maxlength="3" minlength="2" name="Manequim"
+              <input type="text" class="text-field w-input" maxlength="3" minlength="2" name="Manequim"
                 data-name="Fmanequim" placeholder="Digite seu manequim" id="Fmanequim" />
 
               <label for="Fsapato" class="field-label-2">SAPATO*</label>
-              <input type="number" class="text-field w-input" maxlength="2" minlength="2" name="Sapato"
+              <input type="text" class="text-field w-input" maxlength="2" minlength="2" name="Sapato"
                 data-name="Fsapato" placeholder="Digite seu sapato" id="Fsapato" />
 
               <label for="Fcintura" class="field-label-2">CINTURA*</label>
-              <input type="number" class="text-field w-input" maxlength="3" minlength="2" name="Cintura"
+              <input type="text" class="text-field w-input" maxlength="3" minlength="2" name="Cintura"
                 data-name="Fcintura" placeholder="Digite sua cintura" id="Fcintura" />
 
               <label for="Fquadril" class="field-label-2">QUADRIL*</label>
-              <input type="number" class="text-field w-input" maxlength="3" minlength="2" name="Quadril"
+              <input type="text" class="text-field w-input" maxlength="3" minlength="2" name="Quadril"
                 data-name="Fquadril" placeholder="Digite seu quadril" id="Fquadril" />
 
               <label for="Fbustotorax" class="field-label-2">BUSTO - TÓRAX*</label>
-              <input type="number" class="text-field w-input" maxlength="3" minlength="2" name="BustoTorax"
+              <input type="text" class="text-field w-input" maxlength="3" minlength="2" name="BustoTorax"
                 data-name="Fbustotorax" placeholder="Digite sua busto-tórax" id="Fbustotorax" />
 
               <label for="Folhos" class="field-label-4">OLHOS*</label>
