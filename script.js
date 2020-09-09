@@ -656,7 +656,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                         <div class="container-parceiros">
                           <div class="texts-parceiros-main">
                             <p id="title-Pmain">CLUBE DE VANTAGENS BRAZIL MODEL AGENCY</p>
-                            <p>Clica na logo de nossos parceiros e veja os descontos, ofertas e benefícios que cada um oferece para os alunos da Brazil Model e para os alunos da Faculdade Pitágoras.<br>
+                            <p>Clica na logo de nossos parceiros e veja os descontos, ofertas e benefícios que cada um oferece para os alunos da Brazil Model e para os alunos da Faculdade Pitágoras. 
                             Vantagens exclusivas para os estudantes apresentando a carteirinha.<br>
                             Aproveita a grande variedade de promoções, incluindo descontos especiais em cursos de graduação e pós -graduação, artigos, estética, viagens, fest food, restaurantes, hotéis, entretenimento, lazer, diversões e muito mais.</p>
                           </div>
