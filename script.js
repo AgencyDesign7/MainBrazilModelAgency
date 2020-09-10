@@ -548,6 +548,11 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                                       <p>* Marketing Pessoal</p>
                                       <p>* Gerenciamento de Carreira</p>
                                     </div>
+                                    <div class="certifications-container">
+                                      <div><p>Alunos com certificação</p></div>
+                                      <div><p>Comentários</p></div>
+                                      <div><p>Fotos</p></div>
+                                    </div>
                                   <div class="btn-aplly"><span class="apllyIcon"></span><p>CLIQUE AQUI PARA MATRICULAR AGORA</p></div>
                                   <span class="countdown">countdown</span> 
                                 </div>
@@ -572,6 +577,11 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                                       <p>* Orientação e Prática para Seleção de Modelagem</p>
                                       <p>* Postura Fotográfica</p>
                                       <p>* Compreensão da Postura</p>
+                                    </div>
+                                    <div class="certifications-container">
+                                      <div><p>Alunos com certificação</p></div>
+                                      <div><p>Comentários</p></div>
+                                      <div><p>Fotos</p></div>
                                     </div>
                                   <div class="btn-aplly"><span class="apllyIcon"></span><p>CLIQUE AQUI PARA MATRICULAR AGORA</p></div>
                                   <span class="countdown">countdown</span> 
@@ -600,6 +610,11 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                                       <p>* Maquiagem para o Dia / Noite / Desfiles</p>
                                       <p>* Maquiagem para Noivas</p>
                                     </div>
+                                    <div class="certifications-container">
+                                      <div><p>Alunos com certificação</p></div>
+                                      <div><p>Comentários</p></div>
+                                      <div><p>Fotos</p></div>
+                                    </div>
                                   <div class="btn-aplly"><span class="apllyIcon"></span><p>CLIQUE AQUI PARA MATRICULAR AGORA</p></div>
                                   <span class="countdown">countdown</span> 
                                 </div>
@@ -624,6 +639,11 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                                       <p>* Conceito de Teatro</p>
                                       <p>* Evolução do Teatro</p>
                                       <p>* Metodologia</p>
+                                    </div>
+                                    <div class="certifications-container">
+                                      <div><p>Alunos com certificação</p></div>
+                                      <div><p>Comentários</p></div>
+                                      <div><p>Fotos</p></div>
                                     </div>
                                   <div class="btn-aplly"><span class="apllyIcon"></span><p>CLIQUE AQUI PARA MATRICULAR AGORA</p></div>
                                   <span class="countdown">countdown</span> 
@@ -873,7 +893,11 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
 
                         </div>
                         <div class="contabilidade-texts" style="margin: 20px 0 30px 0;">
-                          <p>Alunos da Brazil Model e Faculdade Pitágoras apresentando a carteirinha tem descontos especiais</p>
+                          <p>Aflorar Personalizados e Costura Criativa esta esperando por você.
+
+                          Visite nossa página no instagran e conheçam nossos trabalhos.
+                          
+                          Desconto de 33% em qualquer produto personalizados com apresentação de sua carteirinha da Brazil Model Agency  e faculdade pitagoras.</p>
                           </div>
                         </div>
                         <div class="contact-watsapp-icons">
