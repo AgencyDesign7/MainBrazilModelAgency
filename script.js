@@ -1570,11 +1570,17 @@ function checkUploadFiles() {
   });
 }
 
-function checkLenghtMax(id, lenghtFieldMax, referenceField, errMessage1) {
+function checkLenghtMaxMin(id, lenghtFieldMax, lenghtFieldMin, referenceField, customMessage = null) {
+  let MessageErrorMax = "Número muito grande. Coloque como no exemplo: 033 9999-9999"
+  let MessageErrorMin = "Número muito curto. Coloque como no exemplo: 033 9999-9999"
   var Entervalue = referenceField.value;
 
   var spanError = document.createElement("p");
-  var erroNode1 = document.createTextNode(errMessage1);
+  if (customMessage === null)
+    var erroNode1 = Entervalue.length > lenghtFieldMax ? document.createTextNode(MessageErrorMax) : Entervalue.length < lenghtFieldMin ? document.createTextNode(MessageErrorMin) : document.createTextNode("none");
+  else
+    var erroNode1 = document.createTextNode(customMessage)
+
   spanError.appendChild(erroNode1);
   spanError.className = "errorMessage";
   spanError.classList.add(id);
@@ -1591,49 +1597,73 @@ function checkLenghtMax(id, lenghtFieldMax, referenceField, errMessage1) {
         checkMessagesDuplicate[1].remove();
       }
     }
-  } else {
-    referenceField.style.backgroundColor = "white";
-    if (!errorMessageShow != "undefined") {
-      errorMessageShow.forEach((indexof) => {
-        indexof.classList[1] === id
-          ? indexof.remove()
-          : console.log(indexof.classList[1]);
-      });
-    }
-  }
-}
-
-function checkLenghtMin(id, lenghtFieldMin, referenceField, errMessage1) {
-  var Entervalue = referenceField.value;
-
-  var spanError = document.createElement("p");
-  var erroNode1 = document.createTextNode(errMessage1);
-  spanError.appendChild(erroNode1);
-  spanError.className = "errorMessage";
-  spanError.classList.add(id);
-  var errorMessageShow = document.querySelectorAll(".errorMessage");
-
-  if (Entervalue.length < lenghtFieldMin) {
-    //referenceField.style.backgroundColor = "#ff9999";
+  } else if (Entervalue.length < lenghtFieldMin) {
+    referenceField.style.backgroundColor = "#ff9999";
     if (!errorMessageShow != "undefined") {
       spanError.appendChild(erroNode1);
       referenceField.parentNode.insertBefore(spanError, referenceField);
+
       var checkMessagesDuplicate = document.querySelectorAll("." + id);
       if (checkMessagesDuplicate.length > 1) {
         checkMessagesDuplicate[1].remove();
       }
     }
-  } else {
-    //referenceField.style.backgroundColor = "white"
+  }
+  else {
+    referenceField.style.backgroundColor = "white";
     if (!errorMessageShow != "undefined") {
       errorMessageShow.forEach((indexof) => {
         indexof.classList[1] === id
           ? indexof.remove()
-          : console.log(indexof.classList[1]);
+          : "";
       });
     }
   }
+
+  const FormatterNumber = (x) => {
+
+    const allNumbers = x.split("");
+    const newVal = x
+
+
+    let inter = allNumbers.filter((num) => {
+      if (Number.isInteger(parseInt(num))) {
+        return true;
+      }
+      else {
+        return false
+      }
+    })
+
+    //console.log(inter)
+
+
+    var ddd = inter.slice(0, 2).toString();
+    var first = inter.slice(2, 6).toString()
+    var last = inter.slice(6, 20).toString()
+
+
+    if (first.length > 0 && last.length < 1 && ddd.length > 2) {
+
+      referenceField.value = "(" + ddd.replace(",", "") + ")" + first.replaceAll(",", "");
+
+    } else if (ddd.length < 4 && first.length < 1) {
+
+      referenceField.value = ddd.replace(",", "")
+      console.log(ddd)
+
+    }
+    else {
+
+      referenceField.value = "(" + ddd.replace(",", "") + ")" + first.replaceAll(",", "") + "-" + last.replaceAll(",", "");
+
+    }
+
+  }
+
+  FormatterNumber(Entervalue)
 }
+
 
 (function loadHideImg() {
   document.head.insertAdjacentHTML(
@@ -2388,5 +2418,4 @@ function countdown() {
     }
   }, 1000);
 };
-
 

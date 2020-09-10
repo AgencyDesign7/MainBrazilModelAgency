@@ -567,7 +567,7 @@
             <label for="Fidade" class="field-label-2">IDADE*</label>
             <input type="text" class="text-field w-input" maxlength="2" name="Idade" data-name="Fidade"
               placeholder="Digite sua idade" id="Fidade" required=""
-              onkeyup="checkLenghtMax('er1',2,this,'Texto muito grande, somente 2 dígitos')" />
+              onkeyup="checkLenghtMaxMin('er2',2,2,this, 'Mínimo 2 dígitos')" />
 
             <!-- <label for="Fnascimento" class="field-label-3">DATA NASCIMENTO*</label>
             <input type="date" class="text-field-3 w-input" maxlength="256" name="DataNascimento"
@@ -583,14 +583,14 @@
             </select>
 
             <label for="Ftelefone" class="field-label-5">DDD + TELEFONE FIXO</label>
-            <input type="tel" pattern="[0-9]{11}" class="text-field-4 w-input" maxlength="15" minlength="11"
-              name="TelefoneFixo" data-name="Ftelefone" placeholder="Ex.: 033 3333-3333" id="Ftelefone"
-              onkeyup="checkLenghtMax('er2',11,this,'Número muito grande. Coloque como no exemplo: 033 3333-3333'); checkLenghtMin('er2m',11,this,'Número muito curto. Coloque como no exemplo: 033 3333-3333')" />
+            <input type="tel" class="text-field-4 w-input" maxlength="13" minlength="13" name="TelefoneFixo"
+              data-name="Ftelefone" placeholder="Ex.: (33)3333-3333" id="Ftelefone"
+              onkeyup="checkLenghtMaxMin('er2',13,13,this)" />
 
             <label for="Fcelular" class="field-label-6">DDD + CELULAR*</label>
-            <input type="tel" pattern="[0-9]{11}" class="text-field-5 w-input" maxlength="16" minlength="11"
-              name="TelefoneCelular" data-name="Fcelular" placeholder="Ex.: 033 9999-9999" id="Fcelular" required=""
-              onkeyup="checkLenghtMax('er3',11,this,'Número muito grande. Coloque como no exemplo: 033 9999-9999'); checkLenghtMin('er3m',11,this,'Número muito curto. Coloque como no exemplo: 033 9999-9999')" />
+            <input type="tel" class="text-field-5 w-input" maxlength="14" minlength="14" name="TelefoneCelular"
+              data-name="Fcelular" placeholder="Ex.: (33)9999-9999" id="Fcelular" required=""
+              onkeyup="checkLenghtMaxMin('er3',14,14,this)" />
 
             <label for="Fendereco" class="field-label">ENDEREÇO*</label>
             <input type="text" class="text-field-2 w-input" maxlength="100" name="Endereco" data-name="Fendereco"
