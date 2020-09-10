@@ -549,9 +549,9 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                                       <p>* Gerenciamento de Carreira</p>
                                     </div>
                                     <div class="certifications-container">
-                                      <div><p>Alunos com certificação</p></div>
-                                      <div><p>Comentários</p></div>
-                                      <div><p>Fotos</p></div>
+                                      <div><a href="#">Alunos com certificação</a></div>
+                                      <div><a href="#">Comentários</a></div>
+                                      <div><a href="#">Fotos</a></div>
                                     </div>
                                   <div class="btn-aplly"><span class="apllyIcon"></span><p>CLIQUE AQUI PARA MATRICULAR AGORA</p></div>
                                   <span class="countdown">countdown</span> 
@@ -579,9 +579,9 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                                       <p>* Compreensão da Postura</p>
                                     </div>
                                     <div class="certifications-container">
-                                      <div><p>Alunos com certificação</p></div>
-                                      <div><p>Comentários</p></div>
-                                      <div><p>Fotos</p></div>
+                                      <div><a href="#">Alunos com certificação</a></div>
+                                      <div><a href="#">Comentários</a></div>
+                                      <div><a href="#">Fotos</a></div>
                                     </div>
                                   <div class="btn-aplly"><span class="apllyIcon"></span><p>CLIQUE AQUI PARA MATRICULAR AGORA</p></div>
                                   <span class="countdown">countdown</span> 
@@ -611,9 +611,9 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                                       <p>* Maquiagem para Noivas</p>
                                     </div>
                                     <div class="certifications-container">
-                                      <div><p>Alunos com certificação</p></div>
-                                      <div><p>Comentários</p></div>
-                                      <div><p>Fotos</p></div>
+                                      <div><a href="#">Alunos com certificação</a></div>
+                                      <div><a href="#">Comentários</a></div>
+                                      <div><a href="#">Fotos</a></div>
                                     </div>
                                   <div class="btn-aplly"><span class="apllyIcon"></span><p>CLIQUE AQUI PARA MATRICULAR AGORA</p></div>
                                   <span class="countdown">countdown</span> 
@@ -641,9 +641,9 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                                       <p>* Metodologia</p>
                                     </div>
                                     <div class="certifications-container">
-                                      <div><p>Alunos com certificação</p></div>
-                                      <div><p>Comentários</p></div>
-                                      <div><p>Fotos</p></div>
+                                      <div><a href="#">Alunos com certificação</a></div>
+                                      <div><a href="#">Comentários</a></div>
+                                      <div><a href="#">Fotos</a></div>
                                     </div>
                                   <div class="btn-aplly"><span class="apllyIcon"></span><p>CLIQUE AQUI PARA MATRICULAR AGORA</p></div>
                                   <span class="countdown">countdown</span> 
