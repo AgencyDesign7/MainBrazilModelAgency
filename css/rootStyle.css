@@ -2509,7 +2509,7 @@ textarea.w-input,textarea.w-select {
 	-moz-transition:  opacity 1s ;
 	-o-transition:  opacity 1s;
 	-webkit-transition:  opacity 1s;
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 .nav-menu{
@@ -3556,7 +3556,7 @@ margin: 0;
   position: absolute;
   width: 100%;
   height: 100%;
-  z-index: 99999;
+  z-index: 999999999;
   animation: opacity 1s;
 }
 .container-consultores > img{
