@@ -4233,3 +4233,33 @@ input::placeholder {
   margin: 0;
   text-decoration: none;
 }
+
+/*Sobre nos -- page */
+
+.equipe-brazilmodel-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; 
+}
+
+.container-equipe{
+  display:flex;
+  flex-direction: column;
+  width: 150px;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 20px;
+  
+}
+
+.container-equipe p{
+  margin: 2px 0;
+}
+
+.container-equipe > :nth-child(2){
+  font-size: 18px;
+}
+.container-equipe > :first-child{
+  margin-bottom: 10px;
+}
