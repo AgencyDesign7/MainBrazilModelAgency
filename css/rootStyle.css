@@ -3152,7 +3152,10 @@ border-radius: 89px;
   width: 30vw;
   margin: 0;
 }
-
+.MainMenu-1, .sub-cantores-1, .mobile-model-cat{
+  padding: 0!important;
+  margin: 0 !important;
+}
 .subnav-events{
   position: absolute;
   background-color: black;
@@ -3160,6 +3163,7 @@ border-radius: 89px;
   margin-left: 35px;
   width: 300px;
   animation: opacity 1s;
+  padding: 0;
 }
 .subnav-events li{
   list-style: none;
