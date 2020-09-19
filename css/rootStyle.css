@@ -3055,10 +3055,29 @@ li:hover a{
   flex-direction: row;
 }
 .imgs-cursos img{
-  width: 40vw;
+  width: 800px;
   height: auto;
   margin: 10px;
   
+}
+
+.workshop-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+}
+
+.workshop-container p{
+  max-width: 800px;
+  text-align: justify;
+  color: #000;
+}
+
+.workshop-container > :first-child{
+  text-align: center;
+  font-weight: bold;
 }
 
 .mobile-model-cat{
@@ -3969,6 +3988,7 @@ input::placeholder {
 .contact-watsapp-icons p{
   font-size: 15px;
   font-weight: bold;
+  color: #000;
 }
 .list-pitagoras-states{
   height: fit-content !important;

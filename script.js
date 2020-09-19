@@ -437,7 +437,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
     popupCategory.classList.remove("display-none-content");
     setTimeout(() => {
       popupCategory.classList.add("container-popup-mgs");
-    }, 200);
+    }, 300);
   }
   if (title === "revista") {
     popupCategory.style.backgroundColor = "black";
@@ -512,11 +512,34 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
       `;
       window.scrollTo(0, 0);
       break;
-    case "lives":
+    case "workshops":
       popupCategory.style.backgroundColor = "black";
       containerImgs.innerHTML = `
                       <div class="imgs-cursos ${title}">
-                      <a  href="javascript:void(0)"><img src="./media/"></a>
+                        <img src="./media/eventos-menu/workshop1.jpg">
+                        <div class="workshop-container">
+                          <p>WORKSHOPS</p>
+                          <p>
+                          Palestra,
+                          Workshop de passarela,
+                          Make-Up e 
+                          Fotos.
+                          
+                          Tudo em um só dia.
+                          Ministrados na teoria e na prática.
+                          
+                          QUEM PODE PARTICIPAR? 
+                          
+                          Pessoas que tem o sonho de ser Ator, Cantores, Companhia Circenses,  Covers,  Dançarinos, Influenciadores Digitais, Modelos, Músico e Sósias.
+                          
+                          Confere as cidades que terão os workshops.
+                          
+                          </p>
+                        </div>
+                        <div class="contact-watsapp-icons">
+                                <a href="https://api.whatsapp.com/send?phone=5531994530485"><img src="./media/IconSocial/IwatsappColor.png"></a>
+                                <p style="margin-bottom: 50px !important;">Maiores informações e inscrições entre em contato</p>
+                              </div>
                       </div>
                       
       `;
@@ -2337,7 +2360,7 @@ function ObjectsArtists(selectArtistName) {
 }
 
 function countdown() {
-  var contDownDate = new Date("September 20, 2020 15:10:00").getTime();
+  var contDownDate = new Date("October 21, 2020 15:10:00").getTime();
 
   var x = setInterval(() => {
     var divCountdown = document.querySelector(
