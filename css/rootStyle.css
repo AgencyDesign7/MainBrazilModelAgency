@@ -3061,6 +3061,10 @@ li:hover a{
   
 }
 
+.audicao{
+  flex-direction: column;
+}
+
 .workshop-container{
   display: flex;
   justify-content: center;
@@ -3990,10 +3994,12 @@ input::placeholder {
   font-weight: bold;
   color: #000;
 }
+
 .list-pitagoras-states{
   height: fit-content !important;
   margin-top: 40px;
   padding: 5px;
+  overflow: hidden !important;
 }
 
 .list-pitagoras-states::-webkit-scrollbar {
@@ -4014,6 +4020,15 @@ input::placeholder {
 
 .list-pitagoras-states li p{
   margin: 5px 0 1px 0 !important;
+  color: black;
+}
+
+.workshop-state{
+  margin-top: 0 !important;
+}
+
+.workshops{
+  flex-direction: column !important;
 }
 
 .container-text-propa{

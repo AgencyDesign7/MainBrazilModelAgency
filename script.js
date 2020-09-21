@@ -528,14 +528,62 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                           Tudo em um só dia.
                           Ministrados na teoria e na prática.
                           
-                          QUEM PODE PARTICIPAR? 
+                          <b>QUEM PODE PARTICIPAR?</b> 
                           
-                          Pessoas que tem o sonho de ser Ator, Cantores, Companhia Circenses,  Covers,  Dançarinos, Influenciadores Digitais, Modelos, Músico e Sósias.
+                          Interessados que têm o sonho de ser:  Atores, Cantores, Companhia Circenses,  Covers,  Dançarinos, Influenciadores Digitais, Modelos, Músico e Sósias.
                           
-                          Confere as cidades que terão os workshops.
+                          Confira as cidades que terão os workshops.
                           
                           </p>
                         </div>
+                        <div class="contact-watsapp">
+                        
+                        <select id="state-pitagoras" name="select-state" onchange="selectedState()">
+                            <option>Selecione um estado...</option>
+                            <!--<option value="ac">AC</option>-->
+                            <!--<option value="al">AL</option>-->
+                            <!--<option value="ap">AP</option>-->
+                            <!--<option value="am">AM</option>-->
+                            <!--<option value="ba">BA</option>-->
+                            <!--<option value="ce">CE</option>-->
+                            <!--<option value="df">DF</option>-->
+                            <!--<option value="es">ES</option>-->
+                            <!--<option value="go">GO</option>-->
+                            <!--<option value="ma">MA</option>-->
+                            <!--<option value="mt">MT</option>-->
+                            <!--<option value="ms">MS</option>-->
+                            <!--<option value="mg">MG</option>-->
+                            <!--<option value="pa">PA</option>-->
+                            <!--<option value="pb">PB</option>-->
+                            <!--<option value="pr">PR</option>-->
+                            <!--<option value="pe">PE</option>-->
+                            <!--<option value="pi">PI</option>-->
+                            <!--<option value="rj">RJ</option>-->
+                            <!--<option value="rn">RN</option>-->
+                            <!--<option value="rs">RS</option>-->
+                            <!--<option value="ro">RO</option>-->
+                            <!--<option value="rr">RR</option>-->
+                            <!--<option value="sc">SC</option>-->
+                            <!--<option value="sp">SP</option>-->
+                            <!--<option value="se">SE</option>-->
+                            <!--<option value="to">TO</option>-->
+                        </select>
+                        <div class="list-pitagoras-states workshop-state"></div>
+                        </div>
+                        <div class="contact-watsapp-icons">
+                                <a href="https://api.whatsapp.com/send?phone=5531994530485"><img src="./media/IconSocial/IwatsappColor.png"></a>
+                                <p style="margin-bottom: 50px !important;">Maiores informações e inscrições entre em contato</p>
+                              </div>
+                      </div>
+                      
+      `;
+      window.scrollTo(0, 0);
+      break;
+    case "audicao":
+      popupCategory.style.backgroundColor = "black";
+      containerImgs.innerHTML = `
+                      <div class="imgs-cursos ${title}">
+                        <img src="./media/eventos-menu/audicao.jpg">
                         <div class="contact-watsapp-icons">
                                 <a href="https://api.whatsapp.com/send?phone=5531994530485"><img src="./media/IconSocial/IwatsappColor.png"></a>
                                 <p style="margin-bottom: 50px !important;">Maiores informações e inscrições entre em contato</p>
@@ -2172,8 +2220,7 @@ function playerMusic(selectedArtist, musicSelected = 0) {
       for (var value = 1; value <= totalMusics; value++) {
         listMusics.innerHTML += `
           <div class="music-list" data-link-pointer>
-          <div class="btn-music"  data-value="${value - 1}" data-Artist ="${
-          getArtists[`selectName`]
+          <div class="btn-music"  data-value="${value - 1}" data-Artist ="${getArtists[`selectName`]
           }"><p>${getArtists["musicas"][value]["name"]}</p></div>
           <p>${getArtists["musicas"][value]["length"]}</p>
         </div>
@@ -2187,8 +2234,7 @@ function playerMusic(selectedArtist, musicSelected = 0) {
     <div class="close-container-music"><a href="#">X</a></div>
     <div class="container-Elements">
         <div id="playthis"></div>
-        <div class="photo-container"><img id="artistPhoto" src="${
-    getArtists[`tumbPhotoUrl`]
+        <div class="photo-container"><img id="artistPhoto" src="${getArtists[`tumbPhotoUrl`]
     }"
                 alt=""></div>
         <div class="controls-music">
