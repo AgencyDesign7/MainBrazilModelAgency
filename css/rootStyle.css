@@ -4302,3 +4302,17 @@ input::placeholder {
 .container-equipe > :first-child{
   margin-bottom: 10px;
 }
+
+.sucess-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  margin-top: 40px;
+}
+
+.sucess-form p{
+ color: black;
+ margin: 10px;
+}
