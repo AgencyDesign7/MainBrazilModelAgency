@@ -571,7 +571,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                         <div class="list-pitagoras-states workshop-state"></div>
                         </div>
                         <div class="contact-watsapp-icons">
-                                <a href="https://api.whatsapp.com/send?phone=5531994530485"><img src="./media/IconSocial/IwatsappColor.png"></a>
+                                <a href="https://api.whatsapp.com/send?phone=5531994530485"><img src="./media/IconSocial/IwatsappColor.png" style="width: 80px; height: auto;"></a>
                                 <p style="margin-bottom: 50px !important;">Maiores informações e inscrições entre em contato</p>
                               </div>
                       </div>
