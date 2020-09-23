@@ -584,6 +584,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
       containerImgs.innerHTML = `
                       <div class="imgs-cursos ${title}">
                         <img src="./media/eventos-menu/audicao.jpg">
+                        <p style="margin-bottom: 50px !important;">Somos uma agência de marketing musical com estratégias para lançamentos e divulgação de cantores, duplas e bandas do Brasil, especializada no  planejamento de produção, contratação e vendas de artistas  para realização de shows e eventos.</p>
                         <div class="contact-watsapp-icons">
                                 <a href="https://api.whatsapp.com/send?phone=5531994530485"><img src="./media/IconSocial/IwatsappColor.png"></a>
                                 <p style="margin-bottom: 50px !important;">Maiores informações e inscrições entre em contato</p>

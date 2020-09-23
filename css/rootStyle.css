@@ -3062,7 +3062,14 @@ li:hover a{
 }
 
 .audicao{
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
+}
+.audicao > :nth-child(2){
+  max-width: 800px;
+  font-size: 18px;
+  color: black;
 }
 
 .workshop-container{
