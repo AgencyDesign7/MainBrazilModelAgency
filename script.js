@@ -1781,6 +1781,9 @@ function buttonMenuEA() {
   var mainLi = document.querySelectorAll(".MainMenu-1");
   var btnVoltarArtistas = document.querySelector(".voltar-artistas");
 
+  var cosplayBtn = document.querySelector('.cosplay-btn')
+  var divCosplay = document.querySelector('.sub-cosplay-1')
+
   var eventsDoc = document.querySelector(".events-btn");
   var divEvento = document.querySelector(".subnav-evento");
   var spanEvent = document.querySelector(".events-btn > span");
@@ -1884,11 +1887,21 @@ function buttonMenuEA() {
       li.classList.remove("display-none-content");
     });
     divCantores.classList.add("display-none-content");
+    divCosplay.classList.add("display-none-content");
   });
 
   cantoresBtn.addEventListener("click", (event) => {
     if (divCantores.classList.contains("display-none-content")) {
       divCantores.classList.remove("display-none-content");
+      mainLi.forEach((li) => {
+        li.classList.add("display-none-content");
+      });
+    }
+  });
+
+  cosplayBtn.addEventListener("click", (event) => {
+    if (divCosplay.classList.contains("display-none-content")) {
+      divCosplay.classList.remove("display-none-content");
       mainLi.forEach((li) => {
         li.classList.add("display-none-content");
       });
