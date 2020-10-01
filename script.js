@@ -1,6 +1,29 @@
+function includesContents() {
+  var templates = ['./resource/template/template.navbar.desktop.html', './resource/template/template.navbar.mobile.html', './resource/template/template.footer.html']
+  var elementesSelected = ['.navbar-desktop-include', '.navbar-mobile-include', '.footerContainer']
+
+  var xhr = new XMLHttpRequest();
+  for (let i = 0; i < templates.length; i++) {
+    xhr.open('GET', templates[i], false)
+    xhr.onreadystatechange = function () {
+      var currentElement = document.querySelector(elementesSelected[i])
+      if (currentElement !== null) {
+        if (this.responseText !== '')
+          currentElement.innerHTML = this.responseText;
+      }
+    }
+    xhr.send()
+
+  }
+
+  onLoad()
+}
+
+
 function onLoad() {
   loadPageProgress();
   navBarMobile();
+  buttonMenuEA()
   var pageName = location.pathname.split("/").pop();
   switch (pageName) {
     case "index.html":
@@ -336,7 +359,7 @@ function ShowSCategorysMainMobile(category) {
 
 /*
 function searchAndShowSlide() {
-
+ 
   var divimg2 = document.querySelectorAll('.w-slide img');
   var spanSlide = document.querySelector('.slideshow');
   divimg2.forEach(elements => {
@@ -349,7 +372,7 @@ function searchAndShowSlide() {
         console.log('hello')
       }
     }, 500)
-
+ 
   })
 }*/
 
@@ -1748,7 +1771,7 @@ function checkLenghtMaxMin(id, lenghtFieldMax, lenghtFieldMin, referenceField, c
   );
 });
 
-!(function buttonMenuEA() {
+function buttonMenuEA() {
   var artistDoc = document.querySelector(".artist-btn");
   var spanIconArtist = document.querySelector(".artist-btn > span");
   var divArtista = document.querySelector(".subnav-artista");
@@ -1910,7 +1933,7 @@ function checkLenghtMaxMin(id, lenghtFieldMax, lenghtFieldMin, referenceField, c
       modelsBtn.classList.remove("activeBtn");
     }
   });
-})();
+};
 
 function ShowOrHideSubMenus(classSelected, BackButton = 0) {
   var arrayChildsNav = document.querySelectorAll("nav > a");

@@ -4285,7 +4285,7 @@ input::placeholder {
 .equipe-brazilmodel-container{
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   flex-wrap: wrap; 
 }
 
