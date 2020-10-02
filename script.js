@@ -4,14 +4,14 @@ function onLoad() {
   buttonMenuEA()
   var pageName = location.pathname.split("/").pop();
   switch (pageName) {
-    case "index.php":
+    case "index":
       slideTitle();
       break;
-    case "facaparte.php":
+    case "facaparte":
       HideOrShowCategoryModel();
       checkUploadFiles();
       break;
-    case "shows.php":
+    case "shows":
       AudioControls();
       break;
     default:
