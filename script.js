@@ -1,39 +1,17 @@
-function includesContents() {
-  var templates = ['./resource/template/template.navbar.desktop.html', './resource/template/template.navbar.mobile.html', './resource/template/template.footer.html']
-  var elementesSelected = ['.navbar-desktop-include', '.navbar-mobile-include', '.footerContainer']
-
-  var xhr = new XMLHttpRequest();
-  for (let i = 0; i < templates.length; i++) {
-    xhr.open('GET', templates[i], false)
-    xhr.onreadystatechange = function () {
-      var currentElement = document.querySelector(elementesSelected[i])
-      if (currentElement !== null) {
-        if (this.responseText !== '')
-          currentElement.innerHTML = this.responseText;
-      }
-    }
-    xhr.send()
-
-  }
-
-  onLoad()
-}
-
-
 function onLoad() {
   loadPageProgress();
   navBarMobile();
   buttonMenuEA()
   var pageName = location.pathname.split("/").pop();
   switch (pageName) {
-    case "index.html":
+    case "index.php":
       slideTitle();
       break;
-    case "facaparte.html":
+    case "facaparte.php":
       HideOrShowCategoryModel();
       checkUploadFiles();
       break;
-    case "shows.html":
+    case "shows.php":
       AudioControls();
       break;
     default:
@@ -1779,7 +1757,7 @@ function buttonMenuEA() {
   var cantoresBtn = document.querySelector(".contores-btn");
   var divCantores = document.querySelector(".sub-cantores-1");
   var mainLi = document.querySelectorAll(".MainMenu-1");
-  var btnVoltarArtistas = document.querySelector(".voltar-artistas");
+  var btnVoltarArtistas = document.querySelectorAll(".voltar-artistas");
 
   var cosplayBtn = document.querySelector('.cosplay-btn')
   var divCosplay = document.querySelector('.sub-cosplay-1')
@@ -1798,6 +1776,7 @@ function buttonMenuEA() {
 
   var subcatModel = document.querySelector(".sub-sub-model");
 
+  //Hide divs menu if others is open
   var hideContent = (menuNoClose) => {
     switch (menuNoClose) {
       case "modelo":
@@ -1866,9 +1845,11 @@ function buttonMenuEA() {
     }
   };
 
-  var subdivCantores = document.querySelector(".sub-cantores-1");
+  // Animation div show
   divCantores.style.animation = "opacity 1s";
+  divCosplay.style.animation = "opacity 1s";
 
+  //Events menus
   artistDoc.addEventListener("click", (event) => {
     hideContent("artista");
     if (divArtista.classList.contains("display-none-content")) {
@@ -1882,13 +1863,16 @@ function buttonMenuEA() {
     }
   });
 
-  btnVoltarArtistas.addEventListener("click", (event) => {
-    mainLi.forEach((li) => {
-      li.classList.remove("display-none-content");
+  btnVoltarArtistas.forEach((btn) => {
+    btn.addEventListener("click", (event) => {
+      mainLi.forEach((li) => {
+        li.classList.remove("display-none-content");
+      });
+      divCantores.classList.add("display-none-content");
+      divCosplay.classList.add("display-none-content");
     });
-    divCantores.classList.add("display-none-content");
-    divCosplay.classList.add("display-none-content");
-  });
+  })
+
 
   cantoresBtn.addEventListener("click", (event) => {
     if (divCantores.classList.contains("display-none-content")) {

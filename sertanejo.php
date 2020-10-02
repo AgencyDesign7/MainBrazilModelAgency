@@ -12,7 +12,7 @@
   <link href="./css/responsiveStyle.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body class="body" onload="includesContents()">
+<body class="body" onload="onLoad()">
   <div class="player-musics display-none-content"></div>
   <div class="div-loader">
     <img src="./media/loading/loader.gif" alt="" />
@@ -26,10 +26,10 @@
     <div class="container-imgs"></div>
   </div>
 
+   <!--Nav Desktop -->
+   <?php require('./resource/template/template.navbar.desktop.html')?>
   <!--Nav Mobile -->
-  <div class="navbar-desktop-include"></div>
-  <!--Nav Mobile -->
-  <div class="navbar-mobile-include"></div>
+  <?php require('./resource/template/template.navbar.mobile.html')?>
 
   <header id="hero" class="hero">
     <div class="title-sertanejo">SERTANEJO</div>
@@ -106,6 +106,7 @@
     </div>
   </header>
   <div class="footerContainer">
+    <?php require('./resource/template/template.footer.html')?>
   </div>
 
   <script src="./script.js"></script>
