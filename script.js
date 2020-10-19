@@ -766,6 +766,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                             <a href="#"  onClick="PopupMsg('contabilidade-propaganda', 'contabilidade-propaganda',1,1)"><img src="./media/parceiros/parceiro13.jpg" alt="parceiro"></a>
                             <a href="#" onClick="PopupMsg('thermas-propaganda', 'thermas-propaganda',1,1)"><img src="./media/parceiros/parceiro14.jpg" alt="parceiro"></a>
                             <a href="#" onClick="PopupMsg('aflorar-propaganda', 'aflorar-propaganda',1,1)"><img src="./media/parceiros/parceiro15.jpg" alt="parceiro"></a>
+                            <img src="./media/parceiros/parceiro16.jpg" alt="parceiro">
                           </div>
                         </div>
                       `;
