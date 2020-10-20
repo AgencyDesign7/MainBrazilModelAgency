@@ -413,6 +413,7 @@ html[data-w-dynpage] [data-w-cloak] {
 h1,h2,h3,h4,h5,h6 {
   font-weight: bold;
   margin-bottom: 10px;
+  color: black;
 }
 
 h1 {
@@ -4002,7 +4003,7 @@ input::placeholder {
   color: #000;
 }
 
-.list-pitagoras-states{
+.list-pitagoras-states, .list-states{
   height: fit-content !important;
   margin-top: 40px;
   padding: 5px;
@@ -4067,7 +4068,7 @@ input::placeholder {
   transition: opacity 2s;
 }
 
-#state-pitagoras{
+#state-pitagoras, #states-select{
   max-width:210px !important;
   color: black;
   font-size: 16px;
@@ -4093,6 +4094,9 @@ input::placeholder {
   align-items: center;
   flex-direction: column;
 }
+.sub-prop-text p{
+  color: black;
+}
 
 .texts-parceiros-main{
   display: flex;
@@ -4115,6 +4119,7 @@ input::placeholder {
 .texts-parceiros-main #title-Pmain{
   font-size: 24px;
   font-weight: bold;
+  text-align: start !important;
 }
 
 .images-main iframe{

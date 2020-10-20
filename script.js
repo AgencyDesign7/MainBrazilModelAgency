@@ -757,16 +757,17 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                             <a href="#" onClick="PopupMsg('pitagoras-propaganda', 'pitagoras-propaganda',1,1)"><img src="./media/parceiros/parceiro1.jpg" alt="parceiro"></a>
                             <a href="#" onClick="PopupMsg('constance-propaganda', 'constance-propaganda', 1, 1)"><img src="./media/parceiros/parceiro2.jpg" alt="parceiro"></a>
                             <a href="#" onClick="PopupMsg('fha-propaganda', 'fha-propaganda', 1, 1)"><img src="./media/parceiros/parceiro3.jpg" alt="parceiro"></a>
-                            <img src="./media/parceiros/parceiro5.jpg" alt="parceiro">
+                            <a href="#" onClick="PopupMsg('subway-propaganda', 'subway-propaganda', 1, 1)"><img src="./media/parceiros/parceiro5.jpg" alt="parceiro"></a>
                             <img src="./media/parceiros/parceiro7.jpg" alt="parceiro">
                             <img src="./media/parceiros/parceiro8.jpg" alt="parceiro">
                             <a href="#" onClick="PopupMsg('only-propaganda', 'only-propaganda', 1, 1)"><img src="./media/parceiros/only/parceiro9.jpg" alt="parceiro"></a>
                             <img src="./media/parceiros/parceiro11.jpg" alt="parceiro">
-                            <img src="./media/parceiros/parceiro12.jpg" alt="parceiro">
+                            <a href="#"  onClick="PopupMsg('odonto-propaganda', 'odonto-propaganda',1,1)"><img src="./media/parceiros/parceiro12.jpg" alt="parceiro"></a>
                             <a href="#"  onClick="PopupMsg('contabilidade-propaganda', 'contabilidade-propaganda',1,1)"><img src="./media/parceiros/parceiro13.jpg" alt="parceiro"></a>
                             <a href="#" onClick="PopupMsg('thermas-propaganda', 'thermas-propaganda',1,1)"><img src="./media/parceiros/parceiro14.jpg" alt="parceiro"></a>
                             <a href="#" onClick="PopupMsg('aflorar-propaganda', 'aflorar-propaganda',1,1)"><img src="./media/parceiros/parceiro15.jpg" alt="parceiro"></a>
-                            <img src="./media/parceiros/parceiro16.jpg" alt="parceiro">
+                            <a href="#" onClick="PopupMsg('smartfit-propaganda', 'smartfit-propaganda',1,1)"><img src="./media/parceiros/parceiro16.jpg" alt="parceiro"></a>
+                            
                           </div>
                         </div>
                       `;
@@ -977,6 +978,125 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                         <div class="contact-watsapp-icons">
                                 <p style="font-size: 18px; color: black;">Para maiores informações: <a href="https://api.whatsapp.com/send?phone=5531988971990"><img src="./media/IconSocial/IwatsappColor.png"></a></p>
                               </div>
+                        </div>
+                      `;
+      break;
+      case "subway-propaganda":
+      popupCategory.style.backgroundColor = "white";
+      containerImgs.innerHTML = `
+                      <div class="propaganda-nv-2">
+                        <div class="back-parceiros-prop" onClick="PopupMsg('parceiros', 'parceiros',1,1)" data-link-on ><p>Voltar Parceiros</p></div>
+                        <div class="container-propaganda">
+                          <div><h3>SUBWAY</h3></div>
+                          <div class="images-main">
+                            
+                              <img src="./media/parceiros/parceiro5.jpg" alt="subway">
+                            
+                          </div>
+                          <div class="txts-propaganda">
+                            <div class="container-text-propa">
+                              <p>Vá em um Subway parceiro do Clube de vantagens Brazil Model e não esqueça de  levar a sua carteirinha de estudante da Brazil Model Agency, Faculdade  Pitágoras ou da Unopar.</p>
+                              <p>Eles oferecem 10% de desconto para compras presencial, não vale para compras em delivery.</p>
+                              <p>Só terá o desconto mediante a apresentação da carteirinha.</p>
+                              <p>Lembre-se que sanduíches promocionais, como o Baratíssimo, Barato do dia e Pop Subway, e promoções que estiverem ocorrendo não fazem parte dos valores especiais, pois já estão com descontos e o desconto não é acumulativo.</p>
+          
+                            </div>
+                            <div class="sub-prop-text"><p><b>Olha em baixo os endereços dos subway parceiros.</b></p>
+                            </div><div>
+                            
+                            <div class="contact-watsapp">
+                            <div class="contact-watsapp-icons" style="display: none;">
+                                <a href="https://api.whatsapp.com/send?phone=5531994530485"><img src="./media/IconSocial/IwatsappColor.png"></a>
+                                <p>Entre em contato com nosso consultor de carreira</p>
+                                <p>Whatsapp</p>
+                              </div>
+                            <select id="state-pitagoras" name="select-state" onchange="selectedState()">
+                              <option>Selecione um estado...</option>
+                              
+                            </select>
+                              <div class="list-pitagoras-states"></div>
+                            </div>
+                          </div>
+
+                        </div>
+                        </div>
+                      `;
+      break;
+      case "odonto-propaganda":
+      popupCategory.style.backgroundColor = "white";
+      containerImgs.innerHTML = `
+                      <div class="propaganda-nv-2">
+                        <div class="back-parceiros-prop" onClick="PopupMsg('parceiros', 'parceiros',1,1)" data-link-on ><p>Voltar Parceiros</p></div>
+                        <div class="container-propaganda">
+                          <div><h3>CLÍNICA ODONTOLÓGICA ODONTOCOMPANY</h3></div>
+                          <div class="images-main">
+                            
+                              <img src="./media/parceiros/parceiro12.jpg" alt="subway">
+                            
+                          </div>
+                          <div class="txts-propaganda">
+                            <div class="container-text-propa">
+                              <p>A OdontoCompany é uma rede de franquias de Clínicas Odontológicas completa, atendendo diversas áreas da odontologia atual e moderna!</p>
+                              <p>Somos conhecidos por nossos pacientes, principalmente pelos resultados obtidos por nossos dentistas no restabelecimento dos sorrisos, através das avançadas técnicas de dentística e implantodontia, utilizando a mais alta tecnologia, com segurança e conforto em todas as etapas do tratamento.</p>
+                              <p>Só terá o desconto mediante a apresentação da carteirinha.</p>
+                            </div>
+                            <div class="sub-prop-text"><p><b>Escolha a clínica  de sua preferência  parceira com o clube de vantagens.</b></p>
+                            </div><div>
+                            
+                            <div class="contact-watsapp">
+                            <div class="contact-watsapp-icons" style="display: none;">
+                                <a href="https://api.whatsapp.com/send?phone=5531994530485"><img src="./media/IconSocial/IwatsappColor.png"></a>
+                                <p>Entre em contato com nosso consultor de carreira</p>
+                                <p>Whatsapp</p>
+                              </div>
+                            <select id="state-pitagoras" name="select-state" onchange="selectedState()">
+                              <option>Selecione um estado...</option>
+                              
+                            </select>
+                              <div class="list-pitagoras-states"></div>
+                            </div>
+                          </div>
+
+                        </div>
+                        </div>
+                      `;
+      break;
+      case "smartfit-propaganda":
+      popupCategory.style.backgroundColor = "white";
+      containerImgs.innerHTML = `
+                      <div class="propaganda-nv-2">
+                        <div class="back-parceiros-prop" onClick="PopupMsg('parceiros', 'parceiros',1,1)" data-link-on ><p>Voltar Parceiros</p></div>
+                        <div class="container-propaganda">
+                          <div><h3>SMART FIT</h3></div>
+                          <div class="images-main">
+                            
+                              <img src="./media/parceiros/parceiro16.jpg" alt="subway">
+                            
+                          </div>
+                          <div class="txts-propaganda">
+                            <div class="container-text-propa">
+                              <p>A Smart Fit é a 5º maior rede de academias esportivas do mundo e a maior da América Latina, com mais de 800 unidades no Brasil e outros 10 países da região, além de ter mais de 1,5 milhões de clientes matriculados.</p>
+                              <p>Alunos da Brazil Model ou da Rede Educacional da Kroton (Amplo, Anhanguera, Fama, Pitágoras, Uni, Uniderp, Unime e Unopar), tem descontos especiais.</p>
+                              <p>Só terá o desconto mediante a apresentação da carteirinha.</p>
+                            </div>
+                            <div class="sub-prop-text"><p><b>Escolha a academia de sua preferência.</b></p>
+                            </div><div>
+                            
+                            <div class="contact-watsapp">
+                            <div class="contact-watsapp-icons" style="display: none;">
+                                <a href="https://api.whatsapp.com/send?phone=5531994530485"><img src="./media/IconSocial/IwatsappColor.png"></a>
+                                <p>Entre em contato com nosso consultor de carreira</p>
+                                <p>Whatsapp</p>
+                              </div>
+                            <select id="state-pitagoras" name="select-state" onchange="selectedState()">
+                              <option>Selecione um estado...</option>
+                              
+                            </select>
+                              <div class="list-pitagoras-states"></div>
+                            </div>
+                          </div>
+
+                        </div>
                         </div>
                       `;
       break;

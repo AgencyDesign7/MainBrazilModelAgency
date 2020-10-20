@@ -285,7 +285,7 @@
   }
 }
 @media screen and (max-width: 767px) {
-  .list-pitagoras-states li p {
+  .list-pitagoras-states li p, .list-states li p {
     font-size: 4vw;
   }
   #end-id {
