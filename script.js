@@ -307,6 +307,8 @@ function showSubs(categorySelected) {
                       <li id="title-sub">${CategoryObjects["Category"][categorySelected]["title"]}</li>
                       <li><img src="${CategoryObjects["Category"][categorySelected]["imgSrc"]}"></li>
                       <div class="options-models">
+                      <li onclick="ShowModelByCategory('${CategoryObjects["Category"][categorySelected]["title"]}', 'FEMININO')"><a href="#">FEMININO</a></li>
+                      <li onclick="ShowModelByCategory('${CategoryObjects["Category"][categorySelected]["title"]}', 'MASCULINO')"><a href="#">MASCULINO</a></li>
                       <li onclick="ShowModelByCategory('${CategoryObjects["Category"][categorySelected]["title"]}', 'TODOS')"><a href="#">TODOS</a></li>
                       </div>
                     </div>
