@@ -307,14 +307,297 @@ function showSubs(categorySelected) {
                       <li id="title-sub">${CategoryObjects["Category"][categorySelected]["title"]}</li>
                       <li><img src="${CategoryObjects["Category"][categorySelected]["imgSrc"]}"></li>
                       <div class="options-models">
-                      <li><a href="${CategoryObjects["Category"][categorySelected]["Flink"]}">FEMININO</a></li>
-                      <li><a href="${CategoryObjects["Category"][categorySelected]["Mlink"]}">MASCULINO</a></li>
-                      <li><a href="${CategoryObjects["Category"][categorySelected]["Alllink"]}">TODOS</a></li>
+                      <li onclick="ShowModelByCategory('${CategoryObjects["Category"][categorySelected]["title"]}', 'TODOS')"><a href="#">TODOS</a></li>
                       </div>
                     </div>
   `;
   refSpanContainer.innerHTML = HtmlBabyCategory;
 }
+
+function ShowModelByCategory(title, gender) {
+  //let categorys = ['baby', 'sub-baby', 'sub-kids', 'preteen', 'sub-teens', 'pre-teen', 'comercial', 'sub-comercial', 'plus size', 'sub-plussize', 'more age', 'sub-moreage', 'fashion', 'sub-fashion', 'fitness', 'sub-fitness', 'urban', 'sub-urban', 'androgyne', 'sub-androgynous'];
+  let categorys = ['baby', 'kid', 'teen', 'commercial', 'comercial', 'size', 'age', 'fashion', 'fitness', 'urban', 'andro'];
+  let ObjModelsCategory = new Object();
+  categorys.forEach(function (cat) {
+    if ((title.toLowerCase()).includes(cat)) {
+      ObjModelsCategory.title = cat;
+      ObjModelsCategory.gender = gender.toLowerCase()
+    }
+
+  })
+
+  var HeroDoc = document.querySelector('.hero')
+
+  PopupMsg('model', 'noCategory', 1, 1)
+
+  CloseAllMenus()
+  switch (ObjModelsCategory.title) {
+    case 'baby':
+      if (ObjModelsCategory.gender === 'masculino') {
+        HeroDoc.innerHTML = `<div class="model-by-category">
+                                  <div class="container-img">
+                                    <a href=""><img src="" alt=""></a>
+                                  </div>
+                                </div>
+                      
+        `;
+      } else if (ObjModelsCategory.gender === 'feminino') {
+        HeroDoc.innerHTML = `<div class="model-by-category">
+                                  <div class="container-img">
+                                    <a href=""><img src="" alt=""></a>
+                                  </div>
+                                </div>
+                      
+        `;
+      } else if (ObjModelsCategory.gender === 'todos') {
+        HeroDoc.innerHTML = `<div class="model-by-category">
+                                  <div class="container-img">
+                                    <a href=""><img src="" alt=""></a>
+                                  </div>
+                                </div>
+                      
+         `;
+      }
+      break;
+    case 'kid':
+      if (ObjModelsCategory.gender === 'masculino') {
+        HeroDoc.innerHTML = `<div class="model-by-category">
+                                  <div class="container-img">
+                                    <a href=""><img src="" alt=""></a>
+                                  </div>
+                                </div>
+                      
+        `;
+      } else if (ObjModelsCategory.gender === 'feminino') {
+        HeroDoc.innerHTML = `<div class="model-by-category">
+                                  <div class="container-img">
+                                    <a href="http://anacaroline.brazilmodel.com.br"><img src="./media/home/models-category/anaCarolineKid.jpg" alt=""></a>
+                                  </div>
+                                </div>
+                      
+        `;
+      } else if (ObjModelsCategory.gender === 'todos') {
+        HeroDoc.innerHTML = `<div class="model-by-category">
+                                  <div class="container-img">
+                                    <a href="http://anacaroline.brazilmodel.com.br"><img src="./media/home/models-category/anaCarolineKid.jpg" alt=""></a>
+                                  </div>
+                                </div>
+                      
+         `;
+      }
+      break;
+    case 'teen':
+      if (ObjModelsCategory.gender === 'masculino') {
+        HeroDoc.innerHTML = `<div class="model-by-category">
+                                  <div class="container-img">
+                                    <a href=""><img src="" alt=""></a>
+                                  </div>
+                                </div>
+                      
+        `;
+      } else if (ObjModelsCategory.gender === 'feminino') {
+        HeroDoc.innerHTML = `<div class="model-by-category">
+                                  <div class="container-img">
+                                    <a href="http://alicediniz.brazilmodel.com.br"><img src="./media/home/models-category/AliceDinizPreTeen.jpg" alt=""></a>
+                                  </div>
+                                </div>
+                      
+        `;
+      } else if (ObjModelsCategory.gender === 'todos') {
+        HeroDoc.innerHTML = `<div class="model-by-category">
+                                  <div class="container-img">
+                                    <a href="http://alicediniz.brazilmodel.com.br"><img src="./media/home/models-category/AliceDinizPreTeen.jpg" alt=""></a>
+                                  </div>
+                                </div>
+                      
+         `;
+      }
+      break;
+    case 'age':
+      if (ObjModelsCategory.gender === 'masculino') {
+        HeroDoc.innerHTML = `<div class="model-by-category">
+                                  <div class="container-img">
+                                    <a href=""><img src="" alt=""></a>
+                                  </div>
+                                </div>
+                      
+        `;
+      } else if (ObjModelsCategory.gender === 'feminino') {
+        HeroDoc.innerHTML = `<div class="model-by-category">
+                                  <div class="container-img">
+                                    <a href="http://elainesantos.brazilmodel.com.br"><img src="./media/home/models-category/ElianeSantosMoreAge.jpg" alt=""></a>
+                                  </div>
+                                </div>
+                      
+        `;
+      } else if (ObjModelsCategory.gender === 'todos') {
+        HeroDoc.innerHTML = `<div class="model-by-category">
+                                  <div class="container-img">
+                                    <a href="http://elainesantos.brazilmodel.com.br"><img src="./media/home/models-category/ElianeSantosMoreAge.jpg" alt=""></a>
+                                  </div>
+                                </div>
+                      
+         `;
+      }
+      break;
+    case 'size':
+      if (ObjModelsCategory.gender === 'masculino') {
+        HeroDoc.innerHTML = `<div class="model-by-category">
+                                    <div class="container-img">
+                                      <a href=""><img src="" alt=""></a>
+                                    </div>
+                                  </div>
+                        
+          `;
+      } else if (ObjModelsCategory.gender === 'feminino') {
+        HeroDoc.innerHTML = `<div class="model-by-category">
+                                    <div class="container-img">
+                                      <a href=""><img src="" alt=""></a>
+                                    </div>
+                                  </div>
+                        
+          `;
+      } else if (ObjModelsCategory.gender === 'todos') {
+        HeroDoc.innerHTML = `<div class="model-by-category">
+                                    <div class="container-img">
+                                      <a href=""><img src="" alt=""></a>
+                                    </div>
+                                  </div>
+                        
+           `;
+      }
+      break;
+    case 'comercial':
+    case 'commercial':
+      if (ObjModelsCategory.gender === 'masculino') {
+        HeroDoc.innerHTML = `<div class="model-by-category">
+                                  <div class="container-img">
+                                    <a href=""><img src="" alt=""></a>
+                                  </div>
+                                </div>
+                      
+        `;
+      } else if (ObjModelsCategory.gender === 'feminino') {
+        HeroDoc.innerHTML = `<div class="model-by-category">
+                                  <div class="container-img">
+                                    <a href="http://alinekawasaki.brazilmodel.com.br"><img src="./media/home/models-category/alineKawasakiCommercial.jpg" alt=""></a>
+                                    <a href="http://anaclara.brazilmodel.com.br"><img src="./media/home/models-category/anaClaraCommercial.jpg" alt=""></a>
+                                  </div>
+                                </div>
+                      
+        `;
+      } else if (ObjModelsCategory.gender === 'todos') {
+        HeroDoc.innerHTML = `<div class="model-by-category">
+                                  <div class="container-img">
+                                    <a href="http://alinekawasaki.brazilmodel.com.br"><img src="./media/home/models-category/alineKawasakiCommercial.jpg" alt=""></a>
+                                    <a href="http://anaclara.brazilmodel.com.br"><img src="./media/home/models-category/anaClaraCommercial.jpg" alt=""></a>
+                                  </div>
+                                </div>
+                      
+         `;
+      }
+      break;
+    case 'fashion':
+      //HeroDoc.setAttribute('style', 'height: 1000px !important; background-color: white;')
+      if (ObjModelsCategory.gender === 'masculino') {
+        HeroDoc.innerHTML = `<div class="model-by-category">
+                                    <div class="container-img">
+                                      <a href="http://marcosmaia.brazilmodel.com.br"><img src="./media/home/models-category/MarcosMaiaFashion.jpg" alt=""></a>
+                                    </div>
+                                  </div>
+                        
+          `;
+      } else if (ObjModelsCategory.gender === 'feminino') {
+        HeroDoc.innerHTML = `<div class="model-by-category">
+                                    <div class="container-img">
+                                      <a href="http://laviniacouto.brazilmodel.com.br"><img src="./media/home/models-category/LaviniaCoutoFashion.jpg" alt=""></a>
+                                      <a href="http://kamillyananias.brazilmodel.com.br"><img src="./media/home/models-category/KamillyAnaniasFashion.jpg" alt=""></a>
+                                    </div>
+                                  </div>
+                        
+          `;
+      } else if (ObjModelsCategory.gender === 'todos') {
+        HeroDoc.innerHTML = `<div class="model-by-category">
+                                    <div class="container-img">
+                                      <a href="http://marcosmaia.brazilmodel.com.br"><img src="./media/home/models-category/MarcosMaiaFashion.jpg" alt=""></a>
+                                      <a href="http://laviniacouto.brazilmodel.com.br"><img src="./media/home/models-category/LaviniaCoutoFashion.jpg" alt=""></a>
+                                      <a href="http://kamillyananias.brazilmodel.com.br"><img src="./media/home/models-category/KamillyAnaniasFashion.jpg" alt=""></a>
+                                    </div>
+                                  </div>
+                        
+           `;
+      }
+      break;
+    case 'andro':
+      if (ObjModelsCategory.gender === 'masculino') {
+        HeroDoc.innerHTML = `<div class="model-by-category">
+                                  <div class="container-img">
+                                    <a href=""><img src="" alt=""></a>
+                                  </div>
+                                </div>
+                      
+        `;
+      } else if (ObjModelsCategory.gender === 'feminino') {
+        HeroDoc.innerHTML = `<div class="model-by-category">
+                                  <div class="container-img">
+                                    <a href=""><img src="" alt=""></a>
+                                  </div>
+                                </div>
+                      
+        `;
+      } else if (ObjModelsCategory.gender === 'todos') {
+        HeroDoc.innerHTML = `<div class="model-by-category">
+                                  <div class="container-img">
+                                    <a href=""><img src="" alt=""></a>
+                                  </div>
+                                </div>
+                      
+         `;
+      }
+      break;
+    case 'urban':
+      if (ObjModelsCategory.gender === 'masculino') {
+        HeroDoc.innerHTML = `<div class="model-by-category">
+                                  <div class="container-img">
+                                    <a href=""><img src="" alt=""></a>
+                                  </div>
+                                </div>
+                      
+        `;
+      } else if (ObjModelsCategory.gender === 'feminino') {
+        HeroDoc.innerHTML = `<div class="model-by-category">
+                                  <div class="container-img">
+                                    <a href=""><img src="" alt=""></a>
+                                  </div>
+                                </div>
+                      
+        `;
+      } else if (ObjModelsCategory.gender === 'todos') {
+        HeroDoc.innerHTML = `<div class="model-by-category">
+                                  <div class="container-img">
+                                    <a href=""><img src="" alt=""></a>
+                                  </div>
+                                </div>
+                      
+         `;
+      }
+      break;
+  }
+}
+
+!function EventBtnModelsCategoryMobile() {
+  let allBtnCategory = document.querySelectorAll('.sub-texts > p')
+
+  if (allBtnCategory) {
+    allBtnCategory.forEach(b => {
+      b.addEventListener('click', event => {
+        let CategoryModel = event.target.parentNode.parentNode.classList[0];
+        let CategoryGenderSelected = event.target.innerHTML;
+        ShowModelByCategory(CategoryModel, CategoryGenderSelected);
+      })
+    })
+  }
+}()
 
 function ShowSCategorysMainMobile(category) {
   var subCategorys = document.querySelectorAll(".subs-category-ref");
@@ -539,7 +822,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                         </div>
                         <div class="contact-watsapp">
                         
-                        <select id="state-pitagoras" name="select-state" onchange="selectedState()">
+                        <select id="states-select" name="select-state" onchange="selectedState('workshop')">
                             <option>Selecione um estado...</option>
                             <!--<option value="ac">AC</option>-->
                             <!--<option value="al">AL</option>-->
@@ -569,7 +852,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                             <!--<option value="se">SE</option>-->
                             <!--<option value="to">TO</option>-->
                         </select>
-                        <div class="list-pitagoras-states workshop-state"></div>
+                        <div class="list-states workshop-state"></div>
                         </div>
                         <div class="contact-watsapp-icons">
                                 <a href="https://api.whatsapp.com/send?phone=5531994530485"><img src="./media/IconSocial/IwatsappColor.png" style="width: 80px; height: auto;"></a>
@@ -812,7 +1095,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                                 <p>Entre em contato com nosso consultor de carreira</p>
                                 <p>Whatsapp</p>
                               </div>
-                            <select id="state-pitagoras" name="select-state" onchange="selectedState()">
+                            <select id="states-select" name="select-state" onchange="selectedState('pitagoras')">
                               <option>Selecione um estado...</option>
                               <option value="ac">AC</option>
                               <option value="al">AL</option>
@@ -842,7 +1125,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                               <!--<option value="se">SE</option>-->
                               <!--<option value="to">TO</option>-->
                             </select>
-                              <div class="list-pitagoras-states"></div>
+                              <div class="list-states"></div>
                             </div>
                           </div>
 
@@ -920,7 +1203,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
     case "contabilidade-propaganda":
       popupCategory.style.backgroundColor = "white";
       containerImgs.innerHTML = `
-                      <div class="propaganda-contabilidade propaganda-nv-2">
+                      <div class="propaganda-container-2 propaganda-nv-2">
                         <div class="back-parceiros-prop" onClick="PopupMsg('parceiros', 'parceiros',1,1)" data-link-on ><p>Voltar Parceiros</p></div>
                         <div class="container-propaganda images-main-contabilidade">
                           
@@ -939,7 +1222,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
     case "thermas-propaganda":
       popupCategory.style.backgroundColor = "white";
       containerImgs.innerHTML = `
-                      <div class="propaganda-contabilidade propaganda-nv-2">
+                      <div class="propaganda-container-2 propaganda-nv-2">
                         <div class="back-parceiros-prop" onClick="PopupMsg('parceiros', 'parceiros',1,1)" data-link-on ><p>Voltar Parceiros</p></div>
                         <div class="images-main">
               
@@ -981,7 +1264,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                         </div>
                       `;
       break;
-      case "subway-propaganda":
+    case "subway-propaganda":
       popupCategory.style.backgroundColor = "white";
       containerImgs.innerHTML = `
                       <div class="propaganda-nv-2">
@@ -1005,16 +1288,13 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                             </div><div>
                             
                             <div class="contact-watsapp">
-                            <div class="contact-watsapp-icons" style="display: none;">
-                                <a href="https://api.whatsapp.com/send?phone=5531994530485"><img src="./media/IconSocial/IwatsappColor.png"></a>
-                                <p>Entre em contato com nosso consultor de carreira</p>
-                                <p>Whatsapp</p>
-                              </div>
-                            <select id="state-pitagoras" name="select-state" onchange="selectedState()">
+                            
+                            <select id="states-select" name="select-state" onchange="selectedState('subway')">
                               <option>Selecione um estado...</option>
+                              <option value="mg">MG</option>
                               
                             </select>
-                              <div class="list-pitagoras-states"></div>
+                              <div class="list-states"></div>
                             </div>
                           </div>
 
@@ -1022,7 +1302,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                         </div>
                       `;
       break;
-      case "odonto-propaganda":
+    case "odonto-propaganda":
       popupCategory.style.backgroundColor = "white";
       containerImgs.innerHTML = `
                       <div class="propaganda-nv-2">
@@ -1031,7 +1311,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                           <div><h3>CLÍNICA ODONTOLÓGICA ODONTOCOMPANY</h3></div>
                           <div class="images-main">
                             
-                              <img src="./media/parceiros/parceiro12.jpg" alt="subway">
+                              <img src="./media/parceiros/parceiro12.jpg" alt="odonto">
                             
                           </div>
                           <div class="txts-propaganda">
@@ -1044,16 +1324,12 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                             </div><div>
                             
                             <div class="contact-watsapp">
-                            <div class="contact-watsapp-icons" style="display: none;">
-                                <a href="https://api.whatsapp.com/send?phone=5531994530485"><img src="./media/IconSocial/IwatsappColor.png"></a>
-                                <p>Entre em contato com nosso consultor de carreira</p>
-                                <p>Whatsapp</p>
-                              </div>
-                            <select id="state-pitagoras" name="select-state" onchange="selectedState()">
+
+                            <select id="states-select" name="select-state" onchange="selectedState('odonto')">
                               <option>Selecione um estado...</option>
-                              
+                              <option value="mg">MG</option>
                             </select>
-                              <div class="list-pitagoras-states"></div>
+                              <div class="list-states"></div>
                             </div>
                           </div>
 
@@ -1061,7 +1337,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                         </div>
                       `;
       break;
-      case "smartfit-propaganda":
+    case "smartfit-propaganda":
       popupCategory.style.backgroundColor = "white";
       containerImgs.innerHTML = `
                       <div class="propaganda-nv-2">
@@ -1070,7 +1346,7 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                           <div><h3>SMART FIT</h3></div>
                           <div class="images-main">
                             
-                              <img src="./media/parceiros/parceiro16.jpg" alt="subway">
+                              <img src="./media/parceiros/parceiro16.jpg" alt="smartfit">
                             
                           </div>
                           <div class="txts-propaganda">
@@ -1088,11 +1364,11 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                                 <p>Entre em contato com nosso consultor de carreira</p>
                                 <p>Whatsapp</p>
                               </div>
-                            <select id="state-pitagoras" name="select-state" onchange="selectedState()">
+                            <select id="states-select" name="select-state" onchange="selectedState('smartfit')">
                               <option>Selecione um estado...</option>
                               
                             </select>
-                              <div class="list-pitagoras-states"></div>
+                              <div class="list-states"></div>
                             </div>
                           </div>
 
@@ -1100,57 +1376,66 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                         </div>
                       `;
       break;
+    case 'models': {
+      popupCategory.style.backgroundColor = "white";
+      //put content in function showModelByCategory()
+      containerImgs.innerHTML = "";
+    }
     default:
       break;
   }
 
   if (classCloseMenu) {
-    var artistDoc = document.querySelector(".artist-btn");
-    var spanIconArtist = document.querySelector(".artist-btn > span");
-    var divArtista = document.querySelector(".subnav-artista");
-
-    var cantoresBtn = document.querySelector(".contores-btn");
-    var divCantores = document.querySelector(".sub-cantores-1");
-    var mainLi = document.querySelectorAll(".MainMenu-1");
-
-    var eventsDoc = document.querySelector(".events-btn");
-    var divEvento = document.querySelector(".subnav-evento");
-    var spanEvent = document.querySelector(".events-btn > span");
-
-    var courseBtn = document.querySelector(".course-btn");
-    var courseSpan = document.querySelector(".course-btn > span");
-    var divCourse = document.querySelector(".subnav-course");
-
-    var modelsDiv = document.querySelector(".main-categorys");
-    var modelbtn = document.querySelector(".model-button");
-    var modelspan = document.querySelector(".model-button  > span");
-    var modelSubCategory = document.querySelector(".sub-sub-model");
-
-    modelsDiv.classList.remove("showContentBlock");
-    modelbtn.classList.remove("activeBtn");
-    modelspan.classList.remove("activeIconArrow");
-    modelSubCategory.classList.add("display-none-content");
-
-    artistDoc.classList.remove("activeBtn");
-    divArtista.classList.add("display-none-content");
-    spanIconArtist.classList.remove("activeIconArrow");
-
-    divCantores.classList.add("display-none-content");
-
-    artistDoc.classList.remove("activeBtn");
-    divArtista.classList.add("display-none-content");
-    spanIconArtist.classList.remove("activeIconArrow");
-
-    divEvento.classList.add("display-none-content");
-    spanEvent.classList.remove("activeIconArrow");
-    eventsDoc.classList.remove("activeBtn");
-
-    divCourse.classList.add("display-none-content");
-    courseSpan.classList.remove("activeIconArrow");
-    courseBtn.classList.remove("activeBtn");
-
-    divCantores.classList.add("display-none-content");
+    CloseAllMenus()
   }
+}
+
+function CloseAllMenus() {
+  var artistDoc = document.querySelector(".artist-btn");
+  var spanIconArtist = document.querySelector(".artist-btn > span");
+  var divArtista = document.querySelector(".subnav-artista");
+
+  var cantoresBtn = document.querySelector(".contores-btn");
+  var divCantores = document.querySelector(".sub-cantores-1");
+  var mainLi = document.querySelectorAll(".MainMenu-1");
+
+  var eventsDoc = document.querySelector(".events-btn");
+  var divEvento = document.querySelector(".subnav-evento");
+  var spanEvent = document.querySelector(".events-btn > span");
+
+  var courseBtn = document.querySelector(".course-btn");
+  var courseSpan = document.querySelector(".course-btn > span");
+  var divCourse = document.querySelector(".subnav-course");
+
+  var modelsDiv = document.querySelector(".main-categorys");
+  var modelbtn = document.querySelector(".model-button");
+  var modelspan = document.querySelector(".model-button  > span");
+  var modelSubCategory = document.querySelector(".sub-sub-model");
+
+  modelsDiv.classList.remove("showContentBlock");
+  modelbtn.classList.remove("activeBtn");
+  modelspan.classList.remove("activeIconArrow");
+  modelSubCategory.classList.add("display-none-content");
+
+  artistDoc.classList.remove("activeBtn");
+  divArtista.classList.add("display-none-content");
+  spanIconArtist.classList.remove("activeIconArrow");
+
+  divCantores.classList.add("display-none-content");
+
+  artistDoc.classList.remove("activeBtn");
+  divArtista.classList.add("display-none-content");
+  spanIconArtist.classList.remove("activeIconArrow");
+
+  divEvento.classList.add("display-none-content");
+  spanEvent.classList.remove("activeIconArrow");
+  eventsDoc.classList.remove("activeBtn");
+
+  divCourse.classList.add("display-none-content");
+  courseSpan.classList.remove("activeIconArrow");
+  courseBtn.classList.remove("activeBtn");
+
+  divCantores.classList.add("display-none-content");
 }
 
 function DisplayDetail() {
@@ -1171,13 +1456,12 @@ function DisplayDetail() {
   }
 }
 
-function selectedState() {
-  let Selected = document.querySelector("#state-pitagoras");
-  let divList = document.querySelector(".list-pitagoras-states");
+function selectedState(title) {
+  let Selected = document.querySelector("#states-select");
+  let divList = document.querySelector(".list-states");
   // let HeroContainer = document.querySelector(".hero");
   // let ContainerPopUp = document.querySelector(".container-popup-mgs");
   // let ContainerImgs = document.querySelector(".container-imgs");
-
   let SocialWhatsapp = document.querySelector(".contact-watsapp-icons");
   if (SocialWhatsapp) SocialWhatsapp.setAttribute("style", "display: flex");
 
@@ -1211,500 +1495,536 @@ function selectedState() {
   };
   ObjectsContainer.AllContainerMsgPopUp.SetHeight(1500);
   divList.setAttribute("style", "overflow-y: hidden;");
-  switch (Selected.value) {
-    case "ac":
-      divList.innerHTML = `
+  if (title === 'pitagoras') {
+    switch (Selected.value) {
+      case "ac":
+        divList.innerHTML = `
+        <li>
+          <p><b>RIO BRANCO/AC</b></p>
+          <p id="end-id">Estrada do São Francisco, S/N, Baixa da Colina, - Rio Branco - AC</p>
+          <p>Semipresencial | A distância | Presencial</p>
+        </li>
+                            `;
+        break;
+      case "al":
+        divList.innerHTML = `
+        <li>
+          <p><b>ARAPIRACA/AL</b></p>
+          <p id="end-id">Rua Domingos Correia, nº 1461, São Luiz, - Arapiraca - AL</p>
+          <p>Presencial</p>
+        </li>
+        <li>
+          <p><b>MACEIO/AL</b></p>
+          <p id="end-id">AVENIDA MENINO MARCELO, 3800, CIDADE UNIVERSITÁRIA - MACEIÓ - AL</p>
+          <p>Semipresencial | A distância | Presencial</p>
+        </li>
+                            `;
+        break;
+      case "ap":
+        ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
+        divList.innerHTML = `
+        
+          <p id="not-found"><b>NÃO ENCONTRADO</b></p>
+        
+                            `;
+        break;
+      case "am":
+        ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
+        divList.innerHTML = `
+        
+          <p id="not-found"><b>NÃO ENCONTRADO</b></p>
+        
+                            `;
+        break;
+      case "ba":
+        divList.setAttribute("style", "overflow-y: scroll;");
+        divList.innerHTML = `
+        <li>
+          <p><b>ALAGOINHAS/BA</b></p>
+          <p id="end-id">Rua Lauro de Freitas, nº 198, Centro, - Alagoinhas - BA</p>
+          <p>Semipresencial | A distância | Presencial</p>
+        </li>
+        <li>
+          <p><b>BOM JESUS DA LAPA/BA</b></p>
+          <p id="end-id">Av.: Manoel Novais, nº 1499 , Centro, - Bom Jesus da Lapa - BA</p>
+          <p>Presencial</p>
+        </li>
+        <li>
+          <p><b>BRUMADO/BA</b></p>
+          <p id="end-id">RUA EUGENIA DANTAS DE ARAUJO, 55, BAIRRO DO HOSPITAL - BRUMADO - BA</p>
+          <p>Presencial</p>
+        </li>
+        <li>
+          <p><b>CAMAÇARI/BA</b></p>
+          <p id="end-id">V PARAFUSO, S/N, INDUSTRIAL - CAMAÇARI - BA</p>
+          <p>Semipresencial | A distância</p>
+        </li>
+        <li>
+          <p><b>EUNAPOLIS/BA</b></p>
+          <p id="end-id">Rua Edgar Trancoso, nº 21, Edgar Trancoso, - Eunápolis - BA</p>
+          <p>Presencial</p>
+      </li>
       <li>
-        <p><b>RIO BRANCO/AC</b></p>
-        <p id="end-id">Estrada do São Francisco, S/N, Baixa da Colina, - Rio Branco - AC</p>
+        <p><b>FEIRA DE SANTANA/BA</b></p>
+        <p id="end-id">AVENIDA JOSE FALCAO DA SILVA, 1283, QUEIMADINHA - FEIRA DE SANTANA - BA</p>
         <p>Semipresencial | A distância | Presencial</p>
+     </li>
+     <li>
+      <p><b>GUANAMBI/BA</b></p>
+      <p id="end-id">Avenida Pedro Braz dos Santos, nº 350, Belo Horizonte, - Guanambi - BA</p>
+      <p>Presencial</p>
+    </li>
+    <li>
+      <p><b>IRECE/BA</b></p>
+      <p id="end-id">RUA MARIA DA CONCEICAO LORDELO NUNES, 87, CENTRO - IRECÊ - BA</p>
+      <p>Semipresencial | A distância | Presencial</p>
+    </li>
+    <li>
+      <p><b>JEQUIE/BA</b></p>
+      <p id="end-id">AVENIDA GOVERNADOR LOMANTO JUNIOR, 1571, JOAQUIM ROMAO - JEQUIÉ - BA</p>
+      <p>Semipresencial | A distância | Presencial</p>
+    </li>
+    <li>
+      <p><b>LUIS EDUARDO MAGALHAES/BA</b></p>
+      <p id="end-id">Avenida Kiichiro Murata, 343, Jardim Imperial, - Luís Eduardo Magalhães - BA</p>
+      <p>Presencial</p>
+    </li>
+    <li>
+      <p><b>SANTO ANTONIO DE JESUS/BA</b></p>
+      <p id="end-id">PRACA FELIX GASPAR, 1, CENTRO - SANTO ANTÔNIO DE JESUS - BA</p>
+      <p>Semipresencial | A distância | Presencial</p>
+    </li>
+    <li>
+      <p><b>SERRINHA/BA</b></p>
+      <p id="end-id">RUA AVENIDA GETULIO VARGAS, 1585, ESTACAO - SERRINHA - BA</p>
+      <p>Semipresencial | A distância | Presencial</p>
+    </li>
+    <li>
+      <p><b>TEIXEIRA DE FREITAS/BA</b></p>
+      <p id="end-id">AVENIDA JUSCELINO KUBITSCHEK, 3000, MONTE CASTELO - TEIXEIRA DE FREITAS - BA</p>
+      <p>Semipresencial | A distância | Presencial</p>
+    </li>
+    <li>
+      <p><b>VITORIA DA CONQUISTA/BA</b></p>
+      <p id="end-id">AVENIDA JURACY MAGALHAES, 3000, BOA VISTA - VITÓRIA DA CONQUISTA - BA</p>
+      <p>Semipresencial | A distância | Presencial</p>
+    </li>
+                            `;
+        break;
+      case "ce":
+        divList.innerHTML = `
+        <li>
+          <p><b>ARACATI/CE</b></p>
+          <p id="end-id">Rodovia CE 040 - KM 138, S/N, Aeroporto, S/N - Aracati - CE</p>
+          <p>Semipresencial | A distância | Presencial</p>
+        </li>
+        <li>
+          <p><b>FORTALEZA/CE - EDUFOR</b></p>
+          <p id="end-id">Rua Carapinima, nº 1615, Benfica, - Fortaleza - CE</p>
+          <p>Semipresencial | A distância | Presencial</p>
+        </li>
+        <li>
+          <p><b>FORTALEZA/CE - FATECI</b></p>
+          <p id="end-id">Rua Barão de Aratanha, nº 51, Centro, - Fortaleza - CE</p>
+          <p>Semipresencial | A distância | Presencial</p>
+        </li>
+        <li>
+          <p><b>JUAZEIRO DO NORTE/CE</b></p>
+          <p id="end-id">AV. PADRE CICERO ESQ. C/ RUA FRANCISCO MARTINS DE SOUZA, S/N, SÃO JOSÉ - JUAZEIRO DO NORTE - CE</p>
+          <p>Semipresencial | A distância | Presencial</p>
+        </li>
+        <li>
+          <p><b>SOBRAL/CE</b></p>
+          <p id="end-id">AVENIDA MONSENHOR JOSE ALOISIO PINTO, 300, DOM EXPEDITO - SOBRAL - CE</p>
+          <p>Semipresencial | A distância | Presencial</p>
       </li>
-                          `;
-      break;
-    case "al":
-      divList.innerHTML = `
-      <li>
-        <p><b>ARAPIRACA/AL</b></p>
-        <p id="end-id">Rua Domingos Correia, nº 1461, São Luiz, - Arapiraca - AL</p>
-        <p>Presencial</p>
-      </li>
-      <li>
-        <p><b>MACEIO/AL</b></p>
-        <p id="end-id">AVENIDA MENINO MARCELO, 3800, CIDADE UNIVERSITÁRIA - MACEIÓ - AL</p>
-        <p>Semipresencial | A distância | Presencial</p>
-      </li>
-                          `;
-      break;
-    case "ap":
-      ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
-      divList.innerHTML = `
-      
+                            `;
+        break;
+      case "df":
+        ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
+        divList.innerHTML = `
+        
         <p id="not-found"><b>NÃO ENCONTRADO</b></p>
       
                           `;
-      break;
-    case "am":
-      ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
-      divList.innerHTML = `
-      
+        break;
+      case "es":
+        divList.innerHTML = `
+        <li>
+          <p><b>CACHOEIRO DE ITAPEMIRIM/ES</b></p>
+          <p id="end-id">AVENIDA JONES DOS SANTOS NEVES, 256, MARIA ORTIZ - CACHOEIRO DE ITAPEMIRIM - ES</p>
+          <p>Semipresencial | A distância</p>
+        </li>
+        <li>
+          <p><b>GUARAPARI/ES</b></p>
+          <p id="end-id">Rodovia Jones dos Santos Neves, 1000, Lagoa Funda, - Guarapari - ES</p>
+          <p>Semipresencial | A distância | Presencial</p>
+        </li>
+        <li>
+          <p><b>LINHARES/ES</b></p>
+          <p id="end-id">Av. São Mateus, 1458, Araçá, - Linhares - ES</p>
+          <p>Semipresencial | A distância | Presencial</p>
+        </li>
+        <li>
+          <p><b>SERRA/ES</b></p>
+          <p id="end-id">Rua Nelcy Lopes Vieira, nº 199, Jardim Limoeiro, - Serra - ES</p>
+          <p>Presencial</p>
+        </li>
+                            `;
+        break;
+      case "go":
+        divList.innerHTML = `
+        <li>
+          <p><b>GOIANIA/GO</b></p>
+          <p id="end-id">AVENIDA MUTIRAO, S/N, SETOR BUENO - GOIÂNIA - GO</p>
+          <p>Semipresencial | A distância | Presencial</p>
+        </li>
+                            `;
+        break;
+      case "ma":
+        divList.innerHTML = `
+        <li>
+          <p><b>BACABAL/MA</b></p>
+          <p id="end-id">RUA DOZE DE OUTUBRO, 377, CENTRO - BACABAL - MA</p>
+          <p>Semipresencial | A distância | Presencial</p>
+        </li>
+        <li>
+          <p><b>IMPERATRIZ/MA - CAMPUS 1</b></p>
+          <p id="end-id">Rua Godofredo Viana, 1271, São José do Egito, - Imperatriz - MA</p>
+          <p>Presencial</p>
+        </li>
+        <li>
+          <p><b>SAO LUIS/MA - COHAMA</b></p>
+          <p id="end-id">Avenida São Luís Rei de França, 32, Turu, - São Luís - MA</p>
+          <p>Presencial</p>
+        </li>
+        <li>
+          <p><b>SAO LUIS/MA - TURU</b></p>
+          <p id="end-id">Avenida São Luís Rei de França, 59, Turu, - São Luís - MA</p>
+          <p>Semipresencial | A distância | Presencial</p>
+        </li>
+                            `;
+        break;
+      case "mt":
+        ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
+        divList.innerHTML = `
+        
         <p id="not-found"><b>NÃO ENCONTRADO</b></p>
       
                           `;
-      break;
-    case "ba":
-      divList.setAttribute("style", "overflow-y: scroll;");
-      divList.innerHTML = `
-      <li>
-        <p><b>ALAGOINHAS/BA</b></p>
-        <p id="end-id">Rua Lauro de Freitas, nº 198, Centro, - Alagoinhas - BA</p>
+        break;
+      case "ms":
+        ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
+        divList.innerHTML = `
+        
+        <p id="not-found"><b>NÃO ENCONTRADO</b></p>
+      
+                          `;
+        break;
+      case "mg":
+        divList.setAttribute("style", "overflow-y: scroll;");
+        divList.innerHTML = `
+        <li>
+          <p><b>BELO HORIZONTE/MG - AFONSO PENA</b></p>
+          <p id="end-id">Av. Afonso Pena, 1901, Funcionários, - Belo Horizonte - MG</p>
+          <p>Semipresencial | A distância | Presencial</p>
+        </li>
+        <li>
+          <p><b>BELO HORIZONTE/MG - ANTONIO CARLOS</b></p>
+          <p id="end-id">AV. PRESIDENTE ANTONIO CARLOS, 4157, SÃO FRANCISCO - BELO HORIZONTE - MG</p>
+          <p>Presencial</p>
+        </li>
+        <li>
+          <p><b>BELO HORIZONTE/MG - BARREIRO</b></p>
+          <p id="end-id">RUA CABO VALERIO SANTOS, 297, BARREIRO - BELO HORIZONTE - MG</p>
+          <p>Semipresencial | A distância | Presencial</p>
+        </li>
+        <li>
+          <p><b>BELO HORIZONTE/MG - CIDADE ACADEMICA</b></p>
+          <p id="end-id">RUA SANTA MADALENA SOFIA, 25, (VILA PARIS) CIDADE JARDIM - BELO HORIZONTE - MG</p>
+          <p>Semipresencial | A distância | Presencial</p>
+        </li>
+        <li>
+          <p><b>BELO HORIZONTE/MG - GUAJAJARAS</b></p>
+          <p id="end-id">RUA GUAJAJARAS, 591, CENTRO - BELO HORIZONTE - MG</p>
+          <p>Semipresencial | A distância | Presencial</p>
+        </li>
+        <li>
+          <p><b>BELO HORIZONTE/MG - RAJA</b></p>
+          <p id="end-id">Av. Raja Gabaglia, 1306, Gutierrez , - Belo Horizonte - MG</p>
+          <p>Semipresencial | A distância | Presencial</p>
+        </li>
+        <li>
+          <p><b>BELO HORIZONTE/MG - TIMBIRAS</b></p>
+          <p id="end-id">R. Timbiras, 1375, Funcionários, - Belo Horizonte - MG</p>
+          <p>Semipresencial | A distância | Presencial</p>
+        </li>
+        <li>
+          <p><b>BELO HORIZONTE/MG - VENDA NOVA</b></p>
+          <p id="end-id">R. Padre Pedro Pinto, 1315, Venda Nova, - Belo Horizonte - MG</p>
+          <p>Semipresencial | A distância | Presencial</p>
+        </li>
+        <li>
+          <p><b>BETIM/MG</b></p>
+          <p id="end-id">AVENIDA JUSCELINO KUBITSCHECK, 229, CENTRO - BETIM - MG</p>
+          <p>Semipresencial | A distância | Presencial</p>
+        </li>
+        <li>
+          <p><b>CONTAGEM/MG</b></p>
+          <p id="end-id">Avenida Babita Camargos, 1295, - Contagem - MG</p>
+          <p>Semipresencial | A distância | Presencial</p>
+        </li>
+        <li>
+          <p><b>DIVINOPOLIS/MG</b></p>
+          <p id="end-id">R. Santos Dumont, 1001, Bairro Do Carmo, - Divinópolis - MG</p>
+          <p>Semipresencial | A distância | Presencial</p>
+        </li>
+        <li>
+          <p><b>GOVERNADOR VALADARES/MG</b></p>
+          <p id="end-id">Av. Doutor Raimundo Monteiro de Rezende, 330, Centro, - Governador Valadares - MG</p>
+          <p>Semipresencial | A distância | Presencial</p>
+        </li>
+        <li>
+          <p><b>IPATINGA/MG - CIDADE NOBRE</b></p>
+          <p id="end-id">Av. Carlos Chagas, 789 , Cidade Nobre, - Ipatinga - MG</p>
+          <p>Presencial</p>
+        </li>
+        <li>
+          <p><b>IPATINGA/MG - HORTO</b></p>
+          <p id="end-id">RUA JEQUITIBA, 401, HORTO - IPATINGA - MG</p>
+          <p>Semipresencial | A distância | Presencial</p>
+        </li>
+        <li>
+          <p><b>ITABIRA/MG</b></p>
+          <p id="end-id">RUA SANTANA, 235, PENHA - ITABIRA - MG</p>
+          <p>Semipresencial | A distância | Presencial</p>
+        </li>
+        <li>
+          <p><b>JUIZ DE FORA/MG</b></p>
+          <p id="end-id">AVENIDA BARAO DO RIO BRANCO, 2572, CENTRO - JUIZ DE FORA - MG</p>
+          <p>Semipresencial | A distância | Presencial</p>
+        </li>
+        <li>
+          <p><b>POCOS DE CALDAS/MG</b></p>
+          <p id="end-id">Av João Pinheiro, 1046, Centro, - Poços de Caldas - MG</p>
+          <p>Semipresencial | A distância | Presencial</p>
+        </li>
+        <li>
+          <p><b>POUSO ALEGRE/MG</b></p>
+          <p id="end-id">Praça Dom Otávio, nº 270, Centro, - Pouso Alegre - MG</p>
+          <p>Semipresencial | A distância | Presencial</p>
+        </li>
+        <li>
+          <p><b>RIBEIRAO DAS NEVES/MG</b></p>
+          <p id="end-id">Rua Ari Teixeira da Costa, nº 1500, Savassi, - Ribeirão das Neves - MG</p>
+          <p>Semipresencial | A distância | Presencial</p>
+        </li>
+        <li>
+          <p><b>UBERLANDIA/MG</b></p>
+          <p id="end-id">AVENIDA DOS VINHEDOS, 1200, MORADA DA COLINA - UBERLÂNDIA - MG</p>
+          <p>Semipresencial | A distância | Presencial</p>
+        </li>
+                            `;
+        break;
+      case "pa":
+        divList.innerHTML = `
+        <li>
+          <p><b>ALTAMIRA/PA</b></p>
+          <p id="end-id">Avenida Tancredo Neves, nº 3414, Premem, - Altamira - PA</p>
+          <p>Presencial</p>
+        </li>
+        <li>
+        <p><b>MARABA/PA - METROPOLITANA</b></p>
+        <p id="end-id">ROD BR 230, KM 7, NOVA MARABÁ - MARABÁ - PA</p>
         <p>Semipresencial | A distância | Presencial</p>
       </li>
       <li>
-        <p><b>BOM JESUS DA LAPA/BA</b></p>
-        <p id="end-id">Av.: Manoel Novais, nº 1499 , Centro, - Bom Jesus da Lapa - BA</p>
-        <p>Presencial</p>
+      <p><b>PARAGOMINAS/PA</b></p>
+      <p id="end-id">Rua Lameira Bittencourt, nº 523, Célio Miranda, - Paragominas - PA</p>
+      <p>Presencial</p>
       </li>
       <li>
-        <p><b>BRUMADO/BA</b></p>
-        <p id="end-id">RUA EUGENIA DANTAS DE ARAUJO, 55, BAIRRO DO HOSPITAL - BRUMADO - BA</p>
-        <p>Presencial</p>
+        <p><b>PARAGOMINAS/PA - METROPOLITANA</b></p>
+        <p id="end-id">ROD PA 256 KM 05, S/ NÚMERO, ZONA RURAL - PARAGOMINAS - PA</p>
+        <p>Semipresencial | A distância | Presencial</p>
       </li>
       <li>
-        <p><b>CAMAÇARI/BA</b></p>
-        <p id="end-id">V PARAFUSO, S/N, INDUSTRIAL - CAMAÇARI - BA</p>
+      <p><b>PARAUAPEBAS/PA - METROPOLITANA</b></p>
+      <p id="end-id">ROD PA 160 KM 10, S/ NÚMERO, ZONA RURAL - PARAUAPEBAS - PA</p>
+      <p>Semipresencial | A distância | Presencial</p>
+      </li>
+      <li>
+      <p><b>SANTAREM/PA</b></p>
+      <p id="end-id">Av. Engenheiro Fernando Guilhon, S/N, Santarenzinho, Rio Tapajós Shopping - Santarém - PA</p>
+      <p>Semipresencial | A distância | Presencial</p>
+      </li>
+      <li>
+      <p><b>TUCURUI/PA</b></p>
+      <p id="end-id">A, Jardim Paraíso, - Tucuruí - PA</p>
+      <p>Semipresencial | A distância | Presencial</p>
+      </li>
+  
+                            `;
+        break;
+      case "pb":
+        divList.innerHTML = `
+        <li>
+          <p><b>CAMPINA GRANDE/PB</b></p>
+          <p id="end-id">Rua Marquês do Herval, nº 39, Centro, - Campina Grande - PB</p>
+          <p>Semipresencial | A distância | Presencial</p>
+        </li>
+        <li>
+        <p><b>JOAO PESSOA/PB</b></p>
+        <p id="end-id">RUA ORLANDO SOARES DE OLIVEIRA, 36, MIRAMAR - JOÃO PESSOA - PB</p>
         <p>Semipresencial | A distância</p>
       </li>
-      <li>
-        <p><b>EUNAPOLIS/BA</b></p>
-        <p id="end-id">Rua Edgar Trancoso, nº 21, Edgar Trancoso, - Eunápolis - BA</p>
-        <p>Presencial</p>
-    </li>
-    <li>
-      <p><b>FEIRA DE SANTANA/BA</b></p>
-      <p id="end-id">AVENIDA JOSE FALCAO DA SILVA, 1283, QUEIMADINHA - FEIRA DE SANTANA - BA</p>
-      <p>Semipresencial | A distância | Presencial</p>
-   </li>
-   <li>
-    <p><b>GUANAMBI/BA</b></p>
-    <p id="end-id">Avenida Pedro Braz dos Santos, nº 350, Belo Horizonte, - Guanambi - BA</p>
-    <p>Presencial</p>
-  </li>
-  <li>
-    <p><b>IRECE/BA</b></p>
-    <p id="end-id">RUA MARIA DA CONCEICAO LORDELO NUNES, 87, CENTRO - IRECÊ - BA</p>
-    <p>Semipresencial | A distância | Presencial</p>
-  </li>
-  <li>
-    <p><b>JEQUIE/BA</b></p>
-    <p id="end-id">AVENIDA GOVERNADOR LOMANTO JUNIOR, 1571, JOAQUIM ROMAO - JEQUIÉ - BA</p>
-    <p>Semipresencial | A distância | Presencial</p>
-  </li>
-  <li>
-    <p><b>LUIS EDUARDO MAGALHAES/BA</b></p>
-    <p id="end-id">Avenida Kiichiro Murata, 343, Jardim Imperial, - Luís Eduardo Magalhães - BA</p>
-    <p>Presencial</p>
-  </li>
-  <li>
-    <p><b>SANTO ANTONIO DE JESUS/BA</b></p>
-    <p id="end-id">PRACA FELIX GASPAR, 1, CENTRO - SANTO ANTÔNIO DE JESUS - BA</p>
-    <p>Semipresencial | A distância | Presencial</p>
-  </li>
-  <li>
-    <p><b>SERRINHA/BA</b></p>
-    <p id="end-id">RUA AVENIDA GETULIO VARGAS, 1585, ESTACAO - SERRINHA - BA</p>
-    <p>Semipresencial | A distância | Presencial</p>
-  </li>
-  <li>
-    <p><b>TEIXEIRA DE FREITAS/BA</b></p>
-    <p id="end-id">AVENIDA JUSCELINO KUBITSCHEK, 3000, MONTE CASTELO - TEIXEIRA DE FREITAS - BA</p>
-    <p>Semipresencial | A distância | Presencial</p>
-  </li>
-  <li>
-    <p><b>VITORIA DA CONQUISTA/BA</b></p>
-    <p id="end-id">AVENIDA JURACY MAGALHAES, 3000, BOA VISTA - VITÓRIA DA CONQUISTA - BA</p>
-    <p>Semipresencial | A distância | Presencial</p>
-  </li>
-                          `;
-      break;
-    case "ce":
-      divList.innerHTML = `
-      <li>
-        <p><b>ARACATI/CE</b></p>
-        <p id="end-id">Rodovia CE 040 - KM 138, S/N, Aeroporto, S/N - Aracati - CE</p>
-        <p>Semipresencial | A distância | Presencial</p>
-      </li>
-      <li>
-        <p><b>FORTALEZA/CE - EDUFOR</b></p>
-        <p id="end-id">Rua Carapinima, nº 1615, Benfica, - Fortaleza - CE</p>
-        <p>Semipresencial | A distância | Presencial</p>
-      </li>
-      <li>
-        <p><b>FORTALEZA/CE - FATECI</b></p>
-        <p id="end-id">Rua Barão de Aratanha, nº 51, Centro, - Fortaleza - CE</p>
-        <p>Semipresencial | A distância | Presencial</p>
-      </li>
-      <li>
-        <p><b>JUAZEIRO DO NORTE/CE</b></p>
-        <p id="end-id">AV. PADRE CICERO ESQ. C/ RUA FRANCISCO MARTINS DE SOUZA, S/N, SÃO JOSÉ - JUAZEIRO DO NORTE - CE</p>
-        <p>Semipresencial | A distância | Presencial</p>
-      </li>
-      <li>
-        <p><b>SOBRAL/CE</b></p>
-        <p id="end-id">AVENIDA MONSENHOR JOSE ALOISIO PINTO, 300, DOM EXPEDITO - SOBRAL - CE</p>
-        <p>Semipresencial | A distância | Presencial</p>
-    </li>
-                          `;
-      break;
-    case "df":
-      ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
-      divList.innerHTML = `
+                            `;
+        break;
+      case "pr":
+        divList.innerHTML = `
+        <li>
+          <p><b>LONDRINA/PR - PITAGORAS</b></p>
+          <p id="end-id">RUA EDWY TAQUES DE ARAUJO, 1100, GLEBA PALHANO - LONDRINA - PR</p>
+          <p>Semipresencial | A distância | Presencial</p>
+        </li>
+                            `;
+        break;
+      case "pe":
+        divList.innerHTML = `
+        <li>
+          <p><b>BELO JARDIM/PE</b></p>
+          <p id="end-id">Rua Doutor Henrique Nascimento, nº 41, São Pedro , - Belo Jardim - PE</p>
+          <p>Semipresencial | A distância | Presencial</p>
+        </li>
+        <li>
+          <p><b>CARUARU/PE</b></p>
+          <p id="end-id">AVENIDA CLETO CAMPELO, 36, MAURICIO DE NASSAU - CARUARU - PE</p>
+          <p>Semipresencial | A distância</p>
+        </li>
+        <li>
+          <p><b>JABOATAO DOS GUARARAPES/PE</b></p>
+          <p id="end-id">RUA AURORA DINIZ CARNEIRO LEAO, 5281, CANDEIAS - JABOATÃO DOS GUARARAPES - PE</p>
+          <p>Semipresencial | A distância | Presencial</p>
+        </li>
+                            `;
+        break;
+      case "pi":
+        ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
+        divList.innerHTML = `
+        
+          <p id="not-found"><b>NÃO ENCONTRADO</b></p>
+        
+                            `;
+        break;
+      case "rj":
+        ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
+        divList.innerHTML = `
+        
+        <p id="not-found"><b>NÃO ENCONTRADO</b></p>
       
-      <p id="not-found"><b>NÃO ENCONTRADO</b></p>
-    
-                        `;
-      break;
-    case "es":
-      divList.innerHTML = `
-      <li>
-        <p><b>CACHOEIRO DE ITAPEMIRIM/ES</b></p>
-        <p id="end-id">AVENIDA JONES DOS SANTOS NEVES, 256, MARIA ORTIZ - CACHOEIRO DE ITAPEMIRIM - ES</p>
-        <p>Semipresencial | A distância</p>
-      </li>
-      <li>
-        <p><b>GUARAPARI/ES</b></p>
-        <p id="end-id">Rodovia Jones dos Santos Neves, 1000, Lagoa Funda, - Guarapari - ES</p>
-        <p>Semipresencial | A distância | Presencial</p>
-      </li>
-      <li>
-        <p><b>LINHARES/ES</b></p>
-        <p id="end-id">Av. São Mateus, 1458, Araçá, - Linhares - ES</p>
-        <p>Semipresencial | A distância | Presencial</p>
-      </li>
-      <li>
-        <p><b>SERRA/ES</b></p>
-        <p id="end-id">Rua Nelcy Lopes Vieira, nº 199, Jardim Limoeiro, - Serra - ES</p>
-        <p>Presencial</p>
-      </li>
                           `;
-      break;
-    case "go":
-      divList.innerHTML = `
-      <li>
-        <p><b>GOIANIA/GO</b></p>
-        <p id="end-id">AVENIDA MUTIRAO, S/N, SETOR BUENO - GOIÂNIA - GO</p>
-        <p>Semipresencial | A distância | Presencial</p>
-      </li>
-                          `;
-      break;
-    case "ma":
-      divList.innerHTML = `
-      <li>
-        <p><b>BACABAL/MA</b></p>
-        <p id="end-id">RUA DOZE DE OUTUBRO, 377, CENTRO - BACABAL - MA</p>
-        <p>Semipresencial | A distância | Presencial</p>
-      </li>
-      <li>
-        <p><b>IMPERATRIZ/MA - CAMPUS 1</b></p>
-        <p id="end-id">Rua Godofredo Viana, 1271, São José do Egito, - Imperatriz - MA</p>
-        <p>Presencial</p>
-      </li>
-      <li>
-        <p><b>SAO LUIS/MA - COHAMA</b></p>
-        <p id="end-id">Avenida São Luís Rei de França, 32, Turu, - São Luís - MA</p>
-        <p>Presencial</p>
-      </li>
-      <li>
-        <p><b>SAO LUIS/MA - TURU</b></p>
-        <p id="end-id">Avenida São Luís Rei de França, 59, Turu, - São Luís - MA</p>
-        <p>Semipresencial | A distância | Presencial</p>
-      </li>
-                          `;
-      break;
-    case "mt":
-      ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
-      divList.innerHTML = `
+        break;
+      case "rn":
+        ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
+        divList.innerHTML = `
+        <li>
+          <p><b>MOSSORO/RN</b></p>
+          <p id="end-id">RUA DOUTOR JOAO MARCELINO, 1107, SANTO ANTONIO - MOSSORÓ - RN</p>
+          <p>Semipresencial | A distância</p>
+        </li>
+                            `;
+        break;
+      case "rs":
+        ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
+        divList.innerHTML = `
+        
+          <p id="not-found"><b>NÃO ENCONTRADO</b></p>
+        
+                            `;
+        break;
+      case "ro":
+        ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
+        divList.innerHTML = `
+        
+          <p id="not-found"><b>NÃO ENCONTRADO</b></p>
+        
+                            `;
+        break;
+      case "rr":
+        ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
+        divList.innerHTML = `
+        
+        <p id="not-found"><b>NÃO ENCONTRADO</b></p>
       
-      <p id="not-found"><b>NÃO ENCONTRADO</b></p>
-    
-                        `;
-      break;
-    case "ms":
-      ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
-      divList.innerHTML = `
-      
-      <p id="not-found"><b>NÃO ENCONTRADO</b></p>
-    
-                        `;
-      break;
-    case "mg":
-      divList.setAttribute("style", "overflow-y: scroll;");
-      divList.innerHTML = `
-      <li>
-        <p><b>BELO HORIZONTE/MG - AFONSO PENA</b></p>
-        <p id="end-id">Av. Afonso Pena, 1901, Funcionários, - Belo Horizonte - MG</p>
-        <p>Semipresencial | A distância | Presencial</p>
-      </li>
-      <li>
-        <p><b>BELO HORIZONTE/MG - ANTONIO CARLOS</b></p>
-        <p id="end-id">AV. PRESIDENTE ANTONIO CARLOS, 4157, SÃO FRANCISCO - BELO HORIZONTE - MG</p>
-        <p>Presencial</p>
-      </li>
-      <li>
-        <p><b>BELO HORIZONTE/MG - BARREIRO</b></p>
-        <p id="end-id">RUA CABO VALERIO SANTOS, 297, BARREIRO - BELO HORIZONTE - MG</p>
-        <p>Semipresencial | A distância | Presencial</p>
-      </li>
-      <li>
-        <p><b>BELO HORIZONTE/MG - CIDADE ACADEMICA</b></p>
-        <p id="end-id">RUA SANTA MADALENA SOFIA, 25, (VILA PARIS) CIDADE JARDIM - BELO HORIZONTE - MG</p>
-        <p>Semipresencial | A distância | Presencial</p>
-      </li>
-      <li>
-        <p><b>BELO HORIZONTE/MG - GUAJAJARAS</b></p>
-        <p id="end-id">RUA GUAJAJARAS, 591, CENTRO - BELO HORIZONTE - MG</p>
-        <p>Semipresencial | A distância | Presencial</p>
-      </li>
-      <li>
-        <p><b>BELO HORIZONTE/MG - RAJA</b></p>
-        <p id="end-id">Av. Raja Gabaglia, 1306, Gutierrez , - Belo Horizonte - MG</p>
-        <p>Semipresencial | A distância | Presencial</p>
-      </li>
-      <li>
-        <p><b>BELO HORIZONTE/MG - TIMBIRAS</b></p>
-        <p id="end-id">R. Timbiras, 1375, Funcionários, - Belo Horizonte - MG</p>
-        <p>Semipresencial | A distância | Presencial</p>
-      </li>
-      <li>
-        <p><b>BELO HORIZONTE/MG - VENDA NOVA</b></p>
-        <p id="end-id">R. Padre Pedro Pinto, 1315, Venda Nova, - Belo Horizonte - MG</p>
-        <p>Semipresencial | A distância | Presencial</p>
-      </li>
-      <li>
-        <p><b>BETIM/MG</b></p>
-        <p id="end-id">AVENIDA JUSCELINO KUBITSCHECK, 229, CENTRO - BETIM - MG</p>
-        <p>Semipresencial | A distância | Presencial</p>
-      </li>
-      <li>
-        <p><b>CONTAGEM/MG</b></p>
-        <p id="end-id">Avenida Babita Camargos, 1295, - Contagem - MG</p>
-        <p>Semipresencial | A distância | Presencial</p>
-      </li>
-      <li>
-        <p><b>DIVINOPOLIS/MG</b></p>
-        <p id="end-id">R. Santos Dumont, 1001, Bairro Do Carmo, - Divinópolis - MG</p>
-        <p>Semipresencial | A distância | Presencial</p>
-      </li>
-      <li>
-        <p><b>GOVERNADOR VALADARES/MG</b></p>
-        <p id="end-id">Av. Doutor Raimundo Monteiro de Rezende, 330, Centro, - Governador Valadares - MG</p>
-        <p>Semipresencial | A distância | Presencial</p>
-      </li>
-      <li>
-        <p><b>IPATINGA/MG - CIDADE NOBRE</b></p>
-        <p id="end-id">Av. Carlos Chagas, 789 , Cidade Nobre, - Ipatinga - MG</p>
-        <p>Presencial</p>
-      </li>
-      <li>
-        <p><b>IPATINGA/MG - HORTO</b></p>
-        <p id="end-id">RUA JEQUITIBA, 401, HORTO - IPATINGA - MG</p>
-        <p>Semipresencial | A distância | Presencial</p>
-      </li>
-      <li>
-        <p><b>ITABIRA/MG</b></p>
-        <p id="end-id">RUA SANTANA, 235, PENHA - ITABIRA - MG</p>
-        <p>Semipresencial | A distância | Presencial</p>
-      </li>
-      <li>
-        <p><b>JUIZ DE FORA/MG</b></p>
-        <p id="end-id">AVENIDA BARAO DO RIO BRANCO, 2572, CENTRO - JUIZ DE FORA - MG</p>
-        <p>Semipresencial | A distância | Presencial</p>
-      </li>
-      <li>
-        <p><b>POCOS DE CALDAS/MG</b></p>
-        <p id="end-id">Av João Pinheiro, 1046, Centro, - Poços de Caldas - MG</p>
-        <p>Semipresencial | A distância | Presencial</p>
-      </li>
-      <li>
-        <p><b>POUSO ALEGRE/MG</b></p>
-        <p id="end-id">Praça Dom Otávio, nº 270, Centro, - Pouso Alegre - MG</p>
-        <p>Semipresencial | A distância | Presencial</p>
-      </li>
-      <li>
-        <p><b>RIBEIRAO DAS NEVES/MG</b></p>
-        <p id="end-id">Rua Ari Teixeira da Costa, nº 1500, Savassi, - Ribeirão das Neves - MG</p>
-        <p>Semipresencial | A distância | Presencial</p>
-      </li>
-      <li>
-        <p><b>UBERLANDIA/MG</b></p>
-        <p id="end-id">AVENIDA DOS VINHEDOS, 1200, MORADA DA COLINA - UBERLÂNDIA - MG</p>
-        <p>Semipresencial | A distância | Presencial</p>
-      </li>
                           `;
-      break;
-    case "pa":
-      divList.innerHTML = `
-      <li>
-        <p><b>ALTAMIRA/PA</b></p>
-        <p id="end-id">Avenida Tancredo Neves, nº 3414, Premem, - Altamira - PA</p>
-        <p>Presencial</p>
-      </li>
-      <li>
-      <p><b>MARABA/PA - METROPOLITANA</b></p>
-      <p id="end-id">ROD BR 230, KM 7, NOVA MARABÁ - MARABÁ - PA</p>
-      <p>Semipresencial | A distância | Presencial</p>
-    </li>
-    <li>
-    <p><b>PARAGOMINAS/PA</b></p>
-    <p id="end-id">Rua Lameira Bittencourt, nº 523, Célio Miranda, - Paragominas - PA</p>
-    <p>Presencial</p>
-    </li>
-    <li>
-      <p><b>PARAGOMINAS/PA - METROPOLITANA</b></p>
-      <p id="end-id">ROD PA 256 KM 05, S/ NÚMERO, ZONA RURAL - PARAGOMINAS - PA</p>
-      <p>Semipresencial | A distância | Presencial</p>
-    </li>
-    <li>
-    <p><b>PARAUAPEBAS/PA - METROPOLITANA</b></p>
-    <p id="end-id">ROD PA 160 KM 10, S/ NÚMERO, ZONA RURAL - PARAUAPEBAS - PA</p>
-    <p>Semipresencial | A distância | Presencial</p>
-    </li>
-    <li>
-    <p><b>SANTAREM/PA</b></p>
-    <p id="end-id">Av. Engenheiro Fernando Guilhon, S/N, Santarenzinho, Rio Tapajós Shopping - Santarém - PA</p>
-    <p>Semipresencial | A distância | Presencial</p>
-    </li>
-    <li>
-    <p><b>TUCURUI/PA</b></p>
-    <p id="end-id">A, Jardim Paraíso, - Tucuruí - PA</p>
-    <p>Semipresencial | A distância | Presencial</p>
-    </li>
+        break;
+      case "sc":
+        ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
+        divList.innerHTML = `
+        
+          <p id="not-found"><b>NÃO ENCONTRADO</b></p>
+        
+                            `;
+        break;
+      case "sp":
+        ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
+        divList.innerHTML = `
+        
+          <p id="not-found"><b>NÃO ENCONTRADO</b></p>
+        
+                            `;
+        break;
+      case "se":
+        ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
+        divList.innerHTML = `
+        
+          <p id="not-found"><b>NÃO ENCONTRADO</b></p>
+        
+                            `;
+        break;
+      case "to":
+        ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
+        divList.innerHTML = `
+        
+        <p id="not-found"><b>NÃO ENCONTRADO</b></p>
+      
+                          `;
+        break;
+    }
+  }
+  else if (title === 'subway') {
+    switch (Selected.value) {
+      case "mg":
+        divList.innerHTML = `
+        <li>
+          <p><b></b></p>
+          <p id="end-id">Av.: João César de Oliveira - 2415  - Loja 06 - Eldorado - Contagem/MG.</p>
+          <p id="end-id">(31) 9 8668-1573</p>
+        </li>
+        <li>
+          <p><b></b></p>
+          <p id="end-id">Rod. BR 381 - N 3.000 - Riacho das Pedras - na praça de alimentação do Carrefour - Contagem/MG</p>
+          <p id="end-id">(31) 9 7337-3475</p>
+        </li>
+                            `;
+        break;
+    }
 
-                          `;
-      break;
-    case "pb":
-      divList.innerHTML = `
-      <li>
-        <p><b>CAMPINA GRANDE/PB</b></p>
-        <p id="end-id">Rua Marquês do Herval, nº 39, Centro, - Campina Grande - PB</p>
-        <p>Semipresencial | A distância | Presencial</p>
-      </li>
-      <li>
-      <p><b>JOAO PESSOA/PB</b></p>
-      <p id="end-id">RUA ORLANDO SOARES DE OLIVEIRA, 36, MIRAMAR - JOÃO PESSOA - PB</p>
-      <p>Semipresencial | A distância</p>
-    </li>
-                          `;
-      break;
-    case "pr":
-      divList.innerHTML = `
-      <li>
-        <p><b>LONDRINA/PR - PITAGORAS</b></p>
-        <p id="end-id">RUA EDWY TAQUES DE ARAUJO, 1100, GLEBA PALHANO - LONDRINA - PR</p>
-        <p>Semipresencial | A distância | Presencial</p>
-      </li>
-                          `;
-      break;
-    case "pe":
-      divList.innerHTML = `
-      <li>
-        <p><b>BELO JARDIM/PE</b></p>
-        <p id="end-id">Rua Doutor Henrique Nascimento, nº 41, São Pedro , - Belo Jardim - PE</p>
-        <p>Semipresencial | A distância | Presencial</p>
-      </li>
-      <li>
-        <p><b>CARUARU/PE</b></p>
-        <p id="end-id">AVENIDA CLETO CAMPELO, 36, MAURICIO DE NASSAU - CARUARU - PE</p>
-        <p>Semipresencial | A distância</p>
-      </li>
-      <li>
-        <p><b>JABOATAO DOS GUARARAPES/PE</b></p>
-        <p id="end-id">RUA AURORA DINIZ CARNEIRO LEAO, 5281, CANDEIAS - JABOATÃO DOS GUARARAPES - PE</p>
-        <p>Semipresencial | A distância | Presencial</p>
-      </li>
-                          `;
-      break;
-    case "pi":
-      ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
-      divList.innerHTML = `
-      
-        <p id="not-found"><b>NÃO ENCONTRADO</b></p>
-      
-                          `;
-      break;
-    case "rj":
-      ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
-      divList.innerHTML = `
-      
-      <p id="not-found"><b>NÃO ENCONTRADO</b></p>
-    
-                        `;
-      break;
-    case "rn":
-      ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
-      divList.innerHTML = `
-      <li>
-        <p><b>MOSSORO/RN</b></p>
-        <p id="end-id">RUA DOUTOR JOAO MARCELINO, 1107, SANTO ANTONIO - MOSSORÓ - RN</p>
-        <p>Semipresencial | A distância</p>
-      </li>
-                          `;
-      break;
-    case "rs":
-      ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
-      divList.innerHTML = `
-      
-        <p id="not-found"><b>NÃO ENCONTRADO</b></p>
-      
-                          `;
-      break;
-    case "ro":
-      ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
-      divList.innerHTML = `
-      
-        <p id="not-found"><b>NÃO ENCONTRADO</b></p>
-      
-                          `;
-      break;
-    case "rr":
-      ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
-      divList.innerHTML = `
-      
-      <p id="not-found"><b>NÃO ENCONTRADO</b></p>
-    
-                        `;
-      break;
-    case "sc":
-      ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
-      divList.innerHTML = `
-      
-        <p id="not-found"><b>NÃO ENCONTRADO</b></p>
-      
-                          `;
-      break;
-    case "sp":
-      ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
-      divList.innerHTML = `
-      
-        <p id="not-found"><b>NÃO ENCONTRADO</b></p>
-      
-                          `;
-      break;
-    case "se":
-      ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
-      divList.innerHTML = `
-      
-        <p id="not-found"><b>NÃO ENCONTRADO</b></p>
-      
-                          `;
-      break;
-    case "to":
-      ObjectsContainer.AllContainerMsgPopUp.SetHeight(1000);
-      divList.innerHTML = `
-      
-      <p id="not-found"><b>NÃO ENCONTRADO</b></p>
-    
-                        `;
-      break;
+  }
+  else if (title === 'odonto') {
+    switch (Selected.value) {
+      case "mg":
+        divList.innerHTML = `
+        <li>
+          <p><b></b></p>
+          <p id="end-id">Rua Haia, 251 Bairro Santa Cruz Contagem/MG.</p>
+          <p id="end-id">(31) 3049-2525</p>
+          <p id="end-id">(31) 9 7337-3475</p>
+        </li>
+                            `;
+        break;
+    }
+
   }
 }
 
@@ -2629,4 +2949,6 @@ function countdown() {
     }
   }, 1000);
 };
+
+
 
