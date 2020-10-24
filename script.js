@@ -317,7 +317,7 @@ function showSubs(categorySelected) {
 }
 
 function ShowModelByCategory(title, gender) {
-  //let categorys = ['baby', 'sub-baby', 'sub-kids', 'preteen', 'sub-teens', 'pre-teen', 'comercial', 'sub-comercial', 'plus size', 'sub-plussize', 'more age', 'sub-moreage', 'fashion', 'sub-fashion', 'fitness', 'sub-fitness', 'urban', 'sub-urban', 'androgyne', 'sub-androgynous'];
+  
   let categorys = ['baby', 'kid', 'teen', 'commercial', 'comercial', 'size', 'age', 'fashion', 'fitness', 'urban', 'andro'];
   let ObjModelsCategory = new Object();
   categorys.forEach(function (cat) {
@@ -372,17 +372,25 @@ function ShowModelByCategory(title, gender) {
         `;
       } else if (ObjModelsCategory.gender === 'feminino') {
         HeroDoc.innerHTML = `<div class="model-by-category">
-                                  <div class="container-img">
-                                    <a href="http://anacaroline.brazilmodel.com.br"><img src="./media/home/models-category/anaCarolineKid.jpg" alt=""></a>
-                                  </div>
+                                  <div class="title-category-selected"><p>KID - FEMININO</p></div>
+                                    <div class="container-img">
+                                      <div class="model-container-u">
+                                        <a href="http://anacaroline.brazilmodel.com.br"><img src="./media/home/models-category/anaCarolineKid.jpg" alt=""></a>
+                                        <p>ANA CAROLINE</p>
+                                      </div>
+                                    </div>
                                 </div>
                       
         `;
       } else if (ObjModelsCategory.gender === 'todos') {
         HeroDoc.innerHTML = `<div class="model-by-category">
-                                  <div class="container-img">
-                                    <a href="http://anacaroline.brazilmodel.com.br"><img src="./media/home/models-category/anaCarolineKid.jpg" alt=""></a>
-                                  </div>
+                                 <div class="title-category-selected"><p>KID - TODOS</p></div>
+                                    <div class="container-img">
+                                      <div class="model-container-u">
+                                        <a href="http://anacaroline.brazilmodel.com.br"><img src="./media/home/models-category/anaCarolineKid.jpg" alt=""></a>
+                                        <p>ANA CAROLINE</p>
+                                      </div>
+                                    </div>
                                 </div>
                       
          `;
@@ -399,17 +407,25 @@ function ShowModelByCategory(title, gender) {
         `;
       } else if (ObjModelsCategory.gender === 'feminino') {
         HeroDoc.innerHTML = `<div class="model-by-category">
-                                  <div class="container-img">
-                                    <a href="http://alicediniz.brazilmodel.com.br"><img src="./media/home/models-category/AliceDinizPreTeen.jpg" alt=""></a>
-                                  </div>
+                                  <div class="title-category-selected"><p>PRE-TEEN - FEMININO</p></div>
+                                    <div class="container-img">
+                                      <div class="model-container-u">
+                                         <a href="http://alicediniz.brazilmodel.com.br"><img src="./media/home/models-category/AliceDinizPreTeen.jpg" alt=""></a>
+                                         <p>ALICE DINIZ</p>
+                                        </div>
+                                    </div>
                                 </div>
                       
         `;
       } else if (ObjModelsCategory.gender === 'todos') {
         HeroDoc.innerHTML = `<div class="model-by-category">
-                                  <div class="container-img">
-                                    <a href="http://alicediniz.brazilmodel.com.br"><img src="./media/home/models-category/AliceDinizPreTeen.jpg" alt=""></a>
-                                  </div>
+                                  <div class="title-category-selected"><p>PRE-TEEN - TODOS</p></div>
+                                    <div class="container-img">
+                                      <div class="model-container-u">
+                                         <a href="http://alicediniz.brazilmodel.com.br"><img src="./media/home/models-category/AliceDinizPreTeen.jpg" alt=""></a>
+                                         <p>ALICE DINIZ</p>
+                                        </div>
+                                    </div>
                                 </div>
                       
          `;
@@ -426,18 +442,26 @@ function ShowModelByCategory(title, gender) {
         `;
       } else if (ObjModelsCategory.gender === 'feminino') {
         HeroDoc.innerHTML = `<div class="model-by-category">
+                                  <div class="title-category-selected"><p>MORE AGE - FEMININO</p></div>
                                   <div class="container-img">
-                                    <a href="http://elainesantos.brazilmodel.com.br"><img src="./media/home/models-category/ElianeSantosMoreAge.jpg" alt=""></a>
+                                    <div class="model-container-u">
+                                      <a href="http://elainesantos.brazilmodel.com.br"><img src="./media/home/models-category/ElianeSantosMoreAge.jpg" alt=""></a>
+                                      <p>ELAINE SANTOS</p>
+                                    </div>
                                   </div>
                                 </div>
                       
         `;
       } else if (ObjModelsCategory.gender === 'todos') {
         HeroDoc.innerHTML = `<div class="model-by-category">
+                                  <div class="title-category-selected"><p>MORE AGE - TODOS</p></div>
                                   <div class="container-img">
-                                    <a href="http://elainesantos.brazilmodel.com.br"><img src="./media/home/models-category/ElianeSantosMoreAge.jpg" alt=""></a>
+                                    <div class="model-container-u">
+                                      <a href="http://elainesantos.brazilmodel.com.br"><img src="./media/home/models-category/ElianeSantosMoreAge.jpg" alt=""></a>
+                                      <p>ELAINE SANTOS</p>
+                                    </div>
                                   </div>
-                                </div>
+                              </div>
                       
          `;
       }
@@ -481,18 +505,32 @@ function ShowModelByCategory(title, gender) {
         `;
       } else if (ObjModelsCategory.gender === 'feminino') {
         HeroDoc.innerHTML = `<div class="model-by-category">
+                                  <div class="title-category-selected"><p>COMMERCIAL - FEMININO</p></div>
                                   <div class="container-img">
-                                    <a href="http://alinekawasaki.brazilmodel.com.br"><img src="./media/home/models-category/alineKawasakiCommercial.jpg" alt=""></a>
-                                    <a href="http://anaclara.brazilmodel.com.br"><img src="./media/home/models-category/anaClaraCommercial.jpg" alt=""></a>
+                                    <div class="model-container-u">
+                                      <a href="http://alinekawasaki.brazilmodel.com.br"><img src="./media/home/models-category/alineKawasakiCommercial.jpg" alt=""></a>
+                                      <p>ALINE KAWASAKI</p>
+                                    </div>
+                                    <div class="model-container-u">
+                                      <a href="http://anaclara.brazilmodel.com.br"><img src="./media/home/models-category/anaClaraCommercial.jpg" alt=""></a>
+                                      <p>ANA CLARA</p>
+                                    </div>
                                   </div>
                                 </div>
                       
         `;
       } else if (ObjModelsCategory.gender === 'todos') {
         HeroDoc.innerHTML = `<div class="model-by-category">
+                                  <div class="title-category-selected"><p>COMMERCIAL - TODOS</p></div>
                                   <div class="container-img">
-                                    <a href="http://alinekawasaki.brazilmodel.com.br"><img src="./media/home/models-category/alineKawasakiCommercial.jpg" alt=""></a>
-                                    <a href="http://anaclara.brazilmodel.com.br"><img src="./media/home/models-category/anaClaraCommercial.jpg" alt=""></a>
+                                    <div class="model-container-u">
+                                      <a href="http://alinekawasaki.brazilmodel.com.br"><img src="./media/home/models-category/alineKawasakiCommercial.jpg" alt=""></a>
+                                      <p>ALINE KAWASAKI</p>
+                                    </div>
+                                    <div class="model-container-u">
+                                      <a href="http://anaclara.brazilmodel.com.br"><img src="./media/home/models-category/anaClaraCommercial.jpg" alt=""></a>
+                                      <p>ANA CLARA</p>
+                                    </div>
                                   </div>
                                 </div>
                       
@@ -503,17 +541,28 @@ function ShowModelByCategory(title, gender) {
       //HeroDoc.setAttribute('style', 'height: 1000px !important; background-color: white;')
       if (ObjModelsCategory.gender === 'masculino') {
         HeroDoc.innerHTML = `<div class="model-by-category">
+                                    <div class="title-category-selected"><p>FASHION - MASCULINO</p></div>
                                     <div class="container-img">
-                                      <a href="http://marcosmaia.brazilmodel.com.br"><img src="./media/home/models-category/MarcosMaiaFashion.jpg" alt=""></a>
+                                      <div class="model-container-u">
+                                        <a href="http://marcosmaia.brazilmodel.com.br"><img src="./media/home/models-category/MarcosMaiaFashion.jpg" alt=""></a>
+                                        <p>MARCOS MAIA</p>
+                                      </div>
                                     </div>
                                   </div>
                         
           `;
       } else if (ObjModelsCategory.gender === 'feminino') {
         HeroDoc.innerHTML = `<div class="model-by-category">
+                                    <div class="title-category-selected"><p>FASHION - FEMININO</p></div>
                                     <div class="container-img">
-                                      <a href="http://laviniacouto.brazilmodel.com.br"><img src="./media/home/models-category/LaviniaCoutoFashion.jpg" alt=""></a>
-                                      <a href="http://kamillyananias.brazilmodel.com.br"><img src="./media/home/models-category/KamillyAnaniasFashion.jpg" alt=""></a>
+                                      <div class="model-container-u">
+                                        <a href="http://laviniacouto.brazilmodel.com.br"><img src="./media/home/models-category/LaviniaCoutoFashion.jpg" alt=""></a>
+                                        <p>LAVINIA COUTO</p>
+                                      </div>
+                                      <div class="model-container-u">
+                                        <a href="http://kamillyananias.brazilmodel.com.br"><img src="./media/home/models-category/KamillyAnaniasFashion.jpg" alt=""></a>
+                                        <p>KAMILLY ANANIAS</p>
+                                      </div>
                                     </div>
                                   </div>
                         
@@ -521,9 +570,19 @@ function ShowModelByCategory(title, gender) {
       } else if (ObjModelsCategory.gender === 'todos') {
         HeroDoc.innerHTML = `<div class="model-by-category">
                                     <div class="container-img">
-                                      <a href="http://marcosmaia.brazilmodel.com.br"><img src="./media/home/models-category/MarcosMaiaFashion.jpg" alt=""></a>
-                                      <a href="http://laviniacouto.brazilmodel.com.br"><img src="./media/home/models-category/LaviniaCoutoFashion.jpg" alt=""></a>
-                                      <a href="http://kamillyananias.brazilmodel.com.br"><img src="./media/home/models-category/KamillyAnaniasFashion.jpg" alt=""></a>
+                                      <div class="title-category-selected"><p>FASHION - TODOS</p></div>
+                                      <div class="model-container-u">
+                                        <a href="http://marcosmaia.brazilmodel.com.br"><img src="./media/home/models-category/MarcosMaiaFashion.jpg" alt=""></a>
+                                        <p>MARCOS MAIA</p>
+                                      </div>
+                                      <div class="model-container-u">
+                                        <a href="http://laviniacouto.brazilmodel.com.br"><img src="./media/home/models-category/LaviniaCoutoFashion.jpg" alt=""></a>
+                                        <p>LAVINIA COUTO</p>
+                                      </div>
+                                      <div class="model-container-u">
+                                        <a href="http://kamillyananias.brazilmodel.com.br"><img src="./media/home/models-category/KamillyAnaniasFashion.jpg" alt=""></a>
+                                        <p>KAMILLY ANANIAS</p>
+                                      </div>
                                     </div>
                                   </div>
                         
@@ -2000,13 +2059,16 @@ function selectedState(title) {
         divList.innerHTML = `
         <li>
           <p><b></b></p>
-          <p id="end-id">Av.: João César de Oliveira - 2415  - Loja 06 - Eldorado - Contagem/MG.</p>
-          <p id="end-id">(31) 9 8668-1573</p>
+          <p id="end-id">Contagem/MG</p>
+          <p id="end-id">Av.: João César de Oliveira - 2415  - Loja 06 - Eldorado.</p>
+          <p id="end-id">(31) 9 8668-1579</p>
         </li>
         <li>
           <p><b></b></p>
-          <p id="end-id">Rod. BR 381 - N 3.000 - Riacho das Pedras - na praça de alimentação do Carrefour - Contagem/MG</p>
-          <p id="end-id">(31) 9 7337-3475</p>
+          <p id="end-id">Contagem/MG</p>
+          <p id="end-id">Carrefour Contagem/Betim.</p>
+          <p id="end-id">Rod. BR 381 - N 3.000 - Riacho das Pedras - na praça de alimentação do Carrefour./p>
+          <p id="end-id">(31) 3396-3423</p>
         </li>
                             `;
         break;
@@ -2019,9 +2081,10 @@ function selectedState(title) {
         divList.innerHTML = `
         <li>
           <p><b></b></p>
-          <p id="end-id">Rua Haia, 251 Bairro Santa Cruz Contagem/MG.</p>
+          <p id="end-id">Contagem/MG</p>
+          <p id="end-id">Rua Haia, 251 Bairro Santa Cruz</p>
           <p id="end-id">(31) 3049-2525</p>
-          <p id="end-id">(31) 9 7337-3475</p>
+          <p id="end-id">(31) 7337-3475</p>
         </li>
                             `;
         break;

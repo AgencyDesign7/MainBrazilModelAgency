@@ -4359,3 +4359,29 @@ input::placeholder {
   margin: 20px;
   animation: opacity 1s;
 }
+
+.model-container-u{
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.model-container-u p{
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+.title-category-selected{
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+}
+.title-category-selected p{
+  font-size: 25px;
+  color: black;
+  font-weight: bold;
+}
