@@ -2625,6 +2625,7 @@ function ElementSelect(artistObject) {
   var musicBtn = document.querySelectorAll(".btn-music");
   var musicSelected = "";
   var progressbar = document.querySelector("#progress-track");
+  var progressContainer = document.querySelector(".progress-bar-music");
   var volumeBtn = document.querySelector("#volume-btn");
   var volumeInput = document.querySelector("#volume-bar");
   var closeWindow = document.querySelector(".close-container-music a");
@@ -2713,6 +2714,13 @@ function ElementSelect(artistObject) {
       audioPlayer[musicSelected].play();
     }
   });
+
+  if(progressContainer){
+    progressContainer.addEventListener('click', function(e){
+      audioPlayer[musicSelected].currentTime = (e.offsetX/progressContainer.offsetWidth) * audioPlayer[musicSelected].duration
+      
+    })
+  }
 
   function getTimeMusic(elementAudio) {
     //console.log(audioPlayer[musicSelected].duration)
