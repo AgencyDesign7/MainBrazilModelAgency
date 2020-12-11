@@ -317,7 +317,7 @@ function showSubs(categorySelected) {
 }
 
 function ShowModelByCategory(title, gender) {
-  
+
   let categorys = ['baby', 'kid', 'teen', 'commercial', 'comercial', 'size', 'age', 'fashion', 'fitness', 'urban', 'andro'];
   let ObjModelsCategory = new Object();
   categorys.forEach(function (cat) {
@@ -1110,7 +1110,12 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                             <a href="#"  onClick="PopupMsg('contabilidade-propaganda', 'contabilidade-propaganda',1,1)"><img src="./media/parceiros/parceiro13.jpg" alt="parceiro"></a>
                             <a href="#" onClick="PopupMsg('thermas-propaganda', 'thermas-propaganda',1,1)"><img src="./media/parceiros/parceiro14.jpg" alt="parceiro"></a>
                             <a href="#" onClick="PopupMsg('aflorar-propaganda', 'aflorar-propaganda',1,1)"><img src="./media/parceiros/parceiro15.jpg" alt="parceiro"></a>
-                            <a href="#" onClick="PopupMsg('smartfit-propaganda', 'smartfit-propaganda',1,1)"><img src="./media/parceiros/parceiro16.jpg" alt="parceiro"></a>
+                            <a href="#"><img src="./media/parceiros/parceiro21.jpg" alt="parceiro"></a>
+                            
+                            <a href="#" onClick="PopupMsg('hotdog-propaganda', 'hotdog-propaganda',1,1)"><img src="./media/parceiros/parceiro18.jpg" alt="parceiro"></a>
+                            <a href="#" onClick="PopupMsg('michellekalil-propaganda', 'michellekalil-propaganda',1,1)"><img src="./media/parceiros/parceiro19.jpg" alt="parceiro"></a>
+                            <a href="#"><img src="./media/parceiros/parceiro20.jpg" alt="parceiro"></a>
+                            
                             
                           </div>
                         </div>
@@ -1437,11 +1442,129 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                         </div>
                       `;
       break;
-    case 'models': {
+    case "hotdog-propaganda":
+      popupCategory.style.backgroundColor = "white";
+      containerImgs.innerHTML = `
+                        <div class="propaganda-nv-2">
+                          <div class="back-parceiros-prop" onClick="PopupMsg('parceiros', 'parceiros',1,1)" data-link-on ><p>Voltar Parceiros</p></div>
+                          <div class="container-propaganda">
+                            <div><h3>HOT DOG</h3></div>
+                            <div class="images-main">
+                              
+                                <img src="./media/parceiros/parceiro17.jpg" alt="hot dog">
+                              
+                            </div>
+                            <div class="txts-propaganda">
+                              <div class="container-text-propa">
+                                <p></p>
+                              </div>
+                              <div class="sub-prop-text"><p></p>
+                              </div><div>
+                              
+                              <div class="contact-watsapp">
+                              <div class="contact-watsapp-icons" style="display: flex;">
+                                  <a href="https://api.whatsapp.com/send?phone=5517988254897"><img src="./media/IconSocial/IwatsappColor.png"></a>
+                                  <p>Entre em contato com a gente!</p>
+                                  <p>Whatsapp</p>
+                                </div>
+                              <!--<select id="states-select" name="select-state" onchange="selectedState('smartfit')">
+                                <option>Selecione um estado...</option>
+                                
+                              </select>-->
+                                <div class="list-states"></div>
+                              </div>
+                            </div>
+  
+                          </div>
+                          </div>
+                        `;
+      break;
+    case "michellekalil-propaganda":
+      popupCategory.style.backgroundColor = "white";
+      containerImgs.innerHTML = `
+                          <div class="propaganda-nv-2">
+                            <div class="back-parceiros-prop" onClick="PopupMsg('parceiros', 'parceiros',1,1)" data-link-on ><p>Voltar Parceiros</p></div>
+                            <div class="container-propaganda">
+                              <div><h3>MICHELLE KALIL</h3></div>
+                              <div class="images-main">
+                                
+                                  <img src="./media/parceiros/parceiro19.jpg" alt="michelle kalil">
+                                
+                              </div>
+                              <div class="txts-propaganda">
+                                <div class="container-text-propa">
+                                  <p>Venha comprar o perfume dos seus sonhos na Fragrância Michelle Kalil Oficial.
+                                  Temos todos para oferece-lo</p>                                
+                                  <p>Apresentando a carteirinha da Brazil Model ou Faculdade Pitagoras tem 5% de desconto.</p>
+                                  <p><b>@fragranciamichellekaliloficial</b></p>
+                                </div>
+                                <div class="sub-prop-text"><p><b></b></p>
+                                </div><div>
+                                
+                                <div class="contact-watsapp">
+                                  <div class="contact-watsapp-icons" style="display: none;">
+                                      <a href="https://api.whatsapp.com/send?phone=5531994530485"><img src="./media/IconSocial/IwatsappColor.png"></a>
+                                      <p>Entre em contato com a gente</p>
+                                      <p>Whatsapp</p>
+                                    </div>
+                                    <select id="states-select" name="select-state" onchange="selectedState('michellekalil')">
+                                      <option>Selecione um estado...</option>
+                                      <option value="mg">MG</option>
+                                        
+                                    </select>
+                                    <div class="list-states"></div>
+                                </div>
+                              </div>
+    
+                            </div>
+                            </div>
+                          `;
+      break;
+    case "marcusvinicius-propaganda":
+      popupCategory.style.backgroundColor = "white";
+      containerImgs.innerHTML = `
+                            <div class="propaganda-nv-2">
+                              <div class="back-parceiros-prop" onClick="PopupMsg('parceiros', 'parceiros',1,1)" data-link-on ><p>Voltar Parceiros</p></div>
+                              <div class="container-propaganda">
+                                <div><h3>SMART FIT</h3></div>
+                                <div class="images-main">
+                                  
+                                    <img src="./media/parceiros/parceiro16.jpg" alt="smartfit">
+                                  
+                                </div>
+                                <div class="txts-propaganda">
+                                  <div class="container-text-propa">
+                                    <p>A Smart Fit é a 5º maior rede de academias esportivas do mundo e a maior da América Latina, com mais de 800 unidades no Brasil e outros 10 países da região, além de ter mais de 1,5 milhões de clientes matriculados.</p>
+                                    <p>Alunos da Brazil Model ou da Rede Educacional da Kroton (Amplo, Anhanguera, Fama, Pitágoras, Uni, Uniderp, Unime e Unopar), tem descontos especiais.</p>
+                                    <p>Só terá o desconto mediante a apresentação da carteirinha.</p>
+                                  </div>
+                                  <div class="sub-prop-text"><p><b>Escolha a academia de sua preferência.</b></p>
+                                  </div><div>
+                                  
+                                  <div class="contact-watsapp">
+                                  <div class="contact-watsapp-icons" style="display: none;">
+                                      <a href="https://api.whatsapp.com/send?phone=5531994530485"><img src="./media/IconSocial/IwatsappColor.png"></a>
+                                      <p>Entre em contato com nosso consultor de carreira</p>
+                                      <p>Whatsapp</p>
+                                    </div>
+                                  <select id="states-select" name="select-state" onchange="selectedState('smartfit')">
+                                    <option>Selecione um estado...</option>
+                                    
+                                  </select>
+                                    <div class="list-states"></div>
+                                  </div>
+                                </div>
+      
+                              </div>
+                              </div>
+                            `;
+      break;
+    case 'models': 
       popupCategory.style.backgroundColor = "white";
       //put content in function showModelByCategory()
       containerImgs.innerHTML = "";
-    }
+    
+	break;
     default:
       break;
   }
@@ -2090,6 +2213,21 @@ function selectedState(title) {
         break;
     }
 
+  }else if(title === "michellekalil"){
+    switch (Selected.value) {
+      case "mg":
+        divList.innerHTML = `
+        <li>
+          <p><b></b></p>
+          <p id="end-id">Contagem/MG</p>
+          <p id="end-id">Rua Pedro Olímpio da Fonseca 152</p>
+          <p id="end-id">Bairro: Santa Cruz</p>
+          <p id="end-id">(31) 3514-4903</p>
+        </li>
+                            `;
+        break;
+    }
+
   }
 }
 
@@ -2715,10 +2853,10 @@ function ElementSelect(artistObject) {
     }
   });
 
-  if(progressContainer){
-    progressContainer.addEventListener('click', function(e){
-      audioPlayer[musicSelected].currentTime = (e.offsetX/progressContainer.offsetWidth) * audioPlayer[musicSelected].duration
-      
+  if (progressContainer) {
+    progressContainer.addEventListener('click', function (e) {
+      audioPlayer[musicSelected].currentTime = (e.offsetX / progressContainer.offsetWidth) * audioPlayer[musicSelected].duration
+
     })
   }
 
