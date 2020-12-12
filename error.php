@@ -32,10 +32,18 @@
 
 
   <header id="hero" class="hero" style="padding: 0;">
-    <div class="sucess-form">
-      <p>Formulário enviado com sucesso!</p>
-      <img src="./media/icon/sucess.png">
-      <p>Em breve entraremos em contato!</p>
+    <div class="error-form">
+      <p>Falha ao enviar formulário.</p>
+      <img src="./media/icon/error.png">
+      <p>Favor entrar em contato conosco pelo Whatsapp!</p>
+      <div class="contact-watsapp">
+
+      
+        <div class="contact-watsapp-icons" style="display: flex">
+          <a href="https://api.whatsapp.com/send?phone=5531994530485"><img style="width: 100px; height: auto; margin-top: 40px;" src="./media/IconSocial/IwatsappColor.png"></a>
+          <p>Whatsapp</p>
+        </div>
+      
     </div>
   </header>
   <div class="footerContainer">

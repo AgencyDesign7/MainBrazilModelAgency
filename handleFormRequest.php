@@ -5,11 +5,14 @@ require './vendor/autoload.php';
 use \Mailjet\Resources;
 
 $Bool_check_if_have_uploaded_files = false;
-$fileArray = $_FILES['file']['size'];
-// Check size of files incoming 
-foreach ($fileArray as $key => $value) {
-  if ($fileArray[$key] > 0) {
-    $Bool_check_if_have_uploaded_files = true;
+
+if(isset($_FILES['file'])){
+  $fileArray = $_FILES['file']['size'];
+  // Check size of files incoming 
+  foreach ($fileArray as $key => $value) {
+    if ($fileArray[$key] > 0) {
+      $Bool_check_if_have_uploaded_files = true;
+    }
   }
 }
 
@@ -113,31 +116,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $finalMessage = $Mensage . $Messagelinks;
     $finalDestination = $destinationBackupEmail . "/Email-Backup-" . $nameRequestUser . '.html';
  
-    WriteFile($finalDestination, $finalMessage);
+    WriteFile($finalDestination, $finalMessage, "wb");
     sendEmail($fromEmail, $nameFrom, $to, $toName, $Subject, "", $finalMessage);
-    include('./sucess.html');
 
-    //Erro Message
-    /*$fromEmail = 'contato@brazilmodel.com.br';
-      $nameFrom = 'Brazil Model Agency';
-      $to = 'adeniltonxavier14@gmail.com';
-      $subject = '@ERROR Facaparte.html';
-      $Messagelinks = '<a href=' . $newFolderUser . '> User images</a>';
-      $finalMessage = $Mensage . $Messagelinks;*/
+    
   } else {
     createFolder();
     $Mensage = implode(" - ", $finalRequest);
     $finalDestination = $destinationBackupEmail . "/Email-Backup-" . $nameRequestUser . '.html';
-    WriteFile($finalDestination, $Mensage);
+    WriteFile($finalDestination, $Mensage, "wb");
     sendEmail($fromEmail, $nameFrom, $to, $toName, $Subject, "", $Mensage);
-    include('./sucess.html');
+    
   }
 }
 
-function WriteFile($OpenDestination, $messageWrite)
+function WriteFile($OpenDestination, $messageWrite, $type)
 {
   try {
-    $fp = fopen($OpenDestination, "wb");
+    $fp = fopen($OpenDestination, $type);
     fwrite($fp, $messageWrite);
     fclose($fp);
   } catch (\Exception $e) {
@@ -171,6 +167,13 @@ function sendEmail($FromEmail, $FromName, $ToEmail, $ToName, $Subject, $TextPart
 
   $response = $mj->post(Resources::$Email, ['body' => $body]);
   $response->success();
+
+  if(intval($response->success()) === intval(1)){
+    header('location: ./sucess');
+  }else{
+    WriteFile("./mailSenderLog.txt", "\nError send email: " . date('d/M/Y H:i:s'), 'a');
+    header('location: ./error');
+  }
 }
 
 function createFolder()

@@ -691,7 +691,7 @@ function searchAndShowSlide() {
         elements.innerHTML = "";
       }
       else {
-        console.log('hello')
+       
       }
     }, 500)
  
@@ -2270,22 +2270,27 @@ function HideOrShowCategoryModel() {
 
 function checkUploadFiles() {
   var referenceField = document.querySelectorAll(".inpt");
+  let loader = document.querySelector('.div-loader');
   var buttonSub = document.querySelector(".w-button");
-  var isUplodead = 0;
+  var totalFilesUplodead = 0;
   var talentSelect = document.querySelector(".talent-select");
   buttonSub.addEventListener("click", (event) => {
     if (talentSelect.value === "modelo") {
       referenceField.forEach((input) => {
-        if (input.value != "") isUplodead += 1;
+        if (input.value != "") totalFilesUplodead += 1;
       });
-      if (isUplodead < 5) {
+      if (totalFilesUplodead < 5) {
         event.preventDefault();
         alert("Favor selecionar as fotos para enviar...");
       }
-      isUplodead = 0;
+      totalFilesUplodead = 0;
+      loader.style.opacity = "0.8";
+      loader.classList.remove('hidden-loader');
     }
   });
 }
+
+
 
 function checkLenghtMaxMin(id, lenghtFieldMax, lenghtFieldMin, referenceField, customMessage = null) {
   let MessageErrorMax = "Número muito grande. Coloque como no exemplo: 033 9999-9999"
@@ -2352,7 +2357,7 @@ function checkLenghtMaxMin(id, lenghtFieldMax, lenghtFieldMin, referenceField, c
       }
     })
 
-    //console.log(inter)
+ 
 
 
     var ddd = inter.slice(0, 2).toString();
@@ -2367,7 +2372,6 @@ function checkLenghtMaxMin(id, lenghtFieldMax, lenghtFieldMin, referenceField, c
     } else if (ddd.length < 4 && first.length < 1) {
 
       referenceField.value = ddd.replace(",", "")
-      console.log(ddd)
 
     }
     else {

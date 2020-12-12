@@ -40,7 +40,7 @@
       </section>
       <div class="div-block-12">
         <div class="form-block w-form">
-          <form method="post" action="./requestDoc.php" id="email-form" name="email-form" data-name="Email Form"
+          <form method="post" action="./handleFormRequest" id="email-form" name="email-form" data-name="Email Form"
             class="form" enctype="multipart/form-data">
             <label for="cadastro" class="center-marker-category">DADOS CADASTRAIS</label>
 
@@ -210,7 +210,7 @@
 
               <label for="LcorpoIteiro" class="field-label-7">CORPO INTEIRO*</label>
               <input type="file" name="file[]" data-wait="Please wait..." class="w-input inpt"
-                accept=".jpg,.jpeg,.png" />
+                accept=".jpg,.jpeg,.png"/>
 
               <label for="Lrosto" class="field-label-7">PERFIL*</label>
               <input type="file" name="file[]" data-wait="Please wait..." class="w-input inpt"
@@ -235,12 +235,6 @@
             <input type="submit" value="ENVIAR" data-wait="Please wait..." class="w-button" />
 
           </form>
-          <div class="success-message w-form-done">
-            <div>Thank you! Your submission has been received!</div>
-          </div>
-          <div class="w-form-fail">
-            <div>Oops! Something went wrong while submitting the form.</div>
-          </div>
         </div>
       </div>
     </div>

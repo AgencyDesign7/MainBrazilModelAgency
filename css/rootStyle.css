@@ -4322,8 +4322,10 @@ input::placeholder {
   margin-bottom: 10px;
 }
 
-.sucess-form{
+.sucess-form, .error-form{
   display: flex;
+  width: 100%;
+  height: 100vh;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -4331,9 +4333,14 @@ input::placeholder {
   margin-top: 40px;
 }
 
-.sucess-form p{
+.sucess-form p, .error-form p{
  color: black;
  margin: 10px;
+ font-size: 20px;
+}
+.sucess-form img, .error-form img{
+  width:150px;
+  height: auto;
 }
 
 .sub-cosplay-1{
