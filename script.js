@@ -1559,12 +1559,12 @@ function PopupMsg(title, cat, closeMenuMobile = 0, classCloseMenu) {
                               </div>
                             `;
       break;
-    case 'models': 
+    case 'models':
       popupCategory.style.backgroundColor = "white";
       //put content in function showModelByCategory()
       containerImgs.innerHTML = "";
-    
-	break;
+
+      break;
     default:
       break;
   }
@@ -2213,7 +2213,7 @@ function selectedState(title) {
         break;
     }
 
-  }else if(title === "michellekalil"){
+  } else if (title === "michellekalil") {
     switch (Selected.value) {
       case "mg":
         divList.innerHTML = `
@@ -2357,7 +2357,7 @@ function checkLenghtMaxMin(id, lenghtFieldMax, lenghtFieldMin, referenceField, c
       }
     })
 
- 
+
 
 
     var ddd = inter.slice(0, 2).toString();
@@ -2780,13 +2780,13 @@ function ElementSelect(artistObject) {
       : volumeInput.classList.add("display-none-content");
   });
 
+
   musicBtn.forEach((btn) => {
     btn.addEventListener("click", () => {
       audioPlayer.forEach((audio) => {
         audio.pause();
         audio.currentTime = 0;
       });
-
       audioPlayer[parseInt(btn.getAttribute("data-value"))].play();
       musicSelected = parseInt(btn.getAttribute("data-value"));
       musicName.innerHTML = getArtists["musicas"][musicSelected + 1]["name"];
@@ -2818,6 +2818,11 @@ function ElementSelect(artistObject) {
         playBtn.classList.remove("pausebtn");
       }
     } else {
+      musicSelected = 0;
+      audioPlayer[musicSelected].play();
+      playBtn.classList.add("pausebtn");
+      musicName.innerHTML = getArtists["musicas"][musicSelected + 1]["name"];
+      getTimeMusic(audioPlayer[musicSelected]);
     }
   });
 
@@ -2827,15 +2832,15 @@ function ElementSelect(artistObject) {
       audio.currentTime = 0;
     });
     if (musicSelected < totalMusics - 1) {
-      getTimeMusic(audioPlayer[musicSelected]);
       audioPlayer[musicSelected + 1].play();
       musicSelected += 1;
       musicName.innerHTML = getArtists["musicas"][musicSelected + 1]["name"];
+      getTimeMusic(audioPlayer[musicSelected]);
     } else {
       musicSelected = totalMusics - 1;
       musicName.innerHTML = getArtists["musicas"][musicSelected + 1]["name"];
-      getTimeMusic(audioPlayer[musicSelected]);
       audioPlayer[musicSelected].play();
+      getTimeMusic(audioPlayer[musicSelected]);
     }
   });
 
@@ -2846,14 +2851,14 @@ function ElementSelect(artistObject) {
     });
     if (musicSelected > 0) {
       musicSelected -= 1;
-      getTimeMusic(audioPlayer[musicSelected]);
       audioPlayer[musicSelected].play();
       musicName.innerHTML = getArtists["musicas"][musicSelected + 1]["name"];
+      getTimeMusic(audioPlayer[musicSelected]);
     } else {
       musicSelected = 0;
       musicName.innerHTML = getArtists["musicas"][1]["name"];
-      getTimeMusic(audioPlayer[musicSelected]);
       audioPlayer[musicSelected].play();
+      getTimeMusic(audioPlayer[musicSelected]);
     }
   });
 
@@ -2865,7 +2870,7 @@ function ElementSelect(artistObject) {
   }
 
   function getTimeMusic(elementAudio) {
-    //console.log(audioPlayer[musicSelected].duration)
+    highlight(musicSelected);
     elementAudio.addEventListener("timeupdate", () => {
       progressbar.style.width =
         (audioPlayer[musicSelected].currentTime /
@@ -2874,8 +2879,17 @@ function ElementSelect(artistObject) {
         "%";
     });
   }
+}
 
-  //onClick="ElementSelect(this)""
+function highlight(currentMusic) {
+  let allElementToClear = document.querySelectorAll('.btn-music');
+  allElementToClear.forEach(ele => {
+    ele.parentElement.style.backgroundColor = "";
+
+  })
+
+  let currentMusicName = document.querySelector(`[data-value="${currentMusic}"]`).parentElement
+  currentMusicName.style.backgroundColor = "#4e4e4e"
 }
 
 function playerMusic(selectedArtist, musicSelected = 0) {
